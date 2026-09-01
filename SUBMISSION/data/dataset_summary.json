@@ -1,0 +1,35 @@
+{
+  "n_universities": 1226,
+  "n_expert_labeled": 200,
+  "n_train": 160,
+  "n_test": 40,
+  "n_features": 78,
+  "score_range": [
+    0.0,
+    93.92902322872563
+  ],
+  "grade_counts": {
+    "C": 322,
+    "B": 283,
+    "D": 204,
+    "A": 190,
+    "F": 155,
+    "A+": 72
+  },
+  "test_metrics": {
+    "spearman": 0.8849906191369608,
+    "kendall": 0.7153846153846154,
+    "mae": 8.916653894025808,
+    "rmse": 12.145187238720455,
+    "r2": 0.7517605639754092
+  },
+  "kuet": {
+    "name": "Khulna University of Engineering and Technology",
+    "score": 82.09992314993286,
+    "global_rank": 56,
+    "country_rank": 1,
+    "grade": "A+",
+    "percentile": 95.5
+  },
+  "n_countries_ranked": 19
+}

@@ -1,0 +1,21 @@
+{
+  "n_judgments": 900,
+  "n_unique_pairs": 840,
+  "n_repeats": 60,
+  "self_consistency": 0.8666666666666667,
+  "self_consistency_ci": [
+    0.7540777788695802,
+    0.9406355772946428
+  ],
+  "left_share": 0.48444444444444446,
+  "position_bias_p": 0.36812874476498514,
+  "C": 10.0,
+  "bt_cv_accuracy": 0.8285714285714286,
+  "bt_train_accuracy": 0.9678571428571429,
+  "trackA_judgment_accuracy": 0.7678571428571429,
+  "spearman_A_B": 0.7903567086646831,
+  "kendall_A_B": 0.5980019840144835,
+  "linear_r2": 0.5551441100737758,
+  "mean_ci_width": 3.4152583173506024,
+  "region_eta2": 0.2105125150346046
+}

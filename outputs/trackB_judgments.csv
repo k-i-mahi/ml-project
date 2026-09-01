@@ -1,0 +1,901 @@
+pair_id,winner,confidence,reason
+P0001,left,slight,admission notices + deeper service outweigh right's better wayfinding
+P0002,right,clear,left has no primary menu and no task content at all - an empty shell
+P0003,right,clear,"right has admission notices, 4x the service depth and far better alt-text"
+P0004,right,slight,dated notices and 100% alt-text beat left's one extra task item
+P0005,right,slight,left's 15% alt-text and 4 broken links outweigh its better menu
+P0006,left,clear,"right fails the navigation gate - no primary menu, no logo"
+P0007,right,slight,service depth 9/12 vs 4/12 and complete technical setup
+P0008,left,clear,complete task coverage 6/6 and 100% alt-text vs 4/6 and 29%
+P0009,right,clear,left offers nothing findable; 21 broken links still beats an empty shell
+P0010,right,clear,left has 0% alt-text and no dated content; right is fresh and usable
+P0011,left,clear,right has no task content whatsoever despite decent navigation
+P0012,left,slight,dated notices and a department directory against right's thin freshness
+P0013,left,slight,posted today with real events and deeper service; right is undated and static
+P0014,left,slight,98 days stale beats 662 days - two years reads as abandonment
+P0015,right,clear,"left is stale, has 15 broken links and 14% alt-text"
+P0016,left,slight,search bar and admission notices are task-critical; right has neither
+P0017,right,slight,"100% alt-text, full technical setup and mobile 100 against a 2nd-percentile slow site"
+P0018,left,slight,search plus complete technical setup outweigh right's fresher notices
+P0019,right,slight,complete 6/6 task coverage and best-in-pair accessibility
+P0020,right,clear,left has a 1-item menu and 2.7:1 contrast - a real accessibility failure
+P0021,right,slight,"left lists no academic programs at all, the single most important item"
+P0022,left,slight,genuinely fresh with real events; right's 1-item menu is broken navigation
+P0023,left,slight,department directory and dated notices; right is static
+P0024,left,slight,complete task coverage and 100% alt-text against right's 2%
+P0025,left,slight,dated notices and deeper service outweigh right's better accessibility
+P0026,left,slight,complete 6/6 task coverage and better alt-text against a 3-item menu
+P0027,right,clear,left has no task content and almost no service depth
+P0028,left,slight,"dated notices, deeper service and stronger accessibility outweigh the degenerate menu"
+P0029,left,slight,search bar plus notices posted today; right has neither
+P0030,right,clear,left has no primary menu and no accessible design
+P0031,left,slight,93% alt-text against 13% is a larger gap than the freshness difference
+P0032,left,clear,right serves over plain HTTP and lists no academic programs
+P0033,right,clear,"6/6 task coverage, 8/12 depth and 100% alt-text against a 1-item menu"
+P0034,left,clear,"right offers contact only - no programs, departments or faculty"
+P0035,right,slight,complete task coverage and fresh notices outweigh the missing menu since search is present
+P0036,right,clear,left has one task item and zero service depth
+P0037,right,clear,left has no task content at all
+P0038,left,clear,right has no primary menu and only two task items
+P0039,left,clear,"complete task coverage, posted today, 100% alt-text"
+P0040,left,clear,right has 1.4:1 contrast and mobile 0/100 - effectively unusable
+P0041,right,clear,"100% alt-text against 5%, plus working navigation and fresh notices"
+P0042,left,clear,right is 98 days stale with 15 broken links and 14% alt-text
+P0043,right,slight,"admission notices, deeper service and more events"
+P0044,right,slight,"logo, wider menu and 100% alt-text"
+P0045,right,clear,left has one service item and no programs listing despite right's 39 broken links
+P0046,left,slight,"right has no menu, is 243 days stale and has 0% alt-text"
+P0047,right,clear,88% alt-text against 2% and a real menu against zero items
+P0048,left,slight,"100% alt-text against 40%, fresher, and far better mobile"
+P0049,right,clear,left lists no academic programs; right does and is more accessible
+P0050,left,slight,"breadcrumb, language toggle and real events against slightly deeper service"
+P0051,left,slight,complete 6/6 task coverage and 100% alt-text against missing admissions information
+P0052,right,clear,"left has no menu, is 784 days stale and has 10% alt-text"
+P0053,right,clear,left offers contact only and almost no service depth
+P0054,right,slight,left has no contact route at all; right is deeper with full technical setup
+P0055,right,slight,"both complete on task, but right is deeper, more accessible and far faster"
+P0056,left,slight,"complete task coverage, real dated events and 100% alt-text"
+P0057,left,clear,search bar and 82% alt-text against no search and 13%
+P0058,right,clear,left has no primary menu and no accessible design; right is complete
+P0059,right,slight,service depth 10/12 against 5/12 and genuinely fresh content
+P0060,right,slight,94% alt-text against 14% and dated events with times
+P0061,left,slight,complete 6/6 task coverage and full technical setup
+P0062,left,clear,"full navigation, 11/12 service depth, 100% alt-text - strong across the board"
+P0063,right,slight,complete 6/6 task coverage edges out left's fresher notices
+P0064,left,slight,dated notices with real events and deeper service
+P0065,right,clear,left has no task content at all despite a wider menu
+P0066,right,slight,94% alt-text and a logo; left has neither and no contact route either
+P0067,right,clear,left has 1.4:1 contrast and mobile 0/100 and lists no programs
+P0068,right,slight,"complete task coverage, real navigation and dated events with times"
+P0069,left,slight,"dated notices, 100% alt-text and a usable menu against a 1-item menu"
+P0070,right,slight,"department directory, fresh notices and better alt-text"
+P0071,left,slight,"78% alt-text against 39%, plus fresher notices and an accessibility toggle"
+P0072,left,slight,search bar and 9/12 service depth against 5/12 and no search
+P0073,right,slight,94% alt-text against 48% and twice the service depth
+P0074,left,clear,search bar and 8/12 depth against no search and 2/12
+P0075,right,clear,left has no menu and no task content whatsoever
+P0076,left,clear,"right lists no programs, is 641 days stale and has almost no service depth"
+P0077,right,slight,"department directory, 90% alt-text and a real menu against a 2-item one"
+P0078,right,slight,posted today with 17 dated events and 100% alt-text
+P0079,right,clear,left has no menu and no task content at all
+P0080,right,clear,left has no task content; right covers five of six and is fresh
+P0081,right,slight,complete task coverage and 20 dated events against a 3-item menu
+P0082,right,slight,service depth 10/12 and genuinely fresh content against undated notices
+P0083,left,clear,search bar and 94% alt-text against no search and 13%
+P0084,left,clear,right lists only admission notices and has 3/12 service depth
+P0085,right,clear,left offers contact only; right at least has real content despite poor contrast
+P0086,left,slight,right lists no programs; left is strong everywhere except the missing menu
+P0087,left,slight,right has no programs listing and is 657 days stale
+P0088,left,slight,94% alt-text against 2% and a real menu against zero items
+P0089,left,slight,right has no contact route at all - a task-critical omission
+P0090,left,clear,right has no task content and 0% alt-text despite a 20-item menu
+P0091,left,clear,right has 1.3:1 contrast - the text cannot be read - and only two task items
+P0092,right,clear,"real navigation, complete task coverage and deeper service"
+P0093,left,slight,"notices posted today against undated ones, plus deeper service"
+P0094,left,slight,"a working menu, a contact route and fresh notices"
+P0095,right,slight,"complete task coverage, 100% alt-text and deeper service"
+P0096,right,slight,"search bar, a real menu and notices posted today with dated events"
+P0097,right,slight,"complete navigation, 100% alt-text and fresh dated events"
+P0098,left,clear,"right has no menu, no task content and 0% alt-text"
+P0099,right,slight,left's 1.1:1 contrast makes the text unreadable regardless of its content
+P0100,left,clear,right is 98 days stale with 15 broken links and 14% alt-text
+P0101,right,slight,"neither has task content, but right has 86% alt-text against 33% and deeper service"
+P0102,left,clear,"right serves over plain HTTP, has no menu and 2% alt-text"
+P0103,right,clear,left offers contact only and one service item
+P0104,left,clear,"right has no menu, is 784 days stale and has 10% alt-text"
+P0105,left,slight,"complete task coverage, a real menu and 20 dated events"
+P0106,right,slight,"complete task coverage, notices posted today and 100% alt-text against 13%"
+P0107,left,clear,right has no task content at all despite a wider menu
+P0108,right,slight,a real 8-item menu and 91% alt-text against no menu and 66%
+P0109,right,slight,"complete navigation with breadcrumb, better alt-text and real events"
+P0110,left,slight,right has no contact route at all; left is also deeper in service
+P0111,left,slight,"8/12 service depth against 3/12, fresher, with a language and accessibility toggle"
+P0112,left,slight,complete task coverage and double the service depth
+P0113,right,clear,left lists no academic programs; right does and is fresher and deeper
+P0114,left,slight,right lists no programs and is 657 days stale
+P0115,left,slight,right lists no academic programs despite better accessibility
+P0116,left,clear,right has no task content at all
+P0117,right,clear,left lists no programs and is 657 days stale; right is fresh with 100% alt-text
+P0118,right,clear,"7 days stale against 662, and a department directory"
+P0119,right,clear,"left has no menu, no task content and no service depth"
+P0120,left,clear,right has no primary menu and no accessible design
+P0121,left,slight,"complete task coverage, 88% alt-text against 40%, and full technical setup"
+P0122,right,slight,left has no contact route; right is deeper with a language toggle
+P0123,right,slight,department directory and fresh dated events against left's better alt-text
+P0124,right,clear,"complete task coverage, 88% alt-text against 8%, and accessible design"
+P0125,right,clear,"left has 1.4:1 contrast, mobile 0/100 and no programs listing"
+P0126,right,slight,admission notices and an accessibility toggle against left's breadcrumb
+P0127,right,slight,88% alt-text against 41% plus full technical setup and deeper service
+P0128,left,slight,"breadcrumb navigation, real dated events and 8/12 depth against 5/12"
+P0129,left,slight,67% alt-text against 15% and no broken links
+P0130,left,slight,"a real menu, a logo and 20 dated events against a 1-item menu"
+P0131,left,slight,department and faculty listings and far deeper service
+P0132,left,clear,right offers contact only and zero service depth
+P0133,right,slight,"10/12 depth, 100% alt-text and much fresher notices"
+P0134,right,slight,accessibility toggle and complete technical setup separate two close profiles
+P0135,left,clear,"full navigation, 11/12 depth and 98% alt-text against right's 2%"
+P0136,right,slight,"search bar, fresher notices and full technical setup"
+P0137,right,slight,"complete task coverage, deeper service and full technical setup"
+P0138,left,slight,"notices posted today with dated events, 100% alt-text and deeper service"
+P0139,right,slight,"faculty listing, 97% alt-text against 53% and deeper service"
+P0140,right,clear,"complete task coverage, notices posted today and deeper service"
+P0141,left,slight,department directory and no broken links against right's seven
+P0142,right,slight,department directory and 9/12 service depth against 6/12
+P0143,right,slight,"a real menu, fresh dated events and deeper service"
+P0144,left,clear,"right has no menu, is 243 days stale and has 0% alt-text"
+P0145,left,slight,right lists no academic programs and has 3/12 service depth
+P0146,right,clear,left has no task content at all
+P0147,left,slight,a 9-item menu against 2 and notices posted today against 39 days old
+P0148,left,clear,right's 2.7:1 contrast fails basic readability and its menu has one item
+P0149,right,slight,"real task content beats an empty shell, though right's missing HTTPS is a genuine fault"
+P0150,left,slight,"search, breadcrumb, accessibility toggle and complete technical setup"
+P0151,right,clear,left offers contact only; right at least lists programs and departments
+P0152,left,clear,a working menu and a contact route against neither
+P0153,right,slight,complete task coverage and a real 6-item menu against a 1-item one
+P0154,left,clear,"department directory, notices posted today, and accessible design which right lacks"
+P0155,right,slight,a working menu and logo are more fundamental than left's better alt-text
+P0156,right,clear,"dated notices, 67% alt-text against 13%, and readable contrast"
+P0157,left,clear,right's 2.7:1 contrast fails basic readability; left is also deeper
+P0158,left,slight,"search bar, deeper service and far better alt-text"
+P0159,right,slight,"department directory, notices posted today and 100% alt-text"
+P0160,left,clear,right has no menu and no task content at all
+P0161,left,slight,"department directory, deeper service and 100% alt-text"
+P0162,right,slight,"100% alt-text, real dated events and deeper service"
+P0163,right,slight,10/12 service depth and dated notices against undated ones
+P0164,right,clear,"complete task coverage, 20 dated events and full technical setup"
+P0165,right,slight,"admission notices, 11/12 service depth and fresh content"
+P0166,left,slight,department directory and deeper service
+P0167,left,slight,97% alt-text against 12% and deeper service
+P0168,right,slight,"real task content beats a shell, despite being badly stale"
+P0169,left,clear,right has no task content at all
+P0170,right,slight,complete task coverage and complete 12/12 service depth
+P0171,left,clear,complete task coverage and every service item present
+P0172,left,slight,"complete task coverage including a contact route, which right lacks"
+P0173,right,clear,"complete task coverage, 10/12 depth against 4/12, and 100% alt-text"
+P0174,right,clear,"complete task coverage, dated notices and 100% alt-text"
+P0175,left,slight,right lists no academic programs
+P0176,right,slight,"a real 6-item menu against a 1-item one, plus deeper service and an accessibility toggle"
+P0177,right,slight,"a working menu, a faculty listing and 98 days stale against 784"
+P0178,right,clear,"left has no menu, 0% alt-text and no accessible design"
+P0179,right,slight,"department directory, a 9-item menu and 88% alt-text"
+P0180,right,slight,left lists neither departments nor faculty - two task-critical gaps
+P0181,left,slight,"a real 7-item menu, faculty listing, fresh notices and 10/12 depth"
+P0182,left,slight,a 0-item menu and 2% alt-text are two structural failures against one content gap
+P0183,left,clear,right is 662 days stale with 3% alt-text and no department directory
+P0184,right,clear,"admission notices, deeper service, accessibility toggle and full technical setup"
+P0185,left,slight,a real menu with breadcrumb and a department directory against a 0-item menu
+P0186,right,slight,"left lists no academic programs, the single most important item"
+P0187,left,clear,right is 662 days stale with 3% alt-text
+P0188,right,clear,"11/12 service depth against 2/12, fresh notices and 79% alt-text"
+P0189,right,clear,"dated notices, 83% alt-text against 13%, and readable contrast"
+P0190,right,slight,a real menu and admission notices posted today
+P0191,right,clear,left has no HTTPS and no contact route; right is fresher and far deeper
+P0192,left,slight,complete task coverage and deeper service
+P0193,left,clear,complete task coverage and 9/12 depth against 2 task items and 10 broken links
+P0194,right,clear,"five task items against two, plus a search bar and better alt-text"
+P0195,left,slight,"10/12 service depth, 97% alt-text and notices posted yesterday"
+P0196,right,clear,"complete task coverage including contact, and not 578 days stale"
+P0197,right,slight,"a wider menu, a notice board and readable contrast"
+P0198,right,slight,complete task coverage with breadcrumb navigation
+P0199,left,clear,right is 662 days stale with 3% alt-text and no department directory
+P0200,right,slight,"dated events with times, deeper service and an accessibility toggle"
+P0201,left,slight,"dated notices with timed events, deeper service and 100% alt-text"
+P0202,right,slight,left's 1.7:1 contrast is unreadable; right at least has faculty and deeper service
+P0203,left,clear,"right has no HTTPS, no programs listing and 5/12 depth against 11/12"
+P0204,right,clear,left has no menu and no task content at all
+P0205,left,clear,right offers contact only and one service item
+P0206,left,slight,right's 1.1:1 contrast makes the text invisible regardless of its 100% alt-text
+P0207,left,slight,"complete task coverage, every service item present, and a search bar"
+P0208,right,slight,notices posted today with 20 dated events against a wholly static site
+P0209,right,clear,left has no menu and no task content
+P0210,left,slight,"faculty listing, deeper service, fresher notices and no broken links"
+P0211,left,slight,"10/12 depth against 5/12, 50% alt-text against 6%, and accessible design"
+P0212,right,clear,"complete task coverage, a working menu and logo, and fresher content"
+P0213,right,clear,"programs listing, 10/12 depth, 100% alt-text and notices posted today"
+P0214,right,slight,"readable contrast against 2.4:1, plus deeper service and full technical setup"
+P0215,right,slight,"an 11-item menu against 2, fresher notices and deeper service"
+P0216,right,slight,left lists no academic programs
+P0217,left,slight,"search bar, 100% alt-text and readable contrast against 4.5:1"
+P0218,right,clear,"notices posted today with 20 events, deeper service and 100% alt-text"
+P0219,right,clear,left's 1.8:1 contrast is unreadable and it has only two task items
+P0220,left,clear,complete task coverage and dated notices against three task items
+P0221,left,slight,notices posted today with timed events and 100% alt-text against 53%
+P0222,right,clear,"dated notices, 100% alt-text against 13%, and readable contrast"
+P0223,left,slight,"complete task coverage including a contact route, and deeper service"
+P0224,left,slight,"complete navigation, 100% alt-text and nine dated events"
+P0225,right,clear,"a contact route, 100% alt-text and not 578 days stale"
+P0226,right,slight,left lists no academic programs and has 3/12 service depth
+P0227,left,clear,"five task items against two, 10/12 depth against 2, and no broken links"
+P0228,right,slight,"complete task coverage including admissions policy, and 100% alt-text"
+P0229,left,clear,"right has one task item, is 113 days stale and has 3% alt-text"
+P0230,left,slight,"search bar, admissions information and readable contrast against 4.5:1"
+P0231,right,slight,"a contact route, a real menu and five dated events"
+P0232,right,clear,"complete task coverage, 9/12 depth against 2/12, and 100% alt-text"
+P0233,right,slight,department and faculty listings and deeper service
+P0234,right,slight,"88% alt-text, an accessibility toggle and full technical setup"
+P0235,left,slight,"notices posted today with timed events, and deeper service"
+P0236,right,clear,left's 1.0:1 contrast means the text is invisible - nothing else can compensate
+P0237,right,clear,left offers contact only; right has fresh notices and 10/12 depth
+P0238,left,clear,right has no task content whatsoever
+P0239,right,clear,"left has one task item, is 113 days stale and has 3% alt-text"
+P0240,right,clear,"admission notices, notices posted today, 9/12 depth and 100% alt-text"
+P0241,left,slight,dated notices with 16 events and deeper service
+P0242,left,slight,"faculty listing, deeper service and 90% alt-text against 68%"
+P0243,left,slight,a real 7-item menu and dated notices against a 2-item menu and none
+P0244,left,slight,"complete task coverage, a real menu and full technical setup"
+P0245,right,clear,left lists no programs and is 657 days stale
+P0246,left,slight,"complete task coverage, 87% alt-text against 13%, and readable contrast"
+P0247,left,clear,"right has no HTTPS, no menu, 2% alt-text and no accessible design"
+P0248,left,slight,"real task content beats an empty shell, though left's missing HTTPS is a genuine fault"
+P0249,right,slight,"notices posted today, 100% alt-text, deeper service and far faster"
+P0250,left,slight,"100% alt-text, an accessibility toggle and deeper service"
+P0251,right,slight,"faculty listing, notices posted today, 100% alt-text and full technical setup"
+P0252,right,slight,dated notices and 9/12 service depth against 4/12
+P0253,right,slight,four task items including departments and faculty against contact alone
+P0254,right,slight,complete task coverage and 9/12 depth outweigh left's better alt-text
+P0255,right,clear,"100% alt-text against 6%, accessible design, and not 130 days stale"
+P0256,right,clear,notices posted today with 11 timed events and 9/12 depth against 2/12
+P0257,right,slight,a logo and notices posted yesterday; both have poor alt-text
+P0258,right,clear,"complete task coverage, dated notices, 100% alt-text and accessible design"
+P0259,left,clear,a working menu and complete task coverage including a contact route
+P0260,left,clear,"complete task coverage with programs listed, against 657 days stale"
+P0261,right,slight,"a 9-item menu, better alt-text and full technical setup"
+P0262,left,clear,"100% alt-text against 3%, accessible design, and complete navigation"
+P0263,left,clear,"right is an empty page - no menu, no logo, no content of any kind"
+P0264,right,clear,left's 1.1:1 contrast is unreadable; right has full technical setup
+P0265,left,clear,right has no task content at all
+P0266,right,slight,96% alt-text against 13% and full technical setup
+P0267,left,slight,100% alt-text against 31% and readable contrast against 5.7:1
+P0268,right,slight,four task items against contact alone
+P0269,left,slight,a logo and notices posted today against no dated content and 0% alt-text
+P0270,left,slight,"80% alt-text against 14%, deeper service and readable contrast"
+P0271,right,clear,"complete task coverage, dated notices, 10/12 depth and 91% alt-text"
+P0272,left,slight,a contact route and genuine freshness against 578 days stale
+P0273,left,slight,100% alt-text against 3% and not 662 days stale
+P0274,left,slight,"complete task coverage, a real menu with breadcrumb, and 100% alt-text"
+P0275,right,slight,"admission notices, 100% alt-text and deeper service"
+P0276,left,slight,"complete task coverage, a real menu, 10/12 depth and 100% alt-text"
+P0277,right,slight,"search bar, 87% alt-text against 17%, and full technical setup"
+P0278,right,slight,"a real 7-item menu against 1, a faculty listing and a notice board"
+P0279,right,clear,"a real menu with breadcrumb, deeper service and mobile 100"
+P0280,left,slight,"a contact route and admissions policy, which right lacks entirely"
+P0281,right,slight,a 6-item menu with full navigation and nine dated events against a 1-item menu
+P0282,right,slight,"an 11-item menu, dated notices and 10/12 service depth"
+P0283,left,slight,"right has no task content at all, despite left's missing HTTPS"
+P0284,left,clear,"complete task coverage, a wider menu, 100% alt-text and deeper service"
+P0285,right,clear,"a real menu with search, complete task coverage and 20 dated events"
+P0286,right,clear,"left has no menu, no task content and 0% alt-text"
+P0287,right,slight,"a contact route, 100% alt-text against 42%, and deeper service"
+P0288,right,clear,"four task items against two, dated events, and fewer broken links"
+P0289,left,clear,"right has no HTTPS, no menu, 2% alt-text and 4/12 depth against 12/12"
+P0290,left,slight,"department listing, 100% alt-text against 29%, and deeper service"
+P0291,left,clear,"right has one task item, is 113 days stale and has 3% alt-text"
+P0292,left,slight,right lists no academic programs; left also has 100% alt-text
+P0293,left,slight,a 10-item menu and 10/12 service depth against 8/12
+P0294,left,slight,a contact route and five service items against a menu leading to nothing
+P0295,left,slight,complete task coverage and twice the service depth
+P0296,left,slight,right's 1.7:1 contrast is unreadable and it has no menu
+P0297,left,clear,right offers contact only and two service items
+P0298,right,slight,faculty listing and a notice board against left's admissions policy
+P0299,left,slight,"complete task coverage including contact, and 100% alt-text"
+P0300,left,clear,right has no task content at all despite a comparable menu
+P0301,left,clear,"right combines 3% alt-text, 4.5:1 contrast and no accessible design - a systematic failure"
+P0302,right,slight,a contact route and a 9-item menu against a 1-item menu and no contact
+P0303,left,slight,right lists no academic programs
+P0304,left,slight,notices posted today with 20 events against a site with no dated content at all
+P0305,right,slight,100% alt-text against 13% and readable navigation with breadcrumb
+P0306,left,slight,notices posted yesterday with 18 timed events against a menu leading to contact alone
+P0307,left,slight,right's 1.0:1 contrast makes the text invisible - depth cannot compensate
+P0308,left,clear,"complete task coverage, a search bar, and notices posted today with nine events"
+P0309,left,slight,search bar and 100% alt-text against 13%
+P0310,left,clear,"complete task coverage, deeper service, and no broken links against 21"
+P0311,left,slight,"admission notices, a 10-item menu and 100% alt-text"
+P0312,right,clear,left has no menu and no task content at all
+P0313,right,clear,82% alt-text against 12% and twenty dated events
+P0314,right,slight,"notices posted this week, 100% alt-text and deeper service"
+P0315,right,clear,"complete task coverage, deeper service, 100% alt-text and an accessibility toggle"
+P0316,right,clear,left offers contact only and has 11% alt-text
+P0317,right,slight,two task items against none at all
+P0318,left,clear,right has no task content whatsoever
+P0319,left,slight,"search bar, admission notices and twelve events against no search"
+P0320,left,slight,complete task coverage and fresh content against no programs and 657 days stale
+P0321,left,clear,"complete task coverage, a wider menu and deeper service"
+P0322,left,slight,"neither has task content, but left at least shows a dated notice board"
+P0323,left,slight,a working menu and 63% alt-text against a 0-item menu and 2%
+P0324,right,clear,department directory and notices four days old against 375
+P0325,right,slight,"complete task coverage, a logo, and notices posted today with seven events"
+P0326,right,slight,a real 10-item menu and readable contrast against 2.7:1 and a 1-item menu
+P0327,left,slight,"right's 1.1:1 contrast makes the page unusable, which outweighs left's broken links"
+P0328,right,slight,"a wider menu with breadcrumb, deeper service and full technical setup"
+P0329,right,slight,left lists no academic programs at all
+P0330,left,clear,"five task items including programs and contact, against two and 1.3:1 contrast"
+P0331,right,slight,"complete task coverage, 98% alt-text against 29%, and fresher notices"
+P0332,right,slight,"search bar, 62% alt-text against 13%, and deeper service"
+P0333,left,clear,"breadcrumb, deeper service, 48% alt-text against 12%, and accessible design"
+P0334,right,clear,complete task coverage and 10/12 depth against one task item
+P0335,left,clear,"91% alt-text against 3%, accessible design, and readable contrast"
+P0336,left,slight,"dated notices, 10/12 service depth and full technical setup"
+P0337,left,slight,"notices four days old against 784, and 92% alt-text against 10%"
+P0338,right,clear,"department directory, notices posted today and deeper service"
+P0339,right,clear,left has no task content at all
+P0340,right,clear,"four task items against one, and not 641 days stale"
+P0341,left,slight,"no broken links against 39, plus full technical setup"
+P0342,right,clear,"a real menu, 100% alt-text against 0%, and deeper service"
+P0343,left,clear,"a real menu with logo, 100% alt-text and seventeen timed events"
+P0344,left,clear,"a logo, notices posted today and 83% alt-text against 0%"
+P0345,right,slight,"readable contrast, a 7-item menu and deeper service against 2.7:1"
+P0346,left,clear,right has one task item and zero service depth
+P0347,left,clear,right's 1.1:1 contrast is unreadable; left is fresher and deeper
+P0348,right,slight,"a wider menu, deeper service, mobile 100 and full technical setup"
+P0349,left,slight,complete task coverage and 100% alt-text against a 0-item menu and 2%
+P0350,right,slight,"department directory, dated notices and sixteen events"
+P0351,right,slight,"complete task coverage including a contact route, which left lacks entirely"
+P0352,left,clear,a real 8-item menu and 97% alt-text against a 0-item menu and 2%
+P0353,right,slight,9/12 service depth against 4/12 and an accessibility toggle
+P0354,right,slight,"department directory, a 9-item menu and notices posted today"
+P0355,right,slight,"complete navigation with breadcrumb, a faculty listing and nine events"
+P0356,right,clear,left has no menu and 1.7:1 contrast; right is complete and fresh
+P0357,right,clear,left's 1.0:1 contrast makes the page invisible; right is fresh with 100% alt-text
+P0358,right,slight,complete task coverage and fresh events; both carry one severe defect
+P0359,left,slight,"notices posted today with events, and 9/12 service depth against 4/12"
+P0360,left,clear,right has no HTTPS and lists no academic programs
+P0361,right,clear,"96% alt-text against 3%, accessible design, and readable contrast"
+P0362,left,slight,"neither has task content, but left is deeper with 86% alt-text against 18%"
+P0363,left,slight,"86% alt-text against 22%, an accessibility toggle and full technical setup"
+P0364,right,slight,"complete task coverage, fresher notices and deeper service"
+P0365,left,slight,95% alt-text against 40% and readable contrast against 4.9:1
+P0366,left,slight,"complete task coverage, 100% alt-text against 40%, and fresher notices"
+P0367,right,clear,"admission notices, notices posted today, deeper service and 91% alt-text"
+P0368,right,clear,"breadcrumb, 100% alt-text against 13%, and 9/12 depth against 4/12"
+P0369,left,slight,"86% alt-text against 3%, accessible design and readable contrast"
+P0370,right,clear,"complete task coverage, a real menu and 100% alt-text against 11%"
+P0371,left,slight,readable text and a working menu; right's 2.7:1 contrast cancels its freshness
+P0372,right,clear,"a real 8-item menu, 100% alt-text against 2%, and dated events"
+P0373,left,slight,"complete task coverage, 100% alt-text against 40%, and an accessibility toggle"
+P0374,left,slight,"a real menu with breadcrumb, a department directory and 100% alt-text"
+P0375,right,clear,"a working menu, dated notices and twice the service depth"
+P0376,right,slight,"department and faculty listings, a wider menu and readable contrast"
+P0377,right,slight,notices posted today against a site with no dated content at all
+P0378,right,clear,a real menu and 8/12 service depth against one service item
+P0379,right,slight,"admission notices, notices posted today with 20 events, and deeper service"
+P0380,left,clear,a working menu and a department directory against a 0-item menu
+P0381,right,clear,"complete task coverage, 100% alt-text, and not 375 days stale"
+P0382,right,slight,dated notices with timed events against no dated content at all
+P0383,right,clear,"right lists academic programs, has 100% alt-text and full technical setup"
+P0384,left,clear,right is an entirely empty page
+P0385,left,slight,"an academic programs listing, which right lacks entirely"
+P0386,right,clear,"left has no menu, 0% alt-text and mobile 0/100"
+P0387,left,slight,a wider menu and notices posted today; seven broken links is a bounded fault
+P0388,left,slight,"fresh notices, 71% alt-text against 14%, deeper service and no broken links"
+P0389,right,clear,"86% alt-text against 3%, accessible design and twelve events"
+P0390,right,slight,"contact route, department directory and dated notices"
+P0391,right,slight,"complete task coverage, a real menu and notices posted today with nine events"
+P0392,right,clear,left has no menu and no task content at all
+P0393,left,slight,a contact route and breadcrumb navigation against no contact
+P0394,left,slight,"a contact route, notices posted today against 109 days stale, and deeper service"
+P0395,right,slight,complete task coverage and every service item present
+P0396,right,clear,"five task items against one, dated notices and 91% alt-text"
+P0397,right,slight,real task content beats a menu leading nowhere
+P0398,left,clear,right's 1.1:1 contrast is unreadable; left has complete task coverage and fresh notices
+P0399,right,slight,right lists academic programs and has 100% alt-text
+P0400,right,clear,left has no task content and 0% alt-text despite a 20-item menu
+P0401,right,clear,"complete navigation with breadcrumb and logo, 11/12 depth, and notices posted today"
+P0402,right,clear,"complete task coverage with programs, posted today, against 657 days stale"
+P0403,right,slight,department directory and notices four days old against 662
+P0404,right,slight,"100% alt-text against 31%, readable contrast and mobile 100"
+P0405,left,clear,right has no menu and no task content at all
+P0406,left,slight,"department directory, 100% alt-text against 29%, and deeper service"
+P0407,right,slight,"8/12 service depth against 2/12, 66% alt-text against 13%, and dated events"
+P0408,right,clear,"complete task coverage, notices posted today with eleven timed events, 100% alt-text"
+P0409,right,slight,complete task coverage and 100% alt-text
+P0410,left,slight,"complete task coverage, breadcrumb, 100% alt-text and sixteen events"
+P0411,left,slight,department directory and twenty timed events; right's 1.0:1 contrast is worse still
+P0412,left,clear,"right has no HTTPS, no menu, 2% alt-text and no accessible design"
+P0413,left,slight,100% alt-text against 13% and an admissions policy
+P0414,right,clear,"a real menu with search and logo, 100% alt-text, and notices posted today"
+P0415,right,slight,notices posted today with timed events against no dated content at all
+P0416,right,slight,complete task coverage and readable contrast against 2.4:1
+P0417,right,slight,"complete task coverage, deeper service and 87% alt-text"
+P0418,left,clear,"a real menu with search, 88% alt-text against 0%, and deeper service"
+P0419,left,slight,a contact route and a dated notice board against no task content
+P0420,right,clear,"five task items against two, dated notices and five timed events"
+P0421,left,clear,"complete task coverage, 10/12 depth against 4/12, and 94% alt-text against 13%"
+P0422,right,clear,"readable contrast against 2.7:1, a wider menu, more events and deeper service"
+P0423,left,clear,"complete task coverage, a working menu and 100% alt-text against 5%"
+P0424,right,clear,"full navigation, 11/12 depth, 98% alt-text and twelve timed events"
+P0425,left,clear,right has no HTTPS and no accessible design; left is also deeper
+P0426,right,slight,complete task coverage and breadcrumb navigation against a 2nd-percentile slow site
+P0427,left,slight,"complete task coverage, a logo and a wider menu"
+P0428,left,slight,an academic programs listing and fresher dated notices
+P0429,left,clear,"complete navigation, 100% alt-text and nine timed events posted today"
+P0430,right,slight,"100% alt-text against 33%, a department directory and deeper service"
+P0431,right,clear,"five task items against two, 8/12 depth against 2/12, and no broken links"
+P0432,left,clear,three task items and 6/12 depth against contact alone
+P0433,right,slight,96% alt-text against 40% and readable contrast against 4.9:1
+P0434,right,clear,an academic programs listing and 8/12 depth against one service item
+P0435,right,slight,department directory and eleven timed events posted today
+P0436,right,slight,left lists no academic programs and no departments
+P0437,left,slight,a working 11-item menu and genuinely fresh dated events
+P0438,left,clear,right has no task content at all
+P0439,right,clear,"right lists academic programs, is deeper and has 92% alt-text"
+P0440,left,slight,"complete task coverage including programs, which right lacks entirely"
+P0441,left,clear,"a contact route, twenty timed events posted today, and deeper service"
+P0442,left,slight,"department directory, dated notices and 100% alt-text"
+P0443,right,clear,"programs listing, notices posted yesterday against 657 days, and 97% alt-text"
+P0444,right,slight,"department directory, notices posted today and 83% alt-text"
+P0445,right,clear,"five task items against two, dated notices and far deeper service"
+P0446,left,slight,"search bar, faculty listing and readable text against 1.7:1 contrast"
+P0447,left,slight,"real task content beats an empty shell, though left's missing HTTPS is a genuine fault"
+P0448,left,slight,"complete task coverage, a real menu and 100% alt-text"
+P0449,right,slight,"75% alt-text against 52%, timed events and full technical setup"
+P0450,left,slight,"HTTPS and a contact route, both of which right lacks"
+P0451,left,clear,right's 1.1:1 contrast is unreadable; left has 94% alt-text and readable text
+P0452,left,slight,admission notices and 10/12 depth against 5/12; search covers the missing menu
+P0453,left,clear,"programs and departments listed, plus readable text against 1.3:1 contrast"
+P0454,right,slight,"five task items, twenty timed events posted today, and deeper service"
+P0455,left,clear,right has no task content at all despite a 20-item menu
+P0456,right,slight,a real menu with search and a faculty listing; left's 1.7:1 contrast is unreadable
+P0457,right,clear,"complete task coverage, notices posted today, and 10/12 depth"
+P0458,right,clear,"100% alt-text against 13%, a 10-item menu and notices posted today"
+P0459,right,slight,fifteen dated timed events against an empty events section
+P0460,left,slight,some task content and genuinely fresh timed events against none at all
+P0461,right,slight,90% alt-text against 13% and readable contrast against 4.2:1
+P0462,right,slight,"a working menu, notices posted today with twenty events, and 91% alt-text"
+P0463,left,slight,"department directory, a logo, and not 375 days stale"
+P0464,right,clear,complete task coverage against contact alone
+P0465,left,clear,right's 1.1:1 contrast is unreadable; left is also deeper
+P0466,right,slight,100% alt-text against 52% and full technical setup
+P0467,right,clear,complete task coverage and 9/12 depth against a single task item
+P0468,left,slight,"a working menu, a contact route and some service depth against none"
+P0469,right,slight,"faculty listing, notices five days old against 55, and deeper service"
+P0470,left,slight,"75% alt-text against 22%, timed events and full technical setup"
+P0471,right,slight,"search bar, breadcrumb and 48% alt-text against 17%"
+P0472,right,slight,a real 11-item menu and dated timed events against a 0-item menu
+P0473,left,clear,an academic programs listing and 100% alt-text against 69%
+P0474,right,slight,"faculty listing, admissions policy, a wider menu and deeper service"
+P0475,left,slight,7/12 service depth against 4/12 and an accessibility toggle
+P0476,right,slight,"complete task coverage, an accessibility toggle and full technical setup"
+P0477,left,clear,right lists no programs and its 1.3:1 contrast is unreadable
+P0478,left,slight,"dated notices, deeper service and an accessibility toggle"
+P0479,left,clear,"right has 1.4:1 contrast, mobile 0/100 and no programs listing"
+P0480,left,clear,"search bar, 100% alt-text against 8%, readable contrast and accessible design"
+P0481,right,clear,"a real 9-item menu against zero, a department directory and 11/12 depth"
+P0482,right,clear,left's 1.1:1 contrast is unreadable; right is deeper with dated notices
+P0483,left,clear,"right has one task item, is 641 days stale and has 19% alt-text"
+P0484,right,slight,a page you can read and navigate beats one with 1.4:1 contrast and mobile 0
+P0485,left,clear,"complete task coverage, posted today, 100% alt-text against 6%"
+P0486,right,slight,"four broken links against 39, plus dated timed events and full technical setup"
+P0487,right,slight,"breadcrumb, deeper service, timed events and no broken links against seven"
+P0488,left,clear,complete task coverage against contact alone
+P0489,left,clear,right has no task content at all
+P0490,right,slight,100% alt-text against 48% and a department directory
+P0491,right,slight,"complete task coverage, deeper service and 88% alt-text"
+P0492,right,slight,five dated timed events and 88% alt-text with full technical setup
+P0493,right,clear,"complete task coverage, notices posted today with nine events, 100% alt-text"
+P0494,right,slight,"search bar, breadcrumb, 100% alt-text against 8%, and accessible design"
+P0495,right,clear,"search bar, department and faculty listings, 10/12 depth and 100% alt-text"
+P0496,right,slight,notices posted today with timed events and 100% alt-text against 67%
+P0497,right,slight,"department directory, complete navigation and a notice board with events"
+P0498,left,clear,right has no task content at all
+P0499,right,slight,9/12 service depth against 5/12 and a notice board
+P0500,left,slight,"fresher notices, 71% alt-text against 29%, and deeper service"
+P0501,left,slight,"notices posted today with eleven timed events, and 68% alt-text against 14%"
+P0502,right,slight,"both are unreadable at ~1:1 contrast, but right has a department directory and 100% alt-text"
+P0503,right,clear,"left has no menu, no task content and no service depth"
+P0504,left,slight,a wider menu and 8/12 service depth against 3/12
+P0505,right,slight,"complete navigation with search and breadcrumb, plus nine events"
+P0506,left,clear,"department directory, 97% alt-text against 63%, and deeper service"
+P0507,left,slight,twenty timed events and 10/12 service depth against a static site
+P0508,right,slight,left lists no academic programs; right also has 90% alt-text against 27%
+P0509,left,slight,readable contrast and accessible design against 4.5:1 and none
+P0510,left,clear,"a working menu, twenty timed events and 92% alt-text against 0%"
+P0511,right,slight,"100% alt-text against 33%, deeper service and full technical setup"
+P0512,right,clear,"five task items against two, 10/12 depth against 4/12, and 100% alt-text"
+P0513,left,clear,"complete task coverage, a real menu and 94% alt-text against 5%"
+P0514,right,slight,"a wider menu, accessible design and full technical setup"
+P0515,left,slight,a wider menu and deeper service; both are poor on accessibility
+P0516,left,slight,"complete task coverage, an accessibility toggle and full technical setup"
+P0517,right,clear,left has no task content at all
+P0518,left,slight,"notices posted today, deeper service, 83% alt-text and mobile 90"
+P0519,right,slight,"notices posted today, 95% alt-text against 41%, and deeper service"
+P0520,right,clear,"notices posted today with timed events, 100% alt-text and full technical setup"
+P0521,right,slight,"faculty listing, notices posted today against 55 days, and a wider menu"
+P0522,right,slight,"notices posted today, 100% alt-text and a wider menu"
+P0523,left,clear,"programs and departments listed, which right lacks, plus mobile 100"
+P0524,right,clear,complete task coverage and 10/12 depth against one task item
+P0525,right,slight,"admission notices, notices posted today and 8/12 depth against 2/12"
+P0526,right,clear,"a real menu with logo and search, 100% alt-text against 0%, and actual content"
+P0527,left,slight,"96% alt-text against 31%, readable contrast and an accessibility toggle"
+P0528,right,slight,"a real menu, admission notices, a department directory and dated timed events"
+P0529,left,clear,five task items and 7/12 depth against contact alone and zero depth
+P0530,left,slight,complete task coverage including admissions policy
+P0531,left,slight,a real 6-item menu and readable contrast against 2.7:1 and a 1-item menu
+P0532,right,slight,"both unreadable at 1.1:1, but right has complete task coverage and deeper service"
+P0533,right,slight,"complete task coverage, a search bar, deeper service and an accessibility toggle"
+P0534,right,clear,"full navigation, five task items, 11/12 depth and twelve timed events"
+P0535,right,clear,"five task items against one, twenty timed events and 98% alt-text"
+P0536,left,clear,"complete task coverage, 10/12 depth against 4/12, and 100% alt-text"
+P0537,right,clear,"complete task coverage, fresh notices against 243 days stale, and no broken links"
+P0538,left,slight,"complete task coverage, a search bar and breadcrumb navigation"
+P0539,left,slight,"programs, contact and faculty listed against admission notices alone"
+P0540,right,clear,"notices posted today, 95% alt-text against 62%, and a wider menu"
+P0541,left,clear,"notices six days old against 243, deeper service and no broken links"
+P0542,left,slight,an academic programs listing and five task items against two
+P0543,left,slight,a 9-item menu and a department directory against a 0-item menu
+P0544,left,slight,notices posted today with events against a site with no dated content
+P0545,right,clear,left has three task items and 6/12 depth; right has none at all
+P0546,right,slight,a working menu and more than twice the service depth
+P0547,right,clear,"complete task coverage, eleven timed events and 100% alt-text against 2%"
+P0548,left,clear,right has no menu and no task content at all
+P0549,right,slight,"a contact route, which left lacks entirely, plus a wider menu"
+P0550,right,slight,"a contact route and a logo, plus deeper service"
+P0551,right,clear,"a real menu with logo and search, and 93% alt-text against 60%"
+P0552,right,slight,88% alt-text against 2% and full technical setup
+P0553,left,slight,98% alt-text against 31% and twenty events with times given
+P0554,left,clear,right is an entirely empty page
+P0555,right,slight,"department directory, breadcrumb, and no broken links against seven"
+P0556,left,clear,right's 1.1:1 contrast is unreadable; left is deeper with 97% alt-text
+P0557,right,clear,"a wider menu, 10/12 depth against 7/12, and 100% alt-text"
+P0558,right,slight,a wider menu and 90% alt-text against 13%
+P0559,left,slight,department directory and twenty events posted today
+P0560,left,clear,"a real menu with search, readable contrast against 4.5:1, and fresher notices"
+P0561,right,slight,"a logo, a search bar, twenty timed events and deeper service"
+P0562,right,clear,"left has no HTTPS, no menu and 2% alt-text"
+P0563,right,slight,a real menu and 98% alt-text against 73%
+P0564,left,clear,right's 1.7:1 contrast is unreadable and it has 2/12 service depth
+P0565,right,slight,7/12 service depth against 2/12 and a wider menu
+P0566,left,clear,"complete task coverage, a search bar and 10/12 depth against 5/12"
+P0567,left,slight,"100% alt-text against 40%, readable contrast, and no broken links"
+P0568,right,slight,no broken links against 39 - a serious reliability failure
+P0569,left,clear,"a real menu with search, a department directory and 100% alt-text"
+P0570,left,slight,"faculty listing, notices posted today against 34 days, and deeper service"
+P0571,left,clear,"right has no menu, no dated content, 0% alt-text and mobile 0/100"
+P0572,right,slight,"dated notices, 86% alt-text against 17%, and a search bar"
+P0573,right,slight,"admission notices, a department directory and dated content, despite the broken links"
+P0574,left,clear,"five task items against two, 7/12 depth against 2/12, and no broken links"
+P0575,right,slight,"admission notices, notices posted today, and nearly twice the service depth"
+P0576,left,clear,"complete task coverage, notices posted today against 39 days, and nine events"
+P0577,right,slight,"an academic programs listing, a real menu and no broken links against four"
+P0578,right,clear,"a real menu with search, and 82% alt-text against 0%"
+P0579,left,slight,"complete task coverage including a contact route, and deeper service"
+P0580,right,slight,"five task items against two, 8/12 depth against 2/12, and no broken links"
+P0581,left,clear,"right has no HTTPS, no menu and no contact route"
+P0582,right,slight,a real menu and a contact route against neither
+P0583,left,clear,right's 1.1:1 contrast is unreadable; left is fresh with timed events
+P0584,right,clear,left has no menu and no task content at all
+P0585,left,clear,"complete task coverage including contact, a real menu, and 100% alt-text"
+P0586,right,slight,"a real menu, a department directory and notices posted today"
+P0587,right,clear,left has no task content at all despite a wider menu
+P0588,right,clear,complete task coverage and every service item present
+P0589,left,slight,complete task coverage and notices posted today against 55 days old
+P0590,left,slight,fresher notices with sixteen events and a wider menu
+P0591,left,slight,a working menu and seventeen timed events posted today
+P0592,left,clear,"100% alt-text against 13%, a search bar, and notices posted today"
+P0593,left,clear,right has no task content at all
+P0594,left,slight,"breadcrumb, dated notices, 100% alt-text and an accessibility toggle"
+P0595,left,slight,"admission notices, twenty timed events and an accessibility toggle"
+P0596,left,clear,an academic programs listing and notices posted today against 657 days stale
+P0597,right,slight,"a real 8-item menu, 62% alt-text against 0%, and deeper service"
+P0598,right,clear,"a real menu with search, 100% alt-text and notices posted today"
+P0599,right,slight,"breadcrumb navigation, a wider menu, deeper service and nine timed events"
+P0600,right,slight,"complete task coverage, a wider menu, deeper service and full technical setup"
+P0601,right,clear,"a contact route, a logo, notices posted today, and deeper service"
+P0602,left,slight,accessible design and a wider menu; both are badly stale
+P0603,right,clear,"a real menu with search, 100% alt-text against 0%, and mobile 100 against 0"
+P0604,left,slight,complete task coverage and dated notices
+P0605,right,slight,"accessible design, an accessibility toggle and deeper service"
+P0606,left,slight,"search bar, 90% alt-text against 62%, and full technical setup"
+P0607,right,clear,"complete task coverage, 10/12 depth against 5/12, and 94% alt-text against 0%"
+P0608,left,clear,"five task items against three, twenty timed events, and no broken links against 21"
+P0609,left,clear,"complete task coverage, 100% alt-text against 0%, and deeper service"
+P0610,left,slight,department directory and 8/12 service depth against 2/12
+P0611,right,slight,"breadcrumb navigation, 11/12 depth and 98% alt-text against 43%"
+P0612,left,clear,"complete task coverage with programs, 100% alt-text, and readable at every size"
+P0613,right,slight,four task items and 11/12 depth against one task item and one service item
+P0614,left,slight,a genuinely maintained notice board and a search bar against a 641-day-stale page
+P0615,right,slight,"search bar, a wider menu and 11/12 service depth"
+P0616,right,slight,readable text; left's 1.1:1 contrast puts its extra content out of reach
+P0617,right,clear,complete task coverage and 8/12 depth against one task item 113 days stale
+P0618,right,slight,"complete task coverage, 100% alt-text against 23%, and full technical setup"
+P0619,left,slight,"a contact route, which right lacks entirely, plus a wider menu"
+P0620,left,clear,"five task items against one, 10/12 depth against 1/12, and 100% alt-text"
+P0621,right,slight,"complete navigation, no broken links against 39, and mobile 100"
+P0622,left,clear,"a real menu with search, 100% alt-text against 11%, and accessible design"
+P0623,right,clear,"a logo and search, twenty timed events posted today, and 11/12 depth against 4/12"
+P0624,left,clear,right has no HTTPS and no contact route; left also has a real menu
+P0625,right,clear,"left has 1.4:1 contrast, mobile 0/100 and no programs listing"
+P0626,right,slight,"search bar, 63% alt-text against 17%, and no broken links"
+P0627,left,slight,complete task coverage and a search bar
+P0628,left,slight,"department directory, a wider menu, and not 662 days stale"
+P0629,right,clear,"five task items against one, and 100% alt-text against 29%"
+P0630,left,clear,"programs, departments and faculty listed, a search bar, and 100% alt-text against 0%"
+P0631,left,clear,"search bar, dated notices with timed events, and 100% alt-text against 17%"
+P0632,right,slight,"an academic programs listing, dated notices and deeper service"
+P0633,left,slight,admission notices and twice the service depth
+P0634,left,slight,dated notices with twenty timed events and deeper service
+P0635,left,slight,"a real 10-item menu, deeper service and readable contrast against 2.7:1"
+P0636,right,clear,"complete task coverage, a logo and search, and 100% alt-text against 0%"
+P0637,left,slight,a real 8-item menu with breadcrumb and readable contrast against 4.5:1
+P0638,left,slight,"a contact route, fresher notices with timed events, and deeper service"
+P0639,left,slight,"a contact route, which right lacks entirely"
+P0640,right,slight,"100% alt-text against 23%, a wider menu and full technical setup"
+P0641,left,slight,"department and faculty listings, a wider menu and readable contrast"
+P0642,left,slight,"complete task coverage, breadcrumb, deeper service and no broken links"
+P0643,right,slight,"a real menu with search, a contact route and accessible design"
+P0644,left,clear,"five task items against two, and right's 1.8:1 contrast is unreadable"
+P0645,right,clear,"five task items against two, 9/12 depth against 2/12, and no broken links"
+P0646,left,slight,dated notices and 97% alt-text against 43%
+P0647,right,slight,"an academic programs listing, deeper service and no broken links"
+P0648,left,clear,readable text; right's 1.1:1 contrast makes the page unusable
+P0649,right,slight,a page you can actually read; left's 1.1:1 contrast puts all its content out of reach
+P0650,left,clear,"complete task coverage, eleven timed events posted today, and 100% alt-text"
+P0651,right,slight,"a contact route, a wider menu and a notice board"
+P0652,right,slight,"notices posted today with seven events, and 78% alt-text against 62%"
+P0653,left,slight,"department directory, notices posted today with events, and 92% alt-text against 48%"
+P0654,left,slight,four task items against two and a search bar; both fail a baseline check
+P0655,left,slight,no broken links against 39 and better alt-text
+P0656,left,slight,"dated notices, deeper service and a wider menu"
+P0657,right,clear,five task items against one and 9/12 depth against 1/12
+P0658,right,slight,readable contrast against 2.4:1 and 10/12 service depth
+P0659,right,clear,"four task items against one, 9/12 depth against 3/12, and a notice board"
+P0660,right,slight,"a real menu, 90% alt-text against 2%, and deeper service"
+P0661,right,slight,a real 8-item menu and twice the service depth
+P0662,left,slight,"a search bar, breadcrumb, logo and deeper service"
+P0663,left,clear,"four task items against one, 9/12 depth against 5/12, and dated notices"
+P0664,left,clear,right has no menu and no task content at all
+P0665,left,clear,"complete task coverage, notices posted today, and not 109 days stale"
+P0666,left,slight,an academic programs listing and a dated notice board
+P0667,right,clear,left's 1.1:1 contrast is unreadable; right is fresh with 92% alt-text
+P0668,left,slight,right is an entirely empty page
+P0669,left,clear,right's 1.0:1 contrast is invisible; left has twelve events and full technical setup
+P0670,right,slight,"97% alt-text against 83%, deeper service and an accessibility toggle"
+P0671,right,slight,five task items against one and more than twice the service depth
+P0672,right,clear,"five task items against two, 100% alt-text against 74%, and no broken links"
+P0673,left,clear,right's 1.8:1 contrast is unreadable and it has two task items
+P0674,right,slight,"complete task coverage, 87% alt-text against 40%, and mobile 100"
+P0675,left,slight,"53% alt-text against 15%, mobile 100, and no broken links against four"
+P0676,right,slight,"a contact route, a full-height contrast and mobile 100 against a slightly fresher but contactless site"
+P0677,right,slight,"breadcrumb, student portal, faq and 100% alt-text against a wider menu"
+P0678,right,clear,1.1:1 contrast makes the left site's text effectively invisible
+P0679,left,clear,the right site offers only a contact page behind a one-item menu
+P0680,left,clear,"no menu, no tasks, no content at all on the left"
+P0681,right,slight,a programs listing and real service depth against a two-year-stale board
+P0682,right,clear,"programs, departments, 100% alt-text and a live notice board"
+P0683,right,clear,"the left site has no menu, no tasks and 0% alt-text"
+P0684,right,slight,86% alt-text against 14% and a notice board dated four days ago
+P0685,left,clear,"the right site lists only notices, with no programs, contact or faculty"
+P0686,left,slight,"admissions policy, faq, footer contact and mobile 100"
+P0687,right,clear,the left site has no primary menu and 0% alt-text
+P0688,right,slight,"fifteen upcoming events with date and time, and far better alt-text"
+P0689,left,slight,a notice board updated yesterday against one two years dead
+P0690,right,clear,the left site has no programs and no admission notices
+P0691,left,slight,"library, prospectus, departments and fresh notices against a two-page site"
+P0692,left,clear,"100% alt-text, mobile 100, ten service pages and notices posted today"
+P0693,left,clear,twice the service depth and a notice board updated yesterday
+P0694,right,slight,eleven dated upcoming events against a site with no notice board
+P0695,left,slight,"the right site has a zero-item menu, no search and no admission notices"
+P0696,left,slight,"deeper service pages, 97% alt-text and a board updated yesterday"
+P0697,left,clear,1.8:1 contrast and only three service pages on the right
+P0698,right,slight,a programs listing and a live board against one 657 days stale
+P0699,left,slight,"library, careers, alumni and scholarships against a thin five-page site"
+P0700,left,clear,"admissions policy, departments and eleven-item nav against 21 broken links"
+P0701,right,clear,1.1:1 contrast leaves the left site's text unreadable whatever else it has
+P0702,left,clear,"100% alt-text, notices posted today and eight service pages against a stale thin site"
+P0703,right,slight,"departments, faculty and twice the service depth with far better alt-text"
+P0704,right,clear,"the left site has a zero-item menu, no search and no admission notices"
+P0705,left,clear,twenty dated upcoming events and eleven service pages against 1.8:1 contrast
+P0706,right,slight,"a seven-item menu, search and full task coverage against a two-page site"
+P0707,left,slight,97% alt-text against 17% and a notice board updated today
+P0708,right,clear,"the left site has no menu, no contact route and 11% alt-text"
+P0709,left,clear,"notices today, eight events, 100% alt-text and eleven service pages"
+P0710,right,slight,"admissions policy, departments and admission notices the left site never lists"
+P0711,left,clear,"the right site lists no programs, no contact and no admissions at all"
+P0712,right,clear,39 broken links against a clean site with 100% alt-text
+P0713,left,slight,"admissions policy, departments and sixteen events against a thinner site"
+P0714,right,clear,"contact, departments, faculty and nine service pages against four"
+P0715,right,clear,the left site offers only a contact page and a mission statement
+P0716,right,slight,a contact route and footer contact against a site with none
+P0717,right,slight,"a dated notice board, six timed events and deeper service pages"
+P0718,left,clear,a contact route and 100% alt-text against a board 578 days stale
+P0719,right,clear,"contact, notices posted today and a nine-item menu"
+P0720,left,slight,a contact route and eighteen timed events against a site with neither
+P0721,right,clear,"contact, departments, fresh notices and ten service pages"
+P0722,right,clear,1.1:1 contrast and 16% alt-text against a well-built live site
+P0723,right,slight,"a contact route, breadcrumb and 100% alt-text"
+P0724,right,slight,"a seven-item menu, departments and better alt-text on both counts"
+P0725,left,clear,"twenty timed events, full task coverage and ten service pages"
+P0726,right,slight,"an admissions policy, a live notice board and 100% alt-text"
+P0727,left,clear,a programs listing and nine service pages against a board 657 days stale
+P0728,left,clear,"a contact route, fresher notices and deeper service pages"
+P0729,left,slight,twenty timed events and a footer contact against an undated board
+P0730,right,slight,97% alt-text against 53% and nine service pages against six
+P0731,right,clear,the left site is not even served over https and has no menu
+P0732,right,clear,the left site offers only a contact page and no programs
+P0733,right,clear,"neither is on https, but 66% alt-text and eight service pages beat 2%"
+P0734,right,clear,"the left site lists no programs, no contact and no admissions at all"
+P0735,right,slight,"a contrast toggle, mobile 100 and careers and prospectus pages"
+P0736,right,clear,"admission notices, a board updated five days ago and nine service pages"
+P0737,left,slight,an admission notices route and three more service pages
+P0738,right,slight,"an admissions policy, a live notice board and 100% alt-text"
+P0739,right,slight,a nine-item menu against no menu at all and 0% alt-text
+P0740,right,slight,a four-item menu and 96% alt-text against no navigation and 0%
+P0741,right,slight,"twenty timed events, no broken links and eight service pages"
+P0742,right,clear,the left site lists no programs and no admission notices
+P0743,right,slight,"a contact route and a board updated today, neither site on https"
+P0744,left,slight,"an admissions policy, departments and two more service pages"
+P0745,right,slight,a dated board updated today and twice the service depth
+P0746,right,slight,"an admission notices route, five timed events and a calendar"
+P0747,right,slight,a contact route and notices today against a board 578 days stale
+P0748,right,slight,"a contact route, nine service pages and 90% alt-text"
+P0749,left,slight,90% alt-text against 17% and mobile 100 against 75
+P0750,left,clear,2.4:1 contrast makes the right site's text unreadable
+P0751,right,clear,"a seven-item menu, breadcrumb, dated notices and 96% alt-text"
+P0752,right,slight,"an admissions policy, eight service pages and mobile 100 against a mobile 50 site"
+P0753,right,slight,a notice board dated five days ago and 88% alt-text against 43%
+P0754,right,slight,"admissions policy, departments, faculty and ten service pages"
+P0755,left,slight,the right site is not served over https and has no contact route
+P0756,right,clear,the left site lists nothing at all behind its twenty-item menu
+P0757,left,slight,departments and a board 130 days old against one 662 days dead
+P0758,left,clear,"the right site lists no programs, no contact and no admissions"
+P0759,right,clear,"an admissions policy, notices today and ten service pages"
+P0760,left,slight,"a programs listing the right site never offers, despite the broken links"
+P0761,left,slight,a live notice board and 92% alt-text against a bare site with 0%
+P0762,right,slight,100% alt-text and an admissions policy against 3% and 4.5:1
+P0763,left,slight,"a notice board, news and five service pages against two"
+P0764,left,slight,100% alt-text against 13% and a dated board against an undated one
+P0765,right,clear,"an admissions policy, notices four days old and twenty timed events"
+P0766,right,slight,"notices today, nine timed events and a breadcrumb trail"
+P0767,left,slight,a two-item menu and search against a zero-item menu and no search
+P0768,left,slight,"an admissions policy, a real menu and eight service pages"
+P0769,right,clear,2.4:1 contrast makes the left site's text unreadable
+P0770,right,clear,a real menu and a dated notice board against neither
+P0771,left,clear,1.0:1 contrast leaves the right site's text completely invisible
+P0772,right,clear,39 broken links against a clean site with an admissions policy
+P0773,right,slight,"admission notices, a seven-item menu and notices posted yesterday"
+P0774,left,slight,100% alt-text and seven service pages against 13% and two
+P0775,right,clear,"the left site lists no programs, no contact and no admissions"
+P0776,left,slight,2.7:1 contrast leaves the right site barely readable despite its content
+P0777,right,clear,the left site lists no programs and no admission notices
+P0778,right,slight,"an admissions policy, 100% alt-text and mobile 100"
+P0779,right,clear,1.0:1 contrast leaves the left site's text completely invisible
+P0780,left,slight,"nine service pages against five, a search box and a contrast toggle"
+P0781,left,slight,a programs and departments listing the right site never offers
+P0782,right,slight,twenty timed events and eleven service pages against four
+P0783,left,slight,"ten events, prospectus and careers against a bare navigable shell"
+P0784,left,slight,"a real menu, search and an admissions policy against a zero-item menu"
+P0785,right,slight,ten service pages against five and a board updated yesterday
+P0786,right,slight,"eight service pages, 16.9:1 contrast and a much faster load"
+P0787,right,clear,"the left site has no menu, no programs and one service page"
+P0788,right,slight,"neither site lists anything, but the right one can at least be navigated"
+P0789,right,slight,"a four-item menu against a zero-item one, at equal freshness"
+P0790,left,slight,"97% alt-text against 53%, dated notices and ten service pages"
+P0791,right,slight,"admission notices, a board updated today and four timed events"
+P0792,left,slight,2.4:1 contrast makes the right site's text unreadable
+P0793,left,clear,an admissions policy and 100% alt-text against 3% and a 662-day board
+P0794,left,slight,an admissions policy and twenty timed events against two
+P0795,right,slight,twice the service depth and twenty timed events
+P0796,left,clear,96% alt-text against 3% and a board not 662 days dead
+P0797,left,slight,"notices today, twenty events and 100% alt-text"
+P0798,left,clear,the right site scores 0 on mobile with no menu and 0% alt-text
+P0799,left,slight,"an admissions policy, a search box and seven upcoming events"
+P0800,right,slight,"an admissions policy, departments and a six-item menu"
+P0801,right,slight,eight service pages against four and 100% alt-text at 14.5:1
+P0802,left,slight,a programs listing and admission notices the right site never offers
+P0803,right,slight,"a search box, nine service pages and 21:1 contrast with a toggle"
+P0804,left,clear,"admission notices, departments and a board updated today"
+P0805,left,slight,"a contact route, an admissions policy and a live notice board"
+P0806,right,slight,"a dated board, sixteen events and nine service pages"
+P0807,right,slight,a notice board updated today and 95% alt-text against 67%
+P0808,right,clear,100% alt-text against 0% and mobile 100 with a real menu
+P0809,left,clear,"the right site has no menu, no content and nothing to do"
+P0810,right,clear,notices today and twenty timed events against a board 130 days stale
+P0811,right,clear,83% alt-text against 2% and an eleven-item menu against none
+P0812,right,slight,"https and a contact route, neither site having a menu"
+P0813,left,clear,"the right site lists only notices, 641 days stale, behind two pages"
+P0814,left,slight,"a contact route, an admissions policy and a board updated today"
+P0815,left,slight,a contact route and a live board against a menu leading nowhere
+P0816,right,slight,five upcoming events and a calendar against a board 578 days dead
+P0817,left,slight,a contact route the right site never offers
+P0818,left,slight,"an admissions policy, ten service pages and 100% alt-text"
+P0819,right,slight,100% alt-text against 52% and a footer contact route
+P0820,right,slight,"neither lists much, but the right site has search and admission notices"
+P0821,right,clear,the left site offers only a contact page and 11% alt-text
+P0822,left,clear,"a programs listing, eight service pages and no broken links"
+P0823,right,clear,"a real menu, search and 65% alt-text against none and 0%"
+P0824,left,slight,"twenty events, a calendar and a careers page"
+P0825,right,clear,91% alt-text against 13% and twenty events against one
+P0826,right,slight,ten service pages against four and 97% alt-text at 18.4:1
+P0827,left,slight,a faculty listing and a board updated today against one 55 days old
+P0828,left,slight,"a dated live board, deeper service pages and 96% alt-text"
+P0829,left,slight,a programs listing the right site never offers
+P0830,left,slight,"100% alt-text against 17%, mobile 100 and nine timed events"
+P0831,left,slight,"https and a contact route, neither site having a menu"
+P0832,left,slight,97% alt-text against 62% and a dated notice board
+P0833,left,clear,notices today and twenty events against a site with neither
+P0834,left,clear,100% alt-text against 14% and sixteen upcoming events
+P0835,left,slight,100% alt-text against 52% and timed upcoming events
+P0836,left,clear,"an admissions policy, a real menu and search against a zero-item menu"
+P0837,left,slight,53% alt-text and 14.8:1 against 3% and 4.5:1 with no accessible design
+P0838,right,clear,1.3:1 contrast and no programs or contact route on the left
+P0839,right,slight,a contact route and notices four days old against a board 109 days stale
+P0840,left,slight,a seven-item menu and search against no navigation at all
+P0841,left,slight,twenty timed events and a dated board against a site where nothing happens
+P0842,right,clear,1.1:1 contrast leaves the left site's text invisible
+P0843,right,slight,100% alt-text against 3% and mobile 100 against a site at 4.5:1
+P0844,right,slight,a contact route and a live board against a menu leading nowhere
+P0845,right,clear,the left site lists nothing at all behind its twenty-item menu
+P0846,right,clear,"an admissions policy, notices today and 100% alt-text against 6%"
+P0847,right,slight,93% alt-text against 13% and one more service page
+P0848,right,slight,"an admissions policy, 62% alt-text against 43% and mobile 100"
+P0849,right,slight,a programs listing the left site never offers
+P0850,right,clear,"an admissions policy, ten service pages and 94% alt-text against 13%"
+P0851,left,slight,an admission notices route and twenty upcoming events against nine
+P0852,left,clear,the right site lists nothing at all and has no menu
+P0853,right,slight,a five-item menu and 94% alt-text against no menu and 2%
+P0854,left,clear,eleven service pages and a live board against two pages and none
+P0855,left,clear,a contact route and 100% alt-text against a board 578 days dead
+P0856,left,clear,"the right site lists no programs, no contact and no admissions"
+P0857,left,slight,"100% alt-text against 40%, mobile 100 and a much faster load"
+P0858,right,clear,the left site lists nothing at all and has no menu
+P0859,right,slight,"an admissions policy, ten service pages and mobile 100"
+P0860,left,slight,a five-item menu and breadcrumb against no navigation at all
+P0861,right,slight,seven service pages against four and a contrast toggle
+P0862,left,clear,"a programs listing, nine service pages and 65% alt-text against 3%"
+P0863,left,slight,a notice board updated today against a site with none
+P0864,left,clear,the right site lists nothing at all and has no menu
+P0865,left,slight,an admissions policy and twenty timed events against two
+P0866,right,slight,"a dated board four days old, nine service pages and mobile 100"
+P0867,left,slight,"an admissions policy, twenty timed events and an eleven-item menu"
+P0868,left,clear,the right site lists nothing at all and has no menu
+P0869,left,clear,"an eight-item menu, eleven timed events and nine service pages"
+P0870,left,clear,"100% alt-text against 27%, ten service pages and departments"
+P0871,left,clear,100% alt-text against 5% and a notice board updated today
+P0872,left,clear,"admission notices, eight service pages and 73% alt-text against 13%"
+P0873,left,slight,a programs listing the right site never offers
+P0874,right,clear,1.1:1 contrast leaves the left site's text invisible
+P0875,left,clear,"programs, contact and departments the right site never lists"
+P0876,left,clear,the right site offers only a contact page and three service pages
+P0877,right,slight,94% alt-text against 41% and a contrast toggle
+P0878,right,clear,the left site lists nothing at all behind its twenty-item menu
+P0879,left,slight,"an admissions policy, a contrast toggle and no broken links"
+P0880,right,slight,100% alt-text against 2% and a six-item menu against none
+P0881,right,clear,"15 broken links and 14% alt-text against a live, readable site"
+P0882,left,slight,2.7:1 contrast leaves the right site barely readable
+P0883,right,slight,a board updated today and twenty events against a site where nothing happens
+P0884,right,clear,1.1:1 contrast leaves the left site's text invisible
+P0885,left,slight,an admissions policy and admission notices the right site never offers
+P0886,left,clear,100% alt-text against 6% and mobile 100 against a 130-day board
+P0887,left,clear,"the right site lists no programs, no contact and no admissions"
+P0888,right,clear,"an admissions policy, departments and a seven-item menu against none"
+P0889,left,slight,an admission notices route and a board updated today
+P0890,left,clear,the right site offers only a contact page and a mission statement
+P0891,right,slight,100% alt-text against 3% and mobile 100 against a 4.5:1 site
+P0892,left,slight,fifteen timed events and a contrast toggle against a two-item menu
+P0893,left,slight,"a board updated today, 100% alt-text and a faculty listing"
+P0894,left,slight,a contact route and a notice board the right site never offers
+P0895,left,slight,an admissions policy and every service page a visitor could want
+P0896,right,slight,1.0:1 contrast leaves the left site unreadable despite its depth
+P0897,right,slight,"21:1 contrast, 96% alt-text, timed events and a breadcrumb trail"
+P0898,left,slight,"a departments listing, twenty timed events and ten service pages"
+P0899,left,slight,"97% alt-text at 18.4:1, ten service pages and no broken links"
+P0900,right,clear,a programs listing and an admissions policy against a board 657 days dead

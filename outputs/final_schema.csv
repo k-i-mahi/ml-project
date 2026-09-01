@@ -1,0 +1,11 @@
+column,rows populated,range,role,definition
+uni_id,"all 1,226",int,identifier,join key across every artefact
+trackA_consensus,"all 1,226",0–100,BASELINE — not the target,mean of 5 persona rubric scores; a deterministic formula over the 69 attributes
+trackA_sd,"all 1,226",0–100,uncertainty,disagreement across the 5 personas
+trackB_bt_score,200,logit ≈ −5…+6,★ TARGET (y),Bradley–Terry latent strength from 900 blind pairwise judgments
+trackB_score_100,200,0–100,presentation only,monotone rescale of the target; must NOT be trained on
+trackB_bt_ci_low/high,200,logit,label uncertainty,"1,000-sample bootstrap CI"
+predicted_quality_score,"all 1,226",0–100,★ MODEL OUTPUT,what every ranking sorts on
+global_website_rank,"all 1,226",1–1226,deliverable,tie-break: B5 → B11 → uni_id
+regional_website_rank,"all 1,226",1–212,deliverable,within 6 regions
+country_website_rank,797,1–172,deliverable,"19 eligible countries only (≥20 universities, real country label)"

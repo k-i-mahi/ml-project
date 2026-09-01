@@ -1,0 +1,93 @@
+column,role,type,block,description,direction,missing
+uni_id,identifier,text,-,unique row id,,
+name,identifier,text,-,university name,,
+url,identifier,text,-,landing page crawled,,
+country,identifier,text,-,country label (10 of 22 are regional buckets),,
+region,identifier,text,-,one of 6 collection regions,,
+predicted_score,label/output,numeric,-,MODEL OUTPUT 0-100. The website quality score. Higher = better.,,
+grade,label/output,nominal,-,"A+ >=80, A >=65, B >=50, C >=35, D >=20, F <20",,
+global_rank,label/output,numeric,-,"1 = best of 1,226",,
+regional_rank,label/output,numeric,-,rank within its region,,
+country_rank,label/output,numeric,-,rank within country; only for 19 eligible countries,,
+percentile,label/output,numeric,-,100 = top of the ranking,,
+quality_score,label/output,numeric,-,GROUND TRUTH 0-100 from expert judgment. Populated for 200 rows only.,,
+has_expert_label,label/output,numeric,-,1 if this row carries the ground-truth label,,
+trackA_consensus,label/output,numeric,-,rule-based rubric baseline score 0-100 (NOT the target),,
+a01_logo,feature,binary,B1_header_nav,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a02_primary_nav,feature,binary,B1_header_nav,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a03_nav_item_count,feature,numeric,B1_header_nav,Retained landing-page attribute from the frozen 69-attribute specification.,non-monotone,verified absence (0) unless listed in assumptions.md
+a04_search_bar,feature,binary,B1_header_nav,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a05_language_toggle,feature,binary,B1_header_nav,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a06_breadcrumb,feature,binary,B1_header_nav,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a07_qs_badge,feature,binary,B2_rankings_recog,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a09_national_rank,feature,binary,B2_rankings_recog,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a11_accreditation,feature,binary,B2_rankings_recog,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a12_accred_count,feature,numeric,B2_rankings_recog,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a13_achievements,feature,binary,B2_rankings_recog,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a15_stat_item_count,feature,numeric,B2_rankings_recog,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a20_news_events,feature,binary,B3_notices_updates,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a21_calendar_link,feature,binary,B3_notices_updates,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a22_admission_notice,feature,binary,B3_notices_updates,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a25_event_images,feature,binary,B4_events_media,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a26_event_captions,feature,binary,B4_events_media,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a27_event_datetime,feature,binary,B4_events_media,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a28_contests,feature,binary,B4_events_media,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a29_video_content,feature,binary,B4_events_media,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a30_image_gallery,feature,binary,B4_events_media,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a31_social_feed_embed,feature,binary,B4_events_media,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a32_vision_mission,feature,binary,B5_page_content,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a33_about_blurb,feature,binary,B5_page_content,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a34_department_links,feature,binary,B5_page_content,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a35_faculty_link,feature,binary,B5_page_content,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a36_research_highlight,feature,binary,B5_page_content,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a37_programs_listing,feature,binary,B5_page_content,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a38_scholarship,feature,binary,B5_page_content,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a39_library_link,feature,binary,B5_page_content,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a40_career_link,feature,binary,B5_page_content,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a41_alumni_link,feature,binary,B5_page_content,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a42_faq_link,feature,binary,B5_page_content,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a43_contact_link,feature,binary,B5_page_content,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a44_student_portal,feature,binary,B5_page_content,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a45_prospectus,feature,binary,B5_page_content,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a46_admissions_policy,feature,binary,B5_page_content,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a47_footer_contact,feature,binary,B6_footer,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a48_footer_sitemap,feature,binary,B6_footer,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a49_copyright_line,feature,binary,B6_footer,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a50_social_links,feature,binary,B6_footer,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a51_quick_links,feature,binary,B6_footer,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a53_contrast_ratio,feature,numeric,B7_visual_design,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a54_banner_carousel,feature,binary,B7_visual_design,Retained landing-page attribute from the frozen 69-attribute specification.,non-monotone,verified absence (0) unless listed in assumptions.md
+a57_logo_prominence,feature,binary,B7_visual_design,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a58_live_chat,feature,binary,B8_service_interact,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a59_feedback_form,feature,binary,B8_service_interact,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a60_trust_seal,feature,binary,B8_service_interact,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a61_testimonials,feature,binary,B8_service_interact,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a63_mobile_score,feature,numeric,B9_technical_perf,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a65_https,feature,binary,B9_technical_perf,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a66_broken_links,feature,numeric,B9_technical_perf,Retained landing-page attribute from the frozen 69-attribute specification.,lower is better,verified absence (0) unless listed in assumptions.md
+a67_gzip,feature,binary,B9_technical_perf,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a69_title_meta,feature,binary,B10_seo_metadata,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a70_favicon,feature,binary,B10_seo_metadata,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a71_sitemap_robots,feature,binary,B10_seo_metadata,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a72_alt_text_pct,feature,numeric,B11_accessibility,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a73_accessible_design,feature,binary,B11_accessibility,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a74_a11y_toggle,feature,binary,B11_accessibility,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+a75_bookmark,feature,binary,B11_accessibility,Retained landing-page attribute from the frozen 69-attribute specification.,higher is better,verified absence (0) unless listed in assumptions.md
+notice_recency_days,feature,numeric,B3_notices_updates,Freshness is the single strongest available signal that a site is maintained. The clip censors the 285 impossible future dates rather than deleting those rows.,lower is better,Left NaN when no date exists; represented separately by a18_missing. Never imputed - absence of a dated notice is itself
+notice_evidence,feature,numeric,B3_notices_updates,Reconciles the a16/a17/a18 contradiction into ONE field. Undated notices get partial credit only - they are weak evidence of freshness.,higher is better,"0 is a genuine level (no evidence), not a missing value."
+event_evidence,feature,numeric,B4_events_media,327 rows flag events with count 0 and 158 count events with the flag off. Level 1 records that contradiction honestly instead of averaging it away.,higher is better,0 is a genuine level.
+load_time_z_region,feature,numeric,B9_technical_perf,"Collector and region are perfectly confounded (audit F17), so raw load time cannot distinguish a slow website from a slow connection. Standardising within region discards the untrustworthy between-region component and keeps the within-region ordering.",lower is better,No missing values.
+broken_links_log,feature,numeric,B9_technical_perf,"Absolute counts with no denominator and a 1,129 outlier. log1p compresses the tail; winsorisation stops one row driving the variance.",lower is better,0 read as verified-absence (assumption A1).
+broken_links_present,feature,binary,B9_technical_perf,"81% of rows are 0, so the count is mostly a presence indicator. Separating them lets a model use 'any broken links at all' independently of how many.",lower is better,nan
+mobile_ordinal,feature,numeric,B9_technical_perf,"a63 is a 3-to-6 level heuristic, not a Lighthouse measurement (audit F12). Treating it as continuous implies precision it does not have.",higher is better,No missing values.
+nav_quality,feature,numeric,B1_header_nav,Navigation is the clearest case where 'more' is not 'better': 0-1 items is a broken menu and 20 items is an undifferentiated dump. A linear term cannot express this.,non-monotone,No missing values.
+a18_missing,feature,binary,B3_notices_updates,"NULL IS NOT ZERO. For a18 the missingness is a quality signal in itself (no dated notice was found); for a72/a53 it records a failed measurement, which must not be confused with a bad measurement.",non-monotone,n/a - this IS the missingness treatment.
+a72_missing,feature,binary,B11_accessibility,"NULL IS NOT ZERO. For a18 the missingness is a quality signal in itself (no dated notice was found); for a72/a53 it records a failed measurement, which must not be confused with a bad measurement.",non-monotone,n/a - this IS the missingness treatment.
+a53_missing,feature,binary,B7_visual_design,"NULL IS NOT ZERO. For a18 the missingness is a quality signal in itself (no dated notice was found); for a72/a53 it records a failed measurement, which must not be confused with a bad measurement.",non-monotone,n/a - this IS the missingness treatment.
+content_completeness_B5,feature,numeric,B5_page_content,"Information completeness within a conceptual dimension, on a common 0-1 scale regardless of how many columns the block happens to contain.",higher is better,No missing values among these binaries.
+footer_completeness_B6,feature,numeric,B6_footer,"Information completeness within a conceptual dimension, on a common 0-1 scale regardless of how many columns the block happens to contain.",higher is better,No missing values among these binaries.
+a11y_completeness_B11,feature,numeric,B11_accessibility,"Information completeness within a conceptual dimension, on a common 0-1 scale regardless of how many columns the block happens to contain.",higher is better,No missing values among these binaries.
+seo_completeness_B10,feature,numeric,B10_seo_metadata,"Information completeness within a conceptual dimension, on a common 0-1 scale regardless of how many columns the block happens to contain.",higher is better,No missing values among these binaries.
+nav_completeness_B1,feature,numeric,B1_header_nav,"Information completeness within a conceptual dimension, on a common 0-1 scale regardless of how many columns the block happens to contain.",higher is better,No missing values among these binaries.
+events_completeness_B4,feature,numeric,B4_events_media,"Information completeness within a conceptual dimension, on a common 0-1 scale regardless of how many columns the block happens to contain.",higher is better,No missing values among these binaries.
+service_completeness_B8,feature,numeric,B8_service_interact,"Information completeness within a conceptual dimension, on a common 0-1 scale regardless of how many columns the block happens to contain.",higher is better,No missing values among these binaries.

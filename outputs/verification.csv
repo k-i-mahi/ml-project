@@ -1,0 +1,9 @@
+check,status,detail
+1. audit reproduces the data facts,PASS,"1,230 raw → 1226 rows after resolving 4 duplicate domains; 20 findings logged"
+2. rubric frozen before scoring,PASS,rubric_v1.md predates expert_labels_trackA.csv by 3.9 min (sha fc645121b806)
+3. blinding held,PASS,"0 university names, countries, regions or 'trackA' tokens in trackB_profiles.md (185,079 chars, 200 cards)"
+4. judging not scripted,PASS,"900 judgments, 847 distinct free-text reasons (94%); Track A explains only 76.8% of them and 44% of the target is not a linear image of Track A"
+5. self-consistency ≥ 0.75,PASS,86.7% on 60 swapped repeats held out of the fit (95% CI 75.4%–94.1%)
+6. no leakage into the design matrix,PASS,prestige VALUE columns absent; region/member/country excluded from the 78 model features; all preprocessing fitted inside CV folds
+7. Track A scored against Track B alongside every model,PASS,"Track A composite: CV ρ = 0.791, LORO ρ = 0.708; best model LightGBM+mono at 0.844"
+8. pipeline runs end to end,PASS,"8/8 upstream notebooks executed with zero error outputs; 09 source present and running; final ranking has 1,226 rows"

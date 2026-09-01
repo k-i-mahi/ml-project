@@ -1,0 +1,12 @@
+block,nominal_weight_pct,shap_share_pct,ratio,gap_pp
+B11_accessibility,6.44,14.819,2.301,8.379
+B5_page_content,37.93,42.893,1.131,4.963
+B7_visual_design,3.42,6.64,1.941,3.22
+B6_footer,5.39,6.438,1.194,1.048
+B8_service_interact,1.78,1.053,0.592,-0.727
+B2_rankings_recog,2.13,1.026,0.482,-1.104
+B10_seo_metadata,3.64,1.865,0.512,-1.775
+B3_notices_updates,12.68,10.155,0.801,-2.525
+B9_technical_perf,6.22,2.79,0.449,-3.43
+B1_header_nav,11.46,7.988,0.697,-3.472
+B4_events_media,8.91,4.333,0.486,-4.577

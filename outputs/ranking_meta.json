@@ -1,0 +1,41 @@
+{
+  "n_ranked": 1226,
+  "n_labelled": 200,
+  "n_country_eligible": 797,
+  "n_eligible_countries": 19,
+  "loadtime_spearman": 0.9943350519689123,
+  "loadtime_median_shift": 22.0,
+  "loadtime_over50": 204,
+  "shap_block_shares": {
+    "B5_page_content": 42.89,
+    "B11_accessibility": 14.82,
+    "B3_notices_updates": 10.16,
+    "B1_header_nav": 7.99,
+    "B7_visual_design": 6.64,
+    "B6_footer": 6.44,
+    "B4_events_media": 4.33,
+    "B9_technical_perf": 2.79,
+    "B10_seo_metadata": 1.87,
+    "B8_service_interact": 1.05,
+    "B2_rankings_recog": 1.03
+  },
+  "rubric_vs_shap_spearman": 0.8000000000000002,
+  "most_underweighted": [
+    "B11_accessibility",
+    "B7_visual_design"
+  ],
+  "most_overweighted": [
+    "B10_seo_metadata",
+    "B9_technical_perf",
+    "B4_events_media"
+  ],
+  "loro_spearman_by_region": {
+    "Asia (East & Southeast)": 0.783,
+    "Eastern & Southern Europe": 0.844,
+    "Latin America & Africa": 0.77,
+    "North America": 0.872,
+    "South & Central Asia + Oceania": 0.897,
+    "Western & Northern Europe": 0.897
+  },
+  "region_kruskal_p": 1.5480685803750867e-60
+}

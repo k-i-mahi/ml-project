@@ -1,0 +1,20 @@
+country,n,mean_score,best_global,median_global
+Australia,38,70.961,2,206.5
+United Kingdom,40,66.663,11,296.5
+France,23,64.342,78,353.0
+India,90,62.775,14,406.5
+United States,172,61.642,1,442.0
+Canada,27,61.635,35,349.0
+Germany,34,61.176,10,448.5
+Bangladesh,22,60.814,56,396.0
+South Africa,21,60.358,31,445.0
+Pakistan,25,56.942,6,575.0
+Italy,32,54.265,32,497.0
+Netherlands,20,51.489,75,699.5
+Poland,28,49.735,74,664.0
+Spain,34,47.753,114,655.0
+South Korea,23,44.509,121,671.0
+Japan,41,42.315,125,867.0
+China,50,26.053,656,1045.0
+Mexico,20,25.224,571,1118.5
+Brazil,57,24.629,271,1098.0

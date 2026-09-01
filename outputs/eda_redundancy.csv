@@ -1,0 +1,16 @@
+feature_a,feature_b,abs_spearman,flag
+a11_accreditation,a12_accred_count,0.8577348678322626,related
+a25_event_images,a26_event_captions,0.755700624165097,related
+a36_research_highlight,a37_programs_listing,0.7094292851976979,related
+a20_news_events,a36_research_highlight,0.7008554814977966,related
+a33_about_blurb,a36_research_highlight,0.6881653591582235,ok
+a33_about_blurb,a35_faculty_link,0.6869751043151019,ok
+a35_faculty_link,a37_programs_listing,0.6805926455884499,ok
+a30_image_gallery,a54_banner_carousel,0.6765811497442837,ok
+a35_faculty_link,a36_research_highlight,0.6679976628465444,ok
+a33_about_blurb,a37_programs_listing,0.6599673719515634,ok
+a20_news_events,a37_programs_listing,0.6452846725950949,ok
+a20_news_events,a33_about_blurb,0.6426622898528471,ok
+a20_news_events,a35_faculty_link,0.640422766550432,ok
+a02_primary_nav,a03_nav_item_count,0.6321673366782324,ok
+a20_news_events,a22_admission_notice,0.630502485760635,ok

@@ -1,0 +1,49 @@
+{
+  "name": "University Website Quality Scorer",
+  "version": "1.0",
+  "algorithm": "LightGBM gradient-boosted trees with monotonic constraints",
+  "hyperparameters": {
+    "colsample_bytree": 0.6,
+    "learning_rate": 0.05,
+    "min_child_samples": 15,
+    "n_estimators": 200,
+    "num_leaves": 15,
+    "reg_lambda": 1.0
+  },
+  "n_features": 78,
+  "n_train_total": 200,
+  "n_train_split": 160,
+  "n_test": 40,
+  "target": "expert quality score 0-100 (Bradley-Terry latent strength, rescaled)",
+  "score_anchor": {
+    "logit_min": -4.621884226391782,
+    "logit_max": 5.565005300701482,
+    "formula": "score = clip(100*(logit-logit_min)/(logit_max-logit_min), 0, 100)"
+  },
+  "held_out_test": {
+    "spearman": 0.8849906191369608,
+    "kendall": 0.7153846153846154,
+    "mae": 8.916653894025808,
+    "rmse": 12.145187238720455,
+    "r2": 0.7517605639754092
+  },
+  "cross_validation": {
+    "spearman_mean": 0.881,
+    "spearman_sd": 0.026,
+    "protocol": "nested 5-fold x 5 seeds"
+  },
+  "leave_one_region_out": {
+    "spearman_mean": 0.844,
+    "spearman_sd": 0.056
+  },
+  "baseline_rule_based": {
+    "spearman_cv": 0.791,
+    "spearman_loro": 0.708
+  },
+  "monotone_constraints": {
+    "increasing": 65,
+    "decreasing": 5,
+    "free": 8
+  },
+  "deployment": "scores all 1,226 universities; 1,026 of them are pure inference"
+}
