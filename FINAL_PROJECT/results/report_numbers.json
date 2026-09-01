@@ -1,0 +1,20 @@
+{
+  "r2": 0.9931092370261972,
+  "mae": 1.114394275606706,
+  "rmse": 1.5573280711664526,
+  "spearman": 0.9930958580972798,
+  "kendall": 0.9374160497567398,
+  "within1": 0.5772357723577236,
+  "within2": 0.8333333333333334,
+  "within5": 0.991869918699187,
+  "best_params": {
+    "learning_rate": 0.05,
+    "min_child_samples": 5,
+    "n_estimators": 900,
+    "num_leaves": 15
+  },
+  "best_cv": 0.9892353284505987,
+  "n_grid": 81,
+  "n_gated_test": 36,
+  "cv_test_agreement": 0.8881118881118882
+}

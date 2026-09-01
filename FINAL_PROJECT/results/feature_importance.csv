@@ -1,0 +1,72 @@
+feature,importance,dimension
+a37_programs_listing,29.089086621307793,D1 academic information
+a02_primary_nav,26.285721575427544,D4 navigation
+a35_faculty_link,6.945741983864768,D1 academic information
+a34_department_links,5.424570965063716,D1 academic information
+a36_research_highlight,4.3892137296326545,D1 academic information
+a22_admission_notice,4.1579763147875255,D2 admission support
+notice_recency_days,3.990927885306777,D3 currency & activity
+a20_news_events,3.742643534287803,D3 currency & activity
+a38_scholarship,3.380463962682777,D2 admission support
+a39_library_link,2.986516955598854,D1 academic information
+a03_nav_item_count,2.2189249607823838,D4 navigation
+a46_admissions_policy,1.3704636724981831,D2 admission support
+a40_career_link,1.0001708368633948,D1 academic information
+a43_contact_link,0.9962747777549192,D2 admission support
+a24_event_count,0.8213830945636541,not used by the scoring model
+a21_calendar_link,0.6844392140559384,D3 currency & activity
+a04_search_bar,0.3267378375628392,D4 navigation
+a45_prospectus,0.264439218359496,D2 admission support
+a51_quick_links,0.26288569805739354,D4 navigation
+a72_alt_text_pct,0.18344856893632433,D5 usability & access
+a23_upcoming_events,0.1747825669914638,not used by the scoring model
+a73_accessible_design,0.15548920080255846,D5 usability & access
+a48_footer_sitemap,0.1379556633666931,D4 navigation
+notice_recency_days_was_missing,0.1286494625511895,not used by the scoring model
+a17_notice_timestamp,0.11301606673058742,not used by the scoring model
+load_time_z_region,0.11112205678169663,D6 technical quality
+a05_language_toggle,0.10190286001303106,D5 usability & access
+a63_mobile_score,0.07438212878249607,D5 usability & access
+a27_event_datetime,0.07355001703401158,D3 currency & activity
+a06_breadcrumb,0.05330185598994803,D4 navigation
+a33_about_blurb,0.04675721906118789,D7 transparency
+a53_contrast_ratio,0.04616390573570388,D5 usability & access
+a32_vision_mission,0.037791529587375396,D7 transparency
+a15_stat_item_count,0.02478844987645929,not used by the scoring model
+a50_social_links,0.0240781712677172,not used by the scoring model
+a66_broken_links,0.02369217498063655,D6 technical quality
+a47_footer_contact,0.02150692296395899,D7 transparency
+a41_alumni_link,0.020064452648619342,not used by the scoring model
+a44_student_portal,0.019389669249089518,D7 transparency
+a11_accreditation,0.017522685987463066,D7 transparency
+a42_faq_link,0.008811084640835725,not used by the scoring model
+a71_sitemap_robots,0.008551191177197905,not used by the scoring model
+a26_event_captions,0.0068536328574244874,not used by the scoring model
+a28_contests,0.005394956824184215,not used by the scoring model
+a09_national_rank,0.0035894591632981295,not used by the scoring model
+a57_logo_prominence,0.0030025842291154683,not used by the scoring model
+a13_achievements,0.0029706316455695644,not used by the scoring model
+a70_favicon,0.0029650468515077665,not used by the scoring model
+a16_notice_board,0.0027800695497701036,not used by the scoring model
+a29_video_content,0.0027010028459905308,not used by the scoring model
+a60_trust_seal,0.0026944391940431143,not used by the scoring model
+a12_accred_count,0.0026276122137969937,not used by the scoring model
+a74_a11y_toggle,0.002417760246501787,D5 usability & access
+a69_title_meta,0.002156973440871995,not used by the scoring model
+a61_testimonials,0.0020308948426884035,not used by the scoring model
+a49_copyright_line,0.002021498163645123,not used by the scoring model
+a25_event_images,0.0018566934863679012,not used by the scoring model
+a14_stats_block,0.001420341457825983,not used by the scoring model
+a58_live_chat,0.0013672862001246138,not used by the scoring model
+a67_gzip,0.0013412357151474587,D6 technical quality
+a07_qs_badge,0.001221096079213604,not used by the scoring model
+a01_logo,0.0012024508512661965,not used by the scoring model
+a54_banner_carousel,0.0009727266645709327,not used by the scoring model
+a30_image_gallery,0.0004443783942285803,not used by the scoring model
+a75_bookmark,0.00031401172846319786,not used by the scoring model
+a59_feedback_form,0.0002141288018488563,not used by the scoring model
+a31_social_feed_embed,9.221046169915784e-05,not used by the scoring model
+a65_https,4.613447617273108e-05,D6 technical quality
+a53_contrast_ratio_was_missing,0.0,not used by the scoring model
+a72_alt_text_pct_was_missing,0.0,not used by the scoring model
+broken_links_log,0.0,D6 technical quality

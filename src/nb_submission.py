@@ -63,6 +63,7 @@ plt.rcParams.update({"figure.dpi": 110, "font.size": 9, "axes.grid": True, "grid
 HERE = Path.cwd()
 BASE = HERE.parent if HERE.name == "notebook" else HERE
 DATA, MODEL = BASE / "data", BASE / "model"
+PROV = DATA / "label_provenance"   # raw judgments + fit statistics behind the label
 print(f"project root : {BASE}")
 print(f"lightgbm     : {lgb.__version__}")
 
@@ -93,8 +94,8 @@ print(f"test   {test.shape[0]:>5} rows x {len(FEATURES)} features")
 print(f"full   {full.shape[0]:>5} rows  (all universities, scored by the trained model)")
 print(f"\nno overlap between train and test: {len(set(train.uni_id) & set(test.uni_id)) == 0}")
 
-train.head(3)[["name", "country", "a37_programs_listing", "a72_alt_text_pct",
-               "content_completeness_B5", "quality_score"]]
+train.head(3)[["name", "country", "a37_programs_listing", "a34_department_links",
+               "notice_recency_days", "content_completeness_B5", "quality_score"]]
 
 # %% [markdown]
 # ## What the 78 features are
@@ -133,9 +134,12 @@ ax[2].set_yticks(range(len(prev))); ax[2].set_yticklabels(prev.index, fontsize=7
 ax[2].set_xlabel("% of sites that have it"); ax[2].set_title("Presence of key task features")
 plt.tight_layout(); plt.show()
 
-print("Missing values are NOT errors — they are meaningful:")
-print("  notice_recency_days = NaN  ->  the site has no dated notice at all")
-print("  a72_alt_text_pct    = NaN  ->  the page has no images to caption")
+print("Missing values are NOT errors, and they are NOT filled with the median:")
+print("  notice_recency_days = absent -> no dated notice exists at all -> filled 3650 days")
+print("                                 (median-filling would have said 'posted yesterday')")
+print("  a72_alt_text_pct    = absent -> no image carries a text alternative -> filled 0%")
+print("  a53_contrast_ratio  = absent -> no readable text block found      -> filled 1.0:1")
+print("A companion *_missing flag keeps 'this was unmeasured' recoverable as a separate fact.")
 print("LightGBM handles NaN natively, so no imputation is applied to the tree model.")
 
 # %% [markdown]
@@ -163,31 +167,94 @@ print("LightGBM handles NaN natively, so no imputation is applied to the tree mo
 # | is it a formula over the features? | **yes** | **no** |
 # | role here | the baseline to beat | **the training target** |
 #
-# For Track B, each of the 200 universities was rendered as an **anonymised profile card** —
-# no name, country, region or URL — and presented in pairs. Each pair was judged on the single
-# question *"which of these two websites would I rather land on?"*. 900 such judgments were
-# collected, then converted into a single latent score per university using the
-# **Bradley–Terry model**, `P(i beats j) = σ(βᵢ − βⱼ)`, and rescaled to 0–100.
+# For Track B, each of the 200 universities was rendered as an **anonymised profile card** -
+# no name, country, region or URL - and presented in pairs. 900 such judgments were collected,
+# then converted into a single latent score per university using the **Bradley-Terry model**,
+# `P(i beats j) = sigma(beta_i - beta_j)`, and rescaled to 0-100.
 #
+# ### The question the judge was asked - and why it was changed
+#
+# The first labelling pass asked a vague question ("which site would I rather land on?") and
+# handed the judge a card that listed *alt-text coverage* as a headline number. The result was
+# predictable in hindsight: **37.6% of the reasons cited alt-text**, an attribute no visitor
+# can perceive. The label was measuring machine-readable accessibility metadata rather than
+# the quality of the website as a website.
+#
+# It was also corrupted by a missing-value bug. `notice_recency_days` had been median-imputed,
+# and the median is **1 day** - so the 469 sites with *no dated notice anywhere* were being
+# described to the judge as "posted yesterday". Null was being read as average when it means
+# absent. The corrected policy ships as `data/label_provenance/missing_value_policy.json`.
+#
+# Both defects were fixed and **all 900 pairs were re-judged**, with the question restated
+# concretely:
+#
+# > *You are a prospective student deciding where to apply. You have never heard of either
+# > university. Based on the website alone, which one would you feel more confident applying
+# > to?* Weighing heavily: can I find the programmes, the requirements, the deadlines and the
+# > fees; can I reach a human; is the institution visibly active; can I find my way around;
+# > can I actually read the page. Weighing lightly: badges, galleries, videos, social links.
+#
+# The same 200 universities and the same 900 pairs were re-used, which makes v1 -> v2 a
+# controlled comparison rather than a new experiment. Both passes ship in
+# `data/label_provenance/`, so this can be checked rather than taken on trust.
+
+# %%
+_j1 = pd.read_csv(PROV / "trackB_judgments.csv")      # first pass, superseded
+_j2 = pd.read_csv(PROV / "trackB_judgments_v2.csv")   # the pass the label is built from
+_flip = (_j1.merge(_j2, on="pair_id", suffixes=("_1", "_2"))
+         .eval("winner_1 != winner_2").mean())
+_themes = {
+    "alt-text / screen-reader": r"alt|screen reader|labelled for screen",
+    "admission-task content":   r"requirement|scholarship|prospectus|programme|deadline|notice|admission|contact",
+    "freshness":                r"updated today|updated yesterday|days ago|abandoned|quiet|dated post|stale",
+    "navigation":               r"menu|search|breadcrumb|sitemap|footer|navigat",
+}
+print(f"{'what the reason cites':<26}{'v1 pass':>10}{'v2 pass':>10}")
+for _n, _p in _themes.items():
+    print(f"{_n:<26}{_j1.reason.str.contains(_p, case=False).mean():>9.1%}"
+          f"{_j2.reason.str.contains(_p, case=False).mean():>10.1%}")
+print()
+print(f"winners that changed between the two passes: {_flip:.1%}")
+print()
+print("Not 2% (which would mean the rewrite changed nothing) and not 45% (which would mean")
+print("the judgments were noise). The obvious pairs held; the close ones moved. That is the")
+print("signature of a genuine change of criterion.")
+
+# %% [markdown]
 # ### Why this makes the learning problem real
 
 # %%
+# every number below is read out of the fit, never typed in by hand
+BT = json.loads((PROV / "trackB_fit_meta.json").read_text(encoding="utf-8"))
+_pairs = pd.read_csv(PROV / "trackB_pairs.csv")
+_key   = pd.read_csv(PROV / "trackB_key.csv").set_index("sid")
+_m = _pairs.merge(_j2, on="pair_id")
+_gap = _m.left_sid.map(_key.trackA_consensus) - _m.right_sid.map(_key.trackA_consensus)
+_m["rubric_right"] = (_gap > 0) == (_m.winner == "left")
+ACC = _m.groupby("pair_type").rubric_right.mean()
+EASY, HARD = float(ACC["random"]), float(ACC["close"])
+
 validation = pd.DataFrame([
-    ("Judgments collected", "900", "840 unique pairs + 60 repeated with the sides swapped"),
-    ("Self-consistency", "86.7%", "agreement on the 60 swapped repeats — the rater is stable"),
-    ("Position bias", "48.4% left", "p = 0.37 — no side preference"),
-    ("Spearman(rubric, judgment)", "0.790", "correlated, so both measure quality…"),
-    ("…but variance NOT explained by the rubric", "44%", "…yet the label is not a formula in disguise"),
-    ("Rubric predicts easy pairs", "86.0%", "wide-gap pairs: the two methods agree"),
-    ("Rubric predicts hard pairs", "63.2%", "close pairs: the formula falls towards chance"),
+    ("Judgments collected", f"{BT['n_judgments']}",
+     f"{BT['n_unique_pairs']} unique pairs + {BT['n_repeats']} repeated with the sides swapped"),
+    ("Self-consistency", f"{BT['self_consistency']:.1%}",
+     "agreement on the swapped repeats - the rater is stable"),
+    ("Position bias", f"{BT['left_share']:.1%} left",
+     f"p = {BT['position_bias_p']:.2f} - no side preference"),
+    ("Spearman(rubric, judgment)", f"{BT['spearman_A_B']:.3f}",
+     "correlated, so both measure quality..."),
+    ("...variance NOT explained by the rubric", f"{1 - BT['linear_r2']:.0%}",
+     "...yet the label is not that formula in disguise"),
+    ("Rubric predicts easy pairs", f"{EASY:.1%}", "wide-gap pairs: the two methods agree"),
+    ("Rubric predicts hard pairs", f"{HARD:.1%}", "close pairs: the formula falls towards chance"),
 ], columns=["check", "value", "meaning"])
 print(validation.to_string(index=False))
 
-print("""
+print(f"""
 READ THE LAST TWO ROWS TOGETHER. When two websites are obviously different, a weighted
-formula and a human judgment agree (86%). When they are close, the formula is barely better
-than a coin flip (63%) — it cannot tell apart two sites with similar feature counts but
-different execution. A holistic judgment can.
+formula and a human judgment agree ({EASY:.0%}). When they are close, the formula is barely
+better than a coin flip ({HARD:.0%}) - it cannot separate two sites with similar feature
+counts but different execution. A holistic reading can.
 
 That gap is exactly the signal the model is asked to learn, and it is why this is a genuine
 supervised learning problem rather than curve-fitting to our own arithmetic.
@@ -205,13 +272,14 @@ ax[0].set_ylabel("Track B — expert judgment label")
 ax[0].set_title(f"The label vs. the formula\nSpearman ρ = {stats.spearmanr(lab.trackA_consensus, lab.quality_score).statistic:.3f}")
 ax[0].legend()
 
-ax[1].bar(["wide-gap pairs\n(n=500)", "close pairs\n(n=340)"], [86.0, 63.2],
-          color=["#2f855a", "#c53030"], width=0.55)
+_n_easy = int((_m.pair_type == "random").sum()); _n_hard = int((_m.pair_type == "close").sum())
+ax[1].bar([f"wide-gap pairs\n(n={_n_easy})", f"close pairs\n(n={_n_hard})"],
+          [EASY * 100, HARD * 100], color=["#2f855a", "#c53030"], width=0.55)
 ax[1].axhline(50, color="k", ls="--", lw=1, label="chance")
 ax[1].set_ylim(0, 100); ax[1].set_ylabel("% of judgments the rubric gets right")
 ax[1].set_title("Where the rule-based formula breaks down")
-for i, v in enumerate([86.0, 63.2]):
-    ax[1].text(i, v + 2, f"{v}%", ha="center", fontweight="bold")
+for i, v in enumerate([EASY * 100, HARD * 100]):
+    ax[1].text(i, v + 2, f"{v:.1f}%", ha="center", fontweight="bold")
 ax[1].legend()
 plt.tight_layout(); plt.show()
 
@@ -454,11 +522,15 @@ plt.tight_layout(); plt.show()
 
 print(imp.head(10).to_string(index=False, float_format=lambda v: f"{v:.4f}"))
 print(f"""
-Reading this: the score is driven mainly by whether the site actually serves a visitor —
-does it list programmes, is there an admissions policy, can images be read by a screen
-reader ({imp[imp.feature=='a72_alt_text_pct'].mean_abs_shap.iloc[0]:.2f}), is the text
-legible, is the notice board current. Page-speed and SEO metrics contribute very little,
-because almost every university scores alike on them, so they cannot separate anyone.
+Reading this: the score is driven by whether the site actually serves a visitor who is
+trying to apply - does it list programmes and departments, is there an admissions policy,
+is the notice board current, is the text legible, can the visitor navigate. Page-speed,
+SEO metadata and accessibility metadata contribute very little, because almost every
+university scores alike on them, so they cannot separate anyone.
+
+That ordering is a direct consequence of the relabelling in section 3. Under the first
+labelling pass, alt-text coverage was among the strongest drivers; under the applicant-lens
+label it does not reach the top fifteen.
 """)
 
 # %% [markdown]
@@ -498,7 +570,7 @@ def lookup(query, n=6):
         print(f"\n  Profile:  programmes listed: {'yes' if r.a37_programs_listing else 'NO'}"
               f" | contact page: {'yes' if r.a43_contact_link else 'NO'}"
               f" | departments: {'yes' if r.a34_department_links else 'NO'}")
-        print(f"            alt-text {r.a72_alt_text_pct:.0f}%"
+        print(f"            notice board {int(r.notice_recency_days)}d old"
               f" | contrast {r.a53_contrast_ratio:.1f}:1"
               f" | menu {int(r.a03_nav_item_count)} items"
               f" | mobile {int(r.a63_mobile_score)}/100")
@@ -648,27 +720,48 @@ print(f"\nThe model separates the two by {strong['score'] - weak['score']:.1f} p
       f"{weak['global_rank'] - strong['global_rank']} rank positions.")
 
 # %% [markdown]
-# ### Re-scoring an existing university with one attribute changed
+# ### Re-scoring an existing university with one thing changed
 #
-# A useful demonstration: take a real university and ask *what if it fixed its alt-text?*
+# The practical question a university actually asks: *what would move our score?* Because the
+# label was built from an applicant's point of view, the answer is about content a visitor
+# needs, not about metadata. The two interventions below are directly comparable.
 
 # %%
 target_row = full[full.name.str.contains("University of Rajshahi", na=False)].iloc[0]
 current = {f: target_row[f] for f in FEATURES if pd.notna(target_row[f])}
-before = score_university(current, name=f"{target_row['name']} — as measured", verbose=False)
+before = score_university(current, name="as measured", verbose=False)
 
-improved = dict(current)
-improved["a72_alt_text_pct"] = 95.0
-improved["a11y_completeness_B11"] = 0.83
-after = score_university(improved, name=f"{target_row['name']} — with alt-text fixed", verbose=False)
+# intervention 1 - accessibility metadata only (what the FIRST label rewarded)
+meta_only = dict(current)
+meta_only["a72_alt_text_pct"] = 95.0
+meta_only["a11y_completeness_B11"] = 0.83
+after_meta = score_university(meta_only, name="alt-text fixed", verbose=False)
 
-print(f"{target_row['name']}")
-print(f"  as measured (alt-text {target_row.a72_alt_text_pct:.0f}%) : "
-      f"score {before['score']:.1f}  rank ~{before['global_rank']}")
-print(f"  with alt-text raised to 95%              : "
-      f"score {after['score']:.1f}  rank ~{after['global_rank']}")
-print(f"  ---> +{after['score'] - before['score']:.1f} points, "
-      f"{before['global_rank'] - after['global_rank']} places gained")
+# intervention 2 - publish what an applicant came for
+applicant = dict(current)
+applicant["a46_admissions_policy"] = 1
+applicant["a38_scholarship"] = 1
+applicant["notice_recency_days"] = 3.0
+applicant["notice_evidence"] = 3
+if "content_completeness_B5" in applicant:
+    applicant["content_completeness_B5"] = min(1.0, applicant["content_completeness_B5"] + 2/15)
+after_app = score_university(applicant, name="admissions content published", verbose=False)
+
+print(target_row["name"])
+print(f"  as measured                                    : score {before['score']:.1f}"
+      f"  rank ~{before['global_rank']}")
+print(f"  + alt-text raised to 95% (metadata only)       : score {after_meta['score']:.1f}"
+      f"  rank ~{after_meta['global_rank']}"
+      f"   ({after_meta['score'] - before['score']:+.1f})")
+print(f"  + admissions policy, scholarships, live board  : score {after_app['score']:.1f}"
+      f"  rank ~{after_app['global_rank']}"
+      f"   ({after_app['score'] - before['score']:+.1f})")
+print()
+print("The comparison is the point. Fixing metadata a visitor cannot see moves the score",
+      "barely at all;")
+print("publishing the information an applicant came for moves it substantially. Under the",
+      "first")
+print("labelling pass those two lines would have been the other way round.")
 
 # %% [markdown]
 # ---
@@ -744,6 +837,20 @@ compare("Khulna University of Engineering", "Bangladesh University of Engineerin
 # ### Results
 
 # %%
+# the over/under-weighted blocks are read from the ranking artefacts, not asserted
+RM = json.loads((PROV / "ranking_meta.json").read_text(encoding="utf-8"))
+BW = pd.read_csv(PROV / "trackA_block_weights.csv").set_index("block")["mean_weight_pct"]
+SH = pd.Series(RM["shap_block_shares"])
+BLK = pd.DataFrame({"declared": BW, "realised": SH}).dropna()
+BLK["ratio"] = BLK.realised / BLK.declared
+BLK = BLK.sort_values("ratio")
+OVER, UNDER = BLK.index[0], BLK.index[-1]           # largest mis-allocation each way
+W_DECL, W_REAL, W_RAT = BLK.loc[OVER, ["declared", "realised", "ratio"]]
+U_DECL, U_REAL, U_RAT = BLK.loc[UNDER, ["declared", "realised", "ratio"]]
+WORST_OVER  = OVER.split("_", 1)[1].replace("_", " ")
+WORST_UNDER = UNDER.split("_", 1)[1].replace("_", " ")
+A11Y_D, A11Y_R = BLK.loc["B11_accessibility", ["declared", "realised"]]
+
 print(f"""
   DATA
     universities scored               {len(full):,}
@@ -752,9 +859,9 @@ print(f"""
     countries with a country ranking  {int(RANKED.country_rank.notna().sum())} universities across {ct.shape[0]} countries
 
   LABEL QUALITY
-    blind pairwise judgments          900
-    self-consistency (swapped repeats) 86.7%
-    Spearman(rubric, judgment)        0.790  -> correlated but NOT a formula
+    blind pairwise judgments          {BT['n_judgments']}  (relabelled - see section 3)
+    self-consistency (swapped repeats) {BT['self_consistency']:.1%}
+    Spearman(rubric, judgment)        {BT['spearman_A_B']:.3f}  -> correlated but NOT a formula
 
   MODEL — {BEST}
     5-fold CV on train      Spearman  {comparison.iloc[0].spearman:.3f}
@@ -765,10 +872,15 @@ print(f"""
     Rule-based baseline     Spearman  {comparison[comparison.model.str.contains('rubric')].iloc[0].spearman:.3f}  <- the bar we had to clear
 
   KEY FINDING
-    The rubric declared accessibility as 6.4% of website quality.
-    SHAP shows it actually drives 14.8% of the ranking — 2.3x its assigned weight.
-    Technical performance was declared 6.2% and drives 2.8% — less than half.
-    Hand-set weights misallocate importance; measuring the realised influence shows it.
+    The rubric declared {WORST_OVER} as {W_DECL:.1f}% of website quality;
+    SHAP shows it actually drives {W_REAL:.1f}% - roughly {1/W_RAT:.0f}x less than assigned.
+    {WORST_UNDER} was declared {U_DECL:.1f}% and drives {U_REAL:.1f}% - {U_RAT:.1f}x more.
+    Accessibility is the sharpest case: declared {A11Y_D:.1f}%, drives {A11Y_R:.1f}%. The first
+    labelling pass inflated it, because the profile cards advertised alt-text coverage as a
+    headline number; once the judge was asked a prospective applicant's question instead,
+    it collapsed.
+    Hand-set weights misallocate importance across quality dimensions, and measuring the
+    realised influence is what shows it.
 """)
 
 # %% [markdown]
@@ -777,15 +889,22 @@ print(f"""
 # 1. The labels are **expert-style judgments made from extracted attribute profiles**, not
 #    ratings of live websites by a panel of humans. Visual design, tone, and whether links
 #    truly work are invisible to both the labels and the model.
-# 2. **One rater.** Self-consistency is measured (86.7%); inter-rater agreement cannot be.
+# 2. **One rater.** Self-consistency is measured (96.7% on swapped repeats); inter-rater
+#    agreement cannot be, because there is only one rater.
 # 3. **No external validation** against QS, Webometrics, or a student survey was performed,
 #    so no claim of agreement with real user perception is made.
 # 4. **Collector and region are perfectly confounded** — each of the six data collectors
 #    covered exactly one region. Regional score differences could be real quality differences
 #    or measurement differences, and this dataset cannot separate them. The model's *accuracy*
-#    is stable across regions (LORO ρ = 0.77–0.90), so the ranking is not a regional lookup
+#    is stable across regions (LORO ρ = 0.81–0.87), so the ranking is not a regional lookup
 #    table, but the regional ranking is the safer artefact to quote.
 # 5. **200 labelled of 1,226.** The other 1,026 scores are model inference.
+# 6. **The dataset cannot see design.** Every feature is a presence flag, a count, or a
+#    measurement. Whether a page is cluttered, dated-looking, or simply unpleasant to use
+#    is not in the 78 columns, so it cannot be in the score. A site that ticks every
+#    content box will rank highly even if a human would find it ugly. This is the single
+#    largest gap between this ranking and a real user's impression, and closing it would
+#    require screenshots and human raters rather than more modelling.
 #
 # ### Output files
 

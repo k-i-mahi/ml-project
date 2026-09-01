@@ -1,6 +1,6 @@
 feature,n_outliers,pct,lower_fence,upper_fence,observed_max,classification,action
 a66_broken_links,232,18.92,0.0,0.0,1129.0,MEASUREMENT ARTEFACT,"One site reports 1,129 vs a second-highest of 59. Winsorised at p99 + log1p; row kept."
 load_time_s,59,4.81,-1.86,22.49,42.18,INSTRUMENTATION,"Confounded with collector; region-standardised. Extremes are network, not website."
-a53_contrast_ratio,0,0.0,-0.35,31.65,21.0,LEGITIMATE,Low ratios are genuinely inaccessible sites. Curve plateaus at 7:1; rows kept.
-a72_alt_text_pct,0,0.0,-57.45,184.55,100.0,LEGITIMATE,"0% alt-text is a real accessibility failure, not an error. Rows kept."
+a53_contrast_ratio,0,0.0,-0.4,31.67,21.0,LEGITIMATE,Low ratios are genuinely inaccessible sites. Curve plateaus at 7:1; rows kept.
+a72_alt_text_pct,0,0.0,-59.7,185.7,100.0,LEGITIMATE,"0% alt-text is a real accessibility failure, not an error. Rows kept."
 a24_event_count,104,8.48,-9.0,15.0,20.0,CENSORED,Pile-up at the cap of 20 means 'at least 20'. Inverted-U curve applied; rows kept.

@@ -5,10 +5,10 @@
   "hyperparameters": {
     "colsample_bytree": 0.6,
     "learning_rate": 0.05,
-    "min_child_samples": 15,
+    "min_child_samples": 5,
     "n_estimators": 200,
-    "num_leaves": 15,
-    "reg_lambda": 1.0
+    "num_leaves": 7,
+    "reg_lambda": 10.0
   },
   "n_features": 78,
   "n_train_total": 200,
@@ -16,16 +16,16 @@
   "n_test": 40,
   "target": "expert quality score 0-100 (Bradley-Terry latent strength, rescaled)",
   "score_anchor": {
-    "logit_min": -4.621884226391782,
-    "logit_max": 5.565005300701482,
+    "logit_min": -4.643500247318809,
+    "logit_max": 5.381057008543082,
     "formula": "score = clip(100*(logit-logit_min)/(logit_max-logit_min), 0, 100)"
   },
   "held_out_test": {
-    "spearman": 0.8849906191369608,
-    "kendall": 0.7153846153846154,
-    "mae": 8.916653894025808,
-    "rmse": 12.145187238720455,
-    "r2": 0.7517605639754092
+    "spearman": 0.9219512195121953,
+    "kendall": 0.735897435897436,
+    "mae": 9.018982171813041,
+    "rmse": 11.438679157260184,
+    "r2": 0.8180327321770584
   },
   "cross_validation": {
     "spearman_mean": 0.881,

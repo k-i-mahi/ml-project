@@ -1,0 +1,30 @@
+{
+  "n_universities": 1225,
+  "n_features": 71,
+  "n_train": 979,
+  "n_test": 246,
+  "score_min": 8.33,
+  "score_max": 95.39,
+  "score_mean": 64.42813061224489,
+  "score_sd": 18.402792889306703,
+  "grade_counts": {
+    "A": 363,
+    "B": 299,
+    "D": 220,
+    "C": 145,
+    "F": 109,
+    "A+": 89
+  },
+  "dimension_weights": {
+    "D1_academic_information": 28,
+    "D2_admission_support": 22,
+    "D3_currency_activity": 15,
+    "D4_navigation_findability": 15,
+    "D5_usability_accessibility": 10,
+    "D6_technical_quality": 7,
+    "D7_institutional_transparency": 3
+  },
+  "n_gated": 186,
+  "n_countries_ranked": 779,
+  "seed": 42
+}

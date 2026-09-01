@@ -1,0 +1,901 @@
+pair_id,winner,confidence,reason
+P0001,left,slight,"admission deadlines and scholarship information, which the right site never shows"
+P0002,right,clear,"the left site lists no programmes, no contact and has no menu at all"
+P0003,right,clear,"admission deadlines, scholarships and a search box against a site with none"
+P0004,left,slight,"published admission requirements, which matter more to me than a fresher notice board"
+P0005,right,slight,"a board updated today, eleven dated events and no broken links"
+P0006,left,slight,the right site has no menu at all and no department listing
+P0007,left,slight,a department listing and a dated upcoming event against a very slow static site
+P0008,left,slight,admission requirements and a department listing
+P0009,right,clear,the left site lists nothing and gives me no way to contact anyone
+P0010,right,slight,"a board updated five days ago, five dated events and a calendar"
+P0011,left,clear,"the right site lists no programmes, no departments and no admission information"
+P0012,left,slight,a department listing and a notice board updated a week ago
+P0013,left,slight,a board updated today and twenty events against a site where nothing is happening
+P0014,left,slight,a department listing and a board 98 days old against one abandoned for 662
+P0015,right,clear,notices today and no broken links against a quiet board and fifteen dead links
+P0016,left,slight,"admission notices and deadlines, which the right site does not publish"
+P0017,left,slight,a notice board updated eight days ago against one with no dated post at all
+P0018,right,slight,a live board and twenty dated events against a site where nothing is happening
+P0019,right,slight,published admission requirements and no broken links
+P0020,right,clear,"2.7:1 contrast makes the left site very hard to read, behind a one-item menu"
+P0021,right,slight,"a programmes listing, which is the first thing I need and the left site lacks"
+P0022,left,slight,a real seven-item menu and a faculty listing against a one-item menu
+P0023,left,clear,a department listing and a live notice board
+P0024,right,slight,"scholarships, six dated events and an academic calendar"
+P0025,left,slight,a board updated three days ago and scholarship information
+P0026,left,slight,"published admission requirements and a much faster, phone-ready site"
+P0027,right,clear,"the left site lists no programmes, no departments and no admission information"
+P0028,right,slight,a real five-item menu against a site with no menu at all
+P0029,right,slight,"admission requirements and scholarships, the two things I still needed"
+P0030,right,clear,"a department listing, a library and an actual menu"
+P0031,right,slight,a library and a notice board updated a week ago
+P0032,left,slight,"a programmes listing, and the right site is not even served over https"
+P0033,right,clear,"admission requirements, scholarships and a real six-item menu against a one-item one"
+P0034,left,clear,"the right site lists no programmes, no departments and has no menu"
+P0035,left,slight,a real menu and four dated events against a site I cannot navigate
+P0036,right,clear,the left site lists no programmes and no departments at all
+P0037,right,clear,"programmes, admission notices and scholarships against a site with none"
+P0038,left,clear,"programmes, departments and a live notice board against a site with no menu"
+P0039,left,clear,admission requirements and a notice board updated today
+P0040,left,clear,"a programmes listing, and the right site is unusable on a phone and unreadable"
+P0041,right,slight,a real menu and a board updated today against a site I cannot navigate
+P0042,left,slight,"no broken links against fifteen, and a board that has not gone quiet"
+P0043,right,clear,"admission notices, deadlines and scholarships, none of which the left site shows"
+P0044,left,slight,a notice board updated five days ago rather than eleven
+P0045,right,slight,"a programmes listing, which the left site never offers despite its broken links"
+P0046,left,slight,a menu of some kind and a board four days old against one 243 days quiet
+P0047,right,slight,a real six-item menu and six dated events against a site with no menu
+P0048,left,slight,"scholarships, a board updated today and twenty upcoming events"
+P0049,right,slight,"a programmes listing, which matters more to me than a fresher board"
+P0050,left,slight,"admission notices and deadlines, and it works properly on a phone"
+P0051,left,slight,"admission requirements and deadlines, which the right site never publishes"
+P0052,right,clear,a live board and twenty dated events against one abandoned for 784 days with no menu
+P0053,right,clear,"programmes, departments and admission information, none of which the left site has"
+P0054,left,slight,"a department listing, a board updated today and twenty dated events"
+P0055,left,slight,"a real four-item menu, a board updated today and a calendar"
+P0056,left,slight,admission requirements and nine upcoming events
+P0057,left,slight,"twenty dated events, a calendar and a search box the right site lacks"
+P0058,right,clear,"the left site has no menu, no departments and no library"
+P0059,right,clear,"a prospectus, a library, a board updated today and twenty events"
+P0060,left,slight,a department listing and a board updated today
+P0061,left,slight,published admission requirements and scholarships
+P0062,left,slight,"a seven-item menu with search and breadcrumbs, and a board updated today"
+P0063,right,slight,published admission requirements and scholarships
+P0064,left,slight,a notice board updated five days ago against a site with no dated post
+P0065,right,clear,the left site lists nothing and gives me no way to contact anyone
+P0066,left,slight,"a wider menu and a calendar, neither site letting me contact anyone"
+P0067,right,clear,"a programmes listing, and the left site is unusable on a phone and unreadable"
+P0068,right,slight,"admission requirements, twenty dated events and a real menu"
+P0069,left,slight,a real four-item menu and a board updated five days ago
+P0070,right,clear,"a department listing, a board updated today and twenty upcoming events"
+P0071,left,slight,"a board updated today, an academic calendar and a much faster site"
+P0072,right,slight,a department listing and a board updated today against a static site
+P0073,left,slight,"a department listing, a prospectus and a fresher notice board"
+P0074,left,clear,"admission deadlines, scholarships, a library and four dated events"
+P0075,right,clear,"the left site lists no programmes, no departments and has no menu"
+P0076,left,clear,"programmes, departments and a board updated yesterday against one abandoned for 641 days"
+P0077,right,slight,"a department listing, a library and a real seven-item menu"
+P0078,right,slight,a board updated today and seventeen dated events against a site where nothing happens
+P0079,right,clear,the left site lists no programmes and no departments at all
+P0080,right,clear,the left site lists nothing and gives me no way to contact anyone
+P0081,right,slight,admission requirements and twenty dated events against two
+P0082,right,clear,"a prospectus, a board updated today and twenty upcoming events"
+P0083,right,slight,nine dated upcoming events against a single undated one
+P0084,left,clear,"programmes, departments and a library, none of which the right site lists"
+P0085,right,clear,"the left site lists no programmes, no departments and no admission information"
+P0086,left,clear,a programmes listing and a department listing the right site never offers
+P0087,left,slight,a programmes listing and admission requirements against a board 657 days dead
+P0088,right,slight,an actual contact page and a board updated today
+P0089,left,slight,"a contact page, which the right site does not give me at all"
+P0090,left,clear,the right site lists nothing behind its twenty-item menu
+P0091,left,clear,"programmes and departments, and the right site's text is unreadable"
+P0092,right,slight,"a real menu, a prospectus and a calendar against a site with no menu"
+P0093,left,slight,a notice board updated today against a site with no dated post
+P0094,left,slight,"a real menu, a contact page and a board updated today"
+P0095,left,slight,five dated upcoming events and an academic calendar
+P0096,right,clear,"admission requirements, deadlines and a real menu against a site with none"
+P0097,left,slight,"admission notices and deadlines, which the right site never publishes"
+P0098,left,clear,the right site lists nothing and has no menu at all
+P0099,right,slight,"the left site's text is essentially unreadable, whatever else it lists"
+P0100,left,slight,"no broken links against fifteen, and it works properly on a phone"
+P0101,left,slight,"neither site lets me apply, but the left one has a search box and dated events"
+P0102,left,clear,the right site has no menu and is not even served over https
+P0103,right,clear,"programmes, departments and a library, none of which the left site lists"
+P0104,left,slight,"a real menu, a faculty and a library against a board abandoned for 784 days"
+P0105,left,clear,"admission requirements, twenty dated events and a real eleven-item menu"
+P0106,left,slight,2.7:1 contrast makes the right site very hard to read behind a one-item menu
+P0107,left,clear,"programmes, departments and admission deadlines the right site never lists"
+P0108,right,slight,an eight-item menu with breadcrumbs against a site I cannot navigate
+P0109,right,slight,"a seven-item menu, breadcrumbs, nine events and mobile 100"
+P0110,right,slight,twenty dated events and far more readable text
+P0111,left,slight,"scholarships, a library, a calendar and a board updated today"
+P0112,right,slight,"a board updated today, seventeen dated events and a search box"
+P0113,right,clear,"a programmes listing and admission deadlines, which the left site lacks"
+P0114,left,clear,"programmes, a prospectus and a board updated yesterday against one 657 days dead"
+P0115,left,clear,"a programmes listing, a prospectus and twenty upcoming events"
+P0116,left,clear,"programmes, departments and admission information, despite the broken links"
+P0117,right,clear,a programmes listing and a board updated today against one 657 days dead
+P0118,right,slight,a department listing and a board a week old against one abandoned for 662 days
+P0119,right,clear,the left site lists nothing and gives me no way to contact anyone
+P0120,left,clear,"a real menu, a department listing and scholarships"
+P0121,left,slight,"admission requirements and scholarships, and it works properly on a phone"
+P0122,left,slight,"scholarships, twenty dated events and a board updated today"
+P0123,right,clear,"a department listing, a board updated today and mobile 100"
+P0124,right,slight,readable text and a search box against a site at 3.5:1 with neither
+P0125,right,clear,"a programmes listing, and the left site is unusable on a phone and unreadable"
+P0126,right,slight,"admission deadlines and scholarships, which the left site never publishes"
+P0127,left,slight,an eleven-item menu with breadcrumbs and an academic calendar
+P0128,right,slight,"admission deadlines, scholarships and seventeen dated events"
+P0129,right,slight,scholarship information and a much wider menu
+P0130,left,slight,"a board updated today, twenty events and a real three-item menu"
+P0131,left,clear,"departments, faculty and scholarships, none of which the right site lists"
+P0132,left,clear,"the right site lists no programmes, no departments and no admissions"
+P0133,right,slight,"a fresher board, a four-item menu and mobile 100"
+P0134,right,slight,"admission deadlines and scholarships, which the left site never publishes"
+P0135,left,slight,"a prospectus, twelve dated events and mobile 100"
+P0136,right,slight,a search box and a board five days old rather than three weeks
+P0137,right,slight,"admission requirements, deadlines and scholarships all published"
+P0138,left,clear,"a prospectus, a board updated today and four dated events"
+P0139,left,slight,"a board updated today, twenty dated events and an eleven-item menu"
+P0140,right,clear,"admission requirements, departments, a library and a board updated today"
+P0141,right,slight,"admission notices and deadlines, and a board updated today"
+P0142,right,slight,"a department listing, a library and scholarship information"
+P0143,right,slight,"a real five-item menu, a live board and seven upcoming events"
+P0144,left,clear,"a real seven-item menu and no broken links against a quiet, unnavigable site"
+P0145,left,clear,"programmes, departments and a prospectus, none of which the right site lists"
+P0146,right,clear,"programmes, departments and admission deadlines against a site with none"
+P0147,left,clear,a nine-item menu and a board updated today rather than 39 days ago
+P0148,left,slight,2.7:1 contrast makes the right site very hard to read behind a one-item menu
+P0149,right,slight,"programmes and departments, though neither site lets me contact anyone"
+P0150,right,slight,a department listing and twenty dated events against two
+P0151,right,clear,"programmes, admission deadlines, a prospectus and departments"
+P0152,left,clear,a real three-item menu and a contact page against a site with neither
+P0153,right,slight,"admission requirements, a six-item menu and a much faster site"
+P0154,left,slight,a department listing and a board updated today with three dated events
+P0155,right,clear,"a prospectus, twenty events and a real eight-item menu against no menu"
+P0156,right,slight,a board updated five days ago and text I can comfortably read
+P0157,left,slight,2.7:1 contrast makes the right site very hard to read
+P0158,left,slight,"a search box, a library and mobile 100 against a site with none of them"
+P0159,right,slight,"departments, a prospectus, a calendar and a board updated today"
+P0160,left,clear,"programmes, departments and admission deadlines the right site never lists"
+P0161,left,slight,"a department listing, which the right site does not offer"
+P0162,right,slight,a prospectus and four dated events against a site listing none
+P0163,right,slight,"a ten-item menu, an academic calendar and a board updated eight days ago"
+P0164,right,slight,"admission requirements, scholarships and twenty dated events"
+P0165,right,clear,admission notices and deadlines and a board updated yesterday
+P0166,left,slight,"a department listing, which the right site does not offer"
+P0167,right,slight,"admission deadlines, a search box and mobile 100"
+P0168,right,slight,"programmes, departments and scholarships, none of which the left site lists"
+P0169,left,slight,"admission notices, faculty and research against a site listing nothing"
+P0170,right,slight,"admission requirements and a prospectus, completing everything I need to apply"
+P0171,left,slight,"admission deadlines, scholarships and a prospectus the right site lacks"
+P0172,left,clear,"a contact route and a library, and the right site gives me neither"
+P0173,right,slight,"admission requirements and scholarships, which the left site does not publish"
+P0174,right,slight,"admission requirements, a department listing and a board updated two days ago"
+P0175,left,clear,"a programmes listing, which the right site never offers"
+P0176,right,clear,"a six-item menu against a one-item one, no broken links and a faster load"
+P0177,right,slight,"a real menu, a faculty and a library, and a board not 784 days dead"
+P0178,right,clear,"scholarships, twenty dated events, a calendar and a real menu"
+P0179,right,slight,"a department listing, a library and a nine-item menu"
+P0180,left,slight,"a contact page, which the right site does not give me at all"
+P0181,left,slight,"a faculty listing, a board updated yesterday and a real seven-item menu"
+P0182,right,slight,"a programmes listing, which is the first thing I look for"
+P0183,left,slight,a department listing and a board that is not 662 days dead
+P0184,right,slight,"admission deadlines, research and a fuller set of service pages"
+P0185,left,slight,a department listing and a real menu with breadcrumbs
+P0186,right,slight,"a programmes listing and a prospectus, which the left site never offers"
+P0187,left,slight,a department listing and a board that is not abandoned
+P0188,right,clear,"departments, a library, scholarships and a board updated yesterday"
+P0189,right,slight,admission requirements and text I can comfortably read
+P0190,right,slight,"admission notices and deadlines, a real menu and a board updated today"
+P0191,right,clear,the left site is not on https and gives me no way to contact anyone
+P0192,left,slight,"departments, faculty and scholarships, none of which the right site lists"
+P0193,left,clear,"departments, admission requirements and scholarships against ten broken links"
+P0194,right,clear,"departments, faculty, a library, a contact page and a search box"
+P0195,left,slight,"a prospectus, a faculty listing, seven dated events and a real eight-item menu"
+P0196,right,clear,"admission requirements, scholarships and a contact page against a 578-day board"
+P0197,right,slight,"a library, a nine-item menu and an academic calendar"
+P0198,right,slight,admission requirements and an eleven-item menu with breadcrumbs
+P0199,left,slight,a department listing and a board updated today rather than 662 days ago
+P0200,right,slight,six dated events and an academic calendar against sixteen undated ones
+P0201,left,slight,scholarship information and a notice board that is actually dated
+P0202,right,clear,"1.7:1 contrast makes the left site very hard to read, and it has no search either"
+P0203,left,clear,"programmes and a prospectus, and the right site is not even on https"
+P0204,right,clear,"programmes, admission deadlines and scholarships against a site listing nothing"
+P0205,left,clear,"programmes, departments and full admission information against an empty site"
+P0206,left,slight,the right site's text is essentially unreadable whatever else it lists
+P0207,left,slight,"admission requirements and a prospectus, completing what I need to apply"
+P0208,right,slight,"a prospectus, a library, twenty dated events and a board updated today"
+P0209,right,clear,the left site lists nothing and gives me no way to contact anyone
+P0210,right,slight,"admission deadlines, scholarships and fifteen dated events"
+P0211,right,slight,"a real five-item menu, a contact page and two dated events"
+P0212,right,clear,"admission requirements, a real menu and a board updated today"
+P0213,right,clear,"a programmes listing and a department listing, neither on the left site"
+P0214,right,slight,"text I can actually read, at comparable content and a faster load"
+P0215,right,slight,"admission requirements, a fresher board and an eleven-item menu"
+P0216,right,slight,"a programmes listing and scholarships, which the left site never offers"
+P0217,right,slight,"a contact page, a library and a dated notice board"
+P0218,right,clear,"scholarships, a library, a board updated today and twenty events"
+P0219,right,clear,1.8:1 contrast and no departments at all on the left
+P0220,left,clear,"admission requirements, departments and a real seven-item menu"
+P0221,right,slight,"a department listing and a library, which the left site does not have"
+P0222,right,slight,"a dated notice board, mobile 100 and text I can comfortably read"
+P0223,left,clear,"a contact route, admission requirements and scholarships"
+P0224,right,slight,"admission deadlines and scholarships, which the left site never publishes"
+P0225,right,clear,a contact page and scholarships against a board abandoned for 578 days
+P0226,right,slight,"programmes, departments and scholarships, none of which the left site lists"
+P0227,left,clear,"departments, a library and admission deadlines against ten broken links"
+P0228,left,slight,scholarship information and a wider menu
+P0229,left,clear,"programmes, admission deadlines and nine dated events against an empty site"
+P0230,left,slight,"admission requirements, scholarships and a menu of some kind"
+P0231,right,clear,"a contact route, a library and five dated events"
+P0232,right,clear,"a prospectus, scholarships, departments and eleven dated events"
+P0233,right,clear,"departments, faculty, scholarships and mobile 100"
+P0234,left,slight,"a notice board that is actually dated, five days old"
+P0235,left,slight,scholarships and a board updated today against a site with no dated post
+P0236,right,clear,the left site's text is essentially unreadable and it lists no departments
+P0237,right,clear,"programmes, departments, a prospectus and a board updated yesterday"
+P0238,left,clear,"programmes, departments and scholarships against a site listing nothing"
+P0239,right,clear,"programmes, departments and admission deadlines against an empty site"
+P0240,right,clear,"a prospectus, a board updated today and four dated events"
+P0241,left,slight,"scholarships, a dated notice board and a much wider menu"
+P0242,left,slight,a faculty listing and no broken links against a cluttered twenty-item menu
+P0243,left,slight,a board updated two days ago and a real seven-item menu
+P0244,left,slight,"admission requirements, a six-item menu and mobile 100"
+P0245,right,clear,a programmes listing and a board updated today against one 657 days dead
+P0246,right,slight,"a real eleven-item menu, four dated events and an academic calendar"
+P0247,left,clear,"https, a library and a menu of some kind, none of which the right site has"
+P0248,left,slight,"programmes and departments, though neither site is easy to trust"
+P0249,left,slight,"a real four-item menu, twelve events and an academic calendar"
+P0250,right,slight,"a board updated today, an academic calendar and a wider menu"
+P0251,right,clear,"scholarships, a prospectus, a faculty listing and a board updated today"
+P0252,left,slight,a real nine-item menu and an academic calendar
+P0253,right,slight,"departments, faculty and admission notices against a site listing nothing"
+P0254,right,slight,"admission requirements, scholarships and a department listing"
+P0255,right,slight,admission requirements and a library against a board 130 days quiet
+P0256,right,clear,"admission deadlines, scholarships and eleven dated events"
+P0257,right,slight,"a board updated yesterday, twelve dated events and a calendar"
+P0258,right,slight,"admission requirements, a department listing and a board updated two days ago"
+P0259,left,clear,admission requirements and a real six-item menu against a site with no menu
+P0260,left,clear,a programmes listing and full admission information against a 657-day board
+P0261,right,slight,scholarship information and a nine-item menu
+P0262,right,slight,"admission deadlines, scholarships and twelve dated events"
+P0263,left,clear,"programmes, departments and scholarships against a site with nothing at all"
+P0264,right,clear,the left site's text is essentially unreadable and it has two broken links
+P0265,left,clear,"programmes, departments and a library against a site listing nothing"
+P0266,left,slight,"a notice board that is actually dated, a week old"
+P0267,right,clear,"a prospectus, a library, a board updated today and twenty events"
+P0268,right,slight,"programmes, departments and faculty, none of which the left site lists"
+P0269,right,slight,"scholarships, a library and a seven-item menu with readable text"
+P0270,left,slight,"admission requirements, scholarships and a library, with readable text"
+P0271,right,slight,"admission requirements, a search box and a board updated four days ago"
+P0272,left,clear,"scholarships, sixteen events and a board three days old against one 578 days dead"
+P0273,right,slight,"admission deadlines, a library and a real menu"
+P0274,left,slight,admission requirements and a menu with breadcrumbs against no menu at all
+P0275,right,slight,"admission deadlines and scholarships, which the left site never publishes"
+P0276,left,slight,published admission requirements and a real six-item menu
+P0277,left,slight,"a library, an academic calendar and a wider menu"
+P0278,right,slight,a faculty listing and a real seven-item menu against a one-item one
+P0279,right,clear,a real five-item menu with breadcrumbs against a site with no menu
+P0280,left,clear,"a contact page, a library and admission requirements"
+P0281,left,slight,"admission deadlines and scholarships, which the right site never publishes"
+P0282,right,slight,"admission requirements, a library and a board updated eight days ago"
+P0283,left,slight,"departments, faculty and a library, though the site is not on https"
+P0284,left,slight,published admission requirements and a wider menu
+P0285,right,clear,"admission requirements, a real menu and twenty dated events"
+P0286,right,clear,"departments, a library and a board updated yesterday against an empty site"
+P0287,right,slight,"a contact route and scholarships, neither of which the left site offers"
+P0288,right,clear,"admission deadlines, scholarships, departments and fifteen dated events"
+P0289,left,clear,"https, a library and a prospectus against a site with no menu and no https"
+P0290,left,slight,"a department listing, a library and an academic calendar"
+P0291,left,clear,"programmes, departments and fifteen dated events against an empty site"
+P0292,left,slight,"programmes, departments and a prospectus, none of which the right site lists"
+P0293,right,slight,a board updated today and three dated events
+P0294,right,slight,"neither site lists anything, but the right one has a real menu"
+P0295,left,slight,"admission requirements and scholarships, which the right site never publishes"
+P0296,left,slight,a real menu and readable text against 1.7:1 contrast and no navigation
+P0297,left,clear,"programmes, departments and a library against a site listing nothing"
+P0298,left,slight,"admission requirements, a library and an academic calendar"
+P0299,left,clear,"a contact route and admission requirements, and the right board is 109 days quiet"
+P0300,left,clear,"programmes, departments and full admission information against an empty site"
+P0301,right,slight,"a department listing, scholarships and twelve dated events"
+P0302,right,clear,"a contact page, a library and a real nine-item menu"
+P0303,left,slight,"a programmes listing and scholarships, neither of which the right site offers"
+P0304,left,slight,a board updated today and twenty events against a site where nothing happens
+P0305,left,slight,"admission deadlines, scholarships, a library and four dated events"
+P0306,left,slight,"a dated notice board, a search box and eighteen timed events"
+P0307,left,clear,"departments and readable text, against a site whose text is unreadable"
+P0308,left,slight,"admission requirements and deadlines, and a search box"
+P0309,right,slight,"admission requirements, nine dated events and an academic calendar"
+P0310,left,clear,"admission requirements, departments and no broken links against 21"
+P0311,left,slight,"admission deadlines, scholarships, seventeen dated events and a calendar"
+P0312,right,clear,the left site lists nothing and gives me no way to contact anyone
+P0313,right,slight,twenty dated events against a single one
+P0314,left,slight,published admission requirements and a search box
+P0315,right,slight,admission requirements and a department listing
+P0316,right,clear,"programmes, departments and a board updated five days ago"
+P0317,right,slight,"admission deadlines, a library and a contact page, neither site listing much"
+P0318,left,clear,"programmes, departments and scholarships against a site listing nothing"
+P0319,left,slight,"admission notices and deadlines, and a search box"
+P0320,left,slight,a programmes listing and full admission information the right site lacks
+P0321,left,clear,"admission requirements, deadlines and a seven-item menu with mobile 100"
+P0322,left,slight,"a search box and a dated notice board, neither site listing anything"
+P0323,right,slight,"departments, a library and a board updated today"
+P0324,right,slight,a department listing and a board four days old against one 375 days dead
+P0325,right,clear,"admission requirements, a board updated today and seven upcoming events"
+P0326,right,slight,2.7:1 contrast leaves the left site very hard to read behind a one-item menu
+P0327,left,clear,readable text and a department listing against a site I cannot read at all
+P0328,right,slight,"scholarships, a seven-item menu and breadcrumbs"
+P0329,right,slight,"a programmes listing and scholarships, which the left site never offers"
+P0330,left,clear,"programmes, departments and a prospectus against unreadable text and none of them"
+P0331,right,clear,"admission requirements, departments and a board updated yesterday"
+P0332,right,slight,"a search box, readable text and a far faster, phone-ready site"
+P0333,right,slight,"scholarships, an eight-item menu and an academic calendar"
+P0334,right,clear,"programmes, departments and full admission information against an empty site"
+P0335,right,slight,"a real eight-item menu, twelve dated events and a calendar"
+P0336,right,slight,a real six-item menu and an academic calendar
+P0337,left,slight,a board four days old and readable text against one abandoned for 784 days
+P0338,right,clear,"departments, a library, scholarships and a board updated today"
+P0339,right,clear,"programmes, departments and admission requirements against an empty site"
+P0340,right,clear,"programmes, departments and a library against a board 641 days dead"
+P0341,right,slight,"a department listing and a real menu, despite the broken links"
+P0342,right,clear,a library and a real four-item menu against a site with no menu
+P0343,left,clear,"a real menu, seventeen dated events and a board updated today"
+P0344,right,slight,"admission deadlines and scholarships, which the left site never publishes"
+P0345,right,slight,a real seven-item menu and readable text against 2.7:1 contrast
+P0346,left,clear,"programmes, departments and a library against a site listing nothing"
+P0347,left,clear,"readable text, a board updated today and twenty events"
+P0348,right,slight,"a seven-item menu, mobile 100 and a student portal"
+P0349,left,slight,"admission requirements and eight events, both sites navigating poorly"
+P0350,right,clear,"a department listing, sixteen events and a board three days old"
+P0351,left,slight,"a board updated today, twenty dated events and a real five-item menu"
+P0352,left,slight,"a real eight-item menu, a prospectus and seven dated events"
+P0353,right,slight,scholarship information and an academic calendar
+P0354,right,clear,"a department listing, a nine-item menu and a board updated today"
+P0355,right,slight,"a faculty listing, a seven-item menu with breadcrumbs and nine events"
+P0356,right,clear,"1.7:1 contrast and no menu on the left against a complete, live site"
+P0357,right,clear,the left site's text is essentially unreadable
+P0358,left,slight,readable text and a real menu against 2.7:1 contrast and a one-item menu
+P0359,left,slight,scholarships and a board updated today
+P0360,left,clear,"a programmes listing and scholarships, and the right site is not on https"
+P0361,left,slight,"a department listing, twelve dated events and an academic calendar"
+P0362,left,slight,"neither site lists anything, but the left has a wider menu and a calendar"
+P0363,right,slight,"a dated notice board, sixteen events and a twelve-item menu"
+P0364,right,clear,"admission requirements, departments, a library and a board updated yesterday"
+P0365,left,slight,readable text and an eleven-item menu against 4.9:1 contrast
+P0366,left,slight,published admission requirements and a fresher notice board
+P0367,right,clear,"admission deadlines, scholarships, a board updated today and mobile 90"
+P0368,right,slight,"scholarships, breadcrumbs, mobile 100 and a far faster load"
+P0369,right,slight,"a real eight-item menu, twelve dated events and a board updated yesterday"
+P0370,right,clear,"admission requirements, departments and a real seven-item menu"
+P0371,right,slight,"departments, admission requirements and a board updated today"
+P0372,right,slight,a real eight-item menu against a site with no menu at all
+P0373,left,slight,"admission requirements and scholarships, which the right site does not publish"
+P0374,left,slight,"a department listing, a library and a real five-item menu"
+P0375,right,clear,a programmes listing and a real seven-item menu against no menu at all
+P0376,right,slight,"departments, faculty and a ten-item menu against a site with neither listing"
+P0377,right,slight,"a library, a nine-item menu and a board updated today"
+P0378,right,slight,"a real menu, a library and a prospectus"
+P0379,right,slight,"admission deadlines, scholarships, a board updated today and twenty events"
+P0380,left,clear,a department listing and a real four-item menu against no menu at all
+P0381,right,slight,admission requirements and a department listing against a 375-day board
+P0382,right,slight,a dated notice board and two upcoming events against a static site
+P0383,right,slight,"a programmes listing, which is the first thing I look for"
+P0384,left,clear,"programmes, departments and full admission information against nothing at all"
+P0385,left,slight,"a programmes listing and a department listing, neither on the right site"
+P0386,right,clear,"admission deadlines, a library and a real menu against mobile 0 and no menu"
+P0387,right,clear,"admission requirements, a department listing and a library"
+P0388,right,slight,"departments, faculty, a library and scholarships, despite the broken links"
+P0389,left,slight,"a dated board, twelve dated events and a wider menu"
+P0390,right,slight,"a contact route, departments and a library, none of which the left site has"
+P0391,right,slight,admission requirements and a board updated today
+P0392,right,clear,"programmes, admission deadlines and scholarships against a site with nothing"
+P0393,left,slight,"a contact route and breadcrumbs, and the right site gives me no way to reach them"
+P0394,left,slight,a contact route and a board updated today against one 109 days quiet
+P0395,left,slight,"a real six-item menu, six dated events and a board updated yesterday"
+P0396,right,clear,"programmes, departments and admission deadlines against a site with none"
+P0397,right,clear,"programmes, departments and a board updated a week ago"
+P0398,left,clear,admission requirements and readable text against a site I cannot read
+P0399,right,slight,"a programmes listing and scholarships, which the left site never offers"
+P0400,right,clear,"programmes, a prospectus and twenty dated events against an empty site"
+P0401,right,clear,"a seven-item menu with breadcrumbs, a board updated today and eight events"
+P0402,right,clear,a programmes listing and admission requirements against a 657-day board
+P0403,right,slight,"a department listing, a prospectus and a board four days old"
+P0404,left,slight,"a prospectus, a board updated today and twenty upcoming events"
+P0405,left,clear,"programmes, departments and twenty dated events against an empty site"
+P0406,left,slight,"a department listing, a seven-item menu and an academic calendar"
+P0407,left,slight,a real seven-item menu against a site with no menu and no search
+P0408,right,clear,"admission requirements, a board updated today and eleven dated events"
+P0409,right,slight,published admission requirements and a wider menu
+P0410,left,slight,"admission requirements, sixteen events and breadcrumbs"
+P0411,left,slight,"a prospectus, twenty dated events and a board updated today"
+P0412,left,clear,"https, a library and a real four-item menu against a site with none"
+P0413,right,slight,"a faculty listing, a five-item menu and a board updated a week ago"
+P0414,right,slight,a real seven-item menu and a board updated today against no navigation
+P0415,right,slight,"a prospectus, a board updated today and four dated events"
+P0416,right,slight,admission requirements and readable text against 2.4:1 contrast
+P0417,left,slight,"a board updated today, twenty dated events and an eleven-item menu"
+P0418,left,slight,a real six-item menu with search and six dated events
+P0419,left,slight,a contact route and a board updated yesterday
+P0420,right,clear,"programmes, departments and a real menu against no menu at all"
+P0421,left,slight,"admission requirements, scholarships, mobile 100 and a calendar"
+P0422,right,slight,"readable text, twenty events and a real menu against 2.7:1 contrast"
+P0423,left,slight,"admission requirements, a real six-item menu and an academic calendar"
+P0424,right,clear,"a prospectus, a real menu, mobile 100 and twelve dated events"
+P0425,left,slight,"https and scholarships, and the right site is not secured at all"
+P0426,right,slight,"admission requirements and scholarships, and an eleven-item menu with breadcrumbs"
+P0427,left,slight,"published admission requirements, a wider menu and mobile 100"
+P0428,left,slight,"programmes, admission deadlines and a prospectus, none of which the right site has"
+P0429,left,slight,"a board updated today, nine dated events and breadcrumbs"
+P0430,right,slight,"departments, a library and admission deadlines"
+P0431,right,slight,"departments, a library, admission deadlines and scholarships"
+P0432,left,clear,"departments, faculty, a library and scholarships against an empty site"
+P0433,left,slight,a department listing and twenty events against two
+P0434,right,slight,"a programmes listing, scholarships and a real four-item menu"
+P0435,right,clear,"departments, scholarships, eleven dated events and a board updated today"
+P0436,right,clear,"a programmes listing, departments and scholarships"
+P0437,left,clear,"a real eleven-item menu, five dated events and a dated board"
+P0438,left,clear,"programmes, departments and fifteen dated events against an empty site"
+P0439,right,slight,"a programmes listing and scholarships, which the left site never offers"
+P0440,left,slight,"a programmes listing, admission requirements and scholarships"
+P0441,left,clear,"a contact route, a prospectus and twenty dated events"
+P0442,left,slight,a department listing and a notice board that is actually dated
+P0443,right,clear,a programmes listing and a board updated yesterday against one 657 days dead
+P0444,right,slight,"a department listing, a seven-item menu and a board updated today"
+P0445,right,clear,"programmes, departments and a real menu against no menu at all"
+P0446,left,clear,"readable text, a faculty and a library against 1.7:1 contrast"
+P0447,left,slight,"departments, faculty and a library, though it is not served over https"
+P0448,left,slight,a faculty listing and a real five-item menu against a one-item one
+P0449,left,slight,"a student portal, mobile 100 and a wider menu"
+P0450,left,slight,"https and a contact route, and the right site offers neither"
+P0451,left,slight,the right site's text is essentially unreadable and it has two broken links
+P0452,left,slight,"admission deadlines and a board four days old, with search to get around"
+P0453,left,clear,"programmes, departments and a prospectus against unreadable text"
+P0454,right,slight,"a prospectus, twenty dated events and a board updated today"
+P0455,left,clear,"programmes, departments and admission deadlines against an empty site"
+P0456,right,clear,"1.7:1 contrast and no menu on the left against a readable, navigable site"
+P0457,right,clear,"admission requirements, a real menu, mobile 100 and a board updated today"
+P0458,right,slight,"scholarships, seventeen dated events and a ten-item menu"
+P0459,right,slight,"departments, a library and fifteen dated events"
+P0460,left,slight,"admission deadlines, a contact page and eighteen timed events"
+P0461,left,slight,a department listing and four dated events against a board 375 days dead
+P0462,right,slight,a real ten-item menu and a board updated today against no menu at all
+P0463,left,slight,a department listing and a board that is not 375 days dead
+P0464,right,clear,"programmes, departments and full admission information against nothing"
+P0465,left,clear,"scholarships, a library and readable text against a site I cannot read"
+P0466,left,slight,"an academic calendar, mobile 100 and a student portal"
+P0467,right,slight,"programmes, departments, requirements and scholarships, none of them on the left"
+P0468,left,slight,"a contact route and a real menu, neither site listing anything"
+P0469,right,clear,"scholarships, a faculty listing and a board five days old"
+P0470,right,slight,"a twelve-item menu, sixteen events and a student portal"
+P0471,left,slight,"scholarships, a department listing and an academic calendar"
+P0472,right,slight,a real eleven-item menu and four dated events against no menu at all
+P0473,left,clear,"a programmes listing, scholarships and seventeen dated events"
+P0474,right,clear,"admission requirements, scholarships, a library and an eleven-item menu"
+P0475,left,slight,"a prospectus, scholarships, four dated events and a calendar"
+P0476,right,slight,published admission requirements and a library
+P0477,left,clear,"departments, admission requirements and readable text against unreadable text"
+P0478,left,slight,"a dated notice board, an academic calendar and a student portal"
+P0479,left,clear,"a programmes listing, seventeen dated events and a usable phone experience"
+P0480,right,slight,"scholarships, a prospectus, a library and a board updated yesterday"
+P0481,right,clear,a department listing and a real nine-item menu against no menu at all
+P0482,right,clear,"admission requirements, a library and readable text"
+P0483,left,clear,a programmes listing and scholarships against a board 641 days dead
+P0484,right,clear,"readable text, a real menu and twenty dated events"
+P0485,left,clear,"admission requirements, a library and a board updated today"
+P0486,right,slight,"four broken links against 39, fifteen dated events and mobile 100"
+P0487,right,clear,"scholarships, a library, breadcrumbs and no broken links"
+P0488,left,clear,"departments, a library and admission requirements against an empty site"
+P0489,left,clear,"programmes, admission deadlines and nine dated events against nothing"
+P0490,right,slight,"departments, scholarships, a seven-item menu and a calendar"
+P0491,left,slight,"a board updated today, twenty dated events and an eleven-item menu"
+P0492,right,slight,"five dated upcoming events, a calendar and a faster load"
+P0493,right,slight,published admission requirements and a board updated today
+P0494,left,slight,"scholarships, a prospectus, a library and a board updated yesterday"
+P0495,right,clear,"departments, faculty, a library and scholarships"
+P0496,left,slight,a department listing and a nine-item menu against a four-item one
+P0497,right,slight,"departments, a library and scholarships"
+P0498,left,clear,"programmes, a prospectus and twenty dated events against an empty site"
+P0499,right,slight,"admission deadlines, a prospectus and a library"
+P0500,right,slight,"a faculty listing, a library, scholarships and a search box"
+P0501,right,slight,"published admission requirements, a search box and a wider menu"
+P0502,right,slight,"a department listing, both sites being essentially unreadable"
+P0503,right,clear,"programmes, departments and full admission information against nothing"
+P0504,left,slight,scholarships and a real four-item menu against a one-item one
+P0505,right,slight,"a search box, breadcrumbs, nine events and mobile 100"
+P0506,left,slight,"a department listing, a library and a board updated today"
+P0507,left,slight,"twenty dated events, a calendar and a real three-item menu"
+P0508,right,slight,"a programmes listing and scholarships, which the left site never offers"
+P0509,right,slight,"a board updated yesterday, twelve dated events and a search box"
+P0510,left,clear,"a real menu, twenty dated events and a calendar against no menu at all"
+P0511,left,slight,a real five-item menu against a site with no menu at all
+P0512,right,clear,"departments, a library, scholarships and mobile 100"
+P0513,left,slight,"admission requirements, a real menu and mobile 100"
+P0514,right,slight,"a wider menu and twenty events, neither site listing anything to apply with"
+P0515,left,slight,"scholarships, a library and an eight-item menu"
+P0516,left,slight,"admission requirements and scholarships, which the right site never publishes"
+P0517,right,clear,"departments, a library and a board updated yesterday against nothing"
+P0518,left,slight,"a seven-item menu, a board updated today and a usable phone experience"
+P0519,left,slight,"admission requirements, a search box and breadcrumbs"
+P0520,right,clear,"scholarships, a board updated today and four dated events"
+P0521,right,slight,"scholarships, a faculty listing and a board updated today"
+P0522,right,slight,"scholarships, seventeen dated events and a board updated today"
+P0523,left,clear,"programmes, departments and a library, none of which the right site lists"
+P0524,right,clear,"programmes, departments and full admission information against nothing"
+P0525,right,slight,"admission deadlines, a prospectus, a library and a board updated today"
+P0526,right,clear,"programmes, departments and a library, none of which the left site lists"
+P0527,right,slight,"a department listing, a prospectus and twenty upcoming events"
+P0528,right,clear,"departments, a library, admission deadlines and fifteen dated events"
+P0529,left,clear,"programmes, departments and admission deadlines against an empty site"
+P0530,left,slight,"admission requirements and deadlines, which the right site never publishes"
+P0531,left,slight,readable text and a real six-item menu against 2.7:1 and a one-item one
+P0532,right,slight,"a prospectus, a library and admission requirements, both being unreadable"
+P0533,right,slight,"admission requirements, departments, a library and scholarships"
+P0534,right,clear,"programmes, a prospectus and twelve dated events against nothing"
+P0535,right,clear,"programmes, departments and a prospectus against a site listing nothing"
+P0536,left,clear,"programmes, departments and admission requirements against no menu at all"
+P0537,right,clear,"admission requirements, a real menu and no broken links against five"
+P0538,left,slight,"admission requirements, scholarships, a search box and breadcrumbs"
+P0539,left,slight,"a programmes listing, a faculty and a library, none on the right site"
+P0540,right,slight,"scholarships, a board updated today and twenty upcoming events"
+P0541,left,slight,a board six days old and no broken links against 243 days and five
+P0542,left,slight,"programmes, admission requirements and scholarships against a hollow site"
+P0543,left,clear,a department listing and a real nine-item menu against no menu at all
+P0544,right,slight,published admission requirements and mobile 100
+P0545,left,clear,"departments, a library and scholarships against a site listing nothing"
+P0546,right,slight,"scholarships, four dated events and a calendar"
+P0547,right,clear,"admission requirements, a prospectus and eleven dated events"
+P0548,left,clear,"programmes, departments and a library against a site with nothing at all"
+P0549,right,clear,"an actual contact page, which the left site never gives me"
+P0550,right,slight,"a contact page and a prospectus, and the left site gives me no way to reach them"
+P0551,left,slight,"admission requirements, scholarships and a library"
+P0552,left,clear,"a department listing, a real six-item menu and six dated events"
+P0553,right,slight,readable text and an eight-item menu against 2.4:1 contrast
+P0554,left,clear,"programmes, departments and admission deadlines against nothing at all"
+P0555,right,slight,"departments, a library, scholarships and no broken links against seven"
+P0556,left,slight,"readable text, a prospectus and seven dated events"
+P0557,right,clear,"scholarships, a seven-item menu, mobile 100 and a much faster load"
+P0558,right,slight,scholarship information and a seven-item menu
+P0559,left,slight,"a department listing, twenty events and an academic calendar"
+P0560,left,clear,"a real menu, admission deadlines and scholarships against no navigation"
+P0561,right,slight,"scholarships, twenty dated events and a search box"
+P0562,right,slight,"https, a department listing and a library, despite the broken links"
+P0563,right,slight,a real four-item menu and an academic calendar against no menu at all
+P0564,left,clear,"departments, a library and five dated events against 1.7:1 contrast"
+P0565,right,slight,"a library, scholarships, an eight-item menu and a calendar"
+P0566,left,slight,"admission requirements, scholarships, a search box and mobile 100"
+P0567,right,slight,"a board updated today, twenty events and an academic calendar"
+P0568,right,slight,no broken links against 39
+P0569,left,clear,a real ten-item menu and seventeen dated events against no menu at all
+P0570,left,slight,"a faculty listing, a board updated today and no broken links"
+P0571,left,clear,"departments, a real menu and a board updated today against mobile 0"
+P0572,right,slight,"a dated notice board, a search box and a faster load"
+P0573,right,slight,"departments, a library and admission deadlines, despite the broken links"
+P0574,left,clear,"departments, a library and scholarships against ten broken links"
+P0575,right,slight,admission deadlines and a board updated today
+P0576,left,clear,"admission requirements, a board updated today and nine upcoming events"
+P0577,right,slight,"a programmes listing, a real six-item menu and no broken links"
+P0578,right,clear,"scholarships, a real five-item menu and a search box"
+P0579,right,slight,"a board updated today, twenty dated events and a real five-item menu"
+P0580,right,slight,"departments, a library, admission deadlines and a prospectus"
+P0581,left,clear,"a contact page and https, and the right site offers neither"
+P0582,right,slight,"a contact page and a real ten-item menu, neither site listing anything"
+P0583,left,slight,readable text and a board updated today against unreadable text
+P0584,right,slight,"programmes, departments and scholarships against a site listing nothing"
+P0585,left,clear,"admission requirements, a contact page and a real five-item menu"
+P0586,right,slight,"a department listing, a real menu and a board updated today"
+P0587,right,clear,"programmes, departments and full admission information against nothing"
+P0588,right,clear,"programmes, departments, requirements and a prospectus against nothing"
+P0589,left,clear,"admission requirements, a faculty listing and a board updated today"
+P0590,left,slight,"scholarships, sixteen events and a twelve-item menu"
+P0591,left,slight,"a real menu, seventeen dated events and an academic calendar"
+P0592,left,slight,"a board updated today, a search box and more readable text"
+P0593,left,clear,"programmes, a prospectus and eleven dated events against nothing"
+P0594,left,slight,"a library, scholarships, breadcrumbs and a dated notice board"
+P0595,left,clear,"a prospectus, scholarships and twenty dated events"
+P0596,left,clear,a programmes listing and a board updated today against one 657 days dead
+P0597,right,slight,"a real eight-item menu, a library and a prospectus"
+P0598,right,clear,"a department listing, a real ten-item menu and seventeen dated events"
+P0599,right,slight,"a department listing, nine dated events and a wider menu"
+P0600,right,slight,"admission requirements, scholarships, a wider menu and mobile 100"
+P0601,right,clear,left gives an applicant no way to contact anyone and its board has no dated post; right is contactable and posted today
+P0602,left,clear,"scholarships, a library and 14 dated events versus none of those, despite 15 broken links"
+P0603,right,clear,"left has no menu, no departments, nothing dated and is unusable on a phone"
+P0604,left,slight,admission requirements and a board updated yesterday beat scholarships on a site with no dated post anywhere
+P0605,left,slight,"prospectus, library and a real menu outweigh right having no main menu, though left's text is uncomfortable to read"
+P0606,right,toss-up,departments and a prospectus edge out scholarships and search; both boards are dead
+P0607,right,clear,"admission requirements, a working menu and full contact details versus a menu-less site quiet for 243 days"
+P0608,left,clear,"full admission set with prospectus, board updated today, 20 dated events; right has no notices, no scholarships and 21 broken links"
+P0609,left,slight,"requirements, scholarships and a board updated today, but the text is very hard to read and right has no menu either"
+P0610,left,clear,"scholarships, departments and a library plus a proper footer and contact route"
+P0611,right,clear,"same admission content but loads at an average speed instead of slower than 99% of sites, plus breadcrumbs"
+P0612,left,clear,right does not even list its programmes
+P0613,right,slight,left holds almost no information at all; right has the full admission set even though its text is barely readable
+P0614,left,slight,"neither lists programmes, but left is alive with 18 dated events and has search, right looks abandoned at 641 days"
+P0615,right,slight,"search, a wider menu, a sitemap footer and full contact details against a board updated one day sooner"
+P0616,right,slight,"scholarships on readable text beat a site whose text is essentially unreadable, though right hides its contact details"
+P0617,right,clear,"left lists no programmes, no departments and no faculty"
+P0618,right,slight,admission requirements and scholarships outweigh the fresher notice board
+P0619,left,clear,scholarships and a real contact route; right gives no way to reach anyone
+P0620,left,clear,"right lists no programmes, no departments, has no menu and no about page"
+P0621,left,slight,"scholarships, a board updated 8 days ago and full contact details, despite a cluttered menu and 39 broken links"
+P0622,left,clear,"right has no menu, no search and only a footer address"
+P0623,right,clear,"prospectus, departments, a board updated today and 20 dated events; neither has a menu but right has search"
+P0624,left,clear,"right has no menu, no way to contact anyone and no https"
+P0625,right,clear,"left does not list programmes, has no menu, is unusable on a phone and its text is unreadable"
+P0626,left,clear,"a prospectus, a departments list, four dated events and a board updated 8 days ago, against a thin two-item menu and an empty events page"
+P0627,left,toss-up,"admission requirements, notices with deadlines and search, against a prospectus and a livelier events page"
+P0628,left,slight,"a departments list, full contact details and a sitemap beat a board that has been silent for 662 days"
+P0629,right,clear,"left lists no programmes, no departments, no faculty and has no about page"
+P0630,left,slight,"left at least lists programmes, departments and scholarships; right lists no programmes at all, though left hides its contact details"
+P0631,left,clear,"a board updated 11 days ago, dated events, search and full contact details against a site with no dated post and no search"
+P0632,right,clear,left does not list its programmes
+P0633,left,clear,notices with deadlines and scholarships outweigh a library page and a couple of undated events
+P0634,left,clear,"a board updated 11 days ago, 20 dated events, a sitemap footer and full contact details"
+P0635,left,slight,"readable text with a full menu, sitemap and search beats slightly more admission content on a page that is very hard to read"
+P0636,right,clear,"left lists no programmes, no departments and no faculty"
+P0637,left,clear,"right has no menu at all, no notices and uncomfortable text"
+P0638,left,clear,right gives no way to contact anyone and its board has been quiet 109 days
+P0639,right,slight,"20 dated events, faster loading and better phone support, against a slightly better contact route"
+P0640,left,clear,"notices with deadlines, a board updated today and dated events; right has no notices and no dated post anywhere"
+P0641,right,slight,"admission requirements, notices and a board updated today outweigh a departments and faculty listing on a dead site"
+P0642,left,slight,"admission requirements, a faculty listing and breadcrumbs against a cluttered 20-item menu and 4 broken links"
+P0643,right,clear,"left has no menu, no search and only a footer address"
+P0644,left,clear,"right has no notices, no departments, no faculty and text that is very hard to read"
+P0645,right,clear,"left lists no departments, no faculty, no library and no research, and has 10 broken links"
+P0646,left,slight,a board updated 39 days ago and a language option against slightly better phone support
+P0647,right,slight,"right lists programmes, faculty, a library and research; left has nothing academic to read despite being livelier"
+P0648,left,clear,a prospectus and a library on readable text; right's text is essentially unreadable
+P0649,left,slight,"complete admission information including requirements, scholarships and a prospectus, though the text is essentially unreadable; right lists no programmes at all"
+P0650,left,clear,"requirements, scholarships and a prospectus, a board updated today and 11 dated events"
+P0651,right,clear,"left gives no way to contact anyone, lists no library and has a one-item menu"
+P0652,right,slight,"identical admission information, but right's board was updated today and it lists upcoming events"
+P0653,left,slight,"scholarships, a departments list and a board updated today against a prospectus and slightly better navigation"
+P0654,left,slight,"neither lists programmes, but left has departments, a library and search; right's text is essentially unreadable"
+P0655,right,slight,"a library and a board updated 8 days ago against a completely static site, despite 39 broken links"
+P0656,left,slight,"a board updated 4 days ago, a quick-links footer and full phone support against a few dated events"
+P0657,right,clear,"left lists no programmes, no departments, no faculty and has no menu"
+P0658,right,slight,"equally rich content and 20 dated events, but left's text is very hard to read at 2.4:1"
+P0659,right,clear,"left lists no programmes, no departments and no faculty"
+P0660,left,slight,a departments list and a board updated today; right has no dated post anywhere and lists no departments
+P0661,right,clear,"scholarships, a library, a board updated yesterday and 12 dated events"
+P0662,right,slight,"admission requirements, a library and a board updated yesterday outweigh scholarships and breadcrumbs"
+P0663,left,clear,"right lists no programmes, no departments and no faculty at all"
+P0664,left,clear,right lists nothing an applicant needs and has no menu
+P0665,left,clear,right gives no way to contact anyone and has been quiet for 109 days
+P0666,left,slight,"left lists programmes, a library and research and posted 14 days ago; right lists no programmes at all"
+P0667,right,slight,readable text and a board updated today beat richer content that is essentially unreadable
+P0668,left,slight,"both are near-empty and uncontactable, but left's text is at least readable"
+P0669,left,clear,a departments list and 12 events on readable text; right's text is essentially unreadable
+P0670,right,slight,scholarships outweigh a wider menu and a sitemap
+P0671,right,slight,"right lists programmes, departments, faculty and a prospectus; left has navigation but nothing academic behind it"
+P0672,right,clear,"left lists no departments, no faculty, no library and no research, and has 10 broken links"
+P0673,left,clear,"right has no notices, nothing academic listed and text at 1.8:1"
+P0674,right,slight,admission requirements and scholarships outweigh a wider menu and a fresher board
+P0675,right,slight,"scholarships, a faculty listing, a sitemap and full contact details against more events"
+P0676,right,slight,"right can at least be contacted; left gives no phone, address or form anywhere despite a fuller departments list"
+P0677,right,slight,"full contact details, breadcrumbs and better phone support against a library page"
+P0678,right,slight,"readable text, a board updated today and 20 events beat richer admission content that cannot be read"
+P0679,left,clear,"right lists no programmes, no departments, no faculty and no notices"
+P0680,right,clear,"left lists nothing at all, has no menu and no way to contact anyone"
+P0681,right,clear,right lists programmes and a prospectus; left has neither and its board has been silent 657 days
+P0682,right,clear,"programmes, scholarships, departments, faculty and a library, none of which left has"
+P0683,right,clear,"left lists nothing, has no menu and no about page"
+P0684,left,slight,"admission requirements, a six-item menu and a sitemap against a fresher board on a one-item menu"
+P0685,left,clear,"right lists no programmes, no departments and has been abandoned for 641 days"
+P0686,left,slight,admission requirements and full phone support against a board updated 39 days ago
+P0687,right,clear,"left has no menu, no search and no footer to navigate by"
+P0688,right,slight,a departments list and 15 dated events against breadcrumbs and slightly better contact details
+P0689,left,clear,right's board has been silent for 662 days and it lists no departments
+P0690,right,clear,"left lists no programmes, no notices and has no about page"
+P0691,left,slight,"a prospectus, scholarships, a departments list and a board updated yesterday, though the text is uncomfortable to read"
+P0692,left,clear,"scholarships, a departments list, a board updated today and search; right has none of those"
+P0693,left,slight,"scholarships, a library and a board updated yesterday against a board quiet for 130 days"
+P0694,right,slight,"a library, a board updated today and 11 dated events against search and breadcrumbs"
+P0695,left,clear,"notices with deadlines and scholarships on a navigable site; right has no menu, no search and no notices"
+P0696,left,toss-up,a prospectus and a genuinely live events page against notices with deadlines and search
+P0697,left,clear,"right has no notices, nothing academic listed, no about page and text at 1.8:1"
+P0698,right,clear,left lists no programmes and its board has been silent for 657 days
+P0699,left,slight,scholarships and full contact details against a departments list and faster loading
+P0700,left,clear,"right has no notices, no scholarships, no departments and 21 broken links"
+P0701,right,clear,a library page and readable text; left's text is essentially unreadable against its background
+P0702,right,slight,a departments and faculty listing plus full contact details against a fresher notice board
+P0703,right,slight,"scholarships, departments and a faculty listing outweigh admission requirements on a livelier board"
+P0704,right,clear,"notices with deadlines, scholarships, a nine-item menu and search; left has no menu and no notices"
+P0705,left,clear,"right lists no departments, no faculty, no notices and its text is at 1.8:1"
+P0706,right,clear,"right has a menu, search, a faculty listing and contact details; left has none of those and no about page"
+P0707,right,slight,notices with deadlines and much faster loading against a board updated today and search
+P0708,right,clear,"scholarships, a menu, search and a contact page; left has no menu and only a footer address"
+P0709,left,clear,"a board updated today, eight events, breadcrumbs, a language option and full contact details"
+P0710,right,clear,"admission requirements, notices, scholarships and a departments list, none of which left has"
+P0711,left,clear,"right lists no programmes, no departments, no faculty and no notices"
+P0712,right,clear,"same content on a clean four-item menu with no broken links, against a cluttered menu and 39 broken links"
+P0713,left,clear,"admission requirements, scholarships and a departments list against a fresher but thinner site"
+P0714,right,clear,"scholarships, departments, faculty and a library, plus search and full contact details"
+P0715,right,clear,"left lists no programmes, no departments, no faculty and no notices"
+P0716,right,clear,"right can be contacted; left offers no phone, address or form anywhere"
+P0717,right,slight,"a board updated 55 days ago with dated events, a sitemap and full contact details, against breadcrumbs and better phone support"
+P0718,left,clear,scholarships and a live site; right's board has been silent for 578 days and it hides its contact page
+P0719,right,clear,"scholarships, a board updated today and a real contact page; left gives no way to reach anyone"
+P0720,left,slight,a board updated yesterday with 18 dated events and full contact details; neither lists any programmes
+P0721,right,clear,"scholarships, a departments list, a board updated 4 days ago and a contact page; left cannot be contacted at all"
+P0722,right,slight,readable text with the same admission requirements and scholarships; left's page cannot be read
+P0723,right,clear,scholarships and a real contact route; left gives no way to reach anyone
+P0724,right,clear,scholarships and a departments list on a seven-item menu; neither can be contacted
+P0725,left,clear,"scholarships, a departments list, a library and 20 dated events"
+P0726,right,clear,"admission requirements, scholarships and a board updated today against a site with no dated post anywhere"
+P0727,left,clear,right lists no programmes and its board has been silent for 657 days
+P0728,left,clear,right gives no way to contact anyone and has been quiet 109 days
+P0729,left,clear,"scholarships, a full departments and library listing, a board updated today and 20 dated events"
+P0730,left,slight,"notices with deadlines, a library and 20 dated events outweigh scholarships and slightly better contact details"
+P0731,right,clear,"left cannot be contacted, has no menu and does not even use https"
+P0732,right,clear,"left lists no programmes, no notices, no departments and no faculty"
+P0733,left,toss-up,"a prospectus, a departments list, a board updated today and search, against scholarships and a secure connection"
+P0734,right,clear,"left lists no programmes, no departments, no faculty and no notices"
+P0735,right,slight,"a prospectus, a calendar, a language option and a board updated today against admission requirements"
+P0736,right,clear,"notices with deadlines, scholarships, a library and a board updated 5 days ago"
+P0737,left,slight,notices with deadlines and scholarships outweigh a departments listing
+P0738,right,clear,admission requirements and a board updated today against a site with no dated post anywhere
+P0739,left,slight,"a faculty listing, a library and a board updated 7 days ago against a prospectus on a completely static site"
+P0740,right,slight,"a real menu, search, a footer and a language option; left has no way to navigate beyond the home page"
+P0741,right,clear,"scholarships, departments, a library and 20 dated events, with no broken links"
+P0742,right,clear,"left lists no programmes, no notices, nothing academic and has no about page"
+P0743,right,clear,"right has a contact page; left gives no way to reach anyone, and neither uses https"
+P0744,left,clear,"admission requirements, scholarships and a departments list, none of which right has"
+P0745,right,clear,"scholarships, a board updated today, a calendar and a language option"
+P0746,right,slight,notices with deadlines and dated events outweigh a fresher board and slightly better contact details
+P0747,right,slight,admission requirements and a board updated today; left's board has been abandoned for 578 days
+P0748,right,slight,right can be contacted through a contact page and footer; left offers no route to a human at all
+P0749,right,slight,"a departments list, a sitemap and faster loading; left's board has been abandoned for 375 days"
+P0750,left,clear,admission requirements on readable text; right's text is very hard to read at 2.4:1
+P0751,right,clear,"a seven-item menu, search, breadcrumbs and a board updated 3 days ago; left has no menu, no search and no footer"
+P0752,right,clear,admission requirements and notices with deadlines against a site that publishes neither
+P0753,left,slight,"a departments list, a real menu and a sitemap against a board updated 5 days ago on a menu-less site"
+P0754,right,clear,"admission requirements, scholarships, departments and a faculty listing, none of which left has"
+P0755,right,slight,"right at least lists departments, faculty and a library and can be read; left's text is at 1.7:1 with no menu, no search and no about page"
+P0756,right,clear,left lists nothing an applicant needs and has no contact page
+P0757,left,slight,"a departments list, full contact details and a board quiet 130 days rather than abandoned 662"
+P0758,left,clear,"right lists no programmes, nothing academic and gives no way to contact anyone"
+P0759,right,clear,"admission requirements, a board updated today, a wider menu and full contact details"
+P0760,left,clear,right does not list its programmes or any scholarships
+P0761,left,slight,a board updated today against a wider menu on a site with no dated post anywhere
+P0762,left,slight,"a board updated yesterday, 12 dated events and a much richer menu, though the text is uncomfortable to read"
+P0763,right,slight,"a prospectus, a departments list and a nine-item menu against a fresher board on a menu-less site"
+P0764,right,slight,admission requirements and nine dated events against a fresher board and search
+P0765,right,clear,"admission requirements, a board updated 4 days ago, 20 dated events and full contact details"
+P0766,left,slight,notices with deadlines and scholarships outweigh a fresher board and breadcrumbs
+P0767,left,slight,"notices with deadlines, a real menu and search; right has no menu, no search and no notices, though it can be contacted"
+P0768,left,clear,"admission requirements, scholarships, a departments list and a library; right has no menu and none of that"
+P0769,right,slight,readable text and full contact details; left's page is very hard to read at 2.4:1
+P0770,right,clear,"a research listing, a real menu and a board updated 5 days ago; left has no menu at all"
+P0771,left,clear,admission requirements and a departments list on readable text; right's text is essentially unreadable
+P0772,right,clear,"admission requirements, a board updated today, a clean menu and no broken links against 39 broken links on a cluttered menu"
+P0773,right,clear,"notices with deadlines, scholarships, a board updated yesterday and a real menu"
+P0774,left,slight,"notices with deadlines, scholarships and search against a contactable but otherwise static site"
+P0775,right,clear,"left lists no programmes, no notices and nothing academic at all"
+P0776,left,slight,readable text and a real menu; right's admission pages are very hard to read at 2.7:1 behind a one-item menu
+P0777,right,clear,"left lists no programmes, no notices and nothing academic at all"
+P0778,right,slight,admission requirements and a library page against a faculty listing and a sitemap
+P0779,right,clear,"a departments list, 20 dated events and readable text; left's text cannot be read at all"
+P0780,left,clear,"scholarships, dated events, search and full contact details against an undated event dump behind no search"
+P0781,left,slight,"right does not list its programmes at all; left does, with scholarships and departments, though it cannot be contacted"
+P0782,right,clear,"a prospectus, scholarships, a departments list, a board updated today and 20 dated events"
+P0783,right,slight,"a seven-item menu, a sitemap, a language option and full contact details; left has no menu at all"
+P0784,left,clear,"admission requirements, notices with deadlines, a real menu and search; right has none of those"
+P0785,right,slight,"a library page, a board updated yesterday and full contact details against search and better phone support"
+P0786,left,clear,right does not list its programmes or any scholarships
+P0787,right,clear,left lists no programmes and has no menu at all
+P0788,right,slight,"both are empty, but right has a menu, search and a language option"
+P0789,right,slight,"a real four-item menu; left offers no menu at all, only search"
+P0790,left,slight,"a prospectus, scholarships, a board updated yesterday and seven dated events against notices with deadlines and search"
+P0791,right,clear,"notices with deadlines, a prospectus, a board updated today and four dated events"
+P0792,left,slight,readable text and breadcrumbs; right is richer but its text is very hard to read at 2.4:1
+P0793,left,clear,admission requirements and a departments list on a live site; right's board has been abandoned 662 days
+P0794,left,clear,"admission requirements, a fresher board and 20 dated events"
+P0795,right,slight,"a library page, full contact details and much faster loading against a fresher board and search"
+P0796,left,slight,full contact details and a nine-item menu; right's board has been abandoned for 662 days
+P0797,right,slight,"admission requirements, a wider menu, full contact details and much better phone support"
+P0798,left,clear,"right has no notices, no library, no research, no menu and is unusable on a phone"
+P0799,left,clear,"admission requirements, a board updated today, seven events and search"
+P0800,right,clear,"admission requirements, scholarships, a departments list and a library, none of which left has"
+P0801,left,slight,"admission requirements, five dated events and full contact details against easier-to-read text and a language option"
+P0802,left,clear,"right lists no programmes, no admission requirements and no notices at all"
+P0803,right,slight,scholarships and search against a board updated one day ago on a site without either
+P0804,left,clear,"notices with deadlines, a departments list, a library, dated events and a real menu; right has no menu"
+P0805,left,clear,"admission requirements, a board updated 35 days ago, a sitemap and full contact details on readable text"
+P0806,right,slight,"a board updated 3 days ago, a twelve-item menu, a footer and full contact details"
+P0807,right,slight,"a board updated today, 20 events, a sitemap and full contact details against search and faster loading"
+P0808,right,clear,"a library page, a real four-item menu, a calendar and full phone support"
+P0809,left,clear,"right lists nothing at all, has no menu, no contact route and unreadable text"
+P0810,right,clear,"scholarships, a prospectus, a library, a board updated today and 20 dated events"
+P0811,right,clear,"admission requirements, an eleven-item menu, a sitemap and full contact details; left has no menu"
+P0812,right,slight,"right has a contact page and a secure connection; left has neither, despite listing scholarships"
+P0813,left,clear,"right lists no programmes, nothing academic, and its board has been abandoned 641 days"
+P0814,left,clear,"admission requirements, scholarships and a departments list; right cannot be contacted at all"
+P0815,left,slight,"both are empty, but left has a contact page, a workable menu and a board updated yesterday"
+P0816,left,slight,left can at least be contacted through its footer and has a six-item menu; right offers no contact route at all
+P0817,left,clear,left has a contact page and a nine-item menu; right gives no way to reach anyone
+P0818,left,slight,admission requirements and full contact details against a wider menu with search
+P0819,right,slight,"full contact details, a language option, a dated event and much faster loading against search"
+P0820,right,clear,"notices with deadlines, a research page, 20 dated events and search"
+P0821,right,clear,"left lists no programmes, no notices, no departments and no faculty"
+P0822,left,clear,"right lists no programmes, no departments, no faculty and no library"
+P0823,right,clear,"scholarships, a real menu, search, a footer and full contact details; left has no menu and no search"
+P0824,right,slight,"admission requirements, a sitemap and a language option against slightly better phone support"
+P0825,right,slight,a board updated today and a much wider menu against search and one dated event
+P0826,right,clear,"a departments list, a faculty listing, a library, scholarships and a prospectus, none of which left has"
+P0827,left,clear,"scholarships, a faculty listing, a board updated today and a nine-item menu with a sitemap"
+P0828,left,slight,"scholarships, a board updated 3 days ago with dated events and full contact details, against a departments list"
+P0829,left,clear,right does not list its programmes or any scholarships
+P0830,right,slight,notices with deadlines and scholarships outweigh a fresher board and breadcrumbs
+P0831,left,slight,"left has a contact page and a secure connection; right has neither, though it lists more departments"
+P0832,right,slight,"admission requirements, a wider menu, full contact details and much faster loading"
+P0833,left,clear,"a departments list, a board updated today and 20 events; right has no dated post and no events"
+P0834,left,slight,"16 events, breadcrumbs, a language option and full contact details against a wider menu and a sitemap"
+P0835,left,slight,"dated events, an eight-item menu and full contact details against a board updated a week sooner"
+P0836,left,clear,"admission requirements, notices with deadlines, scholarships, a real menu and search; right has none of those"
+P0837,right,slight,"scholarships, a board updated yesterday, 12 dated events and a sitemap, though its text is uncomfortable to read"
+P0838,right,clear,"left lists no programmes, no departments and its text is essentially unreadable"
+P0839,right,clear,right has a contact page and a board updated 4 days ago; left offers no contact route and has been quiet 109 days
+P0840,left,clear,"a departments list, a seven-item menu and search; right has no menu and no search"
+P0841,left,slight,a board updated 21 days ago and 20 dated events against a wider menu with search on a site that shows no dates at all
+P0842,right,clear,"the same prospectus and scholarships on a board updated today, and text that can actually be read"
+P0843,left,slight,"scholarships, a departments list, 12 dated events and a sitemap, though its text is uncomfortable to read"
+P0844,right,slight,"both are empty, but right gives a contact page and footer details; left offers no way to reach anyone"
+P0845,right,clear,"left lists no programmes, no notices and nothing academic at all"
+P0846,right,clear,"admission requirements, scholarships, a library and a board updated today"
+P0847,left,slight,"a library page, a board updated 7 days ago and a dated event against a sitemap and a language option"
+P0848,right,clear,"admission requirements, a wider menu, full contact details and much better phone support"
+P0849,right,clear,left does not list its programmes or any scholarships
+P0850,right,clear,"admission requirements and scholarships, plus full contact details and better phone support"
+P0851,left,slight,notices with deadlines and scholarships outweigh breadcrumbs and a language option
+P0852,left,clear,"right lists nothing at all, has no menu and no way to contact anyone"
+P0853,left,slight,left has a contact page and a board updated today; right cannot be contacted and has been quiet 109 days
+P0854,left,clear,"scholarships, a departments list, a library, a board updated yesterday and a sitemap"
+P0855,left,clear,scholarships and full contact details on a live site; right's board has been abandoned 578 days
+P0856,left,clear,"right lists no programmes, nothing academic and has no menu"
+P0857,left,slight,scholarships outweigh a board updated 8 days ago and a sitemap
+P0858,right,clear,"left lists no programmes, no notices and nothing academic"
+P0859,right,clear,"admission requirements and notices with deadlines, plus a wider menu and full phone support"
+P0860,left,clear,"a research listing, a five-item menu with breadcrumbs and much faster loading; right has no menu at all"
+P0861,right,clear,"scholarships, a prospectus, four dated events and full contact details"
+P0862,left,clear,"right lists no programmes, no notices, nothing academic and no about page"
+P0863,left,slight,"a library page, a board updated today, a sitemap and a language option against breadcrumbs and better phone support"
+P0864,left,clear,"right lists nothing at all, has no menu and no contact route"
+P0865,left,slight,admission requirements and 20 dated events against a board updated a few days sooner
+P0866,right,slight,"a board updated 4 days ago, a calendar, a quick-links footer and full phone support"
+P0867,left,clear,"admission requirements, 20 dated events and an eleven-item menu against a one-item menu and no events"
+P0868,left,clear,"right lists nothing at all, has no menu and no way to contact anyone"
+P0869,left,clear,"a complete admission set with prospectus, a departments list and a real menu; right has no menu and no departments"
+P0870,left,clear,"right does not list its programmes, its departments or any scholarships"
+P0871,left,clear,"a real menu, a board updated today, 20 events and clearly readable text"
+P0872,left,clear,"notices with deadlines, scholarships, search and a sitemap; right has none of those"
+P0873,left,slight,right does not list its programmes at all; left lists them with scholarships and a prospectus
+P0874,right,slight,readable text with the same scholarships and departments; left's page cannot be read
+P0875,left,clear,"a departments list, a faculty listing, a library and a nine-item menu; right has been abandoned 641 days"
+P0876,left,clear,"right lists no programmes, no notices, nothing academic and no about page"
+P0877,left,slight,"admission requirements, an eleven-item menu and breadcrumbs"
+P0878,right,clear,left lists nothing an applicant needs
+P0879,right,slight,"a board updated today, 20 events and a sitemap against admission requirements"
+P0880,left,slight,"programmes, scholarships and a board updated today; right does not list its programmes at all"
+P0881,left,clear,"a departments list, a library, scholarships and 14 dated events, despite 15 broken links"
+P0882,right,slight,"right lists programmes, admission requirements and scholarships; left lists no programmes, though right's text is very hard to read"
+P0883,right,clear,"a prospectus, a board updated today and 20 events"
+P0884,right,clear,scholarships on readable text; left's text is essentially unreadable
+P0885,left,slight,"admission requirements, notices with deadlines and scholarships outweigh a fresher board and breadcrumbs"
+P0886,left,slight,admission requirements and a library page against a faculty listing on a board quiet 130 days
+P0887,left,clear,right lists nothing at all and gives no way to contact anyone
+P0888,right,clear,"admission requirements, notices with deadlines, a departments list and a seven-item menu; left has no menu"
+P0889,left,slight,notices with deadlines and a board updated today against a departments list and a sitemap
+P0890,left,clear,"right lists no programmes, no notices and nothing academic"
+P0891,left,slight,"notices with deadlines, scholarships, a sitemap and full contact details, though its text is uncomfortable to read"
+P0892,left,slight,"a departments list, a library and 15 dated events against a two-item menu with nothing listed"
+P0893,left,clear,"a prospectus, scholarships, a faculty listing and a board updated today"
+P0894,left,slight,"left has a contact page, a nine-item menu and a library; right offers no way to reach anyone"
+P0895,left,slight,"admission requirements, a prospectus and a sitemap against a board updated 11 days ago"
+P0896,right,clear,"a departments list, 14 dated events and readable text; left's text cannot be read at all"
+P0897,left,slight,"a departments list, a board updated today, a sitemap and a language option"
+P0898,left,slight,a departments list and 20 dated events against search and a fresher board
+P0899,right,slight,"notices with deadlines, search and a language option against a prospectus and dated events"
+P0900,right,clear,left lists no programmes and its board has been abandoned for 657 days

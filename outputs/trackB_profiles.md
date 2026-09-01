@@ -2072,7 +2072,7 @@ NAV NO PRIMARY MENU | NO logo, search, breadcrumb, language-toggle
 TASK none | NO programs, admissions-policy, admission-notices, contact, departments, faculty
 LIFE no notice board, no events | NO news, calendar, research-highlights
 DEPTH none | NO library, careers, alumni, scholarships, student-portal, faq, prospectus, vision/mission, about, footer-contact, footer-sitemap, quick-links
-A11Y alt-text not measured, contrast not measured | NO accessible-design, text-size/contrast-toggle
+A11Y alt-text 0%, contrast 1.0:1 | NO accessible-design, text-size/contrast-toggle
 TECH mobile 55/100, 0 broken links, loads faster than 72% of peers, https, page-title/meta, sitemap/robots | NO compression, favicon
 EXTRAS none | NO video, gallery, rotating-carousel, social-feed, event-images, event-captions, contests, live-chat, feedback-form, social-links, copyright, prominent-logo
 CLAIMS none | NO QS-badge, national-rank-mention, accreditation, awards, stats-block, trust-seal, testimonials, bookmark-widget

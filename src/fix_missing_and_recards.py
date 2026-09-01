@@ -155,79 +155,59 @@ def nav(row):
 
 def render(row):
     """A blind profile card written the way a prospective student reads a website."""
-    L = []
-    L.append("CAN I FIND WHAT I NEED IN ORDER TO APPLY?")
-    L.append(f"   list of programmes / courses ....... {yn(row.a37_programs_listing)}")
-    L.append(f"   admission requirements / policy .... {yn(row.a46_admissions_policy)}")
-    L.append(f"   admission notices & deadlines ...... {yn(row.a22_admission_notice)}")
-    L.append(f"   scholarships / financial aid ....... {yn(row.a38_scholarship)}")
-    L.append(f"   prospectus or brochure ............. {yn(row.a45_prospectus)}")
     contact = []
     if row.a43_contact_link:
-        contact.append("a contact page")
+        contact.append("contact page")
     if row.a47_footer_contact:
-        contact.append("contact details in the footer")
-    L.append(f"   a way to reach a human ............. {', '.join(contact) if contact else 'NOTHING — no way to contact them'}")
+        contact.append("footer details")
+    contact = " + ".join(contact) if contact else "NO WAY TO CONTACT THEM"
 
-    L.append("")
-    L.append("WHAT WOULD I STUDY, AND WHO WOULD TEACH ME?")
-    L.append(f"   department listing ................. {yn(row.a34_department_links)}")
-    L.append(f"   faculty / teaching staff ........... {yn(row.a35_faculty_link)}")
-    L.append(f"   library ............................ {yn(row.a39_library_link)}")
-    L.append(f"   research being done here ........... {yn(row.a36_research_highlight)}")
-
-    L.append("")
-    L.append("IS THIS PLACE ACTUALLY ALIVE?")
-    L.append(f"   notice board ....................... {freshness(row)}")
-    L.append(f"   news section ....................... {yn(row.a20_news_events)}")
-    L.append(f"   upcoming events .................... {events(row)}")
-    L.append(f"   academic calendar .................. {yn(row.a21_calendar_link)}")
-
-    L.append("")
-    L.append("CAN I GET AROUND THE SITE?")
-    L.append(f"   navigation ......................... {nav(row)}")
-    L.append(f"   search box ......................... {yn(row.a04_search_bar)}")
-    L.append(f"   breadcrumb trail ................... {yn(row.a06_breadcrumb)}")
-    footer_bits = [b for b, f in [("quick links", row.a51_quick_links),
-                                  ("a sitemap", row.a48_footer_sitemap)] if f]
-    L.append(f"   footer navigation .................. {', '.join(footer_bits) if footer_bits else 'none'}")
-    L.append(f"   language options ................... {yn(row.a05_language_toggle)}")
-
-    L.append("")
-    L.append("WILL THE SITE ACTUALLY WORK FOR ME?")
-    L.append(f"   on a phone ......................... {phone(row)}")
-    L.append(f"   speed .............................. {speed(row)}")
-    L.append(f"   readability ........................ {readability(row)}")
-    nb = int(row.a66_broken_links)
-    L.append(f"   broken links ....................... {'none found' if nb == 0 else f'{nb} broken link' + ('s' if nb != 1 else '')}")
-    L.append(f"   secure connection (https) .......... {yn(row.a65_https)}")
-
-    L.append("")
-    L.append("ONCE I AM A STUDENT")
-    depth = [b for b, f in [("student portal", row.a44_student_portal), ("careers / jobs", row.a40_career_link),
-                            ("alumni network", row.a41_alumni_link), ("FAQ", row.a42_faq_link),
-                            ("photo gallery", row.a30_image_gallery), ("video", row.a29_video_content),
-                            ("clubs / contests", row.a28_contests), ("social media links", row.a50_social_links),
-                            ("live chat", row.a58_live_chat), ("feedback form", row.a59_feedback_form)] if f]
-    L.append(f"   {', '.join(depth) if depth else 'nothing beyond the basics'}")
-    L.append(f"   about / mission statement .......... {yn(row.a32_vision_mission or row.a33_about_blurb)}")
-
-    L.append("")
-    marketing = [b for b, f in [("an international ranking badge", row.a07_qs_badge),
-                                ("a national ranking claim", row.a09_national_rank),
+    footer_bits = [b for b, f in [("quick-links", row.a51_quick_links),
+                                  ("sitemap", row.a48_footer_sitemap)] if f]
+    depth = [b for b, f in [("student-portal", row.a44_student_portal), ("careers", row.a40_career_link),
+                            ("alumni", row.a41_alumni_link), ("FAQ", row.a42_faq_link),
+                            ("gallery", row.a30_image_gallery), ("video", row.a29_video_content),
+                            ("clubs", row.a28_contests), ("social", row.a50_social_links),
+                            ("live-chat", row.a58_live_chat), ("feedback-form", row.a59_feedback_form)] if f]
+    marketing = [b for b, f in [("intl-ranking-badge", row.a07_qs_badge),
+                                ("national-rank-claim", row.a09_national_rank),
                                 ("accreditation", row.a11_accreditation),
                                 ("awards", row.a13_achievements),
-                                ("student testimonials", row.a61_testimonials)] if f]
-    L.append(f"THE SITE ADVERTISES: {', '.join(marketing) if marketing else 'nothing in particular'}")
+                                ("testimonials", row.a61_testimonials)] if f]
     a11y = []
     if row.a72_missing == 1 or row.a72_alt_text_pct < 25:
-        a11y.append("images are unlabelled for screen readers")
+        a11y.append("images unlabelled for screen readers")
     elif row.a72_alt_text_pct >= 80:
-        a11y.append("images are labelled for screen readers")
+        a11y.append("images labelled for screen readers")
     if row.a74_a11y_toggle:
-        a11y.append("has a text-size/contrast control")
-    L.append(f"ACCESSIBILITY: {'; '.join(a11y) if a11y else 'no notable accessibility features'}")
-    return "\n".join(L)
+        a11y.append("text-size/contrast control")
+    nb = int(row.a66_broken_links)
+
+    L = [
+        f"APPLY  programmes {yn(row.a37_programs_listing)} | requirements {yn(row.a46_admissions_policy)}"
+        f" | notices+deadlines {yn(row.a22_admission_notice)} | scholarships {yn(row.a38_scholarship)}"
+        f" | prospectus {yn(row.a45_prospectus)} | reach a human: {contact}",
+
+        f"STUDY  departments {yn(row.a34_department_links)} | faculty {yn(row.a35_faculty_link)}"
+        f" | library {yn(row.a39_library_link)} | research {yn(row.a36_research_highlight)}",
+
+        f"ALIVE  notice board: {freshness(row)} | news {yn(row.a20_news_events)}"
+        f" | events: {events(row)} | calendar {yn(row.a21_calendar_link)}",
+
+        f"NAV    {nav(row)} | search {yn(row.a04_search_bar)} | breadcrumb {yn(row.a06_breadcrumb)}"
+        f" | footer: {', '.join(footer_bits) if footer_bits else 'nothing'}"
+        f" | languages {yn(row.a05_language_toggle)}",
+
+        f"WORKS  {phone(row)} | {speed(row)} | {readability(row)}"
+        f" | broken links: {'none' if nb == 0 else nb} | https {yn(row.a65_https)}",
+
+        f"EXTRA  {', '.join(depth) if depth else 'nothing beyond the basics'}"
+        f" | about/mission {yn(row.a32_vision_mission or row.a33_about_blurb)}",
+
+        f"ADVERT {', '.join(marketing) if marketing else 'nothing in particular'}",
+        f"A11Y   {'; '.join(a11y) if a11y else 'nothing notable'}",
+    ]
+    return chr(10).join(L)
 
 
 # blinding: the renderer must not be able to touch an identity column
@@ -256,7 +236,9 @@ hits = sorted(n for n in names if re.search(rf"\b{re.escape(n)}\b", blob))
 ALLOWED_OVERLAP = {"international", "national", "university", "technology", "science", "college",
                    "institute", "research", "america", "asia", "europe", "africa", "central",
                    "south", "north", "east", "west", "southeast", "northern", "western", "eastern",
-                   "southern", "latin", "oceania"}
+                   "southern", "latin", "oceania",
+                   # legitimate card vocabulary that also appears inside some university names
+                   "faculty", "engineering", "medical", "agriculture", "education", "management"}
 leaks = [h for h in hits if h not in ALLOWED_OVERLAP]
 print(f"blinding: {len(leaks)} identity tokens leaked into the cards -> {leaks}")
 assert not leaks

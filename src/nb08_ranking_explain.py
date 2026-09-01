@@ -53,12 +53,17 @@ print(f"final model: {meta['final_model']} | {len(FEATURES)} features | "
 # %% [markdown]
 # ## 1. Refitting the model, and its no-load-time twin
 #
-# `07` selected LightGBM with monotonic constraints. Both variants are refitted here so the
-# with/without load-time comparison is like-for-like: same estimator, same hyperparameter
-# search, only the feature set differs.
+# The variant `07` selected is reconstructed from `model_meta.json` rather than hardcoded —
+# whether it carries monotone constraints and whether it weights labels by their bootstrap
+# precision are both read from the recorded name and parameters. That keeps this notebook
+# honest if model selection ever picks a different variant, and the assertion below is what
+# catches it: the refit must reproduce `07`'s predictions to Spearman > 0.999.
+#
+# Both variants are refitted with that same recipe so the with/without load-time comparison
+# is like-for-like: same estimator, same hyperparameters, only the feature set differs.
 
 # %%
-df = data.merge(labB[["uni_id", "trackB_bt_score"]], on="uni_id", how="left")
+df = data.merge(labB[["uni_id", "trackB_bt_score", "trackB_bt_se"]], on="uni_id", how="left")
 df = df.merge(labA[["uni_id", "trackA_consensus"]], on="uni_id", how="left")
 train = df[df.trackB_bt_score.notna()].reset_index(drop=True)
 y = train.trackB_bt_score.values
@@ -70,16 +75,23 @@ def mono_for(cols):
     return [0 if f in NON_MONOTONE else int(dirmap.get(f, 0)) if dirmap.get(f, 0) in (-1, 1) else 0
             for f in cols]
 
-GRID = {"n_estimators": [200, 400], "learning_rate": [0.02, 0.05], "num_leaves": [7, 15],
-        "min_child_samples": [5, 15], "colsample_bytree": [0.6], "reg_lambda": [1.0, 10.0]}
+# Reconstruct 07's recipe from what 07 recorded, not from an assumption about which won.
+USE_MONO = "mono" in meta["final_model"]
+USE_LABELWT = "labelwt" in meta["final_model"]
+PARAMS = {k.split("__", 1)[-1]: v for k, v in meta["final_params"].items()}
+w_final = None
+if USE_LABELWT:
+    w_final = 1.0 / train.trackB_bt_se.values
+    w_final = w_final / w_final.mean()
+print(f"refit recipe from meta: monotone={USE_MONO} label-weights={USE_LABELWT}")
+print(f"  params: {PARAMS}")
 
 def fit_lgbm(cols):
     est = lgb.LGBMRegressor(random_state=0, verbose=-1, n_jobs=1,
-                            monotone_constraints=mono_for(cols))
-    gs = GridSearchCV(est, GRID, cv=KFold(5, shuffle=True, random_state=0),
-                      scoring="neg_mean_squared_error", n_jobs=-1)
-    gs.fit(train[cols], y)
-    return gs.best_estimator_
+                            monotone_constraints=mono_for(cols) if USE_MONO else None,
+                            **PARAMS)
+    est.fit(train[cols], y, sample_weight=w_final)
+    return est
 
 LOAD_FEATS = ["load_time_z_region"]
 FEATURES_NL = [f for f in FEATURES if f not in LOAD_FEATS]

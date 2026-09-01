@@ -1,0 +1,1227 @@
+global_rank,name,country,predicted_score,grade,country_rank,percentile
+1,Murdoch University,Australia,92.18160168392625,A+,1.0,100.0
+2,University of Otago,New Zealand,92.02009339380486,A+,,99.9
+3,RWTH Aachen University,Germany,91.7889204592469,A+,1.0,99.8
+4,Southern Cross University,Australia,91.66276256444084,A+,2.0,99.8
+5,University of Tartu,Baltics,90.84108836080682,A+,,99.7
+6,Polytechnic University of Milan,Italy,90.53944385062856,A+,1.0,99.6
+7,University of Houston,United States,90.20764401083466,A+,1.0,99.5
+8,University of Porto,Portugal,89.97262049645977,A+,,99.4
+9,Sophia University,Japan,89.73672891927903,A+,1.0,99.3
+10,Eotvos Lorand University,Hungary,89.18466274547949,A+,,99.3
+11,University of Wollongong,Australia,89.07745699644023,A+,3.0,99.2
+12,University of New England,Australia,88.87586187851154,A+,4.0,99.1
+13,Gauhati University,India,88.80696013570694,A+,1.0,99.0
+14,COMSATS University Islamabad,Pakistan,88.2433588860629,A+,1.0,98.9
+15,University of Tasmania,Australia,88.17138702956076,A+,5.0,98.9
+16,San Francisco de Quito University,Peru & Andes,88.16090097460672,A+,,98.8
+17,University of Strasbourg,France,87.92396807938626,A+,1.0,98.7
+18,Scuola Normale Superiore di Pisa,Italy,87.90739751247303,A+,2.0,98.6
+19,Indian Institute of Technology Madras,India,87.8569274554611,A+,2.0,98.5
+20,University of South Africa,South Africa,87.0592602490105,A+,1.0,98.5
+21,University of Colorado Boulder,United States,86.98570799690596,A+,2.0,98.4
+22,University of Leicester,United Kingdom,86.96017940857848,A+,1.0,98.3
+23,Technical University of Munich,Germany,86.91051558787677,A+,2.0,98.2
+24,Curtin University,Australia,86.78199531744205,A+,6.0,98.1
+25,Lingnan University,Hong Kong,86.49701940171961,A+,,98.0
+26,"City, University of London",United Kingdom,86.38098079778996,A+,2.0,98.0
+27,Lincoln University,New Zealand,86.35972470452137,A+,,97.9
+28,University of Lausanne,Switzerland/Austria,86.02636807002787,A+,,97.8
+29,Charles Darwin University,Australia,85.95625526061593,A+,7.0,97.7
+30,Sorbonne University,France,85.87951891721613,A+,2.0,97.6
+31,Khulna University of Engineering and Technology,Bangladesh,85.8630875440027,A+,1.0,97.6
+32,Vrije Universiteit Brussel,Belgium/Ireland/Iceland,85.84649550730863,A+,,97.5
+33,Durham University,United Kingdom,85.53370967425074,A+,3.0,97.4
+34,Bharathiar University,India,85.16366557511074,A+,3.0,97.3
+35,University of Southern Denmark,Denmark,85.01956033652264,A+,,97.2
+36,Walter Sisulu University,South Africa,84.72129439638456,A+,2.0,97.1
+37,Kansas State University,United States,84.64996768859677,A+,3.0,97.1
+38,Corvinus University of Budapest,Hungary,84.5423834592951,A+,,97.0
+39,Georgetown University,United States,84.52240825605524,A+,4.0,96.9
+40,University of Surrey,United Kingdom,84.26371868174478,A+,4.0,96.8
+41,Indian Institute of Technology Ropar,India,83.92741167341542,A+,4.0,96.7
+42,University of Pennsylvania,United States,83.80615342297229,A+,5.0,96.7
+43,Jawaharlal Nehru University,India,83.53466068499651,A+,5.0,96.6
+44,Sokoine University of Agriculture,Sub-Saharan Africa,83.48585277965614,A+,,96.5
+45,University of Caen Normandy,France,83.37244962379731,A+,3.0,96.4
+46,Nanyang Technological University,Singapore,83.32265607362834,A+,,96.3
+47,Hong Kong University of Science and Technology,Hong Kong,83.15374263177499,A+,,96.2
+48,Technical University of Kenya,Sub-Saharan Africa,83.09370582401671,A+,,96.2
+49,Texas A&M University,United States,82.80491623752964,A+,6.0,96.1
+50,Aarhus University,Denmark,82.57798724332554,A+,,96.0
+51,Auckland University of Technology,New Zealand,82.45907717338712,A+,,95.9
+52,Worcester Polytechnic Institute,United States,82.3159773669816,A+,7.0,95.8
+53,Symbiosis International University,India,82.30739896280637,A+,6.0,95.8
+54,University of Kent,United Kingdom,82.18896015030558,A+,5.0,95.7
+55,Indian Institute of Technology Dharwad,India,81.84160485502643,A+,7.0,95.6
+56,Central University of Kerala,India,81.79609118092358,A+,8.0,95.5
+57,Moi University,Sub-Saharan Africa,81.7672256891215,A+,,95.4
+58,University of Parma,Italy,81.71171762450616,A+,3.0,95.4
+59,Estonian University of Life Sciences,Baltics,81.55780639653035,A+,,95.3
+60,University of Arizona,United States,81.52660655907154,A+,8.0,95.2
+61,University of Delhi,India,81.50741411145916,A+,9.0,95.1
+62,Sharda University,India,81.48952116309235,A+,10.0,95.0
+63,NIT Agartala,India,81.48540894451831,A+,11.0,94.9
+64,Brown University,United States,81.44712350403759,A+,9.0,94.9
+65,Tallinn University,Baltics,81.226337585532,A+,,94.8
+66,Rajshahi University of Engineering and Technology,Bangladesh,81.21724778467036,A+,2.0,94.7
+67,Maastricht University,Netherlands,80.9515407118557,A+,1.0,94.6
+68,Mehran University of Engineering and Technology,Pakistan,80.91388579410106,A+,2.0,94.5
+69,West Virginia University,United States,80.9131678741184,A+,10.0,94.5
+70,Louisiana State University,United States,80.7965332936269,A+,11.0,94.4
+71,IIIT Gwalior,India,80.7642828441108,A+,12.0,94.3
+72,University of Nova Gorica,Balkans,80.69993973425792,A+,,94.2
+73,American University in Cairo,Egypt & North Africa,80.5836561049692,A+,,94.1
+74,Australian Catholic University,Australia,80.48224936680792,A+,8.0,94.0
+75,University of Hyderabad,India,80.39488459672471,A+,13.0,94.0
+76,Lehigh University,United States,80.31729701884817,A+,12.0,93.9
+77,Concordia University,Canada,80.28429503021836,A+,1.0,93.8
+78,Massey University,New Zealand,80.25084050700686,A+,,93.7
+79,Dublin City University,Belgium/Ireland/Iceland,80.12458733055419,A+,,93.6
+80,ENS de Lyon,France,80.07225689189875,A+,4.0,93.6
+81,Pondicherry University,India,79.99805011279057,A,14.0,93.5
+82,Maynooth University,Belgium/Ireland/Iceland,79.93445163225897,A,,93.4
+83,University of Nottingham,United Kingdom,79.93012435997498,A,6.0,93.3
+84,Universiti Tunku Abdul Rahman,Malaysia,79.7503527528356,A,,93.2
+85,Makerere University,Sub-Saharan Africa,79.66167014378466,A,,93.1
+86,Chittagong University of Engineering and Technology,Bangladesh,79.52950844976218,A,3.0,93.1
+87,Lancaster University,United Kingdom,79.46953656441883,A,7.0,93.0
+88,Westminster International University in Tashkent,Central Asia,79.29312620020393,A,,92.9
+89,Masaryk University,Czechia,79.1941254349064,A,,92.8
+90,University of Poitiers,France,79.1776032126478,A,5.0,92.7
+91,Chandigarh University,India,78.97116516379467,A,15.0,92.7
+92,University of New South Wales,Australia,78.91746627248581,A,9.0,92.6
+93,University of Western Australia,Australia,78.76927653907546,A,10.0,92.5
+94,University of San Francisco,United States,78.71854184961158,A,13.0,92.4
+95,Nazarbayev University,Central Asia,78.71648897993629,A,,92.3
+96,University of Mannheim,Germany,78.70091729065648,A,3.0,92.3
+97,University of Marburg,Germany,78.69925686876257,A,4.0,92.2
+98,University of Limpopo,South Africa,78.64040216540099,A,3.0,92.1
+99,University of Montpellier,France,78.62558442373609,A,6.0,92.0
+100,VSB - Technical University of Ostrava,Czechia,78.58554189876844,A,,91.9
+101,Aligarh Muslim University,India,78.57886426632678,A,16.0,91.8
+102,MNIT Jaipur,India,78.49478487315606,A,17.0,91.8
+103,University of Bremen,Germany,78.46746799491237,A,5.0,91.7
+104,University of Vigo,Spain,78.42782698791771,A,1.0,91.6
+105,Vita-Salute San Raffaele University,Italy,78.34624162611236,A,4.0,91.5
+106,Samarkand State University,Central Asia,78.3232310517675,A,,91.4
+107,"University of California, Davis",United States,78.25843098978267,A,14.0,91.4
+108,University of Tokyo,Japan,78.22858590631063,A,2.0,91.3
+109,University of Rochester,United States,78.21706027350638,A,15.0,91.2
+110,University of Dar es Salaam,Sub-Saharan Africa,78.2047165458182,A,,91.1
+111,Dibrugarh University,India,78.01757748265881,A,18.0,91.0
+112,University of Latvia,Baltics,77.88607384102423,A,,90.9
+113,University of Miskolc,Hungary,77.88436584021866,A,,90.9
+114,Vidyasagar University,India,77.87829526393134,A,19.0,90.8
+115,Royal Danish Academy,Denmark,77.70453842587168,A,,90.7
+116,Royal University of Phnom Penh,Other SE/E Asia,77.63573897829016,A,,90.6
+117,University of Muenster,Germany,77.39556029898748,A,6.0,90.5
+118,University of Pretoria,South Africa,77.37950888163488,A,4.0,90.5
+119,KIIT University,India,77.36664221252012,A,20.0,90.4
+120,York University,Canada,77.32428453214729,A,2.0,90.3
+121,University of Fort Hare,South Africa,77.24286953676325,A,5.0,90.2
+122,University of Girona,Spain,77.23020995198863,A,2.0,90.1
+123,Indian Institute of Technology BHU Varanasi,India,77.16232603255493,A,21.0,90.0
+124,University of Alberta,Canada,77.1315568157294,A,3.0,90.0
+125,"University of California, San Diego",United States,77.11823720818707,A,16.0,89.9
+126,Monash University,Australia,77.11363450314722,A,11.0,89.8
+127,Lodz University of Technology,Poland,77.0111697804594,A,1.0,89.7
+128,University of Aberdeen,United Kingdom,76.99766420700868,A,8.0,89.6
+129,University of Adelaide,Australia,76.9584512709738,A,12.0,89.6
+130,Roma Tre University,Italy,76.94973625604429,A,5.0,89.5
+131,Lithuanian University of Health Sciences,Baltics,76.8681612093613,A,,89.4
+132,Dalhousie University,Canada,76.8628966257962,A,4.0,89.3
+133,Maharaja Sayajirao University of Baroda,India,76.8584458237735,A,22.0,89.2
+134,University of Canberra,Australia,76.82831219707202,A,13.0,89.2
+135,Slovak University of Agriculture in Nitra,Bulgaria & Slovakia,76.80951627507457,A,,89.1
+136,Lovely Professional University,India,76.7891105054186,A,23.0,89.0
+137,North South University,Bangladesh,76.6532643723394,A,4.0,88.9
+138,University of Tsukuba,Japan,76.58968570255344,A,3.0,88.8
+139,Miguel Hernandez University,Spain,76.53831333984044,A,3.0,88.7
+140,London School of Economics,United Kingdom,76.53668425272767,A,9.0,88.7
+141,Tshwane University of Technology,South Africa,76.44337172675732,A,6.0,88.6
+142,Khulna University,Bangladesh,76.39230137382519,A,5.0,88.5
+143,Queensland University of Technology,Australia,76.34960480593126,A,14.0,88.4
+144,University of South Australia,Australia,76.30582601087896,A,15.0,88.3
+145,Drexel University,United States,76.2709716237222,A,17.0,88.3
+146,Manipal Academy of Higher Education,India,76.25399588392484,A,24.0,88.2
+147,Edith Cowan University,Australia,76.214236732839,A,16.0,88.1
+148,University of Venda,South Africa,76.08979908630272,A,7.0,88.0
+149,University of Zurich,Switzerland/Austria,76.08230847985487,A,,87.9
+150,Technical University of Darmstadt,Germany,76.07128091090844,A,7.0,87.8
+151,Stanford University,United States,75.9902889521193,A,18.0,87.8
+152,University of Cincinnati,United States,75.96840548224039,A,19.0,87.7
+153,NIT Calicut,India,75.88687071579096,A,25.0,87.6
+154,Gujarat University,India,75.8640186201318,A,26.0,87.5
+155,NED University of Engineering and Technology,Pakistan,75.8443708719241,A,3.0,87.4
+156,Ashoka University,India,75.72570371851754,A,27.0,87.4
+157,University of Burgundy,France,75.71361396266228,A,7.0,87.3
+158,Leipzig University,Germany,75.70743226182935,A,8.0,87.2
+159,Durban University of Technology,South Africa,75.69002851504008,A,8.0,87.1
+160,Carnegie Mellon University,United States,75.68204814940408,A,20.0,87.0
+161,Bangladesh University of Professionals,Bangladesh,75.67294851245799,A,6.0,86.9
+162,Ateneo de Manila University,Philippines,75.6096297873413,A,,86.9
+163,Adam Mickiewicz University,Poland,75.57554673471208,A,2.0,86.8
+164,Loughborough University,United Kingdom,75.57321402627639,A,10.0,86.7
+165,University of Tuebingen,Germany,75.36405532880255,A,9.0,86.6
+166,Central University of Karnataka,India,75.33151024799335,A,28.0,86.5
+167,University of Johannesburg,South Africa,75.28465610425015,A,9.0,86.5
+168,NIT Warangal,India,75.24022499003271,A,29.0,86.4
+169,University of Regensburg,Germany,75.16984895954364,A,10.0,86.3
+170,University of Victoria,Canada,75.04888947104206,A,5.0,86.2
+171,University of Queensland,Australia,74.99533738675254,A,17.0,86.1
+172,BRAC University,Bangladesh,74.93491157546954,A,7.0,86.1
+173,SGH Warsaw School of Economics,Poland,74.87764817987237,A,3.0,86.0
+174,San Jose State University,United States,74.8315796026021,A,21.0,85.9
+175,La Trobe University,Australia,74.8057520395306,A,18.0,85.8
+176,Pokhara University,Nepal,74.74950555253653,A,,85.7
+177,California Polytechnic State University,Canada,74.73640743081337,A,6.0,85.6
+178,Kwame Nkrumah University of Science and Technology,Sub-Saharan Africa,74.68470788619074,A,,85.6
+179,University of Liege,Belgium/Ireland/Iceland,74.67203788414807,A,,85.5
+180,FAU Erlangen-Nuremberg,Germany,74.64080036650076,A,11.0,85.4
+181,EPFL,Switzerland/Austria,74.56966663747134,A,,85.3
+182,California Institute of Technology,Canada,74.54379442362884,A,7.0,85.2
+183,University of Bern,Switzerland/Austria,74.41687071487534,A,,85.2
+184,University of Burdwan,India,74.39258843178283,A,30.0,85.1
+185,ETH Zurich,Switzerland/Austria,74.39031488736762,A,,85.0
+186,University of Sheffield,United Kingdom,74.30517761598897,A,11.0,84.9
+187,National University of Sciences and Technology,Pakistan,74.09742989496797,A,4.0,84.8
+188,University of Galway,Belgium/Ireland/Iceland,74.06343902088891,A,,84.7
+189,Central University of Tamil Nadu,India,74.06140611882246,A,31.0,84.7
+190,Alagappa University,India,73.99253186533471,A,32.0,84.6
+191,National University of Uzbekistan,Central Asia,73.85394995302946,A,,84.5
+192,University of Kerala,India,73.58091367554621,A,33.0,84.4
+193,University of Algarve,Portugal,73.51251344722799,A,,84.3
+194,Pepperdine University,United States,73.49213505302653,A,22.0,84.3
+195,Claremont McKenna College,United States,73.48642799971186,A,23.0,84.2
+196,James Cook University,Australia,73.45483882786169,A,19.0,84.1
+197,University of Lille,France,73.43623861389574,A,8.0,84.0
+198,Vanderbilt University,United States,73.26829017110092,A,24.0,83.9
+199,Bharathidasan University,India,73.11229852786566,A,34.0,83.8
+200,University of Port Harcourt,Sub-Saharan Africa,73.1039918150513,A,,83.8
+201,Munster Technological University,Belgium/Ireland/Iceland,73.09995013233753,A,,83.7
+202,Mahidol University,Thailand,73.09468663726129,A,,83.6
+203,FAST National University Pakistan,Pakistan,73.08297719245967,A,5.0,83.5
+204,Chiang Mai University,Thailand,72.947454371218,A,,83.4
+205,Loyola Marymount University,United States,72.92725142301532,A,25.0,83.4
+206,International Islamic University Islamabad,Pakistan,72.87026965960081,A,6.0,83.3
+207,University of Massachusetts Amherst,United States,72.86748236343372,A,26.0,83.2
+208,University of Technology Sydney,Australia,72.8262658564527,A,20.0,83.1
+209,Indian Institute of Technology Bhubaneswar,India,72.74877257205512,A,35.0,83.0
+210,University of Santiago Chile,Chile,72.73656872199254,A,,83.0
+211,Columbia University,United States,72.71878890395116,A,27.0,82.9
+212,Sepuluh Nopember Institute of Technology,Indonesia,72.67312253994615,A,,82.8
+213,Delft University of Technology,Netherlands,72.64636096339842,A,2.0,82.7
+214,Vilnius Gediminas Technical University,Baltics,72.61857653331315,A,,82.6
+215,Victoria University,Australia,72.58842146115452,A,21.0,82.5
+216,Eastern University Sri Lanka,Sri Lanka,72.5788992068064,A,,82.5
+217,Nicolaus Copernicus University,Poland,72.54922817948602,A,4.0,82.4
+218,Aga Khan University,Pakistan,72.52484023312812,A,7.0,82.3
+219,Bard College,United States,72.52245267465283,A,28.0,82.2
+220,Technical University of Berlin,Germany,72.4981637259909,A,12.0,82.1
+221,Chalmers University of Technology,Sweden,72.49028644400549,A,,82.1
+222,Rutgers University,United States,72.48324979857894,A,29.0,82.0
+223,Roskilde University,Denmark,72.44895110044891,A,,81.9
+224,Seoul National University,South Korea,72.44867761126794,A,1.0,81.8
+225,University of San Carlos,Philippines,72.31681568533422,A,,81.7
+226,Indian Institute of Technology Hyderabad,India,72.27127491179489,A,36.0,81.6
+227,NIT Raipur,India,72.19501488940756,A,37.0,81.6
+228,University of Santiago de Compostela,Spain,72.19423838150303,A,4.0,81.5
+229,Indian Institute of Technology Patna,India,72.1446102626547,A,38.0,81.4
+230,University of Utah,United States,72.0905641086944,A,30.0,81.3
+231,RMIT University,Australia,72.08407834489805,A,22.0,81.2
+232,University of Stuttgart,Germany,72.0771172889169,A,13.0,81.2
+233,Denison University,United States,72.03313008053408,A,31.0,81.1
+234,Patuakhali Science and Technology University,Bangladesh,72.03300143044879,A,8.0,81.0
+235,Memorial University of Newfoundland,Canada,72.02083725412666,A,8.0,80.9
+236,NIT Tiruchirappalli,India,72.00998042538191,A,39.0,80.8
+237,University of Nairobi,Sub-Saharan Africa,71.9799525284792,A,,80.8
+238,Nnamdi Azikiwe University,Sub-Saharan Africa,71.92961969667579,A,,80.7
+239,Daffodil International University,Bangladesh,71.88401758080157,A,9.0,80.6
+240,University of Southern California,United States,71.8749640945534,A,32.0,80.5
+241,Williams College,United States,71.6334639999358,A,33.0,80.4
+242,Kyoto University,Japan,71.5912217357733,A,4.0,80.3
+243,Deakin University,Australia,71.57370951921536,A,23.0,80.3
+244,Rovira i Virgili University,Spain,71.54782764455898,A,5.0,80.2
+245,Queen Mary University of London,United Kingdom,71.54689918624635,A,12.0,80.1
+246,Indiana University Bloomington,United States,71.52739844426027,A,34.0,80.0
+247,Bowling Green State University,United States,71.4471866378792,A,35.0,79.9
+248,University of Genoa,Italy,71.28459239199248,A,6.0,79.9
+249,National University of Science and Technology Zimbabwe,Sub-Saharan Africa,71.25437395513443,A,,79.8
+250,Ca' Foscari University of Venice,Italy,71.2043192173313,A,7.0,79.7
+251,Copenhagen Business School,Denmark,71.19972638864647,A,,79.6
+252,Hong Kong Baptist University,Hong Kong,71.07999474175826,A,,79.5
+253,University of Pecs,Hungary,70.9395119074878,A,,79.4
+254,Northwestern University,United States,70.90218091542921,A,36.0,79.4
+255,PSL University,France,70.68134594998276,A,9.0,79.3
+256,University of Barisal,Bangladesh,70.31569996127408,A,10.0,79.2
+257,Jamia Millia Islamia,India,70.1888764987578,A,40.0,79.1
+258,Assiut University,Egypt & North Africa,70.15692120838162,A,,79.0
+259,National University of Singapore,Singapore,70.05106164721552,A,,79.0
+260,Gwangju Institute of Science and Technology,South Korea,70.05039303705638,A,2.0,78.9
+261,University of Jos,Sub-Saharan Africa,69.94512242995626,A,,78.8
+262,Air University,Pakistan,69.92080338874,A,8.0,78.7
+263,Tohoku University,Japan,69.89314677255794,A,5.0,78.6
+264,Polytechnic University of Bari,Italy,69.81235240594586,A,8.0,78.5
+265,Institute of Business Administration Karachi,Pakistan,69.72173923941604,A,9.0,78.5
+266,Barnard College,United States,69.68267736691125,A,37.0,78.4
+267,Johannes Kepler University Linz,Switzerland/Austria,69.62317143443764,A,,78.3
+268,University of Helsinki,Finland,69.60828645133509,A,,78.2
+269,Georgia Institute of Technology,United States,69.57139614471875,A,38.0,78.1
+270,University of the Sunshine Coast,Australia,69.5703452620581,A,24.0,78.1
+271,Clemson University,United States,69.53817448884986,A,39.0,78.0
+272,University of KwaZulu-Natal,South Africa,69.51747235534658,A,10.0,77.9
+273,Indian Institute of Technology Palakkad,India,69.50926546508857,A,41.0,77.8
+274,Vytautas Magnus University,Baltics,69.3364702114534,A,,77.7
+275,University of the Western Cape,South Africa,69.28386456715891,A,11.0,77.7
+276,UCLouvain,Belgium/Ireland/Iceland,69.2487076226605,A,,77.6
+277,Paris-Saclay University,France,69.22839936652404,A,10.0,77.5
+278,University of Salzburg,Switzerland/Austria,69.19156516683289,A,,77.4
+279,University of Navarra,Spain,69.06949912092063,A,6.0,77.3
+280,University of Eastern Finland,Finland,68.90412357185586,A,,77.2
+281,University of Liverpool,United Kingdom,68.84746921246646,A,13.0,77.2
+282,Austral University,Argentina,68.75466143086575,A,,77.1
+283,Smith College,United States,68.73448627918711,A,40.0,77.0
+284,University of Engineering and Technology Lahore,Pakistan,68.69451890047226,A,10.0,76.9
+285,Yale University,United States,68.6743804463153,A,41.0,76.8
+286,University of Saskatchewan,Canada,68.6669622002435,A,9.0,76.8
+287,University of Sindh,Pakistan,68.58137552967375,A,11.0,76.7
+288,Mid-Western University,Nepal,68.55919653489602,A,,76.6
+289,Villanova University,United States,68.51282472365702,A,42.0,76.5
+290,American International University-Bangladesh,Bangladesh,68.50044539602214,A,11.0,76.4
+291,Cardiff University,United Kingdom,68.49323125671994,A,14.0,76.3
+292,University of Auckland,New Zealand,68.46820220689693,A,,76.3
+293,University of Lucknow,India,68.45144766253483,A,42.0,76.2
+294,University of Wuerzburg,Germany,68.39064754615242,A,14.0,76.1
+295,University of Luxembourg,Switzerland/Austria,68.21670008074354,A,,76.0
+296,Mississippi State University,United States,68.11569662454731,A,43.0,75.9
+297,Seattle University,United States,68.10904518919934,A,44.0,75.9
+298,Brno University of Technology,Czechia,68.06174251604762,A,,75.8
+299,American University,United States,68.02616876350216,A,45.0,75.7
+300,Aalto University,Finland,68.01065058300226,A,,75.6
+301,Indian Institute of Technology Kanpur,India,67.98559502714811,A,43.0,75.5
+302,Reykjavik University,Belgium/Ireland/Iceland,67.98042624550158,A,,75.4
+303,University of Limerick,Belgium/Ireland/Iceland,67.92923820160608,A,,75.4
+304,Riga Stradins University,Baltics,67.90971249008436,A,,75.3
+305,University of Ostrava,Czechia,67.78460204079231,A,,75.2
+306,University of Twente,Netherlands,67.77048975814981,A,3.0,75.1
+307,Iowa State University,United States,67.69194661890839,A,46.0,75.0
+308,Clermont Auvergne University,France,67.68936970607339,A,11.0,75.0
+309,Semmelweis University,Hungary,67.61441798801762,A,,74.9
+310,Universite libre de Bruxelles,Belgium/Ireland/Iceland,67.47775849993512,A,,74.8
+311,City University of Hong Kong,Hong Kong,67.45318072861441,A,,74.7
+312,Sri Lanka Institute of Information Technology,Sri Lanka,67.371450431365,A,,74.6
+313,University of La Laguna,Spain,67.36516619778342,A,7.0,74.6
+314,"University of California, Los Angeles",United States,67.35784401309857,A,47.0,74.5
+315,Indian Institute of Technology Tirupati,India,67.17921975242439,A,44.0,74.4
+316,Indian Institute of Technology Bhilai,India,67.16584991214614,A,45.0,74.3
+317,Indian Institute of Technology Goa,India,67.04115250408688,A,46.0,74.2
+318,Hasselt University,Belgium/Ireland/Iceland,66.95643501390492,A,,74.1
+319,Indian Institute of Technology Gandhinagar,India,66.85866753722495,A,47.0,74.1
+320,University of Edinburgh,United Kingdom,66.81419954496845,A,15.0,74.0
+321,University of Gdansk,Poland,66.78895317172446,A,5.0,73.9
+322,University of Bordeaux,France,66.657305245003,A,12.0,73.8
+323,LUT University,Finland,66.31181455843662,A,,73.7
+324,Virginia Tech,United States,66.17315584947474,A,48.0,73.7
+325,McMaster University,Canada,66.13894723496851,A,10.0,73.6
+326,University of Lorraine,France,66.08195288997922,A,13.0,73.5
+327,Al-Farabi Kazakh National University,Central Asia,66.07543411767998,A,,73.4
+328,University of Jaen,Spain,66.00128759094275,A,8.0,73.3
+329,Bahir Dar University,Sub-Saharan Africa,65.98279982364178,A,,73.2
+330,Universite Cote d'Azur,France,65.78889461835871,A,14.0,73.2
+331,Carleton University,Canada,65.74574352927554,A,11.0,73.1
+332,Central University of Technology Free State,South Africa,65.731044162044,A,12.0,73.0
+333,Union College,United States,65.65423192704544,A,49.0,72.9
+334,Stockholm University,Sweden,65.62193367749566,A,,72.8
+335,Ton Duc Thang University,Vietnam,65.576836170377,A,,72.8
+336,University of Geneva,Switzerland/Austria,65.42715345889819,A,,72.7
+337,Tokushima University,Japan,65.41688106778226,A,6.0,72.6
+338,Sofia Medical University,Bulgaria & Slovakia,65.38458770109276,A,,72.5
+339,Michigan State University,United States,65.37049551621344,A,50.0,72.4
+340,Indian Institute of Technology Mandi,India,65.3435520713005,A,48.0,72.3
+341,Suranaree University of Technology,Thailand,65.18247482352233,A,,72.3
+342,Vellore Institute of Technology,India,65.1647330027256,A,49.0,72.2
+343,Igor Sikorsky Kyiv Polytechnic Institute,Ukraine,65.15186864367783,A,,72.1
+344,University of Education Winneba,Sub-Saharan Africa,65.08727009409155,A,,72.0
+345,University of Madeira,Portugal,65.08031296493309,A,,71.9
+346,Cheikh Anta Diop University,Sub-Saharan Africa,65.06991945665534,A,,71.9
+347,Chiba University,Japan,64.99555389916026,B,7.0,71.8
+348,Warsaw University of Life Sciences,Poland,64.95554060050281,B,6.0,71.7
+349,University of Ibadan,Sub-Saharan Africa,64.90105212067408,B,,71.6
+350,San Diego State University,United States,64.88073758552034,B,51.0,71.5
+351,University of Banja Luka,Balkans,64.84691108223855,B,,71.5
+352,University of Ottawa,Canada,64.69386153138416,B,12.0,71.4
+353,Singapore Management University,Singapore,64.43391418067273,B,,71.3
+354,Tilburg University,Netherlands,64.23280850467687,B,4.0,71.2
+355,Cape Peninsula University of Technology,South Africa,63.99723425926762,B,13.0,71.1
+356,University of Messina,Italy,63.96495536530847,B,9.0,71.0
+357,University of Ghana,Sub-Saharan Africa,63.96084010020783,B,,71.0
+358,National Yunlin University of Science and Technology,Taiwan,63.87375234099031,B,,70.9
+359,Nagoya Institute of Technology,Japan,63.87335331517951,B,8.0,70.8
+360,"University of California, Irvine",United States,63.84341802097453,B,52.0,70.7
+361,Pavol Jozef Safarik University,Bulgaria & Slovakia,63.75616134883455,B,,70.6
+362,Heidelberg University,Germany,63.75304508919627,B,15.0,70.6
+363,University of Vienna,Switzerland/Austria,63.63268527265155,B,,70.5
+364,Charles III University of Madrid,Spain,63.58553864266914,B,9.0,70.4
+365,Sts. Cyril and Methodius University Skopje,Balkans,63.36850780578386,B,,70.3
+366,Colgate University,United States,63.32036033155664,B,53.0,70.2
+367,National Chung Hsing University,Taiwan,63.27608650831269,B,,70.1
+368,Transilvania University of Brasov,Romania,63.25443432572418,B,,70.1
+369,University of York,United Kingdom,63.220139561313765,B,16.0,70.0
+370,University of Glasgow,United Kingdom,63.21132024929356,B,17.0,69.9
+371,Sri Venkateswara University,India,63.079257372369455,B,50.0,69.8
+372,University of Oregon,United States,62.9774119004491,B,54.0,69.7
+373,Ohio State University,United States,62.85258528342026,B,55.0,69.7
+374,National Taiwan University,Taiwan,62.60127116878704,B,,69.6
+375,Baylor University,United States,62.49733266531919,B,56.0,69.5
+376,University of Craiova,Romania,62.486623193201005,B,,69.4
+377,Dartmouth College,United States,62.42547336732874,B,57.0,69.3
+378,Lahore University of Management Sciences,Pakistan,62.33544752691988,B,12.0,69.2
+379,Agricultural University of Athens,Greece,62.2432377691398,B,,69.2
+380,University of Trieste,Italy,62.13176485971815,B,10.0,69.1
+381,Indian Institute of Technology ISM Dhanbad,India,61.98409620355044,B,51.0,69.0
+382,University of Sussex,United Kingdom,61.94214987438974,B,18.0,68.9
+383,Polytechnic University of Turin,Italy,61.8882972262326,B,11.0,68.8
+384,Pomona College,United States,61.882939541125126,B,58.0,68.8
+385,Central University of Rajasthan,India,61.64693201877032,B,52.0,68.7
+386,University of Newcastle,Australia,61.62243128232337,B,25.0,68.6
+387,University of Opole,Poland,61.57397162517726,B,7.0,68.5
+388,Kiel University,Germany,61.55350762707818,B,16.0,68.4
+389,University of North Sumatra,Indonesia,61.52626340997676,B,,68.4
+390,Thammasat University,Thailand,61.41431298974529,B,,68.3
+391,Swarthmore College,United States,61.403820188832185,B,59.0,68.2
+392,University of Oxford,United Kingdom,61.312180520139314,B,19.0,68.1
+393,University of Tours,France,61.2492177235792,B,15.0,68.0
+394,"University of California, Santa Cruz",United States,61.22557636447844,B,60.0,67.9
+395,University of Ljubljana,Balkans,61.185722729138334,B,,67.9
+396,University of Bonn,Germany,61.177448845736286,B,17.0,67.8
+397,University of St Andrews,United Kingdom,61.16910433856118,B,20.0,67.7
+398,Federal University of Grande Dourados,Brazil,61.13703595210154,B,1.0,67.6
+399,Jagannath University,Bangladesh,61.07319357237345,B,12.0,67.5
+400,University of Cape Coast,Sub-Saharan Africa,60.97461777694612,B,,67.5
+401,IIIT Hyderabad,India,60.97088716587681,B,53.0,67.4
+402,Tribhuvan Institute of Engineering,Nepal,60.954306072066736,B,,67.3
+403,Marche Polytechnic University,Italy,60.95193279170721,B,12.0,67.2
+404,University of Wroclaw,Poland,60.896426207258,B,8.0,67.1
+405,Bangladesh University of Textiles,Bangladesh,60.848078381967085,B,13.0,67.0
+406,Nanchang University,China,60.83085969842308,B,1.0,67.0
+407,Kathmandu University,Nepal,60.79407701447072,B,,66.9
+408,BI Norwegian Business School,Norway,60.73827278985926,B,,66.8
+409,Karlsruhe Institute of Technology,Germany,60.73231877464211,B,18.0,66.7
+410,Ain Shams University,Egypt & North Africa,60.60254735267409,B,,66.6
+411,University of Oklahoma,United States,60.40423871858933,B,61.0,66.6
+412,Illinois Institute of Technology,United States,60.370479583739474,B,62.0,66.5
+413,Central Queensland University,Australia,60.349069895514646,B,26.0,66.4
+414,Stony Brook University,United States,60.32220988843747,B,63.0,66.3
+415,Royal University of Bhutan,Central Asia,60.21979798812272,B,,66.2
+416,Miami University,United States,59.9358965160113,B,64.0,66.2
+417,NOVA University Lisbon,Portugal,59.93221072550659,B,,66.1
+418,University of Rwanda,Sub-Saharan Africa,59.78219563167836,B,,66.0
+419,Stevens Institute of Technology,United States,59.65551054872166,B,65.0,65.9
+420,University of Konstanz,Germany,59.58513207248865,B,19.0,65.8
+421,Sant'Anna School of Advanced Studies,Italy,59.50885130241841,B,13.0,65.7
+422,Wilfrid Laurier University,Canada,59.452276475486016,B,13.0,65.7
+423,Far Eastern University,Philippines,59.448422938892286,B,,65.6
+424,University of Chittagong,Bangladesh,59.399198508000126,B,14.0,65.5
+425,Chungbuk National University,South Korea,59.37680245087025,B,3.0,65.4
+426,University of Bath,United Kingdom,59.33782700335585,B,21.0,65.3
+427,University of Montreal,Canada,59.32502762764311,B,14.0,65.3
+428,Universiti Malaysia Sabah,Malaysia,59.26432664386826,B,,65.2
+429,NIT Karnataka Surathkal,India,59.22948196211247,B,54.0,65.1
+430,Tufts University,United States,59.20113970260016,B,66.0,65.0
+431,V. N. Karazin Kharkiv National University,Ukraine,59.09152868592219,B,,64.9
+432,University of the Witwatersrand,South Africa,59.08932289374607,B,14.0,64.8
+433,Simon Fraser University,Canada,58.97630591795192,B,15.0,64.8
+434,University of Iowa,United States,58.9559783537807,B,67.0,64.7
+435,University College Cork,Belgium/Ireland/Iceland,58.905201466106384,B,,64.6
+436,Jomo Kenyatta University of Agriculture and Technology,Sub-Saharan Africa,58.85117130941953,B,,64.5
+437,Indian Institute of Technology Bombay,India,58.79700475616029,B,55.0,64.4
+438,Far Western University,Nepal,58.73866654967485,B,,64.4
+439,Autonomous University of Madrid,Spain,58.71834471331001,B,10.0,64.3
+440,Australian National University,Australia,58.6129341712571,B,27.0,64.2
+441,University of Kansas,United States,58.52210089258658,B,68.0,64.1
+442,University of Basel,Switzerland/Austria,58.43252982250879,B,,64.0
+443,University of Mauritius,Sub-Saharan Africa,58.40932219247704,B,,63.9
+444,Wake Forest University,United States,58.26099847153878,B,69.0,63.9
+445,University of Alicante,Spain,58.24198677858643,B,11.0,63.8
+446,University of Thessaly,Greece,58.22195491860321,B,,63.7
+447,University of Jaffna,Sri Lanka,58.168738494408935,B,,63.6
+448,University of Basilicata,Italy,58.10718450276181,B,14.0,63.5
+449,IT University of Copenhagen,Denmark,58.09552517495153,B,,63.5
+450,Quaid-i-Azam University,Pakistan,58.04915121137416,B,13.0,63.4
+451,Maria Curie-Sklodowska University,Poland,57.99157352324007,B,9.0,63.3
+452,Autonomous University of Barcelona,Spain,57.977919927480784,B,12.0,63.2
+453,"University of California, Riverside",United States,57.96806171751622,B,70.0,63.1
+454,Helwan University,Egypt & North Africa,57.96756533653954,B,,63.1
+455,SRM Institute of Science and Technology,India,57.95046796203061,B,56.0,63.0
+456,UCSI University,Malaysia,57.93505824917755,B,,62.9
+457,University of National and World Economy,Bulgaria & Slovakia,57.68475590209311,B,,62.8
+458,King's College London,United Kingdom,57.62216254576524,B,22.0,62.7
+459,University of Zimbabwe,Sub-Saharan Africa,57.60515446894355,B,,62.6
+460,University of Chicago,United States,57.48349593523682,B,71.0,62.6
+461,Sabaragamuwa University of Sri Lanka,Sri Lanka,57.47757096485899,B,,62.5
+462,Kwansei Gakuin University,Japan,57.45972436575662,B,9.0,62.4
+463,University of St. Thomas,United States,57.39303278625285,B,72.0,62.3
+464,Clark University,United States,57.35518541992789,B,73.0,62.2
+465,Autonomous Technological Institute of Mexico,Mexico,57.34379506982695,B,1.0,62.2
+466,University of Denver,United States,57.276006782012914,B,74.0,62.1
+467,Ehime University,Japan,57.13689794523722,B,10.0,62.0
+468,University of Yangon,Other SE/E Asia,57.12596607375658,B,,61.9
+469,University of Perugia,Italy,57.11018745269746,B,15.0,61.8
+470,University of St. Gallen,Switzerland/Austria,57.09957463335397,B,,61.7
+471,Nanjing University,China,57.079808929119295,B,2.0,61.7
+472,Reed College,United States,57.05891927055311,B,75.0,61.6
+473,Chulalongkorn University,Thailand,57.033695107289,B,,61.5
+474,University of the Punjab,Pakistan,57.02466599226796,B,14.0,61.4
+475,University of Southern Queensland,Australia,56.78064927977929,B,28.0,61.3
+476,Hanze University of Applied Sciences,Netherlands,56.761793722716654,B,5.0,61.3
+477,Brandeis University,United States,56.69131432772253,B,76.0,61.2
+478,University of Colombo,Sri Lanka,56.43540585546484,B,,61.1
+479,Indian Institute of Science,India,56.412395864856094,B,57.0,61.0
+480,Indian Institute of Technology Guwahati,India,56.39445637426258,B,58.0,60.9
+481,University of Crete,Greece,56.28864604305984,B,,60.8
+482,University of Rijeka,Balkans,56.24924292676177,B,,60.8
+483,Hawassa University,Sub-Saharan Africa,56.23148147361536,B,,60.7
+484,Mackenzie Presbyterian University,Brazil,56.17313425347341,B,2.0,60.6
+485,Houari Boumediene University of Science and Technology,Egypt & North Africa,56.13543106300048,B,,60.5
+486,Swedish University of Agricultural Sciences,Sweden,56.11857741237965,B,,60.4
+487,Jimma University,Sub-Saharan Africa,56.02690859880296,B,,60.4
+488,University of Fribourg,Switzerland/Austria,55.99561567375247,B,,60.3
+489,Lund University,Sweden,55.98226970099078,B,,60.2
+490,Macalester College,United States,55.97504204024635,B,77.0,60.1
+491,Imperial College London,United Kingdom,55.96803242285261,B,23.0,60.0
+492,Grenoble Alpes University,France,55.96423081877912,B,16.0,60.0
+493,Kookmin University,South Korea,55.95958172438343,B,4.0,59.9
+494,University of Louisville,United States,55.8221030483904,B,78.0,59.8
+495,Queen's University Belfast,United Kingdom,55.7963083642495,B,24.0,59.7
+496,Indian Institute of Technology Indore,India,55.7928537368011,B,59.0,59.6
+497,Bandung Institute of Technology,Indonesia,55.642281492035714,B,,59.5
+498,Temple University,United States,55.58718167422776,B,79.0,59.5
+499,Public University of Navarre,Spain,55.56231673580686,B,13.0,59.4
+500,Abo Akademi University,Finland,55.560179965390354,B,,59.3
+501,University of Manchester,United Kingdom,55.5073112020781,B,25.0,59.2
+502,"University of Nevada, Reno",United States,55.36801709683252,B,80.0,59.1
+503,University of Maribor,Balkans,55.32317485975416,B,,59.1
+504,Newcastle University,United Kingdom,55.27566970598687,B,26.0,59.0
+505,University of Calgary,Canada,55.25913560094854,B,16.0,58.9
+506,Netaji Subhas University of Technology,India,55.235082227819376,B,60.0,58.8
+507,Uppsala University,Sweden,55.22587581564512,B,,58.7
+508,University at Buffalo,United States,55.19915181648626,B,81.0,58.6
+509,Gonzaga University,United States,54.95740942914984,B,82.0,58.6
+510,Wesleyan University,United States,54.92393784286879,B,83.0,58.5
+511,Kanazawa University,Japan,54.865960849007706,B,11.0,58.4
+512,George Washington University,United States,54.78289721422489,B,84.0,58.3
+513,Obuda University,Hungary,54.67697031478497,B,,58.2
+514,Clarkson University,United States,54.67164634360528,B,85.0,58.2
+515,Flinders University,Australia,54.651057976605536,B,29.0,58.1
+516,De La Salle University,Philippines,54.56404084918173,B,,58.0
+517,Carol Davila University of Medicine and Pharmacy,Romania,54.4815288985732,B,,57.9
+518,Budapest University of Technology and Economics,Hungary,54.45783836114527,B,,57.8
+519,University of Evora,Portugal,54.31366633920162,B,,57.7
+520,Syracuse University,United States,54.26289807426473,B,86.0,57.7
+521,Auburn University,United States,54.21641976280693,B,87.0,57.6
+522,McGill University,Canada,54.2034441076006,B,17.0,57.5
+523,Obafemi Awolowo University,Sub-Saharan Africa,54.18887821615551,B,,57.4
+524,Guru Gobind Singh Indraprastha University,India,54.03249099569651,B,61.0,57.3
+525,Panjab University,India,54.0169517158735,B,62.0,57.3
+526,Kent State University,United States,53.94649173209895,B,88.0,57.2
+527,Pakistan Institute of Engineering and Applied Sciences,Pakistan,53.895725626101886,B,15.0,57.1
+528,The Hague University of Applied Sciences,Netherlands,53.87643686572897,B,6.0,57.0
+529,University of the East,Philippines,53.82239187682735,B,,56.9
+530,Czech University of Life Sciences Prague,Czechia,53.76487351525377,B,,56.9
+531,Brawijaya University,Indonesia,53.73820057007339,B,,56.8
+532,Mohammed VI Polytechnic University,Egypt & North Africa,53.71428542554314,B,,56.7
+533,Leiden University,Netherlands,53.68804072206074,B,7.0,56.6
+534,Comilla University,Bangladesh,53.64253536067607,B,15.0,56.5
+535,University of South Carolina,United States,53.59645435949126,B,89.0,56.4
+536,Leibniz University Hannover,Germany,53.55702833425005,B,20.0,56.4
+537,Bahauddin Zakariya University,Pakistan,53.53625212724409,B,16.0,56.3
+538,Ajou University,South Korea,53.33732340083038,B,5.0,56.2
+539,University of Cape Town,South Africa,53.32812731935037,B,15.0,56.1
+540,University of Carthage,Egypt & North Africa,53.299199393979634,B,,56.0
+541,Ghent University,Belgium/Ireland/Iceland,53.15639173736705,B,,56.0
+542,Howard University,United States,53.15350831179245,B,90.0,55.9
+543,King Mongkut's Institute of Technology Ladkrabang,Thailand,53.04203672945506,B,,55.8
+544,Ulm University,Germany,53.01035213110882,B,21.0,55.7
+545,Binghamton University,United States,52.95291359221086,B,91.0,55.6
+546,University of Strathclyde,United Kingdom,52.93887488728266,B,27.0,55.5
+547,Gdansk University of Technology,Poland,52.92123383240199,B,10.0,55.5
+548,Boston University,United States,52.71468370726952,B,92.0,55.4
+549,University of Macau,Macau,52.686679122454095,B,,55.3
+550,Orebro University,Sweden,52.67727937017166,B,,55.2
+551,Hong Kong Polytechnic University,Hong Kong,52.66401352877936,B,,55.1
+552,Silliman University,Philippines,52.60280784172628,B,,55.1
+553,University of Waikato,New Zealand,52.55639439749896,B,,55.0
+554,University of Gujrat,Pakistan,52.55623685306547,B,17.0,54.9
+555,South China University of Technology,China,52.39249486131901,B,3.0,54.8
+556,University of Florida,United States,52.348909807663176,B,93.0,54.7
+557,Okayama University,Japan,52.31874715156801,B,12.0,54.6
+558,Sciences Po,France,52.28506742108041,B,17.0,54.6
+559,Universite Paris Cite,France,52.282684892655695,B,18.0,54.5
+560,Satbayev University,Central Asia,52.22241028329781,B,,54.4
+561,University of Kentucky,United States,52.05378802160229,B,94.0,54.3
+562,National Chengchi University,Taiwan,52.00450743502774,B,,54.2
+563,Victoria University of Wellington,New Zealand,51.97398330394672,B,,54.2
+564,Chinese University of Hong Kong,Hong Kong,51.95856368458727,B,,54.1
+565,Slovak University of Technology in Bratislava,Bulgaria & Slovakia,51.82169347985783,B,,54.0
+566,Duke University,United States,51.81444534289812,B,95.0,53.9
+567,Swinburne University of Technology,Australia,51.74516563549274,B,30.0,53.8
+568,Bocconi University,Italy,51.55774106443881,B,16.0,53.8
+569,Tajik National University,Central Asia,51.53387246295349,B,,53.7
+570,Hasanuddin University,Indonesia,51.49691137869171,B,,53.6
+571,University of South-Eastern Norway,Norway,51.36038729806906,B,,53.5
+572,University of Zaragoza,Spain,51.27855667630401,B,14.0,53.4
+573,University of Patras,Greece,51.2771106708839,B,,53.3
+574,Lulea University of Technology,Sweden,51.20140212795636,B,,53.3
+575,Mendel University in Brno,Czechia,51.18492272234083,B,,53.2
+576,Pennsylvania State University,United States,51.11220887141373,B,96.0,53.1
+577,Gadjah Mada University,Indonesia,50.98687601708592,B,,53.0
+578,Trinity College Dublin,Belgium/Ireland/Iceland,50.86134194326156,B,,52.9
+579,Kobe University,Japan,50.8311290960455,B,13.0,52.9
+580,"University of California, Berkeley",United States,50.74527933866405,B,97.0,52.8
+581,University of Southampton,United Kingdom,50.73157030783489,B,28.0,52.7
+582,Bielefeld University,Germany,50.71556392371623,B,22.0,52.6
+583,Baylor College of Medicine,United States,50.63658253036146,B,98.0,52.5
+584,University College London,United Kingdom,50.58881402951473,B,29.0,52.4
+585,Southern Methodist University,United States,50.55663677355177,B,99.0,52.4
+586,University of Georgia,United States,50.52456470714382,B,100.0,52.3
+587,University of Namur,Belgium/Ireland/Iceland,50.46398298030138,B,,52.2
+588,Polytechnic University of Valencia,Spain,50.442637080422,B,15.0,52.1
+589,University of Bristol,United Kingdom,50.44216931059536,B,30.0,52.0
+590,Jagiellonian University,Poland,50.40905858641781,B,11.0,52.0
+591,Tokyo University of Science,Japan,50.405541544115806,B,14.0,51.9
+592,University of Zambia,Sub-Saharan Africa,50.341742763345806,B,,51.8
+593,Florida State University,United States,50.3257077039662,B,101.0,51.7
+594,Babes-Bolyai University,Romania,50.24261776324748,B,,51.6
+595,University of Macedonia,Greece,50.23934521610344,B,,51.5
+596,University of Copenhagen,Denmark,50.23597869069679,B,,51.5
+597,Eindhoven University of Technology,Netherlands,50.19965821364,B,8.0,51.4
+598,IPB University,Indonesia,50.197916219021465,B,,51.3
+599,University of Texas at Austin,United States,50.06326582505243,B,102.0,51.2
+600,Bangladesh University of Engineering and Technology,Bangladesh,50.04982249210608,B,16.0,51.1
+601,Hitotsubashi University,Japan,49.983944206261896,C,15.0,51.1
+602,University of British Columbia,Canada,49.96814680280836,C,18.0,51.0
+603,Rochester Institute of Technology,United States,49.8745097545171,C,103.0,50.9
+604,Aalborg University,Denmark,49.83102998012207,C,,50.8
+605,Cadi Ayyad University,Egypt & North Africa,49.7059001279685,C,,50.7
+606,Jahangirnagar University,Bangladesh,49.678431512383455,C,17.0,50.7
+607,University of Connecticut,United States,49.67093611865714,C,104.0,50.6
+608,Catholic University of Portugal,Portugal,49.61727857495591,C,,50.5
+609,Boston College,United States,49.61053378245621,C,105.0,50.4
+610,University of Dundee,United Kingdom,49.55095382130555,C,31.0,50.3
+611,University of New Mexico,United States,49.35723447704501,C,106.0,50.2
+612,University of Sydney,Australia,49.34613478789704,C,31.0,50.2
+613,Banaras Hindu University,India,49.265719271314246,C,63.0,50.1
+614,Osmania University,India,49.26342828736253,C,64.0,50.0
+615,Konkuk University,South Korea,49.25489395601715,C,6.0,49.9
+616,Amherst College,United States,49.19288083865544,C,107.0,49.8
+617,University of Uyo,Sub-Saharan Africa,49.15023568500088,C,,49.8
+618,Jeonbuk National University,South Korea,49.02600563759424,C,7.0,49.7
+619,University of Dhaka,Bangladesh,48.982875200523054,C,18.0,49.6
+620,Loyola University Chicago,United States,48.8950689094952,C,108.0,49.5
+621,University of Warwick,United Kingdom,48.85506037162976,C,32.0,49.4
+622,DePaul University,United States,48.71924054059805,C,109.0,49.3
+623,Toronto Metropolitan University,Canada,48.69273910845445,C,19.0,49.3
+624,Pontifical Catholic University of Peru,Peru & Andes,48.53661060410289,C,,49.2
+625,Maldives National University,Central Asia,48.534750866469146,C,,49.1
+626,Texas Christian University,United States,48.41132199988362,C,110.0,49.0
+627,HAN University of Applied Sciences,Netherlands,48.38467568054847,C,9.0,48.9
+628,Rajarata University of Sri Lanka,Sri Lanka,48.2469162488671,C,,48.9
+629,University of Benin,Sub-Saharan Africa,48.20049465788368,C,,48.8
+630,Strathmore University,Sub-Saharan Africa,48.18743190500243,C,,48.7
+631,Texas Tech University,United States,48.12595492621526,C,111.0,48.6
+632,Amsterdam University of Applied Sciences,Netherlands,48.00842214887245,C,10.0,48.5
+633,University of Jyvaskyla,Finland,47.97499640457608,C,,48.5
+634,Johns Hopkins University,United States,47.872435759356776,C,112.0,48.4
+635,University of Lodz,Poland,47.8153767718931,C,12.0,48.3
+636,University of Turku,Finland,47.77256569378758,C,,48.2
+637,University of Notre Dame,United States,47.75740862997912,C,113.0,48.1
+638,University of Delaware,United States,47.73832159595155,C,114.0,48.0
+639,East West University,Bangladesh,47.63363658212108,C,19.0,48.0
+640,TU Dresden,Germany,47.628314398919336,C,23.0,47.9
+641,Mapua University,Philippines,47.39628730719505,C,,47.8
+642,University of Nis,Balkans,47.33897059530431,C,,47.7
+643,University of Calicut,India,47.25516942430187,C,65.0,47.6
+644,Amrita Vishwa Vidyapeetham,India,47.19862382363989,C,66.0,47.6
+645,Kaunas University of Technology,Baltics,47.15465220395362,C,,47.5
+646,GIK Institute of Engineering Sciences and Technology,Pakistan,47.104964019379935,C,18.0,47.4
+647,Scripps College,United States,47.04854604339196,C,115.0,47.3
+648,Free University of Berlin,Germany,46.97696855511027,C,24.0,47.2
+649,International Islamic University Malaysia,Malaysia,46.94704027764277,C,,47.1
+650,University of Virginia,United States,46.84613427226216,C,116.0,47.1
+651,North Carolina State University,United States,46.84543533019061,C,117.0,47.0
+652,Indian Institute of Technology Roorkee,India,46.758360351075645,C,67.0,46.9
+653,Charles Sturt University,Australia,46.74367743974236,C,32.0,46.8
+654,Ladoke Akintola University of Technology,Sub-Saharan Africa,46.680514355924906,C,,46.7
+655,TU Wien,Switzerland/Austria,46.66980716535506,C,,46.7
+656,Universiti Brunei Darussalam,Other SE/E Asia,46.64390482984551,C,,46.6
+657,Universiti Utara Malaysia,Malaysia,46.61362872652508,C,,46.5
+658,University of Pittsburgh,United States,46.52082376133771,C,118.0,46.4
+659,Silesian University of Technology,Poland,46.50637493246604,C,13.0,46.3
+660,Saxion University of Applied Sciences,Netherlands,46.47996130180016,C,11.0,46.2
+661,Universidad de las Americas Puebla,United States,46.47058546959024,C,119.0,46.2
+662,AGH University of Krakow,Poland,46.37516401077715,C,14.0,46.1
+663,Covenant University,Sub-Saharan Africa,46.37159060292341,C,,46.0
+664,New York University,United States,46.349128845007655,C,120.0,45.9
+665,University of Leeds,United Kingdom,46.256129109077655,C,33.0,45.8
+666,Wroclaw University of Science and Technology,Poland,46.19780779622722,C,15.0,45.8
+667,Kharkiv Polytechnic Institute,Ukraine,46.18732349590142,C,,45.7
+668,Nantes University,France,45.99265926473467,C,19.0,45.6
+669,Kumamoto University,Japan,45.97957919745525,C,16.0,45.5
+670,Aix-Marseille University,France,45.85915022099836,C,20.0,45.4
+671,University of Almeria,Spain,45.801287527825885,C,16.0,45.4
+672,University of South Bohemia,Czechia,45.65373587384507,C,,45.3
+673,Sogang University,South Korea,45.64079371596752,C,8.0,45.2
+674,Kyung Hee University,South Korea,45.54648464510567,C,9.0,45.1
+675,Bina Nusantara University,Indonesia,45.47732455197267,C,,45.0
+676,University of Caxias do Sul,Brazil,45.43477659085045,C,3.0,44.9
+677,Federal University of Technology Owerri,Sub-Saharan Africa,45.36864070460727,C,,44.9
+678,Kenyon College,United States,45.36522279350731,C,121.0,44.8
+679,Indian Institute of Technology Jodhpur,India,45.21802218865031,C,68.0,44.7
+680,University of Primorska,Balkans,45.20632277407117,C,,44.6
+681,Tribhuvan University,Nepal,45.19225815123139,C,,44.5
+682,West Pomeranian University of Technology,Poland,45.17336242732407,C,16.0,44.5
+683,Haverford College,United States,45.12239961227193,C,122.0,44.4
+684,Universiti Teknologi MARA,Malaysia,45.06490372613993,C,,44.3
+685,University of Goettingen,Germany,45.049402726596,C,25.0,44.2
+686,Nagoya University,Japan,44.98838260827544,C,17.0,44.1
+687,University of Split,Balkans,44.98575965796068,C,,44.0
+688,Western Sydney University,Australia,44.98404728315661,C,33.0,44.0
+689,Brock University,Canada,44.96264587309231,C,20.0,43.9
+690,University of Bialystok,Poland,44.94338902042048,C,17.0,43.8
+691,University of Manitoba,Canada,44.885032386615535,C,21.0,43.7
+692,University of San Diego,United States,44.873685402832486,C,123.0,43.6
+693,Multimedia University,Malaysia,44.84839877733914,C,,43.6
+694,Technological University Dublin,Belgium/Ireland/Iceland,44.78222406224105,C,,43.5
+695,Hanyang University,South Korea,44.77061873612058,C,10.0,43.4
+696,Kyushu University,Japan,44.7231687912688,C,18.0,43.3
+697,University of New Hampshire,United States,44.70914138020717,C,124.0,43.2
+698,Bowdoin College,United States,44.7075145110006,C,125.0,43.1
+699,Institute of Technology of Cambodia,Other SE/E Asia,44.60963295519521,C,,43.1
+700,Doshisha University,Japan,44.58734373604612,C,19.0,43.0
+701,Tezpur University,India,44.5837509159656,C,69.0,42.9
+702,University of North Carolina at Chapel Hill,United States,44.50471026906253,C,126.0,42.8
+703,Yuriy Fedkovych Chernivtsi National University,Ukraine,44.44578776887286,C,,42.7
+704,Mount Holyoke College,United States,44.43060281692348,C,127.0,42.7
+705,Oles Honchar Dnipro National University,Ukraine,44.4039033676148,C,,42.6
+706,Vassar College,United States,44.40377782201217,C,128.0,42.5
+707,Trinity College,United States,44.40312508513926,C,129.0,42.4
+708,University of Piraeus,Greece,44.370892081670846,C,,42.3
+709,Shinshu University,Japan,44.29257287349675,C,20.0,42.3
+710,University of Rajshahi,Bangladesh,44.28555163301864,C,20.0,42.2
+711,Inland Norway University of Applied Sciences,Norway,44.25994209474466,C,,42.1
+712,Kagawa University,Japan,44.2007423437726,C,21.0,42.0
+713,Medical University of Vienna,Switzerland/Austria,44.17561230475827,C,,41.9
+714,Massachusetts Institute of Technology,United States,44.141098976330966,C,130.0,41.8
+715,Hiroshima University,Japan,44.05518647759578,C,22.0,41.8
+716,Shanghai Jiao Tong University,China,43.71702534642554,C,4.0,41.7
+717,National Yang Ming Chiao Tung University,Taiwan,43.69867417040359,C,,41.6
+718,University of Modena and Reggio Emilia,Italy,43.558945937469936,C,17.0,41.5
+719,Harvard University,United States,43.52143064761067,C,131.0,41.4
+720,Karlstad University,Sweden,43.48656715848542,C,,41.4
+721,Rice University,United States,43.41776682770066,C,132.0,41.3
+722,Claude Bernard University Lyon 1,France,43.410524886831865,C,21.0,41.2
+723,University of Engineering and Technology Taxila,Pakistan,43.26359090876246,C,19.0,41.1
+724,University of Agder,Norway,43.22597225706839,C,,41.0
+725,University of Ioannina,Greece,43.11984027885224,C,,40.9
+726,University of Duisburg-Essen,Germany,43.02881096493564,C,26.0,40.9
+727,Dongguk University,South Korea,42.9958213714829,C,11.0,40.8
+728,University of Exeter,United Kingdom,42.90761195197279,C,34.0,40.7
+729,University of Alabama,United States,42.88709745267213,C,133.0,40.6
+730,Oberlin College,United States,42.84864551546961,C,134.0,40.5
+731,Chung-Ang University,South Korea,42.734321887250346,C,12.0,40.5
+732,Keio University,Japan,42.66942373117055,C,23.0,40.4
+733,Cochin University of Science and Technology,India,42.54589969057626,C,70.0,40.3
+734,Niigata University,Japan,42.461000230883606,C,24.0,40.2
+735,National University of Laos,Other SE/E Asia,42.45599313602756,C,,40.1
+736,Kyungpook National University,South Korea,42.44169829373136,C,13.0,40.0
+737,Bangladesh Agricultural University,Bangladesh,42.41723451627125,C,21.0,40.0
+738,University of Debrecen,Hungary,42.36220189051089,C,,39.9
+739,Bucharest University of Economic Studies,Romania,42.28233507936299,C,,39.8
+740,Cornell University,United States,42.06220795254342,C,135.0,39.7
+741,Polytechnic University of Catalonia,Spain,42.040328121166,C,17.0,39.6
+742,Silpakorn University,Thailand,41.98340378444338,C,,39.6
+743,Uva Wellassa University,Sri Lanka,41.980392274151264,C,,39.5
+744,Birla Institute of Technology and Science Pilani,India,41.97751473560934,C,71.0,39.4
+745,Stellenbosch University,South Africa,41.95104296357631,C,16.0,39.3
+746,University of Lima,Peru & Andes,41.9104122055684,C,,39.2
+747,Oregon State University,United States,41.90414203748597,C,136.0,39.2
+748,Hellenic Mediterranean University,Greece,41.85011964811335,C,,39.1
+749,Panteion University,Greece,41.80326051050996,C,,39.0
+750,University of Oulu,Finland,41.79373385520179,C,,38.9
+751,University of Bologna,Italy,41.77661557051211,C,18.0,38.8
+752,University of Bucharest,Romania,41.702387758594185,C,,38.7
+753,Ivan Franko National University of Lviv,Ukraine,41.64872532547112,C,,38.7
+754,Indian Statistical Institute,India,41.56920139887764,C,72.0,38.6
+755,Monterrey Institute of Technology,Mexico,41.326843475713744,C,2.0,38.5
+756,Polytechnic University of the Philippines,Philippines,41.25440330230866,C,,38.4
+757,Norwegian School of Economics,Norway,41.25330998737445,C,,38.3
+758,Huazhong University of Science and Technology,China,41.24901837922475,C,5.0,38.3
+759,University of Zilina,Bulgaria & Slovakia,41.21288576190427,C,,38.2
+760,Nelson Mandela University,South Africa,41.16953212600656,C,17.0,38.1
+761,Veracruzana University,Mexico,41.0993316532748,C,3.0,38.0
+762,University of Michigan,United States,41.034467307185736,C,137.0,37.9
+763,Gifu University,Japan,40.88898300404598,C,25.0,37.8
+764,Federal University of Rio Grande,Brazil,40.87745700744961,C,4.0,37.8
+765,University of Nigeria Nsukka,Sub-Saharan Africa,40.78470881719099,C,,37.7
+766,Rensselaer Polytechnic Institute,United States,40.75576889127957,C,138.0,37.6
+767,University of Pisa,Italy,40.752250471769074,C,19.0,37.5
+768,Molde University College,Norway,40.74301432847536,C,,37.4
+769,University of Groningen,Netherlands,40.66031915878141,C,12.0,37.4
+770,Heriot-Watt University,United Kingdom,40.53828648034761,C,35.0,37.3
+771,NIT Jalandhar,India,40.53299510935911,C,73.0,37.2
+772,University of Botswana,Sub-Saharan Africa,40.40527772023057,C,,37.1
+773,Technical University of Kosice,Bulgaria & Slovakia,40.25396226929403,C,,37.0
+774,Case Western Reserve University,United States,40.2409418699513,C,139.0,36.9
+775,University of Belgrade,Balkans,40.19264942223162,C,,36.9
+776,"University of California, Santa Barbara",United States,39.97755061166249,C,140.0,36.8
+777,Toyohashi University of Technology,Japan,39.934519873954144,C,26.0,36.7
+778,University of Hamburg,Germany,39.84918016102143,C,27.0,36.6
+779,University of Warsaw,Poland,39.81534723815231,C,18.0,36.5
+780,Marquette University,United States,39.76425299023574,C,141.0,36.5
+781,University of Nebraska-Lincoln,United States,39.74701646964962,C,142.0,36.4
+782,University College of Northern Denmark,Denmark,39.74038778247208,C,,36.3
+783,Griffith University,Australia,39.706873120168616,C,34.0,36.2
+784,University of Antwerp,Belgium/Ireland/Iceland,39.70123382220994,C,,36.1
+785,Shanghai University,China,39.66590044542747,C,6.0,36.1
+786,University of Vaasa,Finland,39.57165149023655,C,,36.0
+787,Mid Sweden University,Sweden,39.53416534471588,C,,35.9
+788,University of Mississippi,United States,39.53101861884094,C,143.0,35.8
+789,Tianjin University,China,39.50796507197946,C,7.0,35.7
+790,Arizona State University,United States,39.48099931826584,C,144.0,35.6
+791,University of the Philippines Diliman,Philippines,39.39641746506493,C,,35.6
+792,Yamagata University,Japan,39.3835575130622,C,27.0,35.5
+793,University of Cologne,Germany,39.286229929343065,C,28.0,35.4
+794,Copperbelt University,Sub-Saharan Africa,39.285426041831,C,,35.3
+795,UCL University College,Denmark,39.1296902390866,C,,35.2
+796,Washington State University,United States,39.01282389205036,C,145.0,35.2
+797,Diponegoro University,Indonesia,38.98368953322338,C,,35.1
+798,Cardinal Stefan Wyszynski University,Poland,38.96079533826188,C,19.0,35.0
+799,Hamilton College,United States,38.9327801559719,C,146.0,34.9
+800,Queen's University,Canada,38.92086160092553,C,22.0,34.8
+801,University of Washington,United States,38.90372362317658,C,147.0,34.7
+802,North-West University,South Africa,38.88109366341127,C,18.0,34.7
+803,O.P. Jindal Global University,India,38.80188827651119,C,74.0,34.6
+804,Santa Clara University,United States,38.78796767411488,C,148.0,34.5
+805,Sapienza University of Rome,Italy,38.741490816928085,C,20.0,34.4
+806,University of Campinas,Brazil,38.70142478298274,C,5.0,34.3
+807,National and Kapodistrian University of Athens,Greece,38.68399840928946,C,,34.3
+808,Burapha University,Thailand,38.669072575293896,C,,34.2
+809,University of West Attica,Greece,38.65437860112869,C,,34.1
+810,L.N. Gumilyov Eurasian National University,Central Asia,38.64972147355538,C,,34.0
+811,University of Peradeniya,Sri Lanka,38.62420584884445,C,,33.9
+812,Kasetsart University,Thailand,38.59507190543839,C,,33.8
+813,Colby College,United States,38.59094009569611,C,149.0,33.8
+814,University of Malaya,Malaysia,38.58922970945759,C,,33.7
+815,Universiti Kebangsaan Malaysia,Malaysia,38.58050107775797,C,,33.6
+816,University College Copenhagen,Denmark,38.44333604238434,C,,33.5
+817,University of Illinois Urbana-Champaign,United States,38.36538588977201,C,150.0,33.4
+818,ISCTE University Institute of Lisbon,Portugal,38.36434792115727,C,,33.4
+819,Sun Yat-sen University,China,38.25576509844905,C,8.0,33.3
+820,University of Gothenburg,Sweden,38.22683537771415,C,,33.2
+821,IIIT Delhi,India,38.178975120546525,C,75.0,33.1
+822,University of Rosario,Colombia,38.119502913530575,C,,33.0
+823,University of Calabria,Italy,38.04909658675683,C,21.0,33.0
+824,University of Minho,Portugal,38.00945371604024,C,,32.9
+825,Tongji University,China,37.733554052721765,C,9.0,32.8
+826,Central China Normal University,China,37.73330812040566,C,10.0,32.7
+827,University of Amsterdam,Netherlands,37.65315651920738,C,13.0,32.6
+828,Nankai University,China,37.61078276615801,C,11.0,32.5
+829,Hunan University,China,37.357731301074445,C,12.0,32.5
+830,University of West Bohemia,Czechia,37.31930518227099,C,,32.4
+831,Matej Bel University,Bulgaria & Slovakia,37.20033771982537,C,,32.3
+832,Sejong University,South Korea,37.120093222125575,C,14.0,32.2
+833,Vinnytsia National Technical University,Ukraine,37.07542094006101,C,,32.1
+834,Tallinn University of Technology,Baltics,37.0050956949236,C,,32.1
+835,Federal University of Santa Maria,Brazil,36.93484214614936,C,6.0,32.0
+836,University of Wisconsin-Madison,United States,36.93072803283664,C,151.0,31.9
+837,University of Zielona Gora,Poland,36.89230147717496,C,20.0,31.8
+838,University of Santo Tomas,Philippines,36.834295827738174,C,,31.7
+839,University of L'Aquila,Italy,36.795775167983415,C,22.0,31.6
+840,University of Malawi,Sub-Saharan Africa,36.69117893130263,C,,31.6
+841,KAIST,South Korea,36.539385413608514,C,15.0,31.5
+842,Colorado State University,United States,36.49200496301168,C,152.0,31.4
+843,University of Kelaniya,Sri Lanka,36.44749410955338,C,,31.3
+844,Linkoping University,Sweden,36.444241179907976,C,,31.2
+845,University of Chile,Chile,36.40185416369111,C,,31.2
+846,National University of Kyiv-Mohyla Academy,Ukraine,36.35235920323005,C,,31.1
+847,University of Calcutta,India,36.20557546582644,C,76.0,31.0
+848,Universiti Sains Malaysia,Malaysia,36.122352238876765,C,,30.9
+849,Meiji University,Japan,36.0925715018105,C,28.0,30.8
+850,Plovdiv University Paisii Hilendarski,Bulgaria & Slovakia,36.08465396547115,C,,30.8
+851,Northeastern University,United States,36.05045282368038,C,153.0,30.7
+852,Singapore University of Technology and Design,Singapore,35.98804949764341,C,,30.6
+853,Vrije Universiteit Amsterdam,Netherlands,35.97548738151296,C,14.0,30.5
+854,University of Minnesota Twin Cities,United States,35.791295466425645,C,154.0,30.4
+855,Gheorghe Asachi Technical University of Iasi,Romania,35.640705994718694,C,,30.3
+856,University of Silesia in Katowice,Poland,35.622701856264584,C,21.0,30.3
+857,Multimedia University of Kenya,Sub-Saharan Africa,35.61174434468698,C,,30.2
+858,Alexandria University,Egypt & North Africa,35.403617160170874,C,,30.1
+859,Mansoura University,Egypt & North Africa,35.24828544909151,C,,30.0
+860,Odesa I. I. Mechnikov National University,Ukraine,35.23286185144452,C,,29.9
+861,University of Szeged,Hungary,35.2093581919534,C,,29.9
+862,Delhi Technological University,India,35.201864499432645,C,77.0,29.8
+863,"University of Tennessee, Knoxville",United States,35.192943540909084,C,155.0,29.7
+864,Universiti Malaysia Terengganu,Malaysia,35.15726074207134,C,,29.6
+865,Karolinska Institute,Sweden,35.11995096029135,C,,29.5
+866,Erasmus University Rotterdam,Netherlands,35.03436206644882,C,15.0,29.4
+867,University of Illinois Chicago,United States,35.01982485766283,C,156.0,29.4
+868,Autonomous University of Nuevo Leon,Mexico,34.98211896436332,D,4.0,29.3
+869,Gachon University,South Korea,34.957745117689115,D,16.0,29.2
+870,University of Ilorin,Sub-Saharan Africa,34.90278697155961,D,,29.1
+871,University of La Frontera,Chile,34.89038136439885,D,,29.0
+872,OsloMet,Norway,34.81990144782663,D,,29.0
+873,Shandong University,China,34.77384155700943,D,13.0,28.9
+874,Technical University of Denmark,Denmark,34.73213610805676,D,,28.8
+875,Norwegian University of Science and Technology,Norway,34.72839483467523,D,,28.7
+876,Southeast University,China,34.68795668216632,D,14.0,28.6
+877,Waseda University,Japan,34.674595672052355,D,29.0,28.5
+878,Fordham University,United States,34.627116835057734,D,157.0,28.5
+879,Addis Ababa University,Sub-Saharan Africa,34.6123787187313,D,,28.4
+880,Thapar Institute of Engineering and Technology,India,34.59417005331849,D,78.0,28.3
+881,University of Danang,Vietnam,34.50069764189396,D,,28.2
+882,Carleton College,Canada,34.479024632498344,D,23.0,28.1
+883,Design School Kolding,Denmark,34.270026961976086,D,,28.1
+884,University College Dublin,Belgium/Ireland/Iceland,34.269555479644346,D,,28.0
+885,"Royal Holloway, University of London",United Kingdom,34.22878752166804,D,36.0,27.9
+886,Sungkyunkwan University,South Korea,34.16099141747387,D,17.0,27.8
+887,University of Agriculture Faisalabad,Pakistan,34.13301690589954,D,20.0,27.7
+888,University of Cambridge,United Kingdom,34.08750834854639,D,37.0,27.7
+889,NIT Hamirpur,India,34.08459847209389,D,79.0,27.6
+890,University of Zagreb Faculty,Balkans,34.001379511107935,D,,27.5
+891,Fontys University of Applied Sciences,Netherlands,33.991716844242944,D,16.0,27.4
+892,Tokyo Medical and Dental University,Japan,33.872140745151405,D,30.0,27.3
+893,Dalian University of Technology,China,33.76537342771746,D,15.0,27.2
+894,University of Dayton,United States,33.750525978959566,D,158.0,27.2
+895,Guangxi University,China,33.637744471476914,D,16.0,27.1
+896,Technical University of Cluj-Napoca,Romania,33.60580361599749,D,,27.0
+897,Goethe University Frankfurt,Germany,33.59572416367697,D,29.0,26.9
+898,Hassan II University of Casablanca,Egypt & North Africa,33.5393405416831,D,,26.8
+899,Kenyatta University,Sub-Saharan Africa,33.520228940915096,D,,26.8
+900,University of Oviedo,Spain,33.45061991266179,D,18.0,26.7
+901,Rotterdam University of Applied Sciences,Netherlands,33.31530584776598,D,17.0,26.6
+902,Mie University,Japan,33.27241252825421,D,31.0,26.5
+903,Riphah International University,Pakistan,33.24229327521392,D,21.0,26.4
+904,Federal University of Espirito Santo,Brazil,33.18118192049231,D,7.0,26.3
+905,Islamic University of Technology,Bangladesh,33.16862107906216,D,22.0,26.3
+906,Pontifical Catholic University of Chile,Chile,33.148601968852354,D,,26.2
+907,Democritus University of Thrace,Greece,33.139936529258094,D,,26.1
+908,Zhejiang University,China,33.067746822175536,D,17.0,26.0
+909,Mekelle University,Sub-Saharan Africa,33.05644647703719,D,,25.9
+910,Xiamen University,China,33.03207277711449,D,18.0,25.9
+911,Umea University,Sweden,32.95248042394367,D,,25.8
+912,Rzeszow University of Technology,Poland,32.90055568933608,D,22.0,25.7
+913,Medical University of Warsaw,Poland,32.84802591517764,D,23.0,25.6
+914,Grinnell College,United States,32.74766792742766,D,159.0,25.5
+915,Wuhan University,China,32.729634851693945,D,19.0,25.4
+916,Taras Shevchenko National University of Kyiv,Ukraine,32.46348570649943,D,,25.4
+917,Paris-Est Creteil University,France,32.43054789512882,D,22.0,25.3
+918,University of Birmingham,United Kingdom,32.39066532756122,D,38.0,25.2
+919,Kazimierz Wielki University,Poland,32.151658105444994,D,24.0,25.1
+920,Jaume I University,Spain,32.09428210803066,D,19.0,25.0
+921,Ocean University of China,China,32.04808809737232,D,20.0,25.0
+922,Montana State University,United States,31.97678489618597,D,160.0,24.9
+923,South Valley University,Egypt & North Africa,31.94496469400597,D,,24.8
+924,Shizuoka University,Japan,31.88357042123678,D,32.0,24.7
+925,Macquarie University,Australia,31.814061611474557,D,35.0,24.6
+926,Palacky University Olomouc,Czechia,31.784045047426755,D,,24.6
+927,Harvey Mudd College,United States,31.73943190614917,D,161.0,24.5
+928,Emory University,United States,31.729143937117275,D,162.0,24.4
+929,University of Waterloo,Canada,31.61767290922724,D,24.0,24.3
+930,University of Kragujevac,Balkans,31.487775802395877,D,,24.2
+931,IIIT Bangalore,India,31.46189286397931,D,80.0,24.1
+932,Universiti Teknologi PETRONAS,Malaysia,31.39967795787154,D,,24.1
+933,University of Puerto Rico,Peru & Andes,31.392669370441443,D,,24.0
+934,National University of San Luis,Argentina,31.33167399438772,D,,23.9
+935,Jilin University,China,31.299149042853248,D,21.0,23.8
+936,University of Hong Kong,Hong Kong,31.236397086339576,D,,23.7
+937,Yunnan University,China,31.177741240427828,D,22.0,23.7
+938,University of Zululand,South Africa,31.09961011217077,D,19.0,23.6
+939,UNIST,South Korea,31.07335021217984,D,18.0,23.5
+940,University of Catania,Italy,30.97593736612406,D,23.0,23.4
+941,Beijing Institute of Technology,China,30.969852289030843,D,23.0,23.3
+942,Chang Gung University,Taiwan,30.928499460665343,D,,23.2
+943,Beijing Forestry University,China,30.85960042170092,D,24.0,23.2
+944,Wuhan University of Technology,China,30.839746869718667,D,25.0,23.1
+945,University of Toronto,Canada,30.7689683084982,D,25.0,23.0
+946,IIIT Allahabad,India,30.701355201421315,D,81.0,22.9
+947,King Mongkut's University of Technology Thonburi,Thailand,30.57466412687669,D,,22.8
+948,Duy Tan University,Vietnam,30.405372511902325,D,,22.8
+949,University of Innsbruck,Switzerland/Austria,30.345805120528176,D,,22.7
+950,MNNIT Allahabad,India,30.25428890064239,D,82.0,22.6
+951,National Technical University of Athens,Greece,30.20635659997861,D,,22.5
+952,University of Ruhuna,Sri Lanka,30.17347536332245,D,,22.4
+953,National Central University,Taiwan,30.161241701087672,D,,22.3
+954,Middlebury College,United States,29.98333493789652,D,163.0,22.3
+955,Polytechnic Institute of Lisbon,Portugal,29.95288314655434,D,,22.2
+956,University of Burgos,Spain,29.800564892998636,D,20.0,22.1
+957,University of Management and Technology,Pakistan,29.76287550803306,D,22.0,22.0
+958,University of Miami,United States,29.7200272399458,D,164.0,21.9
+959,Wageningen University & Research,Netherlands,29.606281030748537,D,18.0,21.9
+960,Central South University,China,29.54916102206328,D,26.0,21.8
+961,Graz University of Technology,Switzerland/Austria,29.47554419256745,D,,21.7
+962,University of Arkansas,United States,29.43139016385844,D,165.0,21.6
+963,Friedrich Schiller University Jena,Germany,29.38024929637717,D,30.0,21.5
+964,Princeton University,United States,28.98810924439322,D,166.0,21.5
+965,Northwestern Polytechnical University,China,28.893951569952208,D,27.0,21.4
+966,University of Palermo,Italy,28.85617792754237,D,24.0,21.3
+967,Peking University,China,28.617285382201405,D,28.0,21.2
+968,University of the Free State,South Africa,28.564218428706823,D,20.0,21.1
+969,Athens University of Economics and Business,Greece,28.552907344928645,D,,21.0
+970,KU Leuven,Belgium/Ireland/Iceland,28.425486618691448,D,,21.0
+971,Asia University Taiwan,Taiwan,28.26645896389326,D,,20.9
+972,Ruhr University Bochum,Germany,28.225487808048005,D,31.0,20.8
+973,University of the Basque Country,Spain,28.113281020967776,D,21.0,20.7
+974,University of Sri Jayewardenepura,Sri Lanka,28.09965132582713,D,,20.6
+975,Industrial University of Santander,Colombia,27.986921282590668,D,,20.6
+976,Taipei Medical University,Taiwan,27.97031460225008,D,,20.5
+977,Comenius University Bratislava,Bulgaria & Slovakia,27.910518651290744,D,,20.4
+978,Pontifical Catholic University of Rio de Janeiro,Brazil,27.72242996670596,D,8.0,20.3
+979,University of Antofagasta,Chile,27.693438828776628,D,,20.2
+980,All India Institute of Medical Sciences Delhi,India,27.688807158743995,D,83.0,20.1
+981,Aristotle University of Thessaloniki,Greece,27.60299334034504,D,,20.1
+982,University of Oslo,Norway,27.390111959943678,D,,20.0
+983,Kabul University,Central Asia,27.29927597856653,D,,19.9
+984,NIT Srinagar,India,27.04794370287612,D,84.0,19.8
+985,Pontifical Catholic University of Rio Grande do Sul,Brazil,26.94696977778631,D,9.0,19.7
+986,West University of Timisoara,Romania,26.90876612821785,D,,19.7
+987,Universiti Teknologi Malaysia,Malaysia,26.90349494402536,D,,19.6
+988,Czech Technical University in Prague,Czechia,26.83018869237622,D,,19.5
+989,Christ University,India,26.82122562435447,D,85.0,19.4
+990,"University of Maryland, College Park",United States,26.755027074820365,D,167.0,19.3
+991,Saitama University,Japan,26.725914908074728,D,33.0,19.2
+992,Northeastern University China,China,26.715483522122124,D,29.0,19.2
+993,University of Reading,United Kingdom,26.58804974011397,D,39.0,19.1
+994,Felix Houphouet-Boigny University,Sub-Saharan Africa,26.57857576891018,D,,19.0
+995,Radboud University,Netherlands,26.38504533468233,D,19.0,18.9
+996,Bahria University,Pakistan,26.32670120018193,D,23.0,18.8
+997,University of Maine,United States,26.312975937838097,D,168.0,18.8
+998,Korea University,South Korea,26.288009682038066,D,19.0,18.7
+999,Alexandru Ioan Cuza University,Romania,26.252762178165355,D,,18.6
+1000,Poznan University of Technology,Poland,26.15818429185133,D,25.0,18.5
+1001,University of Cantabria,Spain,25.76105809073905,D,22.0,18.4
+1002,University of Granada,Spain,25.503610646813808,D,23.0,18.4
+1003,Federal University of ABC,Brazil,25.44094882579237,D,10.0,18.3
+1004,Jinan University,China,25.413612710611947,D,30.0,18.2
+1005,East China Normal University,China,25.36075138735817,D,31.0,18.1
+1006,Southwest Jiaotong University,China,25.33206560589227,D,32.0,18.0
+1007,Federal University of Rio de Janeiro,Brazil,25.30115810988317,D,11.0,17.9
+1008,Universiti Malaysia Sarawak,Malaysia,25.29336846735555,D,,17.9
+1009,Toulouse III - Paul Sabatier University,France,25.1560456533793,D,23.0,17.8
+1010,Federation University Australia,Australia,24.937598647065656,D,36.0,17.7
+1011,VIA University College,Denmark,24.766332135489336,D,,17.6
+1012,National University of Asuncion,Peru & Andes,24.751374930053217,D,,17.5
+1013,Federal University of Mato Grosso do Sul,Brazil,24.746411506231247,D,12.0,17.5
+1014,University of the State of Rio de Janeiro Norte,Brazil,24.628884674634925,D,13.0,17.4
+1015,Bates College,United States,24.62373813893545,D,169.0,17.3
+1016,Jamia Hamdard,India,24.576391265773623,D,86.0,17.2
+1017,Jiangnan University,China,24.525602146677457,D,33.0,17.1
+1018,University of Naples Federico II,Italy,24.47850756038031,D,25.0,17.0
+1019,Rhodes University,South Africa,24.416350396798475,D,21.0,17.0
+1020,National University of Salta,Argentina,24.396452184068327,D,,16.9
+1021,Beijing Jiaotong University,China,24.22317396938848,D,34.0,16.8
+1022,University of Lome,Sub-Saharan Africa,24.212225058293487,D,,16.7
+1023,University College Absalon,Denmark,24.157663365786394,D,,16.6
+1024,Utrecht University,Netherlands,24.13403407615225,D,20.0,16.6
+1025,Anahuac University,Mexico,23.98431032989061,D,5.0,16.5
+1026,Tsinghua University,China,23.98164213591111,D,35.0,16.4
+1027,Federal University of Acre,Brazil,23.97554931829638,D,14.0,16.3
+1028,Aswan University,Egypt & North Africa,23.825808129263997,D,,16.2
+1029,University of Windsor,Canada,23.810089683776813,D,26.0,16.2
+1030,University of Freiburg,Germany,23.711997325361303,D,32.0,16.1
+1031,Johannes Gutenberg University Mainz,Germany,23.56116302330457,D,33.0,16.0
+1032,University of the Republic Uruguay,Peru & Andes,23.468973033230046,D,,15.9
+1033,Kagoshima University,Japan,23.464529990571275,D,34.0,15.8
+1034,Yamaguchi University,Japan,23.437758544419285,D,35.0,15.7
+1035,Bond University,Australia,23.32319185051985,D,37.0,15.7
+1036,University of Chemistry and Technology Prague,Czechia,23.29505688734228,D,,15.6
+1037,Tokyo Institute of Technology,Japan,23.14086480903416,D,36.0,15.5
+1038,University of Missouri,United States,22.89427879596489,D,170.0,15.4
+1039,University of East Anglia,United Kingdom,22.724264264613364,D,40.0,15.3
+1040,Taylor's University,Malaysia,22.69024166359472,D,,15.3
+1041,University of Sassari,Italy,22.596283579492493,D,26.0,15.2
+1042,Naresuan University,Thailand,22.588671445938942,D,,15.1
+1043,Catholic University of the North,Chile,22.40273048865897,D,,15.0
+1044,University of Rhode Island,United States,22.31192676673512,D,171.0,14.9
+1045,Politehnica University of Bucharest,Romania,22.25661020070278,D,,14.8
+1046,University of Vermont,United States,22.23706215875145,D,172.0,14.8
+1047,Tata Institute of Fundamental Research,India,22.07357274568516,D,87.0,14.7
+1048,Universitas Negeri Yogyakarta,Indonesia,21.91817282918068,D,,14.6
+1049,University of Costa Rica,Peru & Andes,21.835273428636672,D,,14.5
+1050,University of Bergen,Norway,21.70934813939381,D,,14.4
+1051,University of the West Indies,Peru & Andes,21.669360484958048,D,,14.4
+1052,KTH Royal Institute of Technology,Sweden,21.548484708590145,D,,14.3
+1053,Getulio Vargas Foundation,Brazil,21.507282802252,D,15.0,14.2
+1054,Federal University of Uberlandia,Brazil,21.15217574241832,D,16.0,14.1
+1055,University of Tunis El Manar,Egypt & North Africa,20.985442656674092,D,,14.0
+1056,University of the Balearic Islands,Spain,20.84039482553729,D,24.0,13.9
+1057,University of Ferrara,Italy,20.780105843054976,D,27.0,13.9
+1058,Federal University of Goias,Brazil,20.518926392792405,D,17.0,13.8
+1059,Rio de Janeiro State University,Brazil,20.49544895212978,D,18.0,13.7
+1060,University of Murcia,Spain,20.441749077198743,D,25.0,13.6
+1061,Nagasaki University,Japan,20.39505923196747,D,37.0,13.5
+1062,Can Tho University,Vietnam,20.352735872772257,D,,13.5
+1063,Higher University of San Andres Bolivia,Peru & Andes,20.29272439987928,D,,13.4
+1064,Torcuato di Tella University,Argentina,20.21113462699408,D,,13.3
+1065,Federal University of Jequitinhonha and Mucuri Valleys,Brazil,20.153734034002152,D,19.0,13.2
+1066,Technical University of Crete,Greece,20.099306912673107,D,,13.1
+1067,Cayetano Heredia University,Peru & Andes,20.04614456169922,D,,13.1
+1068,State University of Goias,Brazil,19.951991303761005,F,20.0,13.0
+1069,Federal University of Rio Grande do Norte,Brazil,19.951916035757343,F,21.0,12.9
+1070,Yokohama National University,Japan,19.94572478625733,F,38.0,12.8
+1071,Politehnica University of Timisoara,Romania,19.90695330206241,F,,12.7
+1072,University of Udine,Italy,19.740512315275275,F,28.0,12.6
+1073,Volda University College,Norway,19.67296343485139,F,,12.6
+1074,National Sun Yat-sen University,Taiwan,19.602787335710733,F,,12.5
+1075,University of Brasilia,Brazil,19.539947012161612,F,22.0,12.4
+1076,Federal University of Pelotas,Brazil,19.51580590698005,F,23.0,12.3
+1077,Capital Normal University,China,19.51187133059373,F,36.0,12.2
+1078,State University of Londrina,Brazil,19.51051377186183,F,24.0,12.2
+1079,University of Aveiro,Portugal,19.45159801814239,F,,12.1
+1080,Federal University of Rio Grande do Sul,Brazil,19.451241385646483,F,25.0,12.0
+1081,Andalas University,Indonesia,19.40252606786853,F,,11.9
+1082,Tashkent State Technical University,Central Asia,19.31954537071697,F,,11.8
+1083,Ludwig Maximilian University of Munich,Germany,19.241479505336216,F,34.0,11.7
+1084,Fudan University,China,19.180456980607804,F,37.0,11.7
+1085,Central University of Haryana,India,19.161339913898733,F,88.0,11.6
+1086,University of Extremadura,Spain,19.153057931904183,F,26.0,11.5
+1087,Federal University of Alagoas,Brazil,19.086190919538527,F,26.0,11.4
+1088,Vietnam National University Hanoi,Vietnam,19.036319462648727,F,,11.3
+1089,University of Sao Paulo,Brazil,19.03064695866981,F,27.0,11.3
+1090,Fluminense Federal University,Brazil,18.595954457427517,F,28.0,11.2
+1091,National University of Engineering Peru,Peru & Andes,18.56508939206105,F,,11.1
+1092,National Autonomous University of Mexico,Mexico,18.42661414716089,F,6.0,11.0
+1093,American University in Bulgaria,Bulgaria & Slovakia,18.390237106280544,F,,10.9
+1094,Federal University of Vicosa,Brazil,18.38515203384674,F,29.0,10.8
+1095,University of Valle,Colombia,18.38015460638802,F,,10.8
+1096,Kyrgyz National University,Central Asia,18.36369171209802,F,,10.7
+1097,University of Bio-Bio,Chile,18.31234455260408,F,,10.6
+1098,Externado University of Colombia,Colombia,18.268959180700545,F,,10.5
+1099,Norwegian University of Life Sciences,Norway,18.194414496088918,F,,10.4
+1100,University of Guanajuato,Mexico,18.13775788504806,F,7.0,10.4
+1101,UiT The Arctic University of Norway,Norway,17.88511878790664,F,,10.3
+1102,Renmin University of China,China,17.803359650129043,F,38.0,10.2
+1103,University of Panama,Peru & Andes,17.76221128711441,F,,10.1
+1104,Mohammed V University in Rabat,Egypt & North Africa,17.723100250849384,F,,10.0
+1105,Federal University of Bahia,Brazil,17.27679395115472,F,30.0,10.0
+1106,Autonomous University of Chihuahua,Mexico,17.101690292269502,F,8.0,9.9
+1107,State University of Santa Cruz,Brazil,17.07872659690723,F,31.0,9.8
+1108,University of Salerno,Italy,16.983295233185512,F,29.0,9.7
+1109,National University of the South,Argentina,16.915195830701755,F,,9.6
+1110,Minia University,Egypt & North Africa,16.799059060152437,F,,9.5
+1111,University of Guadalajara,Mexico,16.7631704905675,F,9.0,9.5
+1112,State University of Ponta Grossa,Brazil,16.751622955472804,F,32.0,9.4
+1113,Cracow University of Technology,Poland,16.70941011159335,F,26.0,9.3
+1114,University of Electronic Science and Technology of China,China,16.679243585498266,F,39.0,9.2
+1115,Ewha Womans University,South Korea,16.65327780163441,F,20.0,9.1
+1116,Kanazawa Institute of Technology,Japan,16.614861851998462,F,39.0,9.1
+1117,Autonomous University of Ciudad Juarez,Mexico,16.595928893197886,F,10.0,9.0
+1118,National University of Mar del Plata,Argentina,16.572531232304705,F,,8.9
+1119,National Taiwan Normal University,Taiwan,16.51407662932669,F,,8.8
+1120,Beni-Suef University,Egypt & North Africa,16.351692080030997,F,,8.7
+1121,National University of Mongolia,Other SE/E Asia,16.32943051576547,F,,8.6
+1122,Pontifical Catholic University of Sao Paulo,Brazil,16.05227077858128,F,33.0,8.6
+1123,Fuzhou University,China,15.968947951275078,F,40.0,8.5
+1124,Ceara State University,Brazil,15.898705531481513,F,34.0,8.4
+1125,Vilnius University,Baltics,15.814901235620743,F,,8.3
+1126,University of Cordoba,Spain,15.661027285022673,F,27.0,8.2
+1127,University of Padua,Italy,15.275357340101923,F,30.0,8.2
+1128,Osaka University,Japan,15.265509506974002,F,40.0,8.1
+1129,Beijing University of Chemical Technology,China,15.260991609816095,F,41.0,8.0
+1130,National Agrarian University La Molina,Peru & Andes,15.145733545663669,F,,7.9
+1131,China Agricultural University,China,15.07301788521294,F,42.0,7.8
+1132,Autonomous University of Nayarit,Mexico,15.003988118698484,F,11.0,7.7
+1133,Federal University of Sergipe,Brazil,14.92988482784819,F,35.0,7.7
+1134,Federal University of Sao Carlos,Brazil,14.83580099734945,F,36.0,7.6
+1135,Josip Juraj Strossmayer University of Osijek,Balkans,14.737719290333828,F,,7.5
+1136,Federal University of Minas Gerais,Brazil,14.727097276499835,F,37.0,7.4
+1137,CEFET Rio de Janeiro,Brazil,14.6376958551451,F,38.0,7.3
+1138,University of the Andes,Colombia,14.519319484777832,F,,7.3
+1139,Ricardo Palma University,Peru & Andes,14.23856269918048,F,,7.2
+1140,State University of Montes Claros,Brazil,14.23530466547832,F,39.0,7.1
+1141,University of Quintana Roo,Mexico,14.222903614995118,F,12.0,7.0
+1142,Polytechnic University of Madrid,Spain,14.206981925220608,F,28.0,6.9
+1143,Zhengzhou University,China,13.892854088600975,F,43.0,6.9
+1144,Tampere University,Finland,13.854904942203705,F,,6.8
+1145,Federal University of Ouro Preto,Brazil,13.837399837512676,F,40.0,6.7
+1146,Hue University,Vietnam,13.58691407243872,F,,6.6
+1147,Federal University of Paraiba,Brazil,13.546834081983086,F,41.0,6.5
+1148,Federal University of Tocantins,Brazil,13.345028962562631,F,42.0,6.4
+1149,University of Malaga,Spain,13.24549392861622,F,29.0,6.4
+1150,Adolfo Ibanez University,Chile,13.204304519866929,F,,6.3
+1151,Federal University of Lavras,Brazil,13.040424982530368,F,43.0,6.2
+1152,University of Antioquia,Colombia,12.989633120238809,F,,6.1
+1153,Pontifical Bolivarian University,Colombia,12.68566677986465,F,,6.0
+1154,University of Karachi,Pakistan,12.615641877486071,F,24.0,6.0
+1155,University of San Andres,Argentina,12.611483926909532,F,,5.9
+1156,Savitribai Phule Pune University,India,12.596323597202652,F,89.0,5.8
+1157,University of Beira Interior,Portugal,12.449378357345443,F,,5.7
+1158,Federal University of Maranhao,Brazil,12.329546476762678,F,44.0,5.6
+1159,Federal University of the Semi-Arid Region,Brazil,12.309059931292476,F,45.0,5.5
+1160,University of Salento,Italy,12.035402808868156,F,31.0,5.5
+1161,State University of Maringa,Brazil,12.022836643457143,F,46.0,5.4
+1162,National Polytechnic Institute,Mexico,12.022073556140246,F,13.0,5.3
+1163,Autonomous University of Hidalgo,Mexico,11.9024586364701,F,14.0,5.2
+1164,Federal University of Juiz de Fora,Brazil,11.87518837017874,F,47.0,5.1
+1165,Warsaw University of Technology,Poland,11.514215078404956,F,27.0,5.1
+1166,National University of San Marcos,Peru & Andes,11.495093195120598,F,,5.0
+1167,Federal University of Piaui,Brazil,11.366725193274526,F,48.0,4.9
+1168,Ferhat Abbas University of Setif,Egypt & North Africa,11.319346218492562,F,,4.8
+1169,University of Science and Technology of China,China,11.126717033154897,F,44.0,4.7
+1170,Prince of Songkla University,Thailand,11.035635005194688,F,,4.6
+1171,University of Valladolid,Spain,10.699556276580129,F,30.0,4.6
+1172,Federal University of Parana,Brazil,10.491235335762648,F,49.0,4.5
+1173,Vietnam National University Ho Chi Minh City,Vietnam,10.4549877360286,F,,4.4
+1174,National University of Cuyo,Argentina,10.323537543564882,F,,4.3
+1175,University of Fortaleza,Brazil,10.193594914985711,F,50.0,4.2
+1176,University of Salamanca,Spain,10.04578791300015,F,31.0,4.2
+1177,University of Iceland,Belgium/Ireland/Iceland,9.895757727416887,F,,4.1
+1178,University of Guadalajara CUCEA,Mexico,9.792300685915825,F,15.0,4.0
+1179,University of Cagliari,Italy,9.722734835134323,F,32.0,3.9
+1180,National University of the Northeast,Argentina,9.649043112035717,F,,3.8
+1181,University of Valparaiso,Chile,9.53973760714713,F,,3.8
+1182,Charles University,Czechia,9.536649855220446,F,,3.7
+1183,University of Constantine 1,Egypt & North Africa,9.430730554439435,F,,3.6
+1184,University of Sonora,Mexico,9.415390081900382,F,16.0,3.5
+1185,Pablo de Olavide University,Spain,9.319229361839064,F,32.0,3.4
+1186,Xi'an Jiaotong University,China,9.275501700915637,F,45.0,3.3
+1187,Hefei University of Technology,China,8.894082203899185,F,46.0,3.3
+1188,Autonomous University of Queretaro,Mexico,8.865573451039898,F,17.0,3.2
+1189,Nord University,Norway,8.810747614459592,F,,3.1
+1190,Beijing Normal University,China,8.546162440610294,F,47.0,3.0
+1191,University of Buenos Aires,Argentina,8.514308157642214,F,,2.9
+1192,Rey Juan Carlos University,Spain,8.329182115396756,F,33.0,2.9
+1193,National Tsing Hua University,Taiwan,8.302151963752978,F,,2.8
+1194,Amazonas State University,Brazil,8.263822445309092,F,51.0,2.7
+1195,Federal University of Alfenas,Brazil,8.122228435803441,F,52.0,2.6
+1196,National Cheng Kung University,Taiwan,8.054128744778874,F,,2.5
+1197,Austral University of Chile,Chile,7.9889931571533745,F,,2.4
+1198,National University of the Littoral,Argentina,7.935191960581967,F,,2.4
+1199,Diego Portales University,Chile,7.818171863010026,F,,2.3
+1200,National University of Tucuman,Argentina,7.704328242510958,F,,2.2
+1201,University of Health Sciences Lahore,Pakistan,7.63102427091208,F,25.0,2.1
+1202,Nanjing Agricultural University,China,7.348047820689135,F,48.0,2.0
+1203,Sao Paulo State University,Brazil,7.320407434087757,F,53.0,2.0
+1204,University of Szczecin,Poland,7.3108107090519905,F,28.0,1.9
+1205,National University of Cordoba,Argentina,6.951010813322052,F,,1.8
+1206,Federal Technological University of Parana,Brazil,6.514670026255236,F,54.0,1.7
+1207,National University of La Plata,Argentina,6.379060865708922,F,,1.6
+1208,Autonomous University of Puebla,Mexico,6.351011929997577,F,18.0,1.5
+1209,Autonomous University of Yucatan,Mexico,6.321878298962344,F,19.0,1.5
+1210,Donghua University,China,6.191840846571737,F,49.0,1.4
+1211,Hokkaido University,Japan,6.13451389397232,F,41.0,1.3
+1212,National University of Rio Cuarto,Argentina,5.683912138770962,F,,1.2
+1213,Sofia University St. Kliment Ohridski,Bulgaria & Slovakia,5.597278687280312,F,,1.1
+1214,Visva-Bharati University,India,4.862467039842598,F,90.0,1.1
+1215,Pusan National University,South Korea,4.702479211660287,F,21.0,1.0
+1216,Autonomous Metropolitan University,Mexico,4.363392886109753,F,20.0,0.9
+1217,Federal University of Campina Grande,Brazil,4.07578370511498,F,55.0,0.8
+1218,University of Melbourne,Australia,3.9161597327262223,F,38.0,0.7
+1219,University of Valencia,Spain,3.9161597327262223,F,34.0,0.7
+1220,Chonnam National University,South Korea,3.9161597327262223,F,22.0,0.6
+1221,University of Guelph,Canada,3.902263896159352,F,27.0,0.5
+1222,State University of Feira de Santana,Brazil,3.410466909196453,F,56.0,0.4
+1223,Harbin Institute of Technology,China,3.0820639209563097,F,50.0,0.3
+1224,University of Zagreb,Balkans,0.0,F,,0.2
+1225,Federal University of Ceara,Brazil,0.0,F,57.0,0.2
+1226,Inha University,South Korea,0.0,F,23.0,0.1

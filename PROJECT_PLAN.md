@@ -1,22 +1,36 @@
 # University Website Quality — Labeling & Full ML Project Plan
 
-> ## ✅ Status: executed in full — 2026-09-01
+> ## ✅ Status: executed in full, then relabelled — 2026-09-01
 >
 > All nine notebooks run end to end with zero error outputs; all 8 verification conditions
-> below PASS. See `DELIVERABLES.md` for the finished artefact set.
+> below PASS. Submission bundle in `SUBMISSION/`. See `DELIVERABLES.md`.
+>
+> **The label was produced twice.** The first pass (`trackB_judgments.csv`) was completed,
+> measured, and then discarded as a target after two defects were found: `notice_recency_days`
+> was median-imputed at 1 day, so the 469 sites with no dated notice were described to the
+> judge as "posted yesterday"; and the profile cards advertised alt-text coverage, which ended
+> up cited in 37.6% of the judge's reasons despite being invisible to a visitor. Both were
+> fixed, the cards were re-rendered around what an applicant needs, and the same 900 pairs were
+> re-judged into `trackB_judgments_v2.csv`. Everything below refers to the v2 label.
 >
 > | what the plan predicted | what actually happened |
 > |---|---|
-> | Track B judging, ~900 pairs | **900/900 complete**, 48.4% left wins (no position bias) |
-> | Self-consistency ≥ 0.75 | **0.867** (95% CI 0.754–0.941) on 60 held-out swapped repeats |
-> | Spearman(A,B) ≈ 0.6–0.8 validates the rubric | **0.790** — in band; 44% of the target is not a linear image of Track A |
-> | Track A may match the model — report it either way | **model wins**: LightGBM+mono LORO ρ **0.844** vs rubric **0.708**, 25/25 folds, p < 0.0001 |
-> | "n=200 is small; Ridge plausibly wins" | **wrong** — LightGBM led on every metric, and led by more under LORO. Recorded in `07` §prior |
-> | SHAP vs rubric weights is the headline | **accessibility 6.4% declared → 14.8% realised (2.3×)**; technical performance 6.2% → 2.8% (0.45×) |
+> | Track B judging, ~900 pairs | **900/900 complete twice**; 48.2% left wins (binomial p = 0.30) |
+> | Self-consistency ≥ 0.75 | **0.967** (95% CI 0.885–0.996), up from 0.867 under the v1 label |
+> | Spearman(A,B) ≈ 0.6–0.8 validates the rubric | **0.814** — in band; 40% of the target is not a linear image of Track A |
+> | Track A may match the model — report it either way | **model wins**: LightGBM+labelwt LORO ρ **0.844** vs rubric **0.774**, p < 0.001 |
+> | "n=200 is small; Ridge plausibly wins" | **wrong** — LightGBM led on every metric, and led by more under LORO |
+> | SHAP vs rubric weights is the headline | **reversed by the relabel**: accessibility 6.4% declared → **1.3%** realised (0.20×), not 14.8×. Under v1 the invisible attribute dominated; under v2 it collapses. Visual design 3.4% → 6.0% (1.74×) is now the largest under-weighting |
 >
-> Two findings the plan did not anticipate: the technical block **alone** is nearly useless
-> (LORO ρ = 0.069), and top-100 regional representation spans 2.3× to 0.25×, which is the
-> largest standing caveat on the global ranking.
+> Findings the plan did not anticipate:
+> 1. **A label can pass every summary statistic and still measure the wrong construct.** The v1
+>    label was 86.7% self-consistent, position-unbiased, and correlated 0.790 with the rubric —
+>    and was measuring alt-text. Only reading the judge's free-text reasons caught it.
+> 2. **2.0% of rows (25) are extraction failures** — no nav, no programmes, no departments, no
+>    contact — almost certainly JS-rendered pages. 21 sit in the bottom 100, so the tail of the
+>    ranking is contaminated while the head is not.
+> 3. The technical block **alone** is nearly useless (LORO ρ = 0.10).
+
 
 ## Context
 

@@ -18,7 +18,7 @@ OUT = ROOT / "outputs"
 SUB = ROOT / "SUBMISSION"
 RNG_SEED = 42
 
-for d in ["data", "data/weka", "notebook", "model", "report", "report/figures"]:
+for d in ["data", "data/weka", "data/label_provenance", "notebook", "model", "report", "report/figures"]:
     (SUB / d).mkdir(parents=True, exist_ok=True)
 
 # ----------------------------------------------------------------- load
@@ -247,6 +247,18 @@ for src, dst in FIGMAP.items():
     if s.exists():
         shutil.copy(s, SUB / "report/figures" / dst)
 print(f"copied {len(FIGMAP)} figures to report/figures/")
+
+# ---------------------------------------------- label provenance (auditable inside the bundle)
+# The label is the one thing a reader cannot re-derive from the feature table, so the raw
+# judgments and the fit statistics travel with the submission rather than being asserted.
+PROV = SUB / "data/label_provenance"
+for f in ["trackB_judgments.csv", "trackB_judgments_v2.csv", "trackB_pairs.csv",
+          "trackB_key.csv", "trackB_fit_meta.json", "missing_value_policy.json",
+          "trackB_profiles_v2.md", "ranking_meta.json", "trackA_block_weights.csv"]:
+    src_f = OUT / f
+    if src_f.exists():
+        shutil.copy(src_f, PROV / f)
+print(f"copied label provenance -> data/label_provenance/ ({len(list(PROV.iterdir()))} files)")
 
 # --------------------------------------------------- machine-readable summary
 summary = dict(

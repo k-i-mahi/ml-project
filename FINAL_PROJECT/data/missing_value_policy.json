@@ -1,0 +1,20 @@
+{
+  "notice_recency_days": {
+    "n_filled": 468,
+    "fill_value": 3650.0,
+    "median_would_have_been": 1.0,
+    "reason": "no dated notice exists anywhere -> treat as ten years stale"
+  },
+  "a72_alt_text_pct": {
+    "n_filled": 4,
+    "fill_value": 0.0,
+    "median_would_have_been": 72.0,
+    "reason": "no image carries a text alternative -> 0% labelled"
+  },
+  "a53_contrast_ratio": {
+    "n_filled": 1,
+    "fill_value": 1.0,
+    "median_would_have_been": 15.43,
+    "reason": "no readable text block was found -> worst possible contrast"
+  }
+}

@@ -1,7 +1,7 @@
 region,n,mean_score,sd_score,top100,bottom100,loro_spearman,loro_mae,top100_expected,top100_ratio
-Asia (East & Southeast),200,40.543,18.795,4,28,0.783,1.118,16.313,0.245
-Eastern & Southern Europe,201,49.874,19.282,10,13,0.844,0.904,16.395,0.61
-Latin America & Africa,207,36.586,20.975,11,53,0.77,0.794,16.884,0.651
-North America,199,61.641,15.282,17,1,0.872,0.938,16.232,1.047
-South & Central Asia + Oceania,212,62.791,19.908,40,5,0.897,0.927,17.292,2.313
-Western & Northern Europe,207,59.97,17.102,18,0,0.897,0.881,16.884,1.066
+Asia (East & Southeast),200,42.047,20.288,6,18,0.854,1.052,16.313,0.368
+Eastern & Southern Europe,201,48.495,22.631,13,15,0.854,1.143,16.395,0.793
+Latin America & Africa,207,34.784,24.707,8,57,0.869,0.726,16.884,0.474
+North America,199,57.085,17.749,17,1,0.811,1.115,16.232,1.047
+South & Central Asia + Oceania,212,63.721,21.602,35,6,0.826,0.743,17.292,2.024
+Western & Northern Europe,207,56.549,20.451,21,3,0.852,0.94,16.884,1.244

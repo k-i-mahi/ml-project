@@ -1,7 +1,8 @@
 # %% [markdown]
 # # 06 — Track B: Bradley–Terry fit, reliability, and rubric validation
 #
-# Input: `outputs/trackB_judgments.csv` (900 blind pairwise judgments),
+# Input: `outputs/trackB_judgments_v2.csv` (900 blind pairwise judgments, applicant-lens
+# relabel — see §0),
 # `outputs/trackB_pairs.csv`, `outputs/trackB_key.csv`, `outputs/expert_labels_trackA.csv`.
 #
 # Output: `outputs/expert_labels_trackB.csv` — **the supervised learning target** —
@@ -40,12 +41,67 @@ OUT = ROOT / "outputs"
 FIG = ROOT / "figures"
 FIG.mkdir(exist_ok=True)
 
-judg = pd.read_csv(OUT / "trackB_judgments.csv")
+judg = pd.read_csv(OUT / "trackB_judgments_v2.csv")
+judg_v1 = pd.read_csv(OUT / "trackB_judgments.csv")   # superseded first pass, kept for the audit in §0
 pairs = pd.read_csv(OUT / "trackB_pairs.csv")
 key = pd.read_csv(OUT / "trackB_key.csv")
 trackA = pd.read_csv(OUT / "expert_labels_trackA.csv")
 
 print(f"judgments {judg.shape} | pairs {pairs.shape} | key {key.shape}")
+
+# %% [markdown]
+# ## 0. Why these judgments were made twice
+#
+# The first labelling pass (`trackB_judgments.csv`) was discarded as a *target*, and the
+# reason is a finding in its own right rather than a mistake to hide.
+#
+# Two defects were found after it was complete.
+#
+# **(a) A missing-value defect in the features the profile cards were rendered from.**
+# `notice_recency_days` was median-imputed. The median is 1 day, so the 469 sites that carry
+# **no dated notice anywhere** were described to the judge as *"posted yesterday"* — the
+# single strongest freshness signal in the card, handed to precisely the sites that had
+# earned it least. Null was being read as average when it means *absent*. `02` now fills it
+# explicitly at the worst case (3650 days), and the same correction applies to
+# `a72_alt_text_pct` (→ 0%) and `a53_contrast_ratio` (→ 1.0). The policy is written to
+# `outputs/missing_value_policy.json`.
+#
+# **(b) The cards led the judge to the wrong criterion.** 37.6% of the first pass's reasons
+# cited alt-text percentage — an attribute no human visitor can perceive — because the card
+# listed it as a headline number. The rewritten cards group evidence by *what a prospective
+# student is trying to do* (APPLY / STUDY / ALIVE / NAV / WORKS), and demote accessibility
+# metadata and marketing badges to the last two lines.
+#
+# The same 200 universities and the same 900 pairs were re-judged, which makes v1 → v2 a
+# controlled comparison rather than a new experiment.
+
+# %%
+_cmp = judg_v1.merge(judg, on="pair_id", suffixes=("_v1", "_v2"))
+assert len(_cmp) == 900, "v1 and v2 must cover the identical pair set"
+_flip = (_cmp.winner_v1 != _cmp.winner_v2).mean()
+
+_themes = {
+    "alt-text / screen-reader": r"alt|screen reader|labelled for screen",
+    "contrast / readability":   r"contrast|readab|unreadable|hard to read",
+    "admission-task content":   r"requirement|scholarship|prospectus|programme|deadline|notice|admission|contact",
+    "freshness":                r"updated today|updated yesterday|days ago|abandoned|quiet|dated post|stale",
+    "navigation":               r"menu|search|breadcrumb|sitemap|footer|navigat",
+}
+print(f"judgments that changed winner: {_flip:.1%}  ({int(_flip*900)} of 900)")
+print()
+print(f"{'reason cites':<26} {'v1':>7} {'v2':>7}")
+for _n, _p in _themes.items():
+    _a = judg_v1.reason.str.contains(_p, case=False, regex=True).mean()
+    _b = judg.reason.str.contains(_p, case=False, regex=True).mean()
+    print(f"{_n:<26} {_a:>6.1%} {_b:>6.1%}")
+
+# %% [markdown]
+# Read the table as a check that the intervention did what it was meant to do. Alt-text goes
+# from the most-cited factor to *never* cited; admission-task content nearly doubles to
+# dominate; freshness triples now that it is measured honestly. And 16.4% of winners flipped —
+# not 2% (which would mean the rewrite changed nothing) and not 45% (which would mean the
+# judgments were noise). The obvious pairs stayed put and the close ones moved, which is the
+# signature of a genuine criterion change. **v2 is the target from here on.**
 
 # %% [markdown]
 # ## 1. Integrity of the judgment set

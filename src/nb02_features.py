@@ -295,6 +295,46 @@ for c, src in [("a18_missing", "a18_recent_notice_date"), ("a72_missing", "a72_a
 print(df[["a18_missing", "a72_missing", "a53_missing"]].mean().mul(100).round(2).to_string())
 
 # %% [markdown]
+# ### 9b. NULL IS NOT ZERO — and it is not the median either
+#
+# The indicators above record *that* a value is absent. This cell decides *what number stands
+# in its place*, and it is the single most consequential line of code in the notebook.
+#
+# The obvious default — median imputation — is wrong here, and demonstrably so. The median of
+# `notice_recency_days` is **1 day**. Median-filling would therefore tell every downstream
+# consumer that the 469 universities with **no dated notice anywhere on the site** posted
+# something *yesterday* — handing the strongest freshness signal in the dataset to exactly the
+# sites that earned it least. That is not a conservative default; it is an inversion.
+#
+# For these three features, absence has a known direction, so each is filled at the **worst
+# defensible value** instead. The rule and its justification are written to
+# `outputs/missing_value_policy.json` so the choice is auditable rather than buried.
+#
+# The missingness indicators are computed *above* this cell, so a model can still recover
+# "this was unmeasured" as a separate fact if that turns out to matter.
+
+# %%
+MISSING_RULE = {
+    "notice_recency_days": (3650.0, "no dated notice exists anywhere -> treat as 10 years stale"),
+    "a72_alt_text_pct":    (0.0,    "no image carries a text alternative -> 0% labelled"),
+    "a53_contrast_ratio":  (1.0,    "no readable text block was found -> worst possible contrast"),
+}
+_policy = {}
+for _c, (_fill, _why) in MISSING_RULE.items():
+    _n = int(df[_c].isna().sum())
+    _median = float(df[_c].median())
+    df[_c] = df[_c].fillna(_fill)
+    _policy[_c] = {"n_filled": _n, "fill_value": _fill, "rejected_median_fill": round(_median, 2),
+                   "reason": _why}
+    print(f"{_c:<22} filled {_n:>4} rows at {_fill:>7.1f}   (median fill would have been {_median:.1f})")
+
+(OUT / "missing_value_policy.json").write_text(json.dumps(_policy, indent=2), encoding="utf-8")
+for _c in MISSING_RULE:
+    assert df[_c].notna().all(), f"{_c} still has nulls after the explicit fill"
+print()
+print("wrote missing_value_policy.json")
+
+# %% [markdown]
 # ## 10. The goodness matrix
 #
 # Every quality feature mapped onto a common **0 = worst … 1 = best** scale, applying the curves
