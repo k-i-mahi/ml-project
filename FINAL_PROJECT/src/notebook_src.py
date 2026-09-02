@@ -726,6 +726,150 @@ ax[2].set_xlabel("residual"); ax[2].set_title(f"Error distribution (MAE {err.mea
 plt.tight_layout(); plt.show()
 
 # %% [markdown]
+# ## Every test university — expected against predicted
+#
+# The three plots above summarise 244 predictions. This section prints them one by one, so
+# that every held-out university can be checked individually rather than trusted in
+# aggregate: what the scoring model said (**expected**), what the trained model returned
+# (**got**), and the difference between them.
+#
+# It is the same comparison §9 makes for the 22 Bangladeshi universities, applied to the
+# whole test set. Four things are worth reading off it:
+#
+# 1. **Score error** — `error = predicted − actual`, positive when the model is generous.
+# 2. **Grade agreement** — whether the predicted score falls in the same band as the actual.
+#    A university at 74.9 is a B and one at 75.1 is an A, so a one-band disagreement near a
+#    boundary is not the same kind of mistake as a two-band one.
+# 3. **Rank agreement** — the deliverable is a league table, so the position matters more
+#    than the score. `shift` is how many places the prediction moves a university.
+# 4. **Whether a gate applied** — the gated sites are where the model families separate
+#    (§10), so they are flagged here.
+
+# %%
+def band(score):
+    """The same grade bands the scoring model uses, applied to a predicted score."""
+    return next(g for lo, g in [(85, "A+"), (75, "A"), (65, "B"),
+                                (50, "C"), (35, "D"), (-1, "F")] if score >= lo)
+
+
+BANDS = ["F", "D", "C", "B", "A", "A+"]
+
+tp = test[["uni_id", "name", "country"]].copy()
+tp["actual"] = y_te
+tp["predicted"] = y_pred
+tp["error"] = tp.predicted - tp.actual
+tp["abs_error"] = tp.error.abs()
+tp["grade_actual"] = test.grade.values
+tp["grade_predicted"] = [band(v) for v in y_pred]
+tp["grade_match"] = tp.grade_actual == tp.grade_predicted
+tp["band_gap"] = [abs(BANDS.index(a) - BANDS.index(b))
+                  for a, b in zip(tp.grade_actual, tp.grade_predicted)]
+tp["gated"] = ((test.a02_primary_nav == 0) | (test.a65_https == 0)).values
+tp["global_rank"] = tp.uni_id.map(dict(zip(full.uni_id, full["rank"])))
+
+tp = tp.sort_values("actual", ascending=False).reset_index(drop=True)
+tp["rank_actual"] = np.arange(1, len(tp) + 1)
+tp["rank_predicted"] = tp.predicted.rank(ascending=False, method="min").astype(int)
+tp["rank_shift"] = tp.rank_actual - tp.rank_predicted
+
+show = tp.assign(
+    university=[n if len(n) <= 34 else n[:31] + "..." for n in tp.name],
+    country_=[c if len(c) <= 18 else c[:15] + "..." for c in tp.country],
+    gate=np.where(tp.gated, "gate", ""),
+    ok=np.where(tp.grade_match, "", "<-"),
+)[["rank_actual", "university", "country_", "actual", "predicted", "error",
+   "grade_actual", "grade_predicted", "ok", "rank_predicted", "rank_shift", "gate"]]
+
+print("=" * 118)
+print(f"  ALL {len(tp)} HELD-OUT UNIVERSITIES — expected (actual) against got (predicted)")
+print("=" * 118)
+with pd.option_context("display.max_rows", None, "display.width", 200):
+    print(show.rename(columns={"rank_actual": "#", "country_": "country",
+                               "grade_actual": "grade", "grade_predicted": "pred",
+                               "rank_predicted": "pred #", "rank_shift": "shift"})
+              .to_string(index=False, float_format=lambda v: f"{v:.2f}"))
+print("=" * 118)
+
+# %% [markdown]
+# ### How the 244 predictions did, in aggregate
+
+# %%
+print("=" * 72)
+print(f"  SCORE  — mean absolute error      {tp.abs_error.mean():>8.3f} points")
+print(f"           median absolute error    {tp.abs_error.median():>8.3f} points")
+print(f"           largest single error     {tp.abs_error.max():>8.2f} points"
+      f"  ({tp.loc[tp.abs_error.idxmax(), 'name']})")
+print(f"           mean signed error        {tp.error.mean():>+8.3f} points"
+      f"  ({'over' if tp.error.mean() > 0 else 'under'}-predicting on average)")
+for t in (1, 2, 5):
+    print(f"           within +/-{t} point{'s' if t > 1 else ' '}        "
+          f"{(tp.abs_error <= t).mean():>8.1%}   "
+          f"({(tp.abs_error <= t).sum()} of {len(tp)})")
+print()
+print(f"  GRADE  — exact band                {tp.grade_match.mean():>8.1%}   "
+      f"({tp.grade_match.sum()} of {len(tp)})")
+print(f"           within one band           {(tp.band_gap <= 1).mean():>8.1%}   "
+      f"({(tp.band_gap <= 1).sum()} of {len(tp)})")
+print(f"           more than one band off    {(tp.band_gap > 1).sum():>8d}   universities")
+print()
+print(f"  RANK   — Spearman rho              "
+      f"{stats.spearmanr(tp.actual, tp.predicted).statistic:>8.4f}")
+print(f"           exactly the right place   {(tp['rank_shift'] == 0).mean():>8.1%}   "
+      f"({(tp['rank_shift'] == 0).sum()} of {len(tp)})")
+print(f"           within 3 places           {(tp['rank_shift'].abs() <= 3).mean():>8.1%}")
+print(f"           largest move              {tp['rank_shift'].abs().max():>8d}   places"
+      f"  ({tp.loc[tp['rank_shift'].abs().idxmax(), 'name']})")
+print()
+for flag, row in tp.groupby("gated").abs_error.agg(["size", "mean"]).iterrows():
+    label = "gated (capped)" if flag else "not gated"
+    print(f"  {label:<16} n = {int(row['size']):>3}   MAE {row['mean']:>6.3f} points")
+print("=" * 72)
+
+print("\n  The ten universities the model got most wrong:")
+print(tp.nlargest(10, "abs_error")[
+    ["rank_actual", "name", "country", "actual", "predicted", "error",
+     "grade_actual", "grade_predicted", "gated"]]
+    .rename(columns={"rank_actual": "#", "grade_actual": "grade",
+                     "grade_predicted": "pred"})
+    .to_string(index=False, float_format=lambda v: f"{v:.2f}"))
+
+# %%
+fig, ax = plt.subplots(1, 2, figsize=(16, 4.4))
+
+x = np.arange(1, len(tp) + 1)
+ax[0].plot(x, tp.actual, lw=1.6, color="#2b6cb0", label="expected (scoring model)")
+ax[0].plot(x, tp.predicted, lw=1.0, color="#c53030", alpha=.85, label="got (LightGBM)")
+ax[0].scatter(x[tp.gated.values], tp.actual.values[tp.gated.values], s=14,
+              color="#d69e2e", zorder=3, label="gate applied")
+ax[0].set_xlabel("test universities, ordered by actual score")
+ax[0].set_ylabel("website score")
+ax[0].set_title(f"Expected against got, all {len(tp)} held-out universities")
+ax[0].legend(fontsize=8)
+
+ax[1].bar(x, tp.error, color=np.where(tp.error >= 0, "#2f855a", "#c53030"), width=1.0)
+ax[1].axhline(0, color="black", lw=.8)
+ax[1].axhline(2, color="#4a5568", ls=":", lw=1.0)
+ax[1].axhline(-2, color="#4a5568", ls=":", lw=1.0)
+ax[1].set_xlabel("test universities, ordered by actual score")
+ax[1].set_ylabel("error (predicted - actual)")
+ax[1].set_title(f"Per-university error  ·  MAE {tp.abs_error.mean():.2f}  ·  "
+                f"dotted lines at +/-2 points")
+plt.tight_layout(); plt.show()
+
+# %% [markdown]
+# Read the left panel first: the red line sits on top of the blue one almost everywhere, and
+# the visible groups of yellow points are the gated universities, held at exactly 45 and 60
+# by the two caps. Those flat runs are the hardest thing in the dataset for an additive model
+# to reproduce, and §10 shows what happens to the linear family there.
+#
+# The right panel is the same information as one error bar per university. The errors are
+# small, roughly symmetric about zero, and show no drift from left to right — the model is
+# not systematically generous to good websites or harsh on bad ones.
+#
+# `results/test_predictions.csv` holds this table in full, one row per held-out university,
+# for anyone who wants to check a particular result outside the notebook.
+
+# %% [markdown]
 # ---
 # # 9. Bangladesh case study — 22 universities the model has never seen
 #
@@ -1363,6 +1507,10 @@ cvdf.to_csv(OUT / "cross_validation.csv", index=False)
 imp.to_csv(OUT / "feature_importance.csv", index=False)
 gaps.to_csv(OUT / "error_by_gate.csv", index=False)
 pd.DataFrame([test_metrics]).to_csv(OUT / "test_metrics.csv", index=False)
+tp[["uni_id", "name", "country", "actual", "predicted", "error", "abs_error",
+    "grade_actual", "grade_predicted", "grade_match", "band_gap", "gated",
+    "global_rank", "rank_actual", "rank_predicted", "rank_shift"]].to_csv(
+        OUT / "test_predictions.csv", index=False)
 bd[["name", "short", "url", "actual", "predicted", "error", "grade", "global_rank",
     "rank_actual", "rank_predicted"]].to_csv(OUT / "bangladesh_predictions.csv", index=False)
 prof.to_csv(OUT / "bangladesh_dimension_profile.csv", index=False)

@@ -25,6 +25,7 @@ by design.
 |---|---|
 | understand the whole project | `report/report.pdf` — 36 pages |
 | see the code and run the demos | `notebook/University_Website_Quality.ipynb` — 16 sections |
+| see every test prediction, expected vs got | notebook §8, or `results/test_predictions.csv` |
 | see the Bangladesh case study | report §9, or notebook §9 |
 | look up how a feature is classified | `data/feature_catalog.csv`, or report Table 3 |
 | check the arithmetic of any score | `data/dimension_scores.csv` |
@@ -82,7 +83,8 @@ FINAL_PROJECT/
 │   ├── weight_sensitivity.csv        how much the ranking depends on our weights
 │   ├── block_ablation.csv            which blocks of features the model needs
 │   ├── error_by_country.csv          where the model is strong and weak geographically
-│   └── test_metrics.csv              final held-out metrics
+│   ├── test_metrics.csv              final held-out metrics
+│   └── test_predictions.csv          all 244 test rows, expected vs got, per university
 │       (`*_report.csv` variants are written by make_figures.py for the report;
 │        the unsuffixed files are written by the notebook. Same seeds, same numbers.)
 │

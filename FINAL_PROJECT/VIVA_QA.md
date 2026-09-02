@@ -313,13 +313,38 @@ a search box, a breadcrumb trail, a clearly linked admissions policy.
 Three universities — BAU, East West and IUT — have no extractable primary navigation and are
 capped at 45, forfeiting 17.6, 25.9 and 29.2 points respectively.
 
-## Q. BUET ranks 18th of 22. Isn't that wrong?
+## Q. BUET ranks 18th of 22 — below KUET. Isn't that wrong?
 
-It is the point, not a bug. BUET is the country's most prestigious engineering institution and
-its landing page scores 66.80 (grade B). Institutional prestige and website quality are close
-to unrelated in this dataset. That is exactly why we dropped the QS and Webometrics columns in
-cleaning: including them would have let the model infer "famous university, therefore good
-website", which is the inference the project exists to avoid.
+It is the point, not a bug, and the arithmetic is fully open. **Show them
+`report/figures/fig_buet_kuet.png`** — regenerate it or any other pair with
+`python src/make_comparison.py "buet" "kuet"`.
+
+BUET scores **66.80 (grade B, national #18)**, KUET **82.18 (grade A, national #4)** — a gap of
+**15.38 points**. Neither site is gated, and they are *identical* on the two heaviest
+dimensions: academic information (25.76 each, out of 28) and navigation (9.00 each, out of 15).
+Almost the whole gap is two dimensions:
+
+| dimension | BUET | KUET | gap |
+|---|---|---|---|
+| D₂ admission support | 9.68 | 18.70 | **−9.02** |
+| D₃ currency and activity | 8.01 | 13.62 | **−5.61** |
+| D₅ + D₆ + D₇ together | 14.35 | 15.11 | −0.76 |
+
+Those two come from six attribute differences on the landing page, all of them checkable:
+
+- **D₂** — BUET's landing page links no admissions policy (`a46_admissions_policy` = 0) and no
+  contact page (`a43_contact_link` = 0). KUET links both.
+- **D₃** — BUET's most recent dated notice was **260 days old** against KUET's **30**
+  (`notice_recency_days`); it lists **2** events against KUET's **20** (`a24_event_count`); and
+  it has no academic calendar link (`a21_calendar_link` = 0).
+
+**The line to finish on.** There are exactly two attributes where BUET beats KUET outright:
+`a07_qs_badge` and `a09_national_rank` — a QS badge and a national ranking badge. Both are
+among the 20 attributes we deliberately **excluded from the label as prestige leakage** (§3 of
+the report). So the honest summary is: BUET's landing page wins on saying how prestigious BUET
+is, and loses on telling an applicant how to apply and whether anything has happened this year.
+The score measures the second thing on purpose. Including the first is precisely the inference
+the project exists to avoid.
 
 ## Q. Your scoring weights are subjective. Doesn't that invalidate the ranking?
 
