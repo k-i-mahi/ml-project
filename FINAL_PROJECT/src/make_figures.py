@@ -46,7 +46,7 @@ X_tr, y_tr, X_te, y_te = train[F], train[T].values, test[F], test[T].values
 
 # ======================================================================= fig 1: the target
 gated = (full.a02_primary_nav == 0) | (full.a65_https == 0)
-fig, ax = plt.subplots(1, 3, figsize=(7.5, 2.9))
+fig, ax = plt.subplots(1, 3, figsize=(8.4, 2.9))
 ax[0].hist([full[T][~gated], full[T][gated]], bins=35, stacked=True,
            color=["#2b6cb0", "#c53030"], edgecolor="white",
            label=["no gate applied", "gate applied"])
@@ -61,11 +61,21 @@ for i, v in enumerate(gc.values):
     ax[1].text(i, v + 5, str(v), ha="center", fontsize=7.5)
 ax[1].set_ylabel("universities"); ax[1].set_title("Grade distribution")
 
+# Blind truncation at 24 characters cut "Western & Northern Europe" to "...Europ" and
+# "South & Central Asia + Oceania" to "...+ O", so the labels are abbreviated explicitly.
+REGION_SHORT = {
+    "South & Central Asia + Oceania": "S & C Asia + Oceania",
+    "Western & Northern Europe": "W & N Europe",
+    "Eastern & Southern Europe": "E & S Europe",
+    "Asia (East & Southeast)": "Asia (E & SE)",
+    "Latin America & Africa": "Latin America & Africa",
+    "North America": "North America",
+}
 reg = full.groupby("region")[T].median().sort_values()
 ax[2].barh(range(len(reg)), reg.values, color="#4a5568")
 ax[2].set_yticks(range(len(reg)))
-ax[2].set_yticklabels([r[:24] for r in reg.index], fontsize=7.0)
-ax[2].set_xlabel("median score"); ax[2].set_title("Median score by region")
+ax[2].set_yticklabels([REGION_SHORT.get(r, r) for r in reg.index], fontsize=7.0)
+ax[2].set_xlabel("median score"); ax[2].set_title("Median score by region", fontsize=8.5)
 plt.tight_layout(); plt.savefig(FIG / "fig_target.png"); plt.close()
 
 # ======================================================================= fig 2: the curves
