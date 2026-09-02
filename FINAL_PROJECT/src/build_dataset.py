@@ -677,32 +677,14 @@ pd.DataFrame(rows).to_csv(DATA / "data_dictionary.csv", index=False)
 # ======================================================================================
 # 7. ARFF EXPORT FOR WEKA
 # ======================================================================================
+# Delegated to src/make_weka.py, which reads the CSV files written above. It lives in its own
+# module because the ARFF view needs per-attribute types (60 of the 71 attributes are nominal
+# {0,1} flags, not numeric) and because it is useful to regenerate the Weka files on their own
+# without re-running the whole pipeline.
 
-def arff(path: Path, frame: pd.DataFrame, relation: str, target: str, target_type: str) -> int:
-    cols = [c for c in FEATURES] + [target]
-    f = frame[cols]
-    lines = [f"% University Website Quality - {relation}",
-             f"% {len(f)} instances, {len(FEATURES)} predictive attributes",
-             f"% Target attribute: {target}", "", f"@relation {relation}", ""]
-    for c in FEATURES:
-        lines.append(f"@attribute {c} numeric")
-    lines.append(f"@attribute {target} {target_type}")
-    lines += ["", "@data"]
-    for _, r in f.iterrows():
-        vals = [f"{r[c]:g}" if pd.notna(r[c]) else "?" for c in FEATURES]
-        vals.append(f"{r[target]:g}" if target_type == "numeric" else str(r[target]))
-        lines.append(",".join(vals))
-    path.write_text("\n".join(lines), encoding="utf-8")
-    return len(f)
+import runpy
 
-
-W = DATA / "weka"
-GRADE_SET = "{A+,A,B,C,D,F}"
-arff(W / "train.arff", train, "website_quality_train", "website_score", "numeric")
-arff(W / "test.arff", test, "website_quality_test", "website_score", "numeric")
-arff(W / "train_classification.arff", train, "website_grade_train", "grade", GRADE_SET)
-arff(W / "test_classification.arff", test, "website_grade_test", "grade", GRADE_SET)
-arff(W / "all_universities.arff", out, "website_quality_all", "website_score", "numeric")
+runpy.run_path(str(Path(__file__).resolve().parent / "make_weka.py"), run_name="__main__")
 
 # ======================================================================================
 # 8. SUMMARY

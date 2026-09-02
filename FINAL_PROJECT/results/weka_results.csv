@@ -1,0 +1,25 @@
+task,protocol,scheme,correlation,mae,rmse,accuracy_pct,kappa
+regression,train -> test (244),ZeroR,0.0,14.9702,17.8614,,
+regression,train -> test (244),SMOreg,0.9523,2.5155,5.7118,,
+regression,train -> test (244),REPTree,0.9581,3.7689,5.1623,,
+regression,train -> test (244),RandomTree,0.8522,6.3851,9.8723,,
+regression,train -> test (244),MultilayerPerceptron,0.9697,2.7262,5.0025,,
+regression,train -> test (244),Bagging(REPTree),0.9809,2.6017,3.5253,,
+regression,train -> test (244),RandomForest(100),0.9845,2.7443,3.5026,,
+regression,10-fold CV (1225),ZeroR,-0.1237,15.434,18.4857,,
+regression,10-fold CV (1225),REPTree,0.9577,3.6664,5.3164,,
+regression,10-fold CV (1225),RandomTree,0.8684,6.485,9.3925,,
+regression,10-fold CV (1225),Bagging(REPTree),0.977,2.8362,3.9612,,
+regression,10-fold CV (1225),RandomForest(100),0.9856,2.9736,3.7632,,
+regression,train -> Bangladesh (22),ZeroR,0.0,13.8292,14.806,,
+regression,train -> Bangladesh (22),SMOreg,0.9737,1.9296,3.5711,,
+regression,train -> Bangladesh (22),REPTree,0.9778,2.2985,2.7506,,
+regression,train -> Bangladesh (22),RandomTree,0.6499,7.1454,10.9559,,
+regression,train -> Bangladesh (22),MultilayerPerceptron,0.9895,1.713,2.2335,,
+regression,train -> Bangladesh (22),Bagging(REPTree),0.9898,1.4974,1.8855,,
+regression,train -> Bangladesh (22),RandomForest(100),0.9868,2.9091,3.4502,,
+classification,train -> test (244),ZeroR,,,,29.5082,0.0
+classification,train -> test (244),NaiveBayes,,,,54.918,0.4543
+classification,train -> test (244),J48,,,,74.5902,0.6776
+classification,train -> test (244),IBk (k=5),,,,63.1148,0.5215
+classification,train -> test (244),RandomForest(100),,,,78.2787,0.7196

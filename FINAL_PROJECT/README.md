@@ -40,7 +40,7 @@ by design.
 ```
 FINAL_PROJECT/
 ├── README.md                   <- you are here
-├── WEKA_GUIDE.md               <- click-by-click Weka steps + expected numbers
+├── WEKA_GUIDE.md               <- click-by-click Weka steps + measured numbers
 ├── VIVA_QA.md                  <- likely questions and how to answer them
 │
 ├── data/
@@ -54,7 +54,7 @@ FINAL_PROJECT/
 │   ├── data_dictionary.csv             every column, its dimension, its range
 │   ├── dataset_summary.json            headline numbers, machine-readable
 │   ├── missing_value_policy.json       how missing values were filled and why
-│   └── weka/                           the same splits as ARFF (5 files)
+│   └── weka/                           the same splits as ARFF (16 files + index)
 │
 ├── notebook/
 │   └── University_Website_Quality.ipynb    the full analysis, already executed
@@ -65,6 +65,7 @@ FINAL_PROJECT/
 │   ├── notebook_src.py         the notebook as a plain .py script
 │   ├── make_figures.py         regenerates every figure in the report
 │   ├── make_tables.py          regenerates every data-driven table in the report
+│   ├── make_weka.py            regenerates the ARFF view with correct attribute types
 │   └── nbbuild.py              builds and executes the notebook from notebook_src.py
 │
 ├── model/

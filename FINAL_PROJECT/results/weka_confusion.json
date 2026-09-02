@@ -1,0 +1,412 @@
+{
+  "ZeroR": {
+    "n": 244,
+    "exact_pct": 29.5,
+    "within_one_band_pct": 62.3,
+    "errors_more_than_one_band": [
+      {
+        "actual": "F",
+        "predicted": "A",
+        "count": 22
+      },
+      {
+        "actual": "D",
+        "predicted": "A",
+        "count": 42
+      },
+      {
+        "actual": "C",
+        "predicted": "A",
+        "count": 28
+      }
+    ],
+    "bands": [
+      "F",
+      "D",
+      "C",
+      "B",
+      "A",
+      "A+"
+    ],
+    "matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        22,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        42,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        28,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        65,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        72,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        15,
+        0
+      ]
+    ]
+  },
+  "NaiveBayes": {
+    "n": 244,
+    "exact_pct": 54.9,
+    "within_one_band_pct": 91.4,
+    "errors_more_than_one_band": [
+      {
+        "actual": "D",
+        "predicted": "A",
+        "count": 4
+      },
+      {
+        "actual": "D",
+        "predicted": "A+",
+        "count": 7
+      },
+      {
+        "actual": "B",
+        "predicted": "D",
+        "count": 6
+      },
+      {
+        "actual": "B",
+        "predicted": "A+",
+        "count": 4
+      }
+    ],
+    "bands": [
+      "F",
+      "D",
+      "C",
+      "B",
+      "A",
+      "A+"
+    ],
+    "matrix": [
+      [
+        22,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        23,
+        0,
+        0,
+        4,
+        7
+      ],
+      [
+        0,
+        4,
+        12,
+        12,
+        0,
+        0
+      ],
+      [
+        0,
+        6,
+        3,
+        41,
+        11,
+        4
+      ],
+      [
+        0,
+        0,
+        0,
+        7,
+        24,
+        41
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        3,
+        12
+      ]
+    ]
+  },
+  "J48": {
+    "n": 244,
+    "exact_pct": 74.6,
+    "within_one_band_pct": 98.8,
+    "errors_more_than_one_band": [
+      {
+        "actual": "C",
+        "predicted": "A",
+        "count": 1
+      },
+      {
+        "actual": "A",
+        "predicted": "C",
+        "count": 1
+      },
+      {
+        "actual": "A+",
+        "predicted": "B",
+        "count": 1
+      }
+    ],
+    "bands": [
+      "F",
+      "D",
+      "C",
+      "B",
+      "A",
+      "A+"
+    ],
+    "matrix": [
+      [
+        18,
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        40,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        21,
+        5,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        12,
+        42,
+        11,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        14,
+        53,
+        4
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        6,
+        8
+      ]
+    ]
+  },
+  "IBk (k=5)": {
+    "n": 244,
+    "exact_pct": 63.1,
+    "within_one_band_pct": 88.5,
+    "errors_more_than_one_band": [
+      {
+        "actual": "D",
+        "predicted": "B",
+        "count": 7
+      },
+      {
+        "actual": "D",
+        "predicted": "A",
+        "count": 12
+      },
+      {
+        "actual": "D",
+        "predicted": "A+",
+        "count": 1
+      },
+      {
+        "actual": "C",
+        "predicted": "F",
+        "count": 1
+      },
+      {
+        "actual": "C",
+        "predicted": "A",
+        "count": 5
+      },
+      {
+        "actual": "B",
+        "predicted": "D",
+        "count": 2
+      }
+    ],
+    "bands": [
+      "F",
+      "D",
+      "C",
+      "B",
+      "A",
+      "A+"
+    ],
+    "matrix": [
+      [
+        21,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        5,
+        17,
+        0,
+        7,
+        12,
+        1
+      ],
+      [
+        1,
+        0,
+        9,
+        13,
+        5,
+        0
+      ],
+      [
+        0,
+        2,
+        5,
+        37,
+        21,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        7,
+        60,
+        5
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        5,
+        10
+      ]
+    ]
+  },
+  "RandomForest(100)": {
+    "n": 244,
+    "exact_pct": 78.3,
+    "within_one_band_pct": 99.6,
+    "errors_more_than_one_band": [
+      {
+        "actual": "D",
+        "predicted": "B",
+        "count": 1
+      }
+    ],
+    "bands": [
+      "F",
+      "D",
+      "C",
+      "B",
+      "A",
+      "A+"
+    ],
+    "matrix": [
+      [
+        22,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        38,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        15,
+        13,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        46,
+        15,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        8,
+        63,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        8,
+        7
+      ]
+    ]
+  }
+}
