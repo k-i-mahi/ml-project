@@ -1,19 +1,19 @@
 {
   "n_universities": 1225,
   "n_features": 71,
-  "n_train": 979,
-  "n_test": 246,
-  "score_min": 8.33,
-  "score_max": 95.39,
-  "score_mean": 64.42813061224489,
-  "score_sd": 18.402792889306703,
+  "n_train": 981,
+  "n_test": 244,
+  "score_min": 7.59,
+  "score_max": 94.94,
+  "score_mean": 63.86000816326531,
+  "score_sd": 18.460250573202508,
   "grade_counts": {
-    "A": 363,
-    "B": 299,
-    "D": 220,
-    "C": 145,
-    "F": 109,
-    "A+": 89
+    "A": 347,
+    "B": 315,
+    "D": 215,
+    "C": 150,
+    "F": 120,
+    "A+": 78
   },
   "dimension_weights": {
     "D1_academic_information": 28,
@@ -26,5 +26,10 @@
   },
   "n_gated": 186,
   "n_countries_ranked": 779,
+  "holdout_country": "Bangladesh",
+  "n_holdout": 22,
+  "max_band_drift_pp": 1.2,
+  "n_features_scored": 51,
+  "n_features_unscored": 20,
   "seed": 42
 }

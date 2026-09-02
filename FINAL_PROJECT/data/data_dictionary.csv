@@ -1,77 +1,77 @@
-column,role,dimension,dtype,min,max,mean,engineered
-a01_logo,feature,not used by the scoring model,int64,0.0,1.0,0.915,0
-a02_primary_nav,feature,D4 navigation,int64,0.0,1.0,0.851,0
-a03_nav_item_count,feature,D4 navigation,int64,0.0,20.0,5.144,0
-a04_search_bar,feature,D4 navigation,int64,0.0,1.0,0.795,0
-a05_language_toggle,feature,D5 usability & access,int64,0.0,1.0,0.386,0
-a06_breadcrumb,feature,D4 navigation,int64,0.0,1.0,0.092,0
-a07_qs_badge,feature,not used by the scoring model,int64,0.0,1.0,0.095,0
-a09_national_rank,feature,not used by the scoring model,int64,0.0,1.0,0.471,0
-a11_accreditation,feature,D7 transparency,int64,0.0,1.0,0.325,0
-a12_accred_count,feature,not used by the scoring model,int64,0.0,4.0,0.308,0
-a13_achievements,feature,not used by the scoring model,int64,0.0,1.0,0.606,0
-a14_stats_block,feature,not used by the scoring model,int64,0.0,1.0,0.509,0
-a15_stat_item_count,feature,not used by the scoring model,int64,0.0,10.0,3.421,0
-a16_notice_board,feature,not used by the scoring model,int64,0.0,1.0,0.433,0
-a17_notice_timestamp,feature,not used by the scoring model,int64,0.0,1.0,0.629,0
-a20_news_events,feature,D3 currency & activity,int64,0.0,1.0,0.861,0
-a21_calendar_link,feature,D3 currency & activity,int64,0.0,1.0,0.552,0
-a22_admission_notice,feature,D2 admission support,int64,0.0,1.0,0.797,0
-a23_upcoming_events,feature,not used by the scoring model,int64,0.0,1.0,0.683,0
-a24_event_count,feature,not used by the scoring model,int64,0.0,20.0,3.976,0
-a25_event_images,feature,not used by the scoring model,int64,0.0,1.0,0.718,0
-a26_event_captions,feature,not used by the scoring model,int64,0.0,1.0,0.655,0
-a27_event_datetime,feature,D3 currency & activity,int64,0.0,1.0,0.387,0
-a28_contests,feature,not used by the scoring model,int64,0.0,1.0,0.405,0
-a29_video_content,feature,not used by the scoring model,int64,0.0,1.0,0.367,0
-a30_image_gallery,feature,not used by the scoring model,int64,0.0,1.0,0.971,0
-a31_social_feed_embed,feature,not used by the scoring model,int64,0.0,1.0,0.056,0
-a32_vision_mission,feature,D7 transparency,int64,0.0,1.0,0.8,0
-a33_about_blurb,feature,D7 transparency,int64,0.0,1.0,0.838,0
-a34_department_links,feature,D1 academic information,int64,0.0,1.0,0.737,0
-a35_faculty_link,feature,D1 academic information,int64,0.0,1.0,0.824,0
-a36_research_highlight,feature,D1 academic information,int64,0.0,1.0,0.882,0
-a37_programs_listing,feature,D1 academic information,int64,0.0,1.0,0.855,0
-a38_scholarship,feature,D2 admission support,int64,0.0,1.0,0.595,0
-a39_library_link,feature,D1 academic information,int64,0.0,1.0,0.715,0
-a40_career_link,feature,D1 academic information,int64,0.0,1.0,0.578,0
-a41_alumni_link,feature,not used by the scoring model,int64,0.0,1.0,0.754,0
-a42_faq_link,feature,not used by the scoring model,int64,0.0,1.0,0.536,0
-a43_contact_link,feature,D2 admission support,int64,0.0,1.0,0.837,0
-a44_student_portal,feature,D7 transparency,int64,0.0,1.0,0.393,0
-a45_prospectus,feature,D2 admission support,int64,0.0,1.0,0.118,0
-a46_admissions_policy,feature,D2 admission support,int64,0.0,1.0,0.155,0
-a47_footer_contact,feature,D7 transparency,int64,0.0,1.0,0.55,0
-a48_footer_sitemap,feature,D4 navigation,int64,0.0,1.0,0.197,0
-a49_copyright_line,feature,not used by the scoring model,int64,0.0,1.0,0.783,0
-a50_social_links,feature,not used by the scoring model,int64,0.0,1.0,0.913,0
-a51_quick_links,feature,D4 navigation,int64,0.0,1.0,0.7,0
-a53_contrast_ratio,feature,D5 usability & access,float64,1.0,21.0,14.409,0
-a53_contrast_ratio_was_missing,feature,not used by the scoring model,int64,0.0,1.0,0.001,1
-a54_banner_carousel,feature,not used by the scoring model,int64,0.0,1.0,0.938,0
-a57_logo_prominence,feature,not used by the scoring model,int64,0.0,1.0,0.653,0
-a58_live_chat,feature,not used by the scoring model,int64,0.0,1.0,0.131,0
-a59_feedback_form,feature,not used by the scoring model,int64,0.0,1.0,0.019,0
-a60_trust_seal,feature,not used by the scoring model,int64,0.0,1.0,0.177,0
-a61_testimonials,feature,not used by the scoring model,int64,0.0,1.0,0.144,0
-a63_mobile_score,feature,D5 usability & access,int64,0.0,100.0,81.571,0
-a65_https,feature,D6 technical quality,int64,0.0,1.0,0.989,0
-a66_broken_links,feature,D6 technical quality,int64,0.0,1129.0,1.5,0
-a67_gzip,feature,D6 technical quality,int64,0.0,1.0,0.817,0
-a69_title_meta,feature,not used by the scoring model,int64,0.0,1.0,0.654,0
-a70_favicon,feature,not used by the scoring model,int64,0.0,1.0,0.903,0
-a71_sitemap_robots,feature,not used by the scoring model,int64,0.0,1.0,0.586,0
-a72_alt_text_pct,feature,D5 usability & access,float64,0.0,100.0,62.044,0
-a72_alt_text_pct_was_missing,feature,not used by the scoring model,int64,0.0,1.0,0.003,1
-a73_accessible_design,feature,D5 usability & access,int64,0.0,1.0,0.932,0
-a74_a11y_toggle,feature,D5 usability & access,int64,0.0,1.0,0.438,0
-a75_bookmark,feature,not used by the scoring model,int64,0.0,1.0,0.01,0
-broken_links_log,feature,D6 technical quality,float64,0.0,7.03,0.212,1
-load_time_z_region,feature,D6 technical quality,float64,-1.875,5.329,-0.0,1
-notice_recency_days,feature,D3 currency & activity,float64,0.0,3650.0,1416.659,1
-notice_recency_days_was_missing,feature,not used by the scoring model,int64,0.0,1.0,0.382,1
-website_score,TARGET (0-100),,float64,,,,0
-grade,"target, banded",,object,,,,0
-rank,output,,int64,,,,0
-regional_rank,output,,int64,,,,0
-country_rank,output,,float64,,,,0
+column,role,dimension,source_group,measurement,dtype,min,max,mean,engineered
+a01_logo,feature,D7 identity & transparency,Header & navigation,binary flag,int64,0.0,1.0,0.915,0
+a02_primary_nav,feature,D4 navigation & findability,Header & navigation,binary flag,int64,0.0,1.0,0.851,0
+a03_nav_item_count,feature,D4 navigation & findability,Header & navigation,count,int64,0.0,20.0,5.144,0
+a04_search_bar,feature,D4 navigation & findability,Header & navigation,binary flag,int64,0.0,1.0,0.795,0
+a05_language_toggle,feature,D5 usability & accessibility,Header & navigation,binary flag,int64,0.0,1.0,0.386,0
+a06_breadcrumb,feature,D4 navigation & findability,Header & navigation,binary flag,int64,0.0,1.0,0.092,0
+a07_qs_badge,feature,not used by the scoring model,Rankings & recognition,binary flag,int64,0.0,1.0,0.095,0
+a09_national_rank,feature,not used by the scoring model,Rankings & recognition,binary flag,int64,0.0,1.0,0.471,0
+a11_accreditation,feature,D7 identity & transparency,Rankings & recognition,binary flag,int64,0.0,1.0,0.325,0
+a12_accred_count,feature,not used by the scoring model,Rankings & recognition,count,int64,0.0,4.0,0.308,0
+a13_achievements,feature,D7 identity & transparency,Rankings & recognition,binary flag,int64,0.0,1.0,0.606,0
+a14_stats_block,feature,not used by the scoring model,Rankings & recognition,binary flag,int64,0.0,1.0,0.509,0
+a15_stat_item_count,feature,not used by the scoring model,Rankings & recognition,count,int64,0.0,10.0,3.421,0
+a16_notice_board,feature,D3 currency & activity,Notices & updates,binary flag,int64,0.0,1.0,0.433,0
+a17_notice_timestamp,feature,D3 currency & activity,Notices & updates,binary flag,int64,0.0,1.0,0.629,0
+a20_news_events,feature,D3 currency & activity,Notices & updates,binary flag,int64,0.0,1.0,0.861,0
+a21_calendar_link,feature,D3 currency & activity,Notices & updates,binary flag,int64,0.0,1.0,0.552,0
+a22_admission_notice,feature,D2 admission support,Notices & updates,binary flag,int64,0.0,1.0,0.797,0
+a23_upcoming_events,feature,D3 currency & activity,Events & media,binary flag,int64,0.0,1.0,0.683,0
+a24_event_count,feature,D3 currency & activity,Events & media,count,int64,0.0,20.0,3.976,0
+a25_event_images,feature,not used by the scoring model,Events & media,binary flag,int64,0.0,1.0,0.718,0
+a26_event_captions,feature,not used by the scoring model,Events & media,binary flag,int64,0.0,1.0,0.655,0
+a27_event_datetime,feature,D3 currency & activity,Events & media,binary flag,int64,0.0,1.0,0.387,0
+a28_contests,feature,not used by the scoring model,Events & media,binary flag,int64,0.0,1.0,0.405,0
+a29_video_content,feature,not used by the scoring model,Events & media,binary flag,int64,0.0,1.0,0.367,0
+a30_image_gallery,feature,not used by the scoring model,Events & media,binary flag,int64,0.0,1.0,0.971,0
+a31_social_feed_embed,feature,not used by the scoring model,Events & media,binary flag,int64,0.0,1.0,0.056,0
+a32_vision_mission,feature,D7 identity & transparency,Page content,binary flag,int64,0.0,1.0,0.8,0
+a33_about_blurb,feature,D7 identity & transparency,Page content,binary flag,int64,0.0,1.0,0.838,0
+a34_department_links,feature,D1 academic information,Page content,binary flag,int64,0.0,1.0,0.737,0
+a35_faculty_link,feature,D1 academic information,Page content,binary flag,int64,0.0,1.0,0.824,0
+a36_research_highlight,feature,D1 academic information,Page content,binary flag,int64,0.0,1.0,0.882,0
+a37_programs_listing,feature,D1 academic information,Page content,binary flag,int64,0.0,1.0,0.855,0
+a38_scholarship,feature,D2 admission support,Page content,binary flag,int64,0.0,1.0,0.595,0
+a39_library_link,feature,D1 academic information,Page content,binary flag,int64,0.0,1.0,0.715,0
+a40_career_link,feature,D1 academic information,Page content,binary flag,int64,0.0,1.0,0.578,0
+a41_alumni_link,feature,D7 identity & transparency,Page content,binary flag,int64,0.0,1.0,0.754,0
+a42_faq_link,feature,D2 admission support,Page content,binary flag,int64,0.0,1.0,0.536,0
+a43_contact_link,feature,D2 admission support,Page content,binary flag,int64,0.0,1.0,0.837,0
+a44_student_portal,feature,D7 identity & transparency,Page content,binary flag,int64,0.0,1.0,0.393,0
+a45_prospectus,feature,D2 admission support,Page content,binary flag,int64,0.0,1.0,0.118,0
+a46_admissions_policy,feature,D2 admission support,Page content,binary flag,int64,0.0,1.0,0.155,0
+a47_footer_contact,feature,D7 identity & transparency,Footer,binary flag,int64,0.0,1.0,0.55,0
+a48_footer_sitemap,feature,D4 navigation & findability,Footer,binary flag,int64,0.0,1.0,0.197,0
+a49_copyright_line,feature,D3 currency & activity,Footer,binary flag,int64,0.0,1.0,0.783,0
+a50_social_links,feature,D7 identity & transparency,Footer,binary flag,int64,0.0,1.0,0.913,0
+a51_quick_links,feature,D4 navigation & findability,Footer,binary flag,int64,0.0,1.0,0.7,0
+a53_contrast_ratio,feature,D5 usability & accessibility,Visual design,ratio,float64,1.0,21.0,14.409,0
+a53_contrast_ratio_was_missing,feature,not used by the scoring model,Measurement quality,indicator (0/1),int64,0.0,1.0,0.001,1
+a54_banner_carousel,feature,not used by the scoring model,Visual design,binary flag,int64,0.0,1.0,0.938,0
+a57_logo_prominence,feature,not used by the scoring model,Visual design,binary flag,int64,0.0,1.0,0.653,0
+a58_live_chat,feature,D2 admission support,Service & interaction,binary flag,int64,0.0,1.0,0.131,0
+a59_feedback_form,feature,not used by the scoring model,Service & interaction,binary flag,int64,0.0,1.0,0.019,0
+a60_trust_seal,feature,D7 identity & transparency,Service & interaction,binary flag,int64,0.0,1.0,0.177,0
+a61_testimonials,feature,not used by the scoring model,Service & interaction,binary flag,int64,0.0,1.0,0.144,0
+a63_mobile_score,feature,D5 usability & accessibility,Technical performance,index 0-100,int64,0.0,100.0,81.571,0
+a65_https,feature,D6 technical quality & discoverability,Technical performance,binary flag,int64,0.0,1.0,0.989,0
+a66_broken_links,feature,D6 technical quality & discoverability,Technical performance,count,int64,0.0,1129.0,1.5,0
+a67_gzip,feature,D6 technical quality & discoverability,Technical performance,binary flag,int64,0.0,1.0,0.817,0
+a69_title_meta,feature,D6 technical quality & discoverability,SEO & metadata,binary flag,int64,0.0,1.0,0.654,0
+a70_favicon,feature,D6 technical quality & discoverability,SEO & metadata,binary flag,int64,0.0,1.0,0.903,0
+a71_sitemap_robots,feature,D6 technical quality & discoverability,SEO & metadata,binary flag,int64,0.0,1.0,0.586,0
+a72_alt_text_pct,feature,D5 usability & accessibility,Accessibility,percentage 0-100,float64,0.0,100.0,62.044,0
+a72_alt_text_pct_was_missing,feature,not used by the scoring model,Measurement quality,indicator (0/1),int64,0.0,1.0,0.003,1
+a73_accessible_design,feature,D5 usability & accessibility,Accessibility,binary flag,int64,0.0,1.0,0.932,0
+a74_a11y_toggle,feature,D5 usability & accessibility,Accessibility,binary flag,int64,0.0,1.0,0.438,0
+a75_bookmark,feature,not used by the scoring model,Accessibility,binary flag,int64,0.0,1.0,0.01,0
+broken_links_log,feature,not used by the scoring model,Technical performance,log1p count,float64,0.0,7.03,0.212,1
+load_time_z_region,feature,D6 technical quality & discoverability,Technical performance,z-score (within region),float64,-1.875,5.329,-0.0,1
+notice_recency_days,feature,D3 currency & activity,Notices & updates,count,float64,0.0,3650.0,1416.659,1
+notice_recency_days_was_missing,feature,not used by the scoring model,Measurement quality,indicator (0/1),int64,0.0,1.0,0.382,1
+website_score,TARGET (0-100),,,,float64,,,,0
+grade,"target, banded",,,,object,,,,0
+rank,output,,,,int64,,,,0
+regional_rank,output,,,,int64,,,,0
+country_rank,output,,,,float64,,,,0

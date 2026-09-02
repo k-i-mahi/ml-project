@@ -1,0 +1,79 @@
+\begin{longtable}{@{}llrrp{4.6cm}@{}}
+\caption{Every term of every dimension: the attribute, its weight $\lambda_{k,j}$ inside the dimension, the points it is worth at its maximum, and the transform $\phi_{k,j}$ applied before weighting. \emph{mod.} marks \texttt{a27\_event\_datetime}, which is not an additive term but the multiplier inside $f_{\text{evt}}$.}\label{tab:terms}\\
+\toprule
+& \textbf{Attribute} & \textbf{$\lambda_{k,j}$} & \textbf{Points} & \textbf{Transform} \\
+\midrule\endfirsthead
+\multicolumn{5}{@{}l}{\small\itshape Table \ref{tab:terms}, continued from previous page}\\
+\toprule
+& \textbf{Attribute} & \textbf{$\lambda_{k,j}$} & \textbf{Points} & \textbf{Transform} \\
+\midrule\endhead
+\midrule\multicolumn{5}{@{}r}{\small\itshape continued on next page}\\\endfoot
+\bottomrule\endlastfoot
+\multicolumn{5}{@{}l}{\cellcolor{softgrey}\textbf{$D1$ --- Academic information} \quad $w_{1} = 28$ points}\\
+& \texttt{a37\_programs\_listing} & 0.30 & 8.40 & \small identity (0/1) \\
+& \texttt{a34\_department\_links} & 0.25 & 7.00 & \small identity (0/1) \\
+& \texttt{a35\_faculty\_link} & 0.15 & 4.20 & \small identity (0/1) \\
+& \texttt{a39\_library\_link} & 0.12 & 3.36 & \small identity (0/1) \\
+& \texttt{a36\_research\_highlight} & 0.10 & 2.80 & \small identity (0/1) \\
+& \texttt{a40\_career\_link} & 0.08 & 2.24 & \small identity (0/1) \\
+& \emph{sum} & 1.00 & 28.00 & \\\addlinespace[3pt]
+\multicolumn{5}{@{}l}{\cellcolor{softgrey}\textbf{$D2$ --- Admission support} \quad $w_{2} = 22$ points}\\
+& \texttt{a46\_admissions\_policy} & 0.26 & 5.72 & \small identity (0/1) \\
+& \texttt{a22\_admission\_notice} & 0.20 & 4.40 & \small identity (0/1) \\
+& \texttt{a38\_scholarship} & 0.18 & 3.96 & \small identity (0/1) \\
+& \texttt{a43\_contact\_link} & 0.15 & 3.30 & \small identity (0/1) \\
+& \texttt{a45\_prospectus} & 0.12 & 2.64 & \small identity (0/1) \\
+& \texttt{a42\_faq\_link} & 0.06 & 1.32 & \small identity (0/1) \\
+& \texttt{a58\_live\_chat} & 0.03 & 0.66 & \small identity (0/1) \\
+& \emph{sum} & 1.00 & 22.00 & \\\addlinespace[3pt]
+\multicolumn{5}{@{}l}{\cellcolor{softgrey}\textbf{$D3$ --- Currency and activity} \quad $w_{3} = 15$ points}\\
+& \texttt{notice\_recency\_days} & 0.32 & 4.80 & \small recency\_curve, 6-step decay \\
+& \texttt{a24\_event\_count} & 0.20 & 3.00 & \small event\_curve, 4-step x datetime factor \\
+& \texttt{a20\_news\_events} & 0.16 & 2.40 & \small identity (0/1) \\
+& \texttt{a21\_calendar\_link} & 0.12 & 1.80 & \small identity (0/1) \\
+& \texttt{a16\_notice\_board} & 0.08 & 1.20 & \small identity (0/1) \\
+& \texttt{a17\_notice\_timestamp} & 0.06 & 0.90 & \small identity (0/1) \\
+& \texttt{a23\_upcoming\_events} & 0.04 & 0.60 & \small identity (0/1) \\
+& \texttt{a49\_copyright\_line} & 0.02 & 0.30 & \small identity (0/1) \\
+& \texttt{a27\_event\_datetime} & \emph{mod.} & \emph{mod.} & \small modifier: x1.0 if events are dated, x0.6 if not \\
+& \emph{sum} & 1.00 & 15.00 & \\\addlinespace[3pt]
+\multicolumn{5}{@{}l}{\cellcolor{softgrey}\textbf{$D4$ --- Navigation and findability} \quad $w_{4} = 15$ points}\\
+& \texttt{a03\_nav\_item\_count} & 0.25 & 3.75 & \small nav\_breadth\_curve, inverted U \\
+& \texttt{a02\_primary\_nav} & 0.25 & 3.75 & \small identity (0/1); also triggers the 45-point gate \\
+& \texttt{a04\_search\_bar} & 0.20 & 3.00 & \small identity (0/1) \\
+& \texttt{a48\_footer\_sitemap} & 0.10 & 1.50 & \small identity (0/1) \\
+& \texttt{a51\_quick\_links} & 0.10 & 1.50 & \small identity (0/1) \\
+& \texttt{a06\_breadcrumb} & 0.10 & 1.50 & \small identity (0/1) \\
+& \emph{sum} & 1.00 & 15.00 & \\\addlinespace[3pt]
+\multicolumn{5}{@{}l}{\cellcolor{softgrey}\textbf{$D5$ --- Usability and accessibility} \quad $w_{5} = 10$ points}\\
+& \texttt{a63\_mobile\_score} & 0.32 & 3.20 & \small linear rescale 0-100 -> 0-1 \\
+& \texttt{a53\_contrast\_ratio} & 0.23 & 2.30 & \small contrast\_curve, plateau at 7:1 \\
+& \texttt{a72\_alt\_text\_pct} & 0.18 & 1.80 & \small sqrt of 0-100 rescale (concave) \\
+& \texttt{a73\_accessible\_design} & 0.10 & 1.00 & \small identity (0/1) \\
+& \texttt{a05\_language\_toggle} & 0.09 & 0.90 & \small identity (0/1) \\
+& \texttt{a74\_a11y\_toggle} & 0.08 & 0.80 & \small identity (0/1) \\
+& \emph{sum} & 1.00 & 10.00 & \\\addlinespace[3pt]
+\multicolumn{5}{@{}l}{\cellcolor{softgrey}\textbf{$D6$ --- Technical quality and discoverability} \quad $w_{6} = 7$ points}\\
+& \texttt{a65\_https} & 0.26 & 1.82 & \small identity (0/1); also triggers the 60-point gate \\
+& \texttt{a66\_broken\_links} & 0.24 & 1.68 & \small broken\_curve, 5-step penalty \\
+& \texttt{load\_time\_z\_region} & 0.20 & 1.40 & \small within-region percentile, inverted \\
+& \texttt{a69\_title\_meta} & 0.12 & 0.84 & \small identity (0/1) \\
+& \texttt{a71\_sitemap\_robots} & 0.07 & 0.49 & \small identity (0/1) \\
+& \texttt{a67\_gzip} & 0.07 & 0.49 & \small identity (0/1) \\
+& \texttt{a70\_favicon} & 0.04 & 0.28 & \small identity (0/1) \\
+& \emph{sum} & 1.00 & 7.00 & \\\addlinespace[3pt]
+\multicolumn{5}{@{}l}{\cellcolor{softgrey}\textbf{$D7$ --- Institutional identity and transparency} \quad $w_{7} = 3$ points}\\
+& \texttt{a32\_vision\_mission} & 0.20 & 0.60 & \small identity (0/1) \\
+& \texttt{a47\_footer\_contact} & 0.14 & 0.42 & \small identity (0/1) \\
+& \texttt{a33\_about\_blurb} & 0.14 & 0.42 & \small identity (0/1) \\
+& \texttt{a11\_accreditation} & 0.11 & 0.33 & \small identity (0/1) \\
+& \texttt{a44\_student\_portal} & 0.11 & 0.33 & \small identity (0/1) \\
+& \texttt{a41\_alumni\_link} & 0.10 & 0.30 & \small identity (0/1) \\
+& \texttt{a13\_achievements} & 0.08 & 0.24 & \small identity (0/1) \\
+& \texttt{a01\_logo} & 0.06 & 0.18 & \small identity (0/1) \\
+& \texttt{a50\_social\_links} & 0.04 & 0.12 & \small identity (0/1) \\
+& \texttt{a60\_trust\_seal} & 0.02 & 0.06 & \small identity (0/1) \\
+& \emph{sum} & 1.00 & 3.00 & \\\addlinespace[3pt]
+\midrule
+& \textbf{All seven dimensions} & & \textbf{100} & \\
+\end{longtable}

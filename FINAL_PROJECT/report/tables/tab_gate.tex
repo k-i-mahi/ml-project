@@ -1,0 +1,16 @@
+\begin{tabular}{llccc}
+\toprule
+\textbf{Model} & \textbf{Family} & \textbf{MAE gated} & \textbf{MAE ungated} & \textbf{ratio} \\
+\midrule
+Linear Regression & linear & 8.88 & 1.85 & $4.80\times$ \\
+Ridge & linear & 9.05 & 1.88 & $4.81\times$ \\
+Lasso & linear & 8.12 & 1.98 & $4.11\times$ \\
+SVR (RBF kernel) & kernel & 5.73 & 1.84 & $3.12\times$ \\
+Neural Net (MLP) & neural & 2.46 & 1.41 & $1.75\times$ \\
+\midrule
+Decision Tree & tree & 0.51 & 3.86 & $0.13\times$ \\
+Random Forest & ensemble & 0.55 & 2.36 & $0.23\times$ \\
+Gradient Boosting & ensemble & 1.56 & 1.54 & $1.01\times$ \\
+\textbf{LightGBM} & ensemble & \textbf{0.77} & \textbf{1.40} & $0.55\times$ \\
+\bottomrule
+\end{tabular}

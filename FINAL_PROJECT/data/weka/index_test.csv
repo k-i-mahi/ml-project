@@ -1,0 +1,245 @@
+weka_instance,uni_id,name,url,country,region,website_score,grade
+1,2029,University of Leicester,https://www.le.ac.uk,United Kingdom,Western & Northern Europe,92.09,A+
+2,2078,Sorbonne University,https://www.sorbonne-universite.fr,France,Western & Northern Europe,91.46,A+
+3,5127,University of Wollongong,https://www.uow.edu.au,Australia,South & Central Asia + Oceania,89.11,A+
+4,2060,FAU Erlangen-Nuremberg,https://www.fau.de,Germany,Western & Northern Europe,89.01,A+
+5,5312,Sharda University,https://www.sharda.ac.in,India,South & Central Asia + Oceania,88.75,A+
+6,6152,Makerere University,https://www.mak.ac.ug,Sub-Saharan Africa,Latin America & Africa,88.36,A+
+7,1081,University of Arizona,https://www.arizona.edu,United States,North America,88.18,A+
+8,5094,North South University,https://www.northsouth.edu,Bangladesh,South & Central Asia + Oceania,86.82,A+
+9,5308,KIIT University,https://www.kiit.ac.in,India,South & Central Asia + Oceania,86.68,A+
+10,1059,Texas A&M University,https://www.tamu.edu,United States,North America,86.65,A+
+11,1099,West Virginia University,https://www.wvu.edu,United States,North America,86.36,A+
+12,2061,University of Stuttgart,https://www.uni-stuttgart.de,Germany,Western & Northern Europe,86.13,A+
+13,5073,COMSATS University Islamabad,https://www.comsats.edu.pk,Pakistan,South & Central Asia + Oceania,85.06,A+
+14,2049,University of Tuebingen,https://uni-tuebingen.de,Germany,Western & Northern Europe,85.02,A+
+15,1117,Worcester Polytechnic Institute,https://www.wpi.edu,United States,North America,85.01,A+
+16,2088,University of Lille,https://www.univ-lille.fr,France,Western & Northern Europe,84.17,A
+17,5027,Manipal Academy of Higher Education,https://www.manipal.edu,India,South & Central Asia + Oceania,84.0,A
+18,5107,Rajshahi University of Engineering and Technology,https://www.ruet.ac.bd,Bangladesh,South & Central Asia + Oceania,83.75,A
+19,1403,Brock University,https://www.brocku.ca,Canada,North America,83.63,A
+20,5022,Aligarh Muslim University,https://www.amu.ac.in,India,South & Central Asia + Oceania,83.51,A
+21,2197,Dublin City University,https://www.dcu.ie,Belgium/Ireland/Iceland,Western & Northern Europe,83.44,A
+22,1062,Lehigh University,https://www1.lehigh.edu,United States,North America,82.9,A
+23,1009,California Institute of Technology,https://www.caltech.edu,Canada,North America,82.84,A
+24,1163,Loyola Marymount University,https://www.lmu.edu,United States,North America,82.41,A
+25,5093,BRAC University,https://www.bracu.ac.bd,Bangladesh,South & Central Asia + Oceania,82.35,A
+26,5106,Khulna University of Engineering and Technology,https://www.kuet.ac.bd,Bangladesh,South & Central Asia + Oceania,82.18,A
+27,1089,University of New Mexico,https://www.unm.edu,United States,North America,82.12,A
+28,3091,Lodz University of Technology,https://www.p.lodz.pl,Poland,Eastern & Southern Europe,81.95,A
+29,1100,University of Cincinnati,https://www.uc.edu,United States,North America,81.9,A
+30,2016,University of Nottingham,https://www.nottingham.ac.uk,United Kingdom,Western & Northern Europe,81.84,A
+31,5108,Chittagong University of Engineering and Technology,https://www.cuet.ac.bd,Bangladesh,South & Central Asia + Oceania,81.4,A
+32,5123,Deakin University,https://www.deakin.edu.au,Australia,South & Central Asia + Oceania,81.22,A
+33,5406,NIT Agartala,https://www.nita.ac.in,India,South & Central Asia + Oceania,81.06,A
+34,5109,Bangladesh University of Professionals,https://www.bup.edu.bd,Bangladesh,South & Central Asia + Oceania,81.03,A
+35,3048,University of Navarra,https://www.unav.edu,Spain,Eastern & Southern Europe,80.91,A
+36,5014,Indian Institute of Technology Gandhinagar,https://www.iitgn.ac.in,India,South & Central Asia + Oceania,80.89,A
+37,5103,American International University-Bangladesh,https://www.aiub.edu,Bangladesh,South & Central Asia + Oceania,80.81,A
+38,2047,Karlsruhe Institute of Technology,https://www.kit.edu,Germany,Western & Northern Europe,80.34,A
+39,2178,University of Zurich,https://www.uzh.ch,Switzerland/Austria,Western & Northern Europe,80.22,A
+40,2018,University of St Andrews,https://www.st-andrews.ac.uk,United Kingdom,Western & Northern Europe,80.16,A
+41,2167,Aalto University,https://www.aalto.fi,Finland,Western & Northern Europe,80.11,A
+42,1068,Virginia Tech,https://www.vt.edu,United States,North America,80.06,A
+43,6522,Central University of Technology Free State,https://www.cut.ac.za,South Africa,Latin America & Africa,80.0,A
+44,4184,Thammasat University,https://www.tu.ac.th,Thailand,Asia (East & Southeast),79.5,A
+45,4143,Hong Kong Baptist University,https://www.hkbu.edu.hk,Hong Kong,Asia (East & Southeast),79.33,A
+46,5009,Indian Institute of Technology Hyderabad,https://www.iith.ac.in,India,South & Central Asia + Oceania,79.33,A
+47,1018,Dartmouth College,https://www.dartmouth.edu,United States,North America,79.11,A
+48,5065,Bharathidasan University,https://www.bdu.ac.in,India,South & Central Asia + Oceania,79.1,A
+49,4172,Sepuluh Nopember Institute of Technology,https://www.its.ac.id,Indonesia,Asia (East & Southeast),78.79,A
+50,3303,Polytechnic University of Bari,https://www.poliba.it,Italy,Eastern & Southern Europe,78.63,A
+51,4070,Chiba University,https://www.chiba-u.ac.jp,Japan,Asia (East & Southeast),78.57,A
+52,5325,Patuakhali Science and Technology University,https://www.pstu.ac.bd,Bangladesh,South & Central Asia + Oceania,78.57,A
+53,5169,Pokhara University,https://www.pu.edu.np,Nepal,South & Central Asia + Oceania,78.46,A
+54,3144,Babes-Bolyai University,https://www.ubbcluj.ro,Romania,Eastern & Southern Europe,78.41,A
+55,5082,Mehran University of Engineering and Technology,https://www.muet.edu.pk,Pakistan,South & Central Asia + Oceania,78.32,A
+56,1157,Claremont McKenna College,https://www.cmc.edu,United States,North America,78.26,A
+57,1024,Carnegie Mellon University,https://www.cmu.edu,United States,North America,78.22,A
+58,1013,"University of California, Los Angeles",https://www.ucla.edu,United States,North America,78.11,A
+59,1011,Johns Hopkins University,https://www.jhu.edu,United States,North America,77.89,A
+60,5072,Aga Khan University,https://www.aku.edu,Pakistan,South & Central Asia + Oceania,77.87,A
+61,1084,University of Oregon,https://www.uoregon.edu,United States,North America,77.8,A
+62,6150,Cheikh Anta Diop University,https://www.ucad.sn,Sub-Saharan Africa,Latin America & Africa,77.72,A
+63,1056,University of Iowa,https://uiowa.edu,United States,North America,77.5,A
+64,1113,Temple University,https://www.temple.edu,United States,North America,77.47,A
+65,3010,Polytechnic University of Turin,https://www.polito.it,Italy,Eastern & Southern Europe,77.31,A
+66,3075,University of Almeria,https://www.ual.es,Spain,Eastern & Southern Europe,77.27,A
+67,5099,Khulna University,https://www.ku.ac.bd,Bangladesh,South & Central Asia + Oceania,76.98,A
+68,5168,Kathmandu University,https://www.ku.edu.np,Nepal,South & Central Asia + Oceania,76.94,A
+69,5104,Daffodil International University,https://www.daffodilvarsity.edu.bd,Bangladesh,South & Central Asia + Oceania,76.84,A
+70,5323,University of Barisal,https://www.bu.ac.bd,Bangladesh,South & Central Asia + Oceania,76.64,A
+71,2028,University of Sussex,https://www.sussex.ac.uk,United Kingdom,Western & Northern Europe,76.62,A
+72,6147,University of Ghana,https://www.ug.edu.gh,Sub-Saharan Africa,Latin America & Africa,76.59,A
+73,2097,Clermont Auvergne University,https://www.uca.fr,France,Western & Northern Europe,76.58,A
+74,6122,Assiut University,https://www.aun.edu.eg,Egypt & North Africa,Latin America & Africa,76.55,A
+75,3074,University of La Laguna,https://www.ull.es,Spain,Eastern & Southern Europe,76.49,A
+76,6107,University of the Witwatersrand,https://www.wits.ac.za,South Africa,Latin America & Africa,76.49,A
+77,5174,Al-Farabi Kazakh National University,https://www.kaznu.kz,Central Asia,South & Central Asia + Oceania,76.45,A
+78,1196,University of Denver,https://www.du.edu,United States,North America,76.36,A
+79,2308,University of Namur,https://www.unamur.be,Belgium/Ireland/Iceland,Western & Northern Europe,76.28,A
+80,1046,Ohio State University,https://www.osu.edu,United States,North America,76.27,A
+81,4124,National Taiwan University,https://www.ntu.edu.tw,Taiwan,Asia (East & Southeast),76.27,A
+82,1165,San Diego State University,https://www.sdsu.edu,United States,North America,76.07,A
+83,1037,University of Notre Dame,https://www.nd.edu,United States,North America,75.98,A
+84,2063,Kiel University,https://www.uni-kiel.de,Germany,Western & Northern Europe,75.88,A
+85,2182,University of Vienna,https://www.univie.ac.at,Switzerland/Austria,Western & Northern Europe,75.71,A
+86,5068,Lahore University of Management Sciences,https://www.lums.edu.pk,Pakistan,South & Central Asia + Oceania,75.46,A
+87,4084,Ehime University,https://www.ehime-u.ac.jp,Japan,Asia (East & Southeast),75.43,A
+88,1065,Syracuse University,https://www.syracuse.edu,United States,North America,74.91,B
+89,1069,Florida State University,https://www.fsu.edu,United States,North America,74.89,B
+90,1176,University of Montreal,https://www.umontreal.ca,Canada,North America,74.83,B
+91,5117,University of Western Australia,https://www.uwa.edu.au,Australia,South & Central Asia + Oceania,74.77,B
+92,2158,IT University of Copenhagen,https://en.itu.dk,Denmark,Western & Northern Europe,74.56,B
+93,3120,University of Crete,https://www.uoc.gr,Greece,Eastern & Southern Europe,74.52,B
+94,1118,Brandeis University,https://www.brandeis.edu,United States,North America,74.47,B
+95,2108,Eindhoven University of Technology,https://www.tue.nl,Netherlands,Western & Northern Europe,74.34,B
+96,1107,Loyola University Chicago,https://www.luc.edu,United States,North America,74.3,B
+97,4176,University of North Sumatra,https://www.usu.ac.id,Indonesia,Asia (East & Southeast),74.23,B
+98,4091,Doshisha University,https://www.doshisha.ac.jp,Japan,Asia (East & Southeast),74.18,B
+99,5324,Bangladesh University of Textiles,https://www.butex.edu.bd,Bangladesh,South & Central Asia + Oceania,74.15,B
+100,2045,Free University of Berlin,https://www.fu-berlin.de,Germany,Western & Northern Europe,74.13,B
+101,5079,Pakistan Institute of Engineering and Applied Sciences,https://www.pieas.edu.pk,Pakistan,South & Central Asia + Oceania,74.03,B
+102,1126,Stony Brook University,https://www.stonybrook.edu,United States,North America,73.86,B
+103,5091,University of Dhaka,https://www.du.ac.bd,Bangladesh,South & Central Asia + Oceania,73.17,B
+104,3038,Sant'Anna School of Advanced Studies,https://www.santannapisa.it,Italy,Eastern & Southern Europe,73.13,B
+105,3315,University of Banja Luka,https://www.unibl.org,Balkans,Eastern & Southern Europe,72.99,B
+106,1145,Wesleyan University,https://www.wesleyan.edu,United States,North America,72.85,B
+107,5096,University of Chittagong,https://www.cu.ac.bd,Bangladesh,South & Central Asia + Oceania,72.64,B
+108,5171,Mid-Western University,https://www.mwu.edu.np,Nepal,South & Central Asia + Oceania,72.53,B
+109,4201,Polytechnic University of the Philippines,https://www.pup.edu.ph,Philippines,Asia (East & Southeast),72.47,B
+110,5409,NIT Raipur,https://www.nitrr.ac.in,India,South & Central Asia + Oceania,72.44,B
+111,5066,Quaid-i-Azam University,https://www.qau.edu.pk,Pakistan,South & Central Asia + Oceania,72.34,B
+112,5327,Sabaragamuwa University of Sri Lanka,https://www.sab.ac.lk,Sri Lanka,South & Central Asia + Oceania,72.28,B
+113,3151,Transilvania University of Brasov,https://www.unitbv.ro,Romania,Eastern & Southern Europe,71.78,B
+114,5045,IIIT Hyderabad,https://www.iiit.ac.in,India,South & Central Asia + Oceania,71.71,B
+115,3166,Odesa I. I. Mechnikov National University,https://www.onu.edu.ua,Ukraine,Eastern & Southern Europe,71.67,B
+116,2127,University of Gothenburg,https://www.gu.se,Sweden,Western & Northern Europe,71.62,B
+117,5322,Comilla University,https://www.cou.ac.bd,Bangladesh,South & Central Asia + Oceania,71.28,B
+118,5110,Jagannath University,https://www.jnu.ac.bd,Bangladesh,South & Central Asia + Oceania,71.17,B
+119,2024,University of Bath,https://www.bath.ac.uk,United Kingdom,Western & Northern Europe,71.16,B
+120,1032,University of Florida,https://www.ufl.edu,United States,North America,71.0,B
+121,5095,Jahangirnagar University,https://www.juniv.edu,Bangladesh,South & Central Asia + Oceania,70.84,B
+122,3140,Mendel University in Brno,https://www.mendelu.cz,Czechia,Eastern & Southern Europe,70.7,B
+123,1010,Cornell University,https://www.cornell.edu,United States,North America,70.68,B
+124,3311,West Pomeranian University of Technology,https://www.zut.edu.pl,Poland,Eastern & Southern Europe,70.56,B
+125,6146,Strathmore University,https://www.strathmore.edu,Sub-Saharan Africa,Latin America & Africa,70.22,B
+126,3180,University of Belgrade,https://www.bg.ac.rs,Balkans,Eastern & Southern Europe,70.13,B
+127,3046,Polytechnic University of Catalonia,https://www.upc.edu,Spain,Eastern & Southern Europe,69.87,B
+128,2146,Norwegian School of Economics,https://www.nhh.no,Norway,Western & Northern Europe,69.13,B
+129,4167,Bandung Institute of Technology,https://www.itb.ac.id,Indonesia,Asia (East & Southeast),68.96,B
+130,3170,Budapest University of Technology and Economics,https://www.bme.hu,Hungary,Eastern & Southern Europe,68.95,B
+131,5321,University of Gujrat,https://www.uog.edu.pk,Pakistan,South & Central Asia + Oceania,68.79,B
+132,4145,University of Macau,https://www.um.edu.mo,Macau,Asia (East & Southeast),68.48,B
+133,1155,Reed College,https://www.reed.edu,United States,North America,68.42,B
+134,3019,University of Perugia,https://www.unipg.it,Italy,Eastern & Southern Europe,67.99,B
+135,2114,Amsterdam University of Applied Sciences,https://www.amsterdamuas.com,Netherlands,Western & Northern Europe,67.97,B
+136,4081,Shinshu University,https://www.shinshu-u.ac.jp,Japan,Asia (East & Southeast),67.93,B
+137,5010,Indian Institute of Technology Indore,https://www.iiti.ac.in,India,South & Central Asia + Oceania,67.78,B
+138,4175,Hasanuddin University,https://www.unhas.ac.id,Indonesia,Asia (East & Southeast),67.73,B
+139,6431,Ladoke Akintola University of Technology,https://www.lautech.edu.ng,Sub-Saharan Africa,Latin America & Africa,67.44,B
+140,4211,University of Danang,https://www.udn.vn,Vietnam,Asia (East & Southeast),67.27,B
+141,5033,Thapar Institute of Engineering and Technology,https://www.thapar.edu,India,South & Central Asia + Oceania,67.06,B
+142,1071,"University of Tennessee, Knoxville",https://www.utk.edu,United States,North America,66.9,B
+143,5092,Bangladesh University of Engineering and Technology,https://www.buet.ac.bd,Bangladesh,South & Central Asia + Oceania,66.8,B
+144,2193,Trinity College Dublin,https://www.tcd.ie,Belgium/Ireland/Iceland,Western & Northern Europe,66.57,B
+145,4109,Kyungpook National University,https://www.knu.ac.kr,South Korea,Asia (East & Southeast),66.36,B
+146,2116,The Hague University of Applied Sciences,https://www.thehagueuniversity.com,Netherlands,Western & Northern Europe,66.02,B
+147,6129,Cadi Ayyad University,https://www.uca.ma,Egypt & North Africa,Latin America & Africa,65.93,B
+148,4074,Kumamoto University,https://www.kumamoto-u.ac.jp,Japan,Asia (East & Southeast),65.92,B
+149,1025,University of Wisconsin-Madison,https://www.wisc.edu,United States,North America,65.64,B
+150,4191,Silpakorn University,https://www.su.ac.th,Thailand,Asia (East & Southeast),65.43,B
+151,1139,Haverford College,https://www.haverford.edu,United States,North America,65.09,B
+152,6506,University of Caxias do Sul,https://www.ucs.br,Brazil,Latin America & Africa,65.0,B
+153,2109,Radboud University,https://www.ru.nl,Netherlands,Western & Northern Europe,64.55,C
+154,2162,University College of Northern Denmark,https://www.ucn.dk,Denmark,Western & Northern Europe,64.18,C
+155,6335,Mohammed VI Polytechnic University,https://www.um6p.ma,Egypt & North Africa,Latin America & Africa,64.13,C
+156,1120,University of Vermont,https://www.uvm.edu,United States,North America,63.83,C
+157,3179,University of Split,https://www.unist.hr,Balkans,Eastern & Southern Europe,63.81,C
+158,1173,University of Waterloo,https://uwaterloo.ca,Canada,North America,63.8,C
+159,6076,University of Rosario,https://www.urosario.edu.co,Colombia,Latin America & Africa,63.29,C
+160,6154,University of Botswana,https://www.ub.bw,Sub-Saharan Africa,Latin America & Africa,63.19,C
+161,3123,Athens University of Economics and Business,https://www.aueb.gr,Greece,Eastern & Southern Europe,63.07,C
+162,3049,University of Granada,https://www.ugr.es,Spain,Eastern & Southern Europe,62.7,C
+163,1141,Middlebury College,https://www.middlebury.edu,United States,North America,62.58,C
+164,3145,Alexandru Ioan Cuza University,https://www.uaic.ro,Romania,Eastern & Southern Europe,61.89,C
+165,4197,University of Santo Tomas,https://www.ust.edu.ph,Philippines,Asia (East & Southeast),61.88,C
+166,4178,Bina Nusantara University,https://www.binus.ac.id,Indonesia,Asia (East & Southeast),61.19,C
+167,6308,Federal University of Rio Grande,https://www.furg.br,Brazil,Latin America & Africa,60.58,C
+168,2145,OsloMet,https://www.oslomet.no,Norway,Western & Northern Europe,60.28,C
+169,3115,Polytechnic Institute of Lisbon,https://www.ipl.pt,Portugal,Eastern & Southern Europe,60.09,C
+170,3089,Medical University of Warsaw,https://www.wum.edu.pl,Poland,Eastern & Southern Europe,58.58,C
+171,6350,Felix Houphouet-Boigny University,https://www.univ-fhb.edu.ci,Sub-Saharan Africa,Latin America & Africa,58.37,C
+172,6021,Federal University of Espirito Santo,https://www.ufes.br,Brazil,Latin America & Africa,58.13,C
+173,3030,University of Calabria,https://www.unical.it,Italy,Eastern & Southern Europe,57.05,C
+174,6120,Alexandria University,https://www.alexu.edu.eg,Egypt & North Africa,Latin America & Africa,57.03,C
+175,5097,University of Rajshahi,https://www.ru.ac.bd,Bangladesh,South & Central Asia + Oceania,56.15,C
+176,2065,Friedrich Schiller University Jena,https://www.uni-jena.de,Germany,Western & Northern Europe,54.77,C
+177,3100,Kazimierz Wielki University,https://www.ukw.edu.pl,Poland,Eastern & Southern Europe,54.04,C
+178,1098,University of Arkansas,https://www.uark.edu,United States,North America,54.02,C
+179,3146,Politehnica University of Bucharest,https://www.upb.ro,Romania,Eastern & Southern Europe,53.05,C
+180,2159,VIA University College,https://www.via.dk,Denmark,Western & Northern Europe,51.91,C
+181,6302,Federal University of Ouro Preto,https://www.ufop.br,Brazil,Latin America & Africa,49.8,D
+182,6027,Federal University of Santa Maria,https://www.ufsm.br,Brazil,Latin America & Africa,48.65,D
+183,6019,Federal University of Rio Grande do Norte,https://www.ufrn.br,Brazil,Latin America & Africa,46.32,D
+184,4073,Nagasaki University,https://www.nagasaki-u.ac.jp,Japan,Asia (East & Southeast),45.82,D
+185,4209,Can Tho University,https://www.ctu.edu.vn,Vietnam,Asia (East & Southeast),45.0,D
+186,4116,Jeonbuk National University,https://www.jbnu.ac.kr,South Korea,Asia (East & Southeast),45.0,D
+187,4013,Tongji University,https://www.tongji.edu.cn,China,Asia (East & Southeast),45.0,D
+188,5098,Bangladesh Agricultural University,https://www.bau.edu.bd,Bangladesh,South & Central Asia + Oceania,45.0,D
+189,5101,Islamic University of Technology,https://www.iutoic-dhaka.edu,Bangladesh,South & Central Asia + Oceania,45.0,D
+190,5105,East West University,https://www.ewubd.edu,Bangladesh,South & Central Asia + Oceania,45.0,D
+191,3085,University of Lodz,https://www.uni.lodz.pl,Poland,Eastern & Southern Europe,45.0,D
+192,5035,NIT Karnataka Surathkal,https://www.nitk.ac.in,India,South & Central Asia + Oceania,45.0,D
+193,5041,Cochin University of Science and Technology,https://www.cusat.ac.in,India,South & Central Asia + Oceania,45.0,D
+194,5029,Birla Institute of Technology and Science Pilani,https://www.bits-pilani.ac.in,India,South & Central Asia + Oceania,45.0,D
+195,4118,Dongguk University,https://www.dongguk.edu,South Korea,Asia (East & Southeast),45.0,D
+196,4160,Taylor's University,https://university.taylors.edu.my,Malaysia,Asia (East & Southeast),45.0,D
+197,4187,King Mongkut's University of Technology Thonburi,https://www.kmutt.ac.th,Thailand,Asia (East & Southeast),45.0,D
+198,4198,Mapua University,https://www.mapua.edu.ph,Philippines,Asia (East & Southeast),45.0,D
+199,6526,University of Constantine 1,https://www.umc.edu.dz,Egypt & North Africa,Latin America & Africa,45.0,D
+200,3197,University of Zilina,https://www.uniza.sk,Bulgaria & Slovakia,Eastern & Southern Europe,45.0,D
+201,3193,Comenius University Bratislava,https://www.uniba.sk,Bulgaria & Slovakia,Eastern & Southern Europe,45.0,D
+202,5161,University of Sri Jayewardenepura,https://www.sjp.ac.lk,Sri Lanka,South & Central Asia + Oceania,45.0,D
+203,5162,University of Ruhuna,https://www.ruh.ac.lk,Sri Lanka,South & Central Asia + Oceania,45.0,D
+204,4062,Kyushu University,https://www.kyushu-u.ac.jp,Japan,Asia (East & Southeast),45.0,D
+205,5132,Western Sydney University,https://www.westernsydney.edu.au,Australia,South & Central Asia + Oceania,45.0,D
+206,2004,University College London,https://www.ucl.ac.uk,United Kingdom,Western & Northern Europe,45.0,D
+207,1402,University of Windsor,https://www.uwindsor.ca,Canada,North America,45.0,D
+208,4048,Guangxi University,https://www.gxu.edu.cn,China,Asia (East & Southeast),45.0,D
+209,3154,Gheorghe Asachi Technical University of Iasi,https://www.tuiasi.ro,Romania,Eastern & Southern Europe,45.0,D
+210,3129,Technical University of Crete,https://www.tuc.gr,Greece,Eastern & Southern Europe,45.0,D
+211,4032,Beijing Institute of Technology,https://www.bit.edu.cn,China,Asia (East & Southeast),45.0,D
+212,1143,Bates College,https://www.bates.edu,United States,North America,45.0,D
+213,4129,National Central University,https://www.ncu.edu.tw,Taiwan,Asia (East & Southeast),45.0,D
+214,4025,Dalian University of Technology,https://www.dlut.edu.cn,China,Asia (East & Southeast),45.0,D
+215,4150,University of Malaya,https://www.um.edu.my,Malaysia,Asia (East & Southeast),45.0,D
+216,5314,MNNIT Allahabad,https://www.mnnit.ac.in,India,South & Central Asia + Oceania,45.0,D
+217,3062,University of Cordoba,https://www.uco.es,Spain,Eastern & Southern Europe,44.81,D
+218,6413,CEFET Rio de Janeiro,https://www.cefet-rj.br,Brazil,Latin America & Africa,43.53,D
+219,6515,University of Bio-Bio,https://www.ubiobio.cl,Chile,Latin America & Africa,35.67,D
+220,6411,Federal University of Jequitinhonha and Mucuri Valleys,https://www.ufvjm.edu.br,Brazil,Latin America & Africa,35.37,D
+221,3105,University of Aveiro,https://www.ua.pt,Portugal,Eastern & Southern Europe,35.32,D
+222,1181,Universidad Nacional Autonoma de Mexico (UNAM),https://www.unam.mx,United States,North America,35.25,D
+223,2140,Norwegian University of Life Sciences,https://www.nmbu.no,Norway,Western & Northern Europe,34.75,F
+224,6012,Federal University of Bahia,https://www.ufba.br,Brazil,Latin America & Africa,34.33,F
+225,2137,University of Bergen,https://www.uib.no,Norway,Western & Northern Europe,34.2,F
+226,6401,Federal University of Lavras,https://www.ufla.br,Brazil,Latin America & Africa,32.08,F
+227,3202,Vilnius University,https://www.vu.lt,Baltics,Eastern & Southern Europe,31.69,F
+228,6419,State University of Montes Claros,https://www.unimontes.br,Brazil,Latin America & Africa,31.69,F
+229,6068,National University of the South,https://www.uns.edu.ar,Argentina,Latin America & Africa,30.73,F
+230,2143,Nord University,https://www.nord.no,Norway,Western & Northern Europe,29.67,F
+231,4190,Naresuan University,https://www.nu.ac.th,Thailand,Asia (East & Southeast),29.57,F
+232,6018,Federal University of Paraiba,https://www.ufpb.br,Brazil,Latin America & Africa,28.78,F
+233,3055,University of Salamanca,https://www.usal.es,Spain,Eastern & Southern Europe,28.69,F
+234,6026,State University of Londrina,https://www.uel.br,Brazil,Latin America & Africa,26.68,F
+235,6514,National University of Rio Cuarto,https://www.unrc.edu.ar,Argentina,Latin America & Africa,26.16,F
+236,6088,University of Valparaiso,https://www.uv.cl,Chile,Latin America & Africa,25.33,F
+237,6061,National University of La Plata,https://www.unlp.edu.ar,Argentina,Latin America & Africa,25.1,F
+238,6504,State University of Ponta Grossa,https://www.uepg.br,Brazil,Latin America & Africa,24.77,F
+239,3192,American University in Bulgaria,https://www.aubg.edu,Bulgaria & Slovakia,Eastern & Southern Europe,22.73,F
+240,4186,Prince of Songkla University,https://www.psu.ac.th,Thailand,Asia (East & Southeast),22.64,F
+241,6065,National University of the Littoral,https://www.unl.edu.ar,Argentina,Latin America & Africa,21.71,F
+242,4033,China Agricultural University,https://www.cau.edu.cn,China,Asia (East & Southeast),21.64,F
+243,4107,Pusan National University,https://www.pusan.ac.kr,South Korea,Asia (East & Southeast),12.23,F
+244,5111,University of Melbourne,https://www.unimelb.edu.au,Australia,South & Central Asia + Oceania,11.73,F

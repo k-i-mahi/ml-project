@@ -12,10 +12,10 @@ directly comparable to the notebook.
 
 | file | rows | target attribute | use for |
 |---|---|---|---|
-| `train.arff` | 979 | `website_score` (numeric) | training a regression model |
-| `test.arff` | 246 | `website_score` (numeric) | **held-out** evaluation |
-| `train_classification.arff` | 979 | `grade` (A+/A/B/C/D/F) | training a classifier |
-| `test_classification.arff` | 246 | `grade` | held-out classifier evaluation |
+| `train.arff` | 981 | `website_score` (numeric) | training a regression model |
+| `test.arff` | 244 | `website_score` (numeric) | **held-out** evaluation |
+| `train_classification.arff` | 981 | `grade` (A+/A/B/C/D/F) | training a classifier |
+| `test_classification.arff` | 244 | `grade` | held-out classifier evaluation |
 | `all_universities.arff` | 1225 | `website_score` | 10-fold cross-validation in one file |
 
 Each file has **71 predictive attributes** plus the target. Identifier columns (`uni_id`,
@@ -37,14 +37,19 @@ able to memorise a university by name, and `region` is confounded with who colle
 
 ```
 Relation:  website_quality_train
-Instances: 979
+Instances: 981
 Attributes: 72
 ```
 
 4. Click `website_score` in the attribute list. The histogram should span roughly **8 to 95**
    with a visible bump around 45.
 
-If the instance count is not 979 you have opened the wrong file.
+If the instance count is not 981 you have opened the wrong file.
+
+> **Note on the split.** All 22 Bangladeshi universities are in `test.arff` and none is
+> in `train.arff`. That is deliberate (see the report, Section 6.1), so a Weka model
+> trained here is also blind to Bangladesh and its predictions on those rows are
+> directly comparable to the notebook's.
 
 ---
 
@@ -99,7 +104,7 @@ Mean absolute error              3.49
 Root mean squared error          4.93
 ```
 
-Worse than linear regression. One tree on 979 rows overfits. This is a **useful** result to
+Worse than linear regression. One tree on 981 rows overfits. This is a **useful** result to
 report, not a failure — it is what motivates the ensemble.
 
 ### 3c. Random Forest — the best Weka model
@@ -121,7 +126,7 @@ Root mean squared error          3.20
 | LinearRegression | 0.98 | 2.56 | 3.80 |
 | REPTree | 0.97 | 3.49 | 4.93 |
 | **RandomForest (100)** | **0.99** | **2.35** | **3.20** |
-| *LightGBM (the notebook's tuned model)* | *0.99* | *1.11* | *1.56* |
+| *LightGBM (the notebook's tuned model)* | *0.99* | *1.15* | *1.54* |
 
 The last row comes from the Python notebook and is **not** reproducible in Weka — Weka has no
 LightGBM scheme. Quote it as the project's result and the Weka rows as an independent
@@ -210,7 +215,7 @@ the same handful of attributes is a nice independent confirmation.
 | `Cannot handle numeric class` | chose a classifier (J48) on a regression file | use `*_classification.arff` |
 | `Train and test set are not compatible` | mixed a regression file with a classification file | both files must be the same family |
 | `OutOfMemoryError` | default heap too small | launch as `java -Xmx2g -jar weka.jar` |
-| RandomForest very slow | `numIterations` too high | 100 is plenty for 979 rows |
+| RandomForest very slow | `numIterations` too high | 100 is plenty for 981 rows |
 | numbers differ slightly from this guide | different Weka version or seed | small differences are expected; the **ordering** of schemes should hold |
 
 ---

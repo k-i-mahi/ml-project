@@ -1,8 +1,8 @@
 {
   "algorithm": "LightGBM regressor",
   "hyperparameters": {
-    "learning_rate": 0.05,
-    "min_child_samples": 5,
+    "learning_rate": 0.03,
+    "min_child_samples": 10,
     "n_estimators": 900,
     "num_leaves": 15
   },
@@ -81,12 +81,19 @@
     "notice_recency_days_was_missing"
   ],
   "target": "website_score (0-100)",
-  "trained_on": "979 universities (80% split, seed 42)",
+  "trained_on": "981 universities (80% split, seed 42, all Bangladeshi universities excluded from training by design)",
+  "holdout_country": "Bangladesh (22 universities, test only)",
   "test_metrics": {
-    "R\u00b2": 0.9931092370261972,
-    "MAE (score points)": 1.114394275606706,
-    "RMSE": 1.5573280711664526,
-    "Spearman \u03c1": 0.9930958580972798,
-    "Kendall \u03c4": 0.9374160497567398
+    "R\u00b2": 0.9925285957780031,
+    "MAE (score points)": 1.1486767214695888,
+    "RMSE": 1.5426324882982132,
+    "Spearman \u03c1": 0.9917899008850141,
+    "Kendall \u03c4": 0.9298019233208812
+  },
+  "bangladesh_holdout": {
+    "n": 22,
+    "MAE": 0.6538265266270913,
+    "R2": 0.9962664802933402,
+    "Spearman": 0.9898253923569117
   }
 }

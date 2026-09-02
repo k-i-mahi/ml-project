@@ -2,104 +2,94 @@
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[margin=2.4cm]{geometry}
+\usepackage[margin=2.3cm]{geometry}
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{longtable}
 \usepackage{amsmath,amssymb}
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 \usepackage{tcolorbox}
 \usepackage{caption}
 \usepackage{float}
 \usepackage{enumitem}
 \usepackage{array}
+\usepackage{multirow}
+\usepackage{tocloft}
 \usepackage[hidelinks]{hyperref}
+
+% compact table of contents
+\setlength{\cftbeforesecskip}{2pt}
+\setlength{\cftbeforesubsecskip}{0pt}
+\renewcommand{\cftsecfont}{\bfseries\small}
+\renewcommand{\cftsecpagefont}{\bfseries\small}
+\renewcommand{\cftsubsecfont}{\small}
+\renewcommand{\cftsubsecpagefont}{\small}
 
 \definecolor{kuetblue}{RGB}{20,60,110}
 \definecolor{softgrey}{RGB}{245,245,247}
 
 \captionsetup{font=small,labelfont=bf}
-\setlist{itemsep=2pt,parsep=0pt,topsep=3pt}
+\setlist{itemsep=1pt,parsep=0pt,topsep=2pt}
 
 \newtcolorbox{keybox}[1]{colback=softgrey,colframe=kuetblue,fonttitle=\bfseries,
-  title={#1},boxrule=0.6pt,left=6pt,right=6pt,top=4pt,bottom=4pt}
+  title={#1},boxrule=0.6pt,left=6pt,right=6pt,top=3pt,bottom=3pt}
+
+\input{tables/macros}
 
 \begin{document}
 
 %========================================================= TITLE PAGE
 \begin{titlepage}
 \centering
-\vspace*{1.0cm}
+\vspace*{0.5cm}
 
-{\Large\bfseries Khulna University of Engineering \& Technology}\\[3pt]
-{\large Department of Computer Science and Engineering}\\[1.5cm]
+{\Large\bfseries Khulna University of Engineering \& Technology}\\[2pt]
+{\Large\bfseries (KUET)}\\[6pt]
+{\large Department of Computer Science and Engineering}\\[0.9cm]
 
-\rule{\textwidth}{1pt}\\[10pt]
-{\LARGE\bfseries A Machine Learning Approach to\\[6pt]
-Scoring and Ranking University Websites}\\[10pt]
-{\large A Seven-Dimension Scoring Model and a Comparative Study\\of Twelve Regression Algorithms}\\[8pt]
-\rule{\textwidth}{1pt}\\[1.3cm]
+{\large\bfseries Machine Learning Project Report}\\[0.8cm]
 
-{\large\bfseries Course:} Machine Learning Laboratory\\[2pt]
-{\large\bfseries Course Code:} CSE 4112\\[1.4cm]
+\rule{\textwidth}{0.9pt}\\[9pt]
+{\LARGE\bfseries A Machine Learning Framework for\\[5pt]
+Predicting and Ranking the Quality of\\[5pt]
+University Websites}\\[9pt]
+\rule{\textwidth}{0.9pt}\\[0.9cm]
 
-{\large\bfseries Submitted By}\\[8pt]
-\begin{tabular}{ll}
-\toprule
-\textbf{Name} & \textbf{Roll} \\
-\midrule
-Faisal Ahmed          & 2107061 \\
-Al Shariar Hossain    & 2107066 \\
-Md. Rubayet Nabil     & 2107073 \\
-Khadimul Islam Mahi   & 2107076 \\
-Abhijeet Deb Nath     & 2107083 \\
-Afifa Sultana Offa    & 2107087 \\
-\bottomrule
-\end{tabular}\\[1.3cm]
+{\large\bfseries Course Information}\\[5pt]
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Course Title} & Machine Learning Laboratory \\ \hline
+\textbf{Course No.}   & CSE 4112 \\ \hline
+\textbf{Department}   & Computer Science and Engineering \\ \hline
+\textbf{University}   & Khulna University of Engineering \& Technology (KUET) \\ \hline
+\end{tabular}\\[0.85cm]
 
-{\large\bfseries Submitted To}\\[6pt]
-\fbox{\parbox{0.55\textwidth}{\centering\vspace{3pt}
-\textcolor{red}{\textbf{[ SUPERVISOR NAME AND DESIGNATION ]}}\\[2pt]
+{\large\bfseries Submitted By}\\[5pt]
+\begin{tabular}{|c|l|c|}
+\hline
+\textbf{No.} & \textbf{Name} & \textbf{Roll} \\ \hline
+1 & Faisal Ahmed          & 2107061 \\ \hline
+2 & Al Shariar Hossain    & 2107066 \\ \hline
+3 & Md. Rubayet Nabil     & 2107073 \\ \hline
+4 & Khadimul Islam Mahi   & 2107076 \\ \hline
+5 & Abhijeet Deb Nath     & 2107083 \\ \hline
+6 & Afifa Sultana Offa    & 2107087 \\ \hline
+\end{tabular}\\[0.85cm]
+
+{\large\bfseries Submitted To}\\[5pt]
+\fbox{\parbox{0.72\textwidth}{\centering\vspace{5pt}
+{\large\bfseries Dr.\ Md.\ Aminul Haque Akhand}\\[2pt]
+Professor\\[1pt]
 \small Department of Computer Science and Engineering\\
-Khulna University of Engineering \& Technology\vspace{3pt}}}\\[1.2cm]
+Khulna University of Engineering \& Technology\\[9pt]
+{\large\bfseries Nabil Faiyaz Sadi}\\[2pt]
+\normalsize Lecturer\\[1pt]
+\small Department of Computer Science and Engineering\\
+Khulna University of Engineering \& Technology\vspace{5pt}}}\\[0.8cm]
 
 \vfill
-{\large Date of Submission: \today}
+{\large\bfseries Submission Date:} \today
 \end{titlepage}
-
-%========================================================= ABSTRACT
-\section*{Abstract}
-
-University websites are the primary interface between an institution and a prospective
-student, yet their quality is rarely measured systematically. This project develops an
-automated method for scoring and ranking them.
-
-We collected 1,230 university landing pages worldwide, each described by 69 measurable
-attributes, and reduced them to a clean modelling dataset of \textbf{1,225 universities and
-71 features}. We then defined a \textbf{seven-dimension scoring model} that converts those
-attributes into a website quality score from 0 to 100. The dimensions are organised around
-what a prospective student needs from the site --- what can be studied, how to apply, whether
-the institution is active, whether the site can be navigated, used, trusted and read --- and
-are combined as a weighted sum subject to two gating rules. Four attributes are mapped
-through explicit non-linear response curves, because their relationship with quality is not
-monotone.
-
-The dataset was split \textbf{80\% training / 20\% testing}, stratified on score band, and
-\textbf{twelve regression algorithms} were trained and compared under identical conditions.
-Performance ranged from $R^2 = 0.786$ (k-nearest neighbours) to $R^2 = 0.992$ (LightGBM).
-After grid-search tuning, the selected LightGBM model achieves $R^2 = 0.993$, MAE $= 1.11$
-score points and Spearman $\rho = 0.993$ on the 246 held-out universities.
-
-The comparative study yields a finding of practical interest. The separation between
-algorithm families is not random: it is concentrated entirely on the universities to which a
-gating rule applies. On those 36 test cases, linear regression is wrong by 6.41 points on
-average against 1.07 for LightGBM --- a $6\times$ difference --- because a weighted sum
-cannot express a hard cap while a decision tree can. Gain-based importance analysis confirms
-that the tuned model independently recovered the gate: the single navigation attribute that
-triggers it accounts for 26\% of all loss reduction.
-
-\vspace{4pt}
-\noindent\textbf{Keywords:} website quality assessment, regression, model comparison,
-feature engineering, gradient boosting, university ranking.
 
 \tableofcontents
 \newpage
@@ -107,115 +97,195 @@ feature engineering, gradient boosting, university ranking.
 %========================================================= 1
 \section{Introduction}
 
-\subsection{Motivation}
+\subsection{Project Scope}
 
 For a prospective student, a university's website is often the only source of information
-available before applying. It determines whether they can find the programmes on offer, learn
-the admission requirements, discover a deadline, or contact a human being. A poorly organised
-site is not a cosmetic problem; it is a barrier to access.
+available before applying. It decides whether they can find the programmes on offer, learn the
+admission requirements, discover a deadline, or contact someone. A badly organised site is not
+merely an aesthetic failing; it is a barrier to access.
 
-Despite this, website quality is usually assessed by manual inspection --- slow, subjective
-and impossible to apply at scale. This project asks whether the assessment can be automated:
-whether a set of attributes that a program can extract from a landing page is sufficient to
-predict a meaningful quality score.
+Most existing tools for assessing university website quality are rule-based: an analyst fixes a
+set of weights and the tool applies arithmetic. This project builds a machine-learning framework
+instead. It extracts landing-page attributes automatically, converts them into a documented
+quality score, and trains a range of regression algorithms to predict that score from the raw
+attributes. We apply it to \nUni{} university websites worldwide, then test it on one country,
+Bangladesh, whose universities are kept out of training by construction.
 
-\subsection{Problem statement}
+\subsection{Problem Statement}
 
 \begin{center}
 \begin{tabular}{c@{\hspace{7pt}}c@{\hspace{7pt}}c@{\hspace{7pt}}c@{\hspace{7pt}}c}
-\fbox{\parbox{3.1cm}{\centering\small\textbf{INPUT}\\[2pt]71 measured\\attributes of one\\university landing page}}
+\fbox{\parbox{3.1cm}{\centering\small\textbf{INPUT}\\[2pt]\nFeat{} measured\\attributes of one\\university landing page}}
 & $\longrightarrow$ &
 \fbox{\parbox{2.9cm}{\centering\small\textbf{MODEL}\\[2pt]trained\\regressor}}
 & $\longrightarrow$ &
-\fbox{\parbox{3.7cm}{\centering\small\textbf{OUTPUT}\\[2pt]website score $0$--$100$\\grade A+ \dots F\\global / regional / country rank}}
+\fbox{\parbox{3.7cm}{\centering\small\textbf{OUTPUT}\\[2pt]website score $0$--$100$\\grade A+ to F\\global / regional / country rank}}
 \end{tabular}
 \end{center}
 
-\noindent This is a \textbf{supervised regression} problem. Given the attribute vector of a
-landing page, predict its website quality score. Because the deliverable is a league table,
-rank-order agreement (Spearman $\rho$) is treated as the primary metric alongside $R^2$ and
-mean absolute error.
+\noindent The task is supervised regression: given the attribute vector of a landing page, predict
+its website quality score. Since the deliverable is a league table, we treat rank agreement
+(Spearman $\rho$) as a primary metric alongside $R^2$ and mean absolute error.
 
 \subsection{Objectives}
 
-\begin{enumerate}
-\item Collect and clean a global dataset of university landing-page attributes.
-\item Define a transparent, reproducible scoring model that converts attributes into a
-      0--100 website quality score reflecting a prospective student's needs.
-\item Split the data 80/20 and train a broad range of regression algorithms on identical
-      inputs.
-\item Compare their performance and, more importantly, \emph{explain} why they differ.
-\item Produce global, regional and country rankings, and analyse what drives a website's score.
-\end{enumerate}
+\begin{description}[leftmargin=1.3cm,style=nextline,itemsep=2pt]
+\item[O1.] Collect and clean a global dataset of university landing-page attributes, and classify
+every attribute by page region, measurement type and scoring role.
+\item[O2.] Construct a transparent, reproducible label that turns those attributes into a 0--100
+quality score, stated as equations, using every attribute for which a reason to use it can be
+given.
+\item[O3.] Split the data 80/20, holding an entire country out of training, and train a broad range
+of regression algorithms on identical inputs.
+\item[O4.] Compare their performance and explain why they differ.
+\item[O5.] Evaluate the framework on \nBD{} Bangladeshi universities the model has never seen, and
+characterise where those websites gain and lose points.
+\item[O6.] Produce global, regional and country rankings, and measure how much of the ranking is a
+property of the websites rather than of our own weighting judgement.
+\end{description}
+
+\noindent\textbf{Deliverables:} the cleaned and scored dataset, the attribute catalogue, an executed
+analysis notebook, model artefacts with a scoring entry point, the ranking tables, and this report.
 
 \subsection{Contributions}
 
 \begin{enumerate}
-\item A seven-dimension scoring model with documented weights, two gating rules and four
-      non-linear response curves (Section~\ref{sec:scoring}).
-\item A controlled comparison of twelve regression algorithms across six model families on
-      the same 80/20 split (Section~\ref{sec:comparison}).
-\item An error analysis that attributes the performance gap between families to a specific,
-      demonstrable mechanism rather than to model capacity in the abstract
-      (Section~\ref{sec:why}).
-\item A ranking of 1,225 university websites with an interpretable account of what drives the
-      score (Sections~\ref{sec:importance}--\ref{sec:rankings}).
+\item A seven-dimension scoring model with a documented derivation, explicit equations, published
+inner weights, two gating rules and six non-linear response curves (Section~\ref{sec:label}).
+\item A classification of all \nFeat{} attributes on three axes, specified in
+Table~\ref{tab:catalog}, with a stated reason for each of the \nUnscored{} attributes the label does
+not use (Section~\ref{sec:exclusions}).
+\item A controlled comparison of twelve regression algorithms across six model families
+(Section~\ref{sec:results}).
+\item A country-holdout case study in which all \nBD{} Bangladeshi universities are excluded from
+training and scored as unseen data (Section~\ref{sec:bangladesh}).
+\item An error analysis tracing the performance gap between model families to a specific mechanism
+rather than to capacity in the abstract (Section~\ref{sec:why}).
+\item A sensitivity and ablation study measuring how much of the ranking survives a different
+analyst's weights, and which blocks of attributes the model needs
+(Sections~\ref{sec:ablation}--\ref{sec:sensitivity}).
 \end{enumerate}
 
 %========================================================= 2
-\section{Dataset and Preparation}
+\section{Literature Review}
+\label{sec:lit}
 
-\subsection{Source data}
+Work on university website quality has used automated web analysis, questionnaire studies,
+usability assessment and web-quality models. Table~\ref{tab:lit} summarises the studies closest to
+ours, with attention to those evaluating sites through automatically measurable content, usability,
+accessibility, performance and technical attributes.
 
-The raw dataset consists of 1,230 university landing pages, each described by 69 attributes
-extracted automatically, organised into eleven groups: header and navigation, rankings and
-recognition, notices and updates, events and media, page content, footer, visual design,
-service interaction, technical performance, SEO metadata and accessibility. Attributes are of
-three kinds: presence flags (does a programmes page exist), counts (how many menu items) and
-measurements (contrast ratio, mobile score, load time in seconds).
+\input{tables/tab_litreview}
 
-\subsection{Cleaning}
+\noindent Two points from this literature shaped our design. Saleh \emph{et al.}~\cite{saleh2022}
+report that no universally accepted model of university website quality exists, so there is no
+external label to borrow and one has to be constructed and stated in full
+(Section~\ref{sec:label}). Rashida \emph{et al.}~\cite{rashida2021} and Mukanda \emph{et
+al.}~\cite{mukanda2022} both aggregate measured attributes using weights the analyst fixes, and
+neither reports what the ranking would look like under different weights. We measure that directly
+in Section~\ref{sec:sensitivity}.
 
-Every step below is implemented in \texttt{src/build\_dataset.py} and is reproducible from the
-raw file. Nothing was corrected silently.
+%========================================================= 3
+\section{Data Collection}
+\label{sec:data}
+
+\subsection{Population and Frame}
+
+The dataset was built from university websites in six geographical regions. We crawled 1,230
+landing pages. The collection instrument specified 75 candidate attributes; six of them
+(\texttt{a19}, \texttt{a52}, \texttt{a55}, \texttt{a56}, \texttt{a64}, \texttt{a68}) could not be
+extracted reliably and are absent from the data. We did not impute them, leaving \textbf{69
+attributes per university}.
+
+Collection was distributed across six collectors, one per region. One consequence recurs throughout
+this report: region and collector are perfectly confounded, so any regional difference in a measured
+quantity is partly a property of the websites and partly a property of who measured them.
+
+\subsection{Landing-Page Attributes Used for Evaluation}
+
+The attributes are limited to information visible on, or directly verifiable from, the landing page.
+Most are Boolean values recording the presence or absence of a page element, which is
+scraper-friendly and allows reliable DOM- and keyword-based detection. Integer attributes record
+counts such as navigation items, events, accreditation badges and broken links. Float attributes
+record continuous measurements such as page-load speed, colour contrast ratio, mobile responsiveness
+and alt-text coverage.
+
+Table~\ref{tab:catalog} is the full specification. Attributes are grouped by the block of
+Section~\ref{sec:blocks}. \emph{Dim} names the dimension of Section~\ref{sec:label} that consumes
+the attribute, or a dash where it does not enter the label, in which case the reason appears in the
+justification column; \emph{Pts} is $w_k \lambda_{k,j}$, the points the attribute contributes at its
+maximum. The provenance keys record where each attribute comes from, with those marked \emph{New}
+added from direct observation of live landing pages rather than taken from prior work.
+
+\begin{table}[H]\centering\small
+\caption{Provenance keys used in the attribute catalogue.}
+\input{tables/tab_provenance}
+\end{table}
+
+\footnotesize
+\input{tables/tab_catalog}
+\normalsize
+
+\subsection{Attribute Selection and Collection Protocol}
+
+Ranking attributes such as QS World Ranking and Webometrics were recorded as nullable, since not
+every university displays them, and the most recent notice date was stored in ISO 8601 format where
+available. Two categories, \emph{Rankings \& Recognition} and \emph{Events \& Media}, were added to
+the schema after inspecting real landing pages rather than taken from prior work.
+
+For each university we used the verified official domain as the starting URL. Boolean attributes
+were encoded as
+\begin{equation}
+x_i = \begin{cases} 1, & \text{if the attribute is detected,}\\
+                    0, & \text{otherwise,}\end{cases}
+\end{equation}
+counts as integers, continuous measurements as floating-point values, and unavailable nullable
+measurements as null. The scraper read HTML and DOM elements, hyperlinks, metadata, text content,
+images, media elements, accessibility properties and technical response information. Pages needing
+JavaScript were rendered in a browser environment before extraction. Requests respected
+\texttt{robots.txt}; the crawler submitted no forms and took no action that modifies a target site.
+
+\subsection{Data Cleaning and Audit}
+
+Every step below is implemented in \texttt{src/build\_dataset.py} and is reproducible from the raw
+file. Nothing was corrected silently.
 
 \begin{table}[H]\centering\small
 \caption{Data preparation log.}
-\begin{tabular}{p{5.4cm}p{3.2cm}p{6.2cm}}
+\begin{tabular}{p{4.8cm}p{3.0cm}p{7.1cm}}
 \toprule
 \textbf{Issue} & \textbf{Scale} & \textbf{Action taken} \\
 \midrule
-Constant or empty columns & 3 columns & Dropped: they carry no information \\
+Constant or empty columns & 3 columns & Dropped; they carry no information \\
 Exact duplicate column & \texttt{a62} $\equiv$ \texttt{load\_time\_s} & One copy dropped \\
 External ranking \emph{values} & 95--99\% missing & Dropped: unusable, and they describe the institution rather than the website. The ranking \emph{badge} flags are kept, since displaying a badge is a property of the page \\
-Duplicate sites & 10 rows $\to$ 5 & Deduplicated on the \emph{resolved} URL, so two entry points to the same page are recognised as one site \\
+Duplicate sites & 10 rows $\to$ 5 & Deduplicated on the \emph{resolved} URL, so two entry points to one page count once \\
 Notice dates after the crawl date & 284 rows & Censored to the crawl date rather than deleted \\
 Regional labels in the country field & 169 rows & Flagged; country rankings exclude them \\
 \midrule
-\textbf{Final dataset} & \multicolumn{2}{l}{\textbf{1,225 universities $\times$ 71 features}} \\
+\textbf{Final dataset} & \multicolumn{2}{l}{\textbf{\nUni{} universities $\times$ \nFeat{} features}} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\subsection{Missing values}
+\noindent Dropping the external ranking values is the one place where we discarded a predictor that
+would have helped. QS and Webometrics ranks correlate with our score, but they measure institutional
+prestige rather than the website; keeping them would let a model reason that a famous university
+must have a good website, which is the inference this project exists to avoid.
+Section~\ref{sec:prestige} shows what that inference would have cost.
 
-Three attributes are missing for some universities. The conventional remedy --- replace with
-the column median --- is inappropriate for all three, and for one of them it actively inverts
-the meaning of the data.
+\subsection{Missing and Nullable Values}
 
-\begin{keybox}{Why median imputation was rejected}
-The median of \texttt{notice\_recency\_days} is \textbf{1 day}. Median-filling would therefore
-record the \textbf{468 universities that have no dated notice anywhere on their site} as
-having posted something \emph{yesterday} --- assigning the strongest freshness signal in the
-dataset to precisely the institutions that earned it least. Absence would be read as
-\emph{average} when it in fact means \emph{absent}.
-\end{keybox}
-
-\noindent Because absence has a known direction for each of the three, they are filled at the
-worst defensible value, and a companion \texttt{*\_was\_missing} indicator is computed
-\emph{before} the fill so that ``never measured'' remains recoverable as a separate fact.
+Three attributes are missing for some universities, and the usual remedy of replacing them with the
+column median is wrong for all three. The median of \texttt{notice\_recency\_days} is one day, so
+median-filling would record the 468 universities with no dated notice anywhere on their site as
+having posted something yesterday, handing the strongest freshness signal in the dataset to the
+institutions that earned it least. Because absence has a known direction in each case, we fill at
+the worst defensible value and compute a \texttt{*\_was\_missing} indicator \emph{before} the fill,
+so that ``never measured'' stays recoverable.
 
 \begin{table}[H]\centering\small
+\caption{Missing-value policy.}
 \begin{tabular}{lrrl}
 \toprule
 \textbf{Attribute} & \textbf{Rows} & \textbf{Filled with} & \textbf{What absence means} \\
@@ -227,29 +297,205 @@ worst defensible value, and a companion \texttt{*\_was\_missing} indicator is co
 \end{tabular}
 \end{table}
 
-\subsection{Feature engineering}
+%========================================================= 4
+\section{Data Schema}
+\label{sec:schema}
 
-Four derived features are added. \texttt{notice\_recency\_days} converts a notice date into a
-staleness measure. \texttt{load\_time\_z\_region} standardises load time within region,
-because raw load time is confounded with the data collector: each of six collectors covered
-exactly one region, and regional medians span 8.1\,s to 12.9\,s, so part of the difference is
-measurement rather than website. \texttt{broken\_links\_log} compresses a heavily skewed
-count. Three \texttt{*\_was\_missing} indicators record measurement failure.
+\subsection{Final Dataset Structure and Feature Blocks}
+\label{sec:blocks}
 
-%========================================================= 3
-\section{The Scoring Model}
-\label{sec:scoring}
+After cleaning and feature engineering each university is one feature vector, and the modelling
+dataset is
+\begin{equation}
+X \in \mathbb{R}^{\,\nUni{} \times \nFeat{}}, \qquad y \in [0,100]^{\,\nUni{}},
+\end{equation}
+alongside identification fields, the banded grade and three rank outputs. The \nFeat{} features fall
+into eleven thematic blocks corresponding to regions of a landing page, plus a twelfth holding the
+measurement-failure indicators. Every block except B12 contributes to the label; B12 records whether
+an attribute could be measured at all, which is a property of our extraction rather than of the
+website.
 
-\subsection{Design principle}
+\begin{table}[H]\centering\small
+\caption{Feature blocks. \emph{Dimensions} names the scoring dimensions of
+Section~\ref{sec:label} that draw on each block.}
+\input{tables/tab_blocks}
+\end{table}
 
-The dataset records what a website \emph{has}; it does not record how good it is. A scoring
-model is therefore required to convert attributes into a score. Ours is organised around a
-single question:
+\begin{table}[H]\centering\small
+\caption{Features by measurement type. The dataset is dominated by binary presence flags, which is
+why Euclidean distance, and therefore $k$-NN, performs poorly on it (Section~\ref{sec:results}).}
+\input{tables/tab_measurement_types}
+\end{table}
 
-\begin{center}\itshape What does a prospective student need from a university website?\end{center}
+\subsection{Feature Engineering}
+\label{sec:engineering}
 
-\noindent Seven dimensions answer it. Each is a sub-score $D_k \in [0,1]$ computed from named
-attributes, and the website score is their weighted sum subject to a cap:
+Four derived features are added, each for a stated reason.
+
+\begin{table}[H]\centering\small
+\caption{Engineered features.}
+\begin{tabular}{p{3.5cm}p{11.3cm}}
+\toprule
+\textbf{Derived feature} & \textbf{Why it exists} \\
+\midrule
+\texttt{notice\_recency\_days} & Converts a notice date (attribute 18) into a staleness measure in
+days relative to the crawl date. A date is not comparable across a crawl that spans time; a gap is. \\
+\texttt{load\_time\_z\_region} & Standardises load time within region. Raw load time is confounded
+with the collector: each of six collectors covered one region, and regional medians span 8.1\,s to
+12.9\,s, so part of the difference is measurement rather than website. Raw \texttt{load\_time\_s} is
+withheld from the model. \\
+\texttt{broken\_links\_log} & $\log(1+n)$ of a heavily right-skewed count, so the difference between
+0 and 3 broken links is not swamped by the difference between 40 and 200. \\
+Three \texttt{*\_was\_missing} indicators & Record measurement failure as a fact in its own right,
+computed before imputation. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Modelling Representation}
+
+Three groups of columns are withheld from the model. Identification and crawl metadata, namely
+\texttt{uni\_id}, \texttt{name}, \texttt{url}, \texttt{final\_url}, \texttt{http\_status},
+\texttt{fetched\_at} and \texttt{member}, are not properties of the website. Raw
+\texttt{load\_time\_s} is replaced by its within-region standardisation. Most importantly, the
+intermediate outputs of the scoring curves (\texttt{nav\_quality}, \texttt{notice\_evidence},
+\texttt{event\_evidence}, \texttt{load\_time\_pct\_region}) are withheld, because supplying them
+would hand the model the answer. It receives the raw observables instead, such as
+\texttt{a03\_nav\_item\_count} and \texttt{a24\_event\_count}, and has to recover the threshold,
+saturation and gate behaviour on its own.
+
+All \nFeat{} remaining features go to every model, including the \nUnscored{} that do not enter the
+label, so the model must separate an attribute that matters from one that merely accompanies
+mattering. Section~\ref{sec:ablation} shows that it does.
+
+\subsection{Exploratory Analysis}
+\label{sec:eda}
+
+\begin{figure}[H]\centering
+\includegraphics[width=\textwidth]{figures/fig_eda.png}
+\caption{Left: correlation between the seven sub-scores and the final score. Centre: mean points
+contributed by each dimension, by grade band. Right: score distribution by region.}
+\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=\textwidth]{figures/fig_features.png}
+\caption{Left: features by the page region they came from, split by whether they enter the label.
+Centre: by measurement type. Right: the \nScored{} scored features and their raw correlation with the
+score, coloured by dimension.}
+\end{figure}
+
+\noindent Three properties of the data shape the modelling that follows. The dimensions are only
+loosely related to each other: a university that publishes its programmes well is not reliably the
+one that keeps a fresh notice board, which is why a multi-dimensional score is worth computing
+rather than collapsing into one number. They also differ sharply in how far they separate
+universities (Table~\ref{tab:dimspread}); nearly every site does equally well on technical quality,
+since \httpsShare{} use HTTPS, so that dimension cannot separate anybody whatever weight it is
+given. This is visible before any model is fitted and explains most of the gap between declared
+weight and realised importance in Section~\ref{sec:importance}. Finally, the score distribution is
+bimodal rather than bell-shaped: the shoulder near 45 in Figure~\ref{fig:target} is the population
+of sites hitting a scoring gate, and it is what separates the algorithm families in
+Section~\ref{sec:why}.
+
+\begin{table}[H]\centering\small
+\caption{Spread of each dimension across the \nUni{} universities. A dimension can differentiate
+only to the extent that universities actually differ on it.}
+\label{tab:dimspread}
+\input{tables/tab_dimspread}
+\end{table}
+
+%========================================================= 5
+\section{Label Construction}
+\label{sec:label}
+
+\subsection{The Need for a Constructed Label}
+
+The dataset records what a website has, not how good it is. There is no column called ``quality'',
+and as the review literature reports, no accepted model to borrow one from. Published university
+rankings measure research output and reputation rather than websites, so using them would mean
+training a model to predict prestige from page structure.
+
+A label therefore has to be constructed. It is the most consequential design decision here and the
+one most open to disagreement, so this section states how the dimensions were derived, how the
+weights were set, what the equations are, which attributes are deliberately left out, and what the
+known weaknesses of the result are.
+
+\subsection{Derivation of the Seven Dimensions}
+\label{sec:derivation}
+
+We did not obtain the dimensions by clustering the attributes or by factor analysis. They come from
+a task decomposition driven by one question: what does a prospective student need from a university
+website? The applicant's path through a landing page breaks into seven sub-tasks; each becomes a
+dimension, and the attributes serving it become its terms.
+
+\begin{table}[H]\centering\small
+\caption{Derivation of the seven dimensions from the applicant's task.}
+\begin{tabular}{cp{4.15cm}p{5.15cm}cc}
+\toprule
+& \textbf{The applicant's sub-task} & \textbf{Attributes that serve it} & \textbf{Blocks} & \textbf{Dim.} \\
+\midrule
+1 & ``What can I study here, and who will teach me?'' & programmes listing, department links,
+faculty page, research highlight, library, careers & B5 & $D_1$ \\[2pt]
+2 & ``How do I apply, what does it cost, and who do I ask?'' & admissions policy, admission notices,
+scholarships, prospectus, contact page, FAQ, live chat & B3, B5, B8 & $D_2$ \\[2pt]
+3 & ``Is this institution actually alive and running?'' & notice recency, notice board and timestamp,
+dated events, news, calendar, last-updated line & B3, B4, B6 & $D_3$ \\[2pt]
+4 & ``Can I find any of the above?'' & primary navigation, menu breadth, search box, breadcrumb,
+quick links, footer sitemap & B1, B6 & $D_4$ \\[2pt]
+5 & ``Can I read and use this, on the phone I own?'' & mobile score, contrast ratio, alt-text
+coverage, accessible design, language toggle, accessibility toggle & B1, B7, B9, B11 & $D_5$ \\[2pt]
+6 & ``Does the site work, can it be found, and is it safe?'' & HTTPS, broken links, load speed,
+compression, page title and meta, sitemap, favicon & B9, B10 & $D_6$ \\[2pt]
+7 & ``Is it clear who these people are?'' & vision/mission, about text, footer contact,
+accreditation, student portal, alumni, achievements, logo, social links, trust seal &
+B1, B2, B5, B6, B8 & $D_7$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent Three rules governed the assignment, and they are what make the mapping reproducible
+rather than a matter of taste. First, one attribute belongs to one dimension, assigned to the
+sub-task it primarily serves: \texttt{a48\_footer\_sitemap} sits in the footer block but serves
+finding things, so $D_4$ scores it and $D_7$ does not, since double-counting would quietly re-weight
+the label. Second, an attribute serving no sub-task is not scored, but the reason must be stated;
+Section~\ref{sec:exclusions} gives it for each of the \nUnscored{} excluded attributes. Third, only
+attributes that are actually populated are used: anything missing for more than half the dataset was
+dropped in cleaning, and anything present on fewer than 2\% of sites is excluded as too rare to
+carry weight.
+
+\subsection{Weight Assignment}
+
+The seven dimensions combine through weights summing to 100, set by a stated ordering principle
+rather than by tuning: a dimension's weight is proportional to how directly it serves the applicant's
+purpose in visiting the site. That yields three tiers.
+
+\begin{table}[H]\centering\small
+\caption{The three weighting tiers.}
+\begin{tabular}{lp{7.9cm}cc}
+\toprule
+\textbf{Tier} & \textbf{Principle} & \textbf{Dimensions} & \textbf{Points} \\
+\midrule
+\textbf{The content}    & What the applicant came for. If it is absent, nothing else rescues the
+visit. & $D_1, D_2$ & \textbf{50} \\
+\textbf{The delivery}   & The machinery that makes the content reachable, current and usable.
+Necessary, but in service of the content. & $D_3, D_4, D_5$ & \textbf{40} \\
+\textbf{The foundation} & Baseline hygiene, discoverability and self-presentation. Expected rather
+than rewarded; their absence is punished by the gates instead. & $D_6, D_7$ & \textbf{10} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent Within a tier the same principle sets the order. $D_1$ outranks $D_2$ because a student
+who cannot find the programme has no reason to read the admission rules, and $D_4$ outranks $D_3$
+and $D_5$ because navigation conditions access to everything else. These are not the only defensible
+weights, and we do not claim they are; we claim that a stated rule fixed them before any score was
+computed, that they are published in full, and that the league table barely moves when they are
+perturbed (Section~\ref{sec:sensitivity}).
+
+\subsection{The Scoring Equation}
+\label{sec:equations}
+
+Each dimension is a sub-score $D_k \in [0,1]$, and the website score is their weighted sum subject to
+a cap:
 
 \begin{equation}
 \boxed{\;
@@ -258,115 +504,321 @@ attributes, and the website score is their weighted sum subject to a cap:
 \label{eq:score}
 \end{equation}
 
+\noindent Each dimension is itself a weighted sum of transformed attributes,
+
+\begin{equation}
+D_k \;=\; \sum_{j} \lambda_{k,j}\, \phi_{k,j}\!\left(a_{k,j}\right),
+\qquad \sum_j \lambda_{k,j} = 1,
+\label{eq:dim}
+\end{equation}
+
+\noindent where $a_{k,j}$ is a measured attribute, $\phi_{k,j}$ the transform applied to it (the
+identity for a binary flag, otherwise one of the response curves of Section~\ref{sec:curves}), and
+$\lambda_{k,j}$ its weight inside the dimension. Since the inner weights sum to one, dimension $k$
+contributes at most $w_k$ points and attribute $j$ of dimension $k$ is worth exactly
+$w_k \lambda_{k,j}$ points at its maximum. Writing $g(a)$ for an attribute read as $0/1$:
+
+\begin{align}
+D_1 &= 0.30\,g(\text{programs}) + 0.25\,g(\text{departments}) + 0.15\,g(\text{faculty}) \notag\\
+    &\quad + 0.12\,g(\text{library}) + 0.10\,g(\text{research}) + 0.08\,g(\text{careers})
+    \label{eq:d1}\\[3pt]
+D_2 &= 0.26\,g(\text{admissions policy}) + 0.20\,g(\text{admission notice})
+       + 0.18\,g(\text{scholarship}) \notag\\
+    &\quad + 0.15\,g(\text{contact}) + 0.12\,g(\text{prospectus})
+       + 0.06\,g(\text{FAQ}) + 0.03\,g(\text{live chat})
+    \label{eq:d2}\\[3pt]
+D_3 &= 0.32\,f_{\text{rec}}(\text{notice age})
+       + 0.20\,f_{\text{evt}}(\text{event count},\text{dated})
+       + 0.16\,g(\text{news}) \notag\\
+    &\quad + 0.12\,g(\text{calendar}) + 0.08\,g(\text{notice board})
+       + 0.06\,g(\text{timestamp}) \notag\\
+    &\quad + 0.04\,g(\text{upcoming events}) + 0.02\,g(\text{last-updated line})
+    \label{eq:d3}\\[3pt]
+D_4 &= 0.25\,g(\text{primary nav}) + 0.25\,f_{\text{nav}}(\text{menu items})
+       + 0.20\,g(\text{search}) \notag\\
+    &\quad + 0.10\,g(\text{breadcrumb}) + 0.10\,g(\text{quick links})
+       + 0.10\,g(\text{footer sitemap})
+    \label{eq:d4}\\[3pt]
+D_5 &= 0.32\,\frac{\text{mobile score}}{100} + 0.23\,f_{\text{con}}(\text{contrast})
+       + 0.18\,f_{\text{alt}}(\text{alt-text \%}) \notag\\
+    &\quad + 0.10\,g(\text{accessible design}) + 0.09\,g(\text{language toggle})
+       + 0.08\,g(\text{a11y toggle})
+    \label{eq:d5}\\[3pt]
+D_6 &= 0.26\,g(\text{https}) + 0.24\,f_{\text{brk}}(\text{broken links})
+       + 0.20\,\bigl(1 - \mathrm{pctl}_{\text{region}}(\text{load time})\bigr) \notag\\
+    &\quad + 0.12\,g(\text{title \& meta}) + 0.07\,g(\text{gzip})
+       + 0.07\,g(\text{sitemap/robots}) + 0.04\,g(\text{favicon})
+    \label{eq:d6}\\[3pt]
+D_7 &= 0.20\,g(\text{vision}) + 0.14\,g(\text{about}) + 0.14\,g(\text{footer contact})
+       + 0.11\,g(\text{accreditation}) \notag\\
+    &\quad + 0.11\,g(\text{student portal}) + 0.10\,g(\text{alumni})
+       + 0.08\,g(\text{achievements}) \notag\\
+    &\quad + 0.06\,g(\text{logo}) + 0.04\,g(\text{social links})
+       + 0.02\,g(\text{trust seal})
+    \label{eq:d7}
+\end{align}
+
+\noindent Table~\ref{tab:terms} restates Equations~\eqref{eq:d1}--\eqref{eq:d7} against the exact
+column names with the points each attribute carries. It is generated from
+\texttt{data/feature\_catalog.csv}, so the equations printed here and the code that computes the
+score cannot drift apart.
+
+{\small\input{tables/tab_dimension_terms}}
+
+\subsection{Non-Linear Response Curves}
+\label{sec:curves}
+
+Six attributes do not reward linearly, and the label says so explicitly rather than assuming
+proportionality. Each transform is chosen because the attribute's relationship with quality is
+genuinely not monotone or not proportional.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.98\textwidth]{figures/fig_curves.png}
+\caption{Four of the response curves. The remaining two are $f_{\text{evt}}$
+(Equation~\eqref{eq:evt}) and the concave $f_{\text{alt}}$ (Equation~\eqref{eq:alt}).}
+\end{figure}
+
+\vspace{-4pt}
+\paragraph{Menu breadth, an inverted U.} A menu of 0--2 items leads nowhere, 5--9 items indicates an
+organised site, and 20 items is a wall of links. Neither ``more is better'' nor ``less is better''
+describes this, so no monotone function can represent it. The curve enters $D_4$:
+\begin{equation}
+f_{\text{nav}}(n) = \begin{cases}
+0.00 & n \le 0\\ 0.30 & 1 \le n \le 2\\ 0.75 & 3 \le n \le 4\\
+\mathbf{1.00} & \mathbf{5 \le n \le 9}\\ 0.90 & 10 \le n \le 12\\
+0.75 & 13 \le n \le 15\\ 0.55 & n \ge 16
+\end{cases}
+\label{eq:nav}
+\end{equation}
+
+\paragraph{Notice age, a staleness decay.} A post from last week and one from last year are not 51
+weeks apart in value; ``recent'' and ``abandoned'' are plateaus with a cliff between them. This term
+carries the largest single weight in $D_3$:
+\begin{equation}
+f_{\text{rec}}(d) = \begin{cases}
+1.00 & d \le 7 \text{ days}\\ 0.90 & d \le 30\\ 0.70 & d \le 90\\
+0.45 & d \le 180\\ 0.20 & d \le 365\\ 0.00 & d > 365
+\end{cases}
+\label{eq:rec}
+\end{equation}
+
+\paragraph{Contrast, a plateau at WCAG AAA.} The accessibility standard is 7:1, and beyond it more
+contrast does not improve reading, since 21:1 is no better than 12:1. The curve therefore stops
+rewarding instead of rising:
+\begin{equation}
+f_{\text{con}}(r) = \begin{cases}
+0.30\,u(r;1,3) & r < 3.0\\
+0.30 + 0.30\,u(r;3,4.5) & 3.0 \le r < 4.5\\
+0.60 + 0.40\,u(r;4.5,7) & 4.5 \le r < 7.0\\
+1.00 & r \ge 7.0
+\end{cases}
+\qquad u(x;l,h) = \frac{x-l}{h-l}\bigg|_0^1
+\label{eq:con}
+\end{equation}
+
+\paragraph{Broken links, a step penalty.} One dead link is an oversight and forty is neglect, so the
+penalty is not proportional to the count:
+\begin{equation}
+f_{\text{brk}}(n) = \begin{cases}
+1.00 & n = 0\\ 0.85 & 1 \le n \le 2\\ 0.65 & 3 \le n \le 5\\
+0.40 & 6 \le n \le 15\\ 0.15 & 16 \le n \le 40\\ 0.00 & n > 40
+\end{cases}
+\label{eq:brk}
+\end{equation}
+
+\paragraph{Events, a count scaled by whether they are dated.} Twenty undated ``events'' form a
+decorative block rather than a calendar, so the count curve in $D_3$ is multiplied by a factor
+reflecting whether any of them carries a date:
+\begin{equation}
+f_{\text{evt}}(c, t) = \underbrace{\begin{cases}
+0.00 & c = 0\\ 0.55 & 1 \le c \le 2\\ 1.00 & 3 \le c \le 12\\
+0.85 & 13 \le c < 20\\ 0.70 & c \ge 20
+\end{cases}}_{\text{how many}} \times \underbrace{\begin{cases} 1.0 & t = 1\\ 0.6 & t = 0
+\end{cases}}_{\text{are they dated?}}
+\label{eq:evt}
+\end{equation}
+
+\paragraph{Alt-text, concave.} Going from 0\% to 20\% of images labelled is a larger accessibility
+gain than going from 80\% to 100\%, so the transform in $D_5$ is
+\begin{equation}
+f_{\text{alt}}(p) = \sqrt{p/100}\,, \qquad p \in [0,100].
+\label{eq:alt}
+\end{equation}
+
+\subsection{Gating Rules}
+\label{sec:gates}
+
+Two failures are severe enough that no amount of other content compensates. We express them as hard
+caps rather than large negative weights, because that is what they mean.
+
 \begin{table}[H]\centering\small
-\caption{The seven dimensions, their weights, and the attributes that compose them.}
-\begin{tabular}{clcp{7.4cm}}
+\caption{The two gating rules.}
+\begin{tabular}{lccp{6.9cm}}
 \toprule
-& \textbf{Dimension} & $w_k$ & \textbf{Principal attributes} \\
+\textbf{Condition} & \textbf{Cap} & \textbf{Affected} & \textbf{Rationale} \\
 \midrule
-$D_1$ & Academic information       & \textbf{28} & programmes listing, department links, faculty page, library, research highlight, careers \\
-$D_2$ & Admission support          & \textbf{22} & admissions policy, admission notices, scholarships, contact page, prospectus \\
-$D_3$ & Currency and activity      & \textbf{15} & notice recency, dated events, news section, academic calendar \\
-$D_4$ & Navigation and findability & \textbf{15} & primary navigation, menu breadth, search box, breadcrumb, quick links, sitemap \\
-$D_5$ & Usability and accessibility& \textbf{10} & mobile score, contrast ratio, alt-text coverage, accessible design, language toggle \\
-$D_6$ & Technical quality          & \textbf{7}  & HTTPS, broken links, load speed relative to region \\
-$D_7$ & Institutional transparency & \textbf{3}  & vision/mission, about text, footer contact, accreditation, student portal \\
+no primary navigation & 45 & \nGateNav{} & A site that cannot be navigated cannot serve an
+applicant, however much content is buried inside it \\
+no HTTPS              & 60 & \nGateHttps{}  & A site that is not encrypted should not be trusted
+with an application form or personal data \\
 \midrule
-& \textbf{Total} & \textbf{100} & \\
+\multicolumn{2}{l}{\emph{at least one gate}} & \textbf{\nGated{}} & \pctGated{} of the dataset;
+\nGateBoth{} universities trigger both \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\noindent The weights are ordered by how directly each dimension serves the applicant's task.
-The content a student actually came for accounts for half the score ($D_1 + D_2 = 50$); the
-machinery that delivers it accounts for most of the remainder; self-presentation accounts for
-the least. The weights were fixed before any score was computed.
+\noindent The gates destroy \ptsLost{} points in total, an average of \ptsLostMean{} for each of the
+\nGated{} universities they touch. That is the arithmetic behind the shoulder at 45 in
+Figure~\ref{fig:target}, it is what makes Equation~\eqref{eq:score} non-linear, and it turns out to
+account for most of the difference between the twelve algorithms compared later.
 
-\subsection{Gating rules}
+\subsection{Attributes Deliberately Excluded from the Label}
+\label{sec:exclusions}
 
-Two failures are severe enough that no amount of other content compensates:
+\nScored{} of the \nFeat{} features enter the label and \nUnscored{} do not. Rule two of
+Section~\ref{sec:derivation} requires a reason for each, and Table~\ref{tab:excl} gives them.
 
-\begin{center}\small
-\begin{tabular}{lcp{8.4cm}}
-\toprule
-\textbf{Condition} & \textbf{Cap} & \textbf{Rationale} \\
-\midrule
-no primary navigation & 45 & A site that cannot be navigated cannot serve an applicant, however much content is buried inside it \\
-no HTTPS              & 60 & A site that is not encrypted should not be trusted with an application form or personal data \\
-\bottomrule
-\end{tabular}
-\end{center}
+\begin{table}[H]\centering\small
+\caption{The exclusion register. All \nFeat{} features, including these, are still supplied to every
+model as input; only the target omits them.}
+\label{tab:excl}
+\input{tables/tab_exclusions}
+\end{table}
 
-\noindent A gate applies to \textbf{186 of 1,225 universities (15.2\%)}. Gates make
-Equation~\ref{eq:score} non-linear, and Section~\ref{sec:why} shows that this single design
-choice accounts for most of the difference between the algorithms compared.
+\noindent Two categories deserve comment. \emph{Quality not judgeable from presence} is the largest:
+the crawler can record that a page has an image gallery, a carousel or an embedded video, but not
+whether any of them is any good, and scoring their presence would reward having a carousel rather
+than having a usable one. \emph{Prestige leakage} keeps the two ranking-badge flags out of the label
+for the same reason the ranking value columns were dropped in cleaning, since a website-quality score
+that rewards displaying a QS badge is partly measuring institutional fame.
 
-\subsection{Non-linear response curves}
+\subsection{Worked Example and Resulting Label}
 
-Four attributes do not reward linearly, and the scoring model states this explicitly rather
-than assuming proportionality.
+The label is auditable end to end. \texttt{data/dimension\_scores.csv} stores every sub-score, point
+contribution, cap and final score for all \nUni{} universities, and the notebook checks that
+recomputing Equation~\eqref{eq:score} from those sub-scores reproduces the published score for 100\%
+of them. One row in full:
 
-\begin{figure}[H]\centering
-\includegraphics[width=\textwidth]{figures/fig_curves.png}
-\caption{The four non-linear response curves used inside the dimension sub-scores.}
-\end{figure}
+\begin{table}[H]\centering\small
+\caption{Khulna University of Engineering \& Technology (\texttt{kuet.ac.bd}), scored step by step.
+No gate applies, so the cap is 100 and the score is the plain weighted sum. Small discrepancies
+against the published score are rounding, since the published value is computed from unrounded
+sub-scores.}
+\input{tables/tab_worked_example}
+\end{table}
 
-\begin{itemize}
-\item \textbf{Menu size --- an inverted U.} A menu with 0--2 items leads nowhere; 5--9 items
-      indicates an organised site; 20 items is a wall of links. Neither ``more is better''
-      nor ``less is better'' describes this, so no monotone function can represent it.
-\item \textbf{Notice age --- staleness decay.} A post from last week and one from last year
-      are not 51 weeks apart in value. ``Recent'' and ``abandoned'' are plateaus with a cliff
-      between them.
-\item \textbf{Contrast --- a plateau at 7:1.} WCAG AAA is 7:1. Beyond it, more contrast is not
-      a better reading experience, so the curve stops rewarding rather than rising further.
-\item \textbf{Broken links --- a step penalty.} One dead link is an oversight; forty is
-      neglect. The penalty is not proportional to the count.
-\end{itemize}
-
-\subsection{The resulting target}
+\noindent The diagnosis is immediate, and it is the kind of output the framework exists to produce:
+KUET's weakest dimension by a wide margin is $D_4$, which carries 15 points. Raising its navigation
+to the level of its own academic content would move it several points and roughly fifty global
+places.
 
 \begin{figure}[H]\centering
 \includegraphics[width=\textwidth]{figures/fig_target.png}
-\caption{The website score across 1,225 universities. The shoulder near 45 in the left panel
-is the population to which a gating rule applies.}
+\caption{The website score across \nUni{} universities. The shoulder near 45 in the left panel is the
+population to which a gating rule applies.}
+\label{fig:target}
 \end{figure}
 
 \begin{table}[H]\centering\small
+\caption{Distribution of the label.}
 \begin{tabular}{lr@{\hspace{18pt}}lr}
 \toprule
-Mean & 64.4 & Grade A+ ($\geq 85$) & 89 \\
-Standard deviation & 18.4 & Grade A (75--85) & 363 \\
-Minimum & 8.3 & Grade B (65--75) & 299 \\
-Maximum & 95.4 & Grade C (50--65) & 145 \\
-Universities gated & 186 & Grade D (35--50) & 220 \\
-& & Grade F ($< 35$) & 109 \\
+Mean & \scoreMean{} & Grade A+ ($\geq 85$) & \gradeAP{} \\
+Standard deviation & \scoreSD{} & Grade A (75--85) & \gradeA{} \\
+Minimum & \scoreMin{} & Grade B (65--75) & \gradeB{} \\
+Maximum & \scoreMax{} & Grade C (50--65) & \gradeC{} \\
+Universities gated & \nGated{} & Grade D (35--50) & \gradeD{} \\
+& & Grade F ($< 35$) & \gradeF{} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-%========================================================= 4
-\section{Experimental Setup}
+\subsection{Threats to the Validity of the Label}
+\label{sec:threats}
 
-\subsection{Train / test split}
+The label is an arithmetic function of \nScored{} of the \nFeat{} features the model is given. This
+is a serious limitation and the leading methodological risk in the study, and it bounds what the
+modelling results can be said to demonstrate, so we state it here rather than leave a reader to
+discover it.
 
-The dataset is split \textbf{80\% training (979 universities) / 20\% testing (246
-universities)}, stratified on score band so that both halves span the full quality range, with
-a fixed random seed so the split is reproducible. Stratification holds to within
-1.5 percentage points in every band.
+\begin{keybox}{What the reported accuracy does and does not mean}
+Because $y$ is computed from the features by Equation~\eqref{eq:score}, a flexible enough model can
+in principle reconstruct it exactly. \textbf{The reported $R^2 = \tR{}$ is therefore not evidence
+that website quality is predictable}; it is evidence that this particular function is recoverable
+from the raw observables.
 
-\textbf{The test set is used once}, in Section~\ref{sec:final}. No algorithm, hyper-parameter
-or threshold was selected using it. Model selection and tuning use 5-fold cross-validation on
-the training set only.
+The question the report can legitimately answer is consequently narrower: given a scoring function
+containing thresholds, saturations and two hard gates, which families of regression algorithm can
+recover it from the raw attributes, and why do the others fail? That question is not circular, and
+Section~\ref{sec:why} answers it with a mechanism rather than a leaderboard. Three properties of the
+design keep it meaningful. The model never sees the sub-scores, the curve outputs or the gate flag,
+only the raw attributes, so it has to recover the structure rather than read it off. \nUnscored{}
+features do not enter the label at all, so it also has to work out what is irrelevant. And recovery
+is demonstrably not automatic: $R^2$ across the eleven non-trivial algorithms spans \rTwoMin{} to
+\rTwoMax{}, with the spread concentrated on an identifiable subpopulation.
+\end{keybox}
 
-\subsection{Algorithms compared}
+\noindent Two consequences follow, and Section~\ref{sec:limitations} carries both. The ranking is a
+separate artefact from the model, and its trustworthiness rests on the defensibility of the weights
+rather than on $R^2$, which is why Section~\ref{sec:sensitivity} tests the ranking directly. And the
+gap between declared weight and realised importance in Section~\ref{sec:importance} is a statement
+about which dimensions vary between universities in this dataset, not a discovery about quality. The
+proper remedy is a label that is not a function of the features, either independent human ratings or
+blind pairwise judgements fitted with a Bradley--Terry model; that was outside the scope of this
+study and is the first item of future work.
 
-Twelve algorithms spanning six families, all trained on identical data. Feature scaling is
-applied inside a pipeline for the distance-, kernel- and gradient-based methods that require
-it, and deliberately not for tree methods, which are invariant to monotone rescaling.
+%========================================================= 6
+\section{ML Study --- Pipeline Design}
+\label{sec:pipeline}
 
 \begin{center}\small
-\begin{tabular}{ll}
+\fbox{\parbox{2.4cm}{\centering raw crawl\\1,230 $\times$ 85}} $\rightarrow$
+\fbox{\parbox{2.3cm}{\centering clean \& audit\\\nUni{} $\times$ \nFeat{}}} $\rightarrow$
+\fbox{\parbox{2.3cm}{\centering label\\Eq.~\eqref{eq:score}}} $\rightarrow$
+\fbox{\parbox{2.5cm}{\centering split 80/20\\+ country holdout}} $\rightarrow$
+\fbox{\parbox{2.3cm}{\centering 12 algorithms\\+ tuning}} $\rightarrow$
+\fbox{\parbox{2.1cm}{\centering evaluation\\\& ranking}}
+\end{center}
+
+\subsection{Train / Test Split and the Country Holdout}
+\label{sec:split}
+
+The dataset is split 80\% training (\nTrain{} universities) and 20\% testing (\nTest{}), stratified
+on score band so both halves span the full quality range, with a fixed random seed, and with one
+constraint imposed on top: \textbf{every one of the \nBD{} Bangladeshi universities is in the test
+set, and none is used for training}.
+
+There are two reasons. The first is that the case study has to mean one thing.
+Section~\ref{sec:bangladesh} presents a table of all \nBD{} Bangladeshi universities with predicted
+and actual scores; had some been in the training set, half the table would be a memory and half a
+prediction, and the two halves would not be comparable row to row. The second is that this is a
+stricter generalisation test than a random split. The \nBD{} sites are not a random draw: they share
+a region, a hosting environment, a set of content-management templates and a set of design
+conventions. Scoring them after seeing none of them tests whether the model learned the scoring
+structure or the local habits of countries it had already met.
+
+The rest of the test set is drawn band-stratified from the other 1,203 universities. We measured the
+cost of the constraint rather than assuming it: the largest distortion to any grade band is
+\maxDrift{} percentage points. The test set is used once, in Section~\ref{sec:final}; no algorithm,
+hyper-parameter or threshold was chosen with it, and the build script asserts that no Bangladeshi
+university reaches the training set so that a later edit cannot break the holdout silently.
+
+\begin{table}[H]\centering\small
+\caption{Stratification after the country holdout. ``Drift'' is the test-set share of a band minus
+its share of the full dataset.}
+\input{tables/tab_stratification}
+\end{table}
+
+\subsection{Algorithms, Validation Protocol and Metrics}
+
+Twelve algorithms across six families were trained on identical data. Feature scaling is applied
+inside a pipeline for the distance-, kernel- and gradient-based methods that need it, and
+deliberately not for tree methods, which are invariant to monotone rescaling.
+
+\begin{table}[H]\centering\small
+\caption{The twelve algorithms, by family.}
+\begin{tabular}{lp{9.2cm}}
 \toprule
 \textbf{Family} & \textbf{Algorithms} \\
 \midrule
@@ -374,44 +826,35 @@ Baseline   & Mean predictor \\
 Linear     & Linear Regression, Ridge ($\alpha=1$), Lasso ($\alpha=0.1$) \\
 Instance   & $k$-Nearest Neighbours ($k=5$) \\
 Kernel     & Support Vector Regression (RBF, $C=100$) \\
-Neural     & Multi-Layer Perceptron ($128\times64$, $L_2 = 10^{-2}$) \\
+Neural     & Multi-Layer Perceptron ($128\times64$, $L_2 = 10^{-2}$, target-scaled) \\
 Tree       & Decision Tree \\
 Ensemble   & Random Forest, Extra Trees, Gradient Boosting, LightGBM \\
 \bottomrule
 \end{tabular}
-\end{center}
+\end{table}
 
-\subsection{Evaluation metrics}
+\noindent Model selection and tuning use 5-fold cross-validation on the training set only, with
+scalers fitted inside each fold so no information from a validation partition reaches the model.
+Hyper-parameters for the selected model come from a grid search over \nGrid{} combinations, again
+5-fold on the training set. Two baselines bound the results: the mean predictor sets the floor, since
+any model failing to beat it has learned nothing, and linear regression sets the interpretable floor,
+being what an additive model of the kind the prior literature uses can reach.
 
-$R^2$ (variance explained), MAE (mean absolute error, in score points, directly
-interpretable), RMSE (penalises large errors) and \textbf{Spearman $\rho$}, which measures
-rank agreement and is the metric that matters most because the deliverable is a league table.
+We report $R^2$ for variance explained, MAE in score points because it is directly interpretable,
+RMSE because it penalises large errors, and Spearman $\rho$ for rank agreement, which matters most
+given that the deliverable is a league table. For the case study we add Kendall $\tau$ and the number
+of national positions predicted exactly.
 
-%========================================================= 5
-\section{Model Comparison}
-\label{sec:comparison}
+%========================================================= 7
+\section{Results}
+\label{sec:results}
+
+\subsection{Model Comparison and Cross-Validation}
 
 \begin{table}[H]\centering\small
-\caption{Twelve algorithms on the held-out test set, ordered by $R^2$. Cross-validation
-figures are 5-fold on the training set only.}
-\begin{tabular}{rlcccccc}
-\toprule
-& \textbf{Model} & \textbf{Family} & $\boldsymbol{R^2}$ & \textbf{MAE} & \textbf{RMSE} & \textbf{Spearman} & \textbf{CV }$\boldsymbol{R^2}$ \\
-\midrule
-1  & \textbf{LightGBM}    & ensemble & \textbf{0.992} & \textbf{1.26} & \textbf{1.71} & \textbf{0.992} & $0.986 \pm 0.001$ \\
-2  & Gradient Boosting    & ensemble & 0.989 & 1.51 & 1.94 & 0.990 & $0.985 \pm 0.003$ \\
-3  & Neural Net (MLP)     & neural   & 0.985 & 1.72 & 2.27 & 0.984 & $0.943 \pm 0.035$ \\
-4  & Random Forest        & ensemble & 0.971 & 2.35 & 3.22 & 0.969 & $0.962 \pm 0.004$ \\
-5  & SVR (RBF kernel)     & kernel   & 0.961 & 2.48 & 3.72 & 0.979 & $0.955 \pm 0.016$ \\
-6  & Linear Regression    & linear   & 0.959 & 2.56 & 3.80 & 0.984 & $0.948 \pm 0.009$ \\
-7  & Ridge                & linear   & 0.959 & 2.60 & 3.80 & 0.984 & $0.945 \pm 0.012$ \\
-8  & Lasso                & linear   & 0.956 & 2.82 & 3.93 & 0.983 & $0.946 \pm 0.007$ \\
-9  & Extra Trees          & ensemble & 0.945 & 3.13 & 4.41 & 0.939 & $0.917 \pm 0.010$ \\
-10 & Decision Tree        & tree     & 0.915 & 3.78 & 5.47 & 0.926 & $0.896 \pm 0.011$ \\
-11 & $k$-NN ($k=5$)       & instance & 0.786 & 5.97 & 8.67 & 0.875 & $0.770 \pm 0.025$ \\
-12 & Mean baseline        & baseline & 0.000 & 15.73 & 18.76 & --- & $-0.010 \pm 0.008$ \\
-\bottomrule
-\end{tabular}
+\caption{Twelve algorithms on the held-out test set, ordered by $R^2$. Cross-validation figures are
+5-fold on the training set only.}
+\input{tables/tab_comparison}
 \end{table}
 
 \begin{figure}[H]\centering
@@ -419,308 +862,499 @@ figures are 5-fold on the training set only.}
 \caption{Model comparison on the held-out test set, coloured by algorithm family.}
 \end{figure}
 
-\noindent Three observations. First, every algorithm beats the mean baseline decisively, so
-the attributes carry real signal. Second, gradient-boosted ensembles lead on all four metrics.
-Third, $k$-NN is the clear worst: in a 71-dimensional, largely binary space, Euclidean
-distance is a poor measure of similarity --- a textbook illustration of the curse of
-dimensionality.
+\noindent Every algorithm beats the mean baseline comfortably, so the attributes carry real signal,
+and the gradient-boosted ensembles lead on all four metrics. The worst performer is $k$-NN, which the
+feature representation predicts before the model is run: \nBinary{} of the \nFeat{} features are
+binary flags, and in a \nFeat{}-dimensional, largely binary space Euclidean distance is a poor
+measure of similarity.
 
-\subsection{Cross-validation}
-
-A single split can flatter or punish a model by chance, so the ordering was re-checked with
-5-fold cross-validation on the training set alone.
+A single split can flatter or punish a model by chance, so we re-checked the ordering with 5-fold
+cross-validation on the training set alone. The two orderings agree at Spearman
+$\rho = \cvAgree{}$, so the comparison is not an artefact of one particular split. One practical note:
+the MLP was the only model that needed the target scaled as well as the inputs, since on the raw
+0--100 scale one fold in five diverged and cross-validated $R^2$ collapsed. Target scaling and $L_2$
+regularisation stabilised it, but its cross-validation standard deviation remains an order of
+magnitude larger than LightGBM's, so it is not only slightly worse on average but markedly less
+reliable.
 
 \begin{figure}[H]\centering
-\includegraphics[width=0.78\textwidth]{figures/fig_cv.png}
+\includegraphics[width=0.76\textwidth]{figures/fig_cv.png}
 \caption{Cross-validated $R^2$ (mean $\pm$ standard deviation) on the training set.}
 \end{figure}
 
-\noindent The cross-validation ordering and the test-set ordering agree at Spearman
-$\rho = 0.888$, so the comparison is not an artefact of one particular split.
-
-\begin{keybox}{A practical note on the neural network}
-The MLP was the only model that required the \emph{target} to be scaled as well as the
-inputs. Trained on the raw 0--100 scale, one fold in five diverged and cross-validated $R^2$
-collapsed to $-0.03 \pm 1.88$. Wrapping it in a target-scaling transformer and adding $L_2$
-regularisation stabilised it at $0.943 \pm 0.035$. The tree-based models needed no equivalent
-care, which is part of why they are the practical choice at this dataset size.
-\end{keybox}
-
-%========================================================= 6
-\section{Hyper-parameter Tuning and Final Evaluation}
+\subsection{Tuning and Final Held-Out Evaluation}
 \label{sec:final}
 
-Grid search over 81 combinations, 5-fold cross-validated on the training set:
-
-\begin{center}\small
+\begin{table}[H]\centering\small
+\begin{minipage}[t]{0.48\textwidth}\centering
+\caption{Grid searched; chosen values in bold.}
 \begin{tabular}{ll}
 \toprule
-\textbf{Parameter} & \textbf{Values searched (selected in bold)} \\
+\textbf{Parameter} & \textbf{Values} \\
 \midrule
 \texttt{n\_estimators}      & 300, 600, \textbf{900} \\
 \texttt{learning\_rate}     & 0.03, \textbf{0.05}, 0.1 \\
 \texttt{num\_leaves}        & \textbf{15}, 31, 63 \\
 \texttt{min\_child\_samples}& \textbf{5}, 10, 20 \\
 \midrule
-\multicolumn{2}{l}{Best cross-validated $R^2$: \textbf{0.9892}} \\
+\multicolumn{2}{l}{Best CV $R^2$: \textbf{\bestCV{}}} \\
 \bottomrule
 \end{tabular}
-\end{center}
-
-\begin{table}[H]\centering
-\caption{Final model on the held-out test set --- 246 universities, evaluated once.}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}\centering
+\caption{Final model, \nTest{} universities, evaluated once.}
 \begin{tabular}{lr}
 \toprule
-$R^2$ & \textbf{0.9931} \\
-MAE (score points) & \textbf{1.11} \\
-RMSE & 1.56 \\
-Spearman $\rho$ & \textbf{0.9931} \\
-Kendall $\tau$ & 0.9374 \\
+$R^2$ & \textbf{\tR{}} \\
+MAE (score points) & \textbf{\tMAE{}} \\
+RMSE & \tRMSE{} \\
+Spearman $\rho$ & \textbf{\tSpear{}} \\
+Kendall $\tau$ & \tKendall{} \\
 \midrule
-Predictions within $\pm 1$ point & 57.7\% \\
-Predictions within $\pm 2$ points & 83.3\% \\
-Predictions within $\pm 5$ points & 99.2\% \\
+within $\pm 1$ point & \wOne{} \\
+within $\pm 2$ points & \wTwo{} \\
+within $\pm 5$ points & \wFive{} \\
 \bottomrule
 \end{tabular}
+\end{minipage}
 \end{table}
+
+\noindent The search settles on a small tree of 15 leaves with 900 boosting rounds and a low minimum
+leaf size, which is what one would expect for a target built from many small additive contributions
+plus a handful of sharp thresholds: shallow trees, many of them, allowed to isolate small groups.
+These figures should be read subject to Section~\ref{sec:threats}, since they measure how well the
+label is recoverable from the raw attributes rather than how well website quality is predictable in
+general.
 
 \begin{figure}[H]\centering
 \includegraphics[width=\textwidth]{figures/fig_predictions.png}
 \caption{Held-out predictions. Residuals show no systematic pattern with predicted value.}
 \end{figure}
 
-%========================================================= 7
-\section{Why the Algorithms Differ}
+%========================================================= 8
+\section{Analysis}
+\label{sec:analysis}
+
+\subsection{Why the Algorithm Families Differ}
 \label{sec:why}
 
-All twelve algorithms saw identical features and identical training data, yet $R^2$ ranged
-from 0.786 to 0.992. Attributing that spread to ``model capacity'' explains nothing. The real
-cause is specific, and it can be demonstrated.
+All twelve algorithms saw identical features and identical training data, yet $R^2$ ranged from
+\rTwoMin{} to \rTwoMax{}. Calling that a difference in model capacity explains nothing; the cause is
+specific and can be demonstrated.
 
-The scoring model contains \textbf{gates} --- hard caps at 45 and 60 points. A linear model
-computes $\sum_j \beta_j x_j$ and has no way to express \emph{``whatever else is true, stop
-here''}. A decision tree does: a split is precisely that statement.
-
-If this is the mechanism, then linear models should fail specifically on gated universities
-and behave normally elsewhere. Splitting the test error accordingly:
+The label contains gates, the hard caps at 45 and 60 points in Equation~\eqref{eq:score}. A linear
+model computes $\sum_j \beta_j x_j$ and has no way to say ``whatever else is true, stop here''. A
+decision tree does, because a split is exactly that statement. If this is the mechanism, linear
+models should fail specifically on gated universities and behave normally elsewhere. Splitting the
+test error confirms it.
 
 \begin{table}[H]\centering\small
-\caption{Mean absolute error on the 36 gated versus 210 ungated test universities.}
-\begin{tabular}{llccc}
-\toprule
-\textbf{Model} & \textbf{Family} & \textbf{MAE gated} & \textbf{MAE ungated} & \textbf{ratio} \\
-\midrule
-Linear Regression & linear   & 6.41 & 1.91 & $3.37\times$ \\
-Ridge             & linear   & 6.37 & 1.96 & $3.25\times$ \\
-Lasso             & linear   & 6.47 & 2.20 & $2.94\times$ \\
-SVR (RBF)         & kernel   & 4.49 & 2.14 & $2.10\times$ \\
-Neural Net (MLP)  & neural   & 4.31 & 3.33 & $1.29\times$ \\
-\midrule
-Decision Tree     & tree     & 1.80 & 4.12 & $0.44\times$ \\
-Random Forest     & ensemble & 1.05 & 2.57 & $0.41\times$ \\
-Gradient Boosting & ensemble & 1.46 & 1.51 & $0.96\times$ \\
-\textbf{LightGBM} & ensemble & \textbf{1.07} & \textbf{1.29} & $0.83\times$ \\
-\bottomrule
-\end{tabular}
+\caption{Mean absolute error on the \nGatedTest{} gated versus \nUngatedTest{} ungated test
+universities.}
+\input{tables/tab_gate}
 \end{table}
 
 \begin{figure}[H]\centering
 \includegraphics[width=\textwidth]{figures/fig_gates.png}
 \caption{Left: error split by whether a gate applied. Right: linear regression systematically
-over-predicts the capped universities (red), because it sums the content the site does have
-and never applies the cap.}
+over-predicts the capped universities (red), because it sums the content the site does have and never
+applies the cap.}
 \end{figure}
 
-\begin{keybox}{The result worth taking away}
-Every linear model is roughly $3\times$ worse on gated universities than on ungated ones.
-Every tree-based model is \emph{as good or better} on them. The performance gap between
-algorithm families in Section~\ref{sec:comparison} is therefore not a vague matter of
-capacity --- it is the concrete inability of an additive model to represent a threshold, and
-it is visible on 36 specific universities.
-\end{keybox}
+\noindent Linear regression is wrong by \linGated{} points on the gated universities against 1.85
+elsewhere, a factor of \linRatio{}. Every tree-based model is as good or better on the gated cases
+than on the ungated ones, and LightGBM sits at \lgbGated{}. The gap between algorithm families is
+therefore not a vague matter of capacity but the concrete inability of an additive model to represent
+a threshold, visible on \nGatedTest{} specific universities. The direction of the error supports the
+mechanism rather than merely correlating with it, since linear regression does not scatter around the
+gated universities but over-predicts them.
 
-%========================================================= 8
-\section{What Drives a Website's Score}
+\subsection{Feature Importance}
 \label{sec:importance}
 
-Feature importance is computed by \textbf{gain} --- how much each split reduced the loss ---
-rather than by split count. The distinction matters: split-count importance flatters
-continuous attributes, which get split many times, over binary ones, which are split once.
-Under split-count importance, load time appeared to be the single most important feature; under
-gain it accounts for well under 1\%.
+We compute importance by gain, meaning how much each split reduced the loss, rather than by split
+count. The distinction matters: split-count importance flatters continuous attributes, which get
+split many times, over binary ones, which are split once. Under split-count importance load time
+looked like the single most important feature; under gain it accounts for well under 1\%.
 
 \begin{figure}[H]\centering
 \includegraphics[width=\textwidth]{figures/fig_importance.png}
-\caption{Gain-based feature importance for the tuned model, individually and aggregated by
-scoring dimension.}
+\caption{Gain-based feature importance for the tuned model, individually and aggregated by scoring
+dimension.}
 \end{figure}
 
 \begin{table}[H]\centering\small
+\caption{The fifteen features carrying the most gain in the tuned model.}
+\input{tables/tab_importance_top}
+\end{table}
+
+\begin{table}[H]\centering\small
 \caption{Declared dimension weight against realised model importance.}
-\begin{tabular}{lrrl}
+\input{tables/tab_importance_dim}
+\end{table}
+
+\noindent A declared weight is not the same as realised influence. A dimension can differentiate
+universities only to the extent that they actually differ on it, and Table~\ref{tab:dimspread} showed
+$D_5$ to $D_7$ are close to universal across the population; $D_6$ drives almost none of the model's
+decisions because \httpsShare{} of sites use HTTPS and little is left to explain. As
+Section~\ref{sec:threats} notes, this is a statement about the dataset rather than a discovery about
+quality, but it echoes a known result in the website-evaluation literature where a scheme allocating
+40\% of its score to performance was later found to drive under 3\% of its ranking variance.
+
+The model also recovered the gating rule without being told about it. \texttt{a02\_primary\_nav}
+accounts for \impNav{} of all gain, far beyond its arithmetic contribution of 3.75 points inside
+$D_4$, because the model learned that this one binary decides whether a 45-point ceiling applies.
+Together with \texttt{a37\_programs\_listing} at \impProg{}, two of \nFeat{} features account for over
+half of everything the model uses.
+
+\subsection{Ablation by Feature Block}
+\label{sec:ablation}
+
+Each block of features is deleted from the input and the tuned model refitted on the same training
+set with the same hyper-parameters. The increase in test MAE is what that block was worth.
+
+\begin{table}[H]\centering\small
+\caption{Block ablation. Blocks are defined twice, once by scoring dimension and once by the page
+region the attribute came from.}
+\input{tables/tab_ablation}
+\end{table}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.95\textwidth]{figures/fig_ablation.png}
+\caption{Increase in test MAE when each block of features is removed and the model refitted.}
+\end{figure}
+
+\noindent Deleting $D_4$ costs more than deleting any other block, $+\ablDfour{}$ points of MAE
+against $+\ablDone{}$ for $D_1$, even though $D_1$ carries almost twice the weight in the label. The
+gate is the reason: without \texttt{a02\_primary\_nav} the model cannot tell which universities are
+capped at 45, and it loses the sharpest boundary in the data. Section~\ref{sec:importance} reached the
+same conclusion by a different route.
+
+The blocks the label does not use cost close to nothing. Removing all seven rankings and recognition
+features, or the three measurement-quality indicators, changes test MAE by a fraction of a point in
+either direction, so the model correctly identified that these attributes contribute little to the
+label despite their raw correlation with the score; that is the property Section~\ref{sec:threats}
+relies on. The two block definitions also act as a consistency check on each other, since header and
+navigation overlaps heavily with $D_4$ and costs nearly the same, as it should. Two independent
+partitions of the feature set agreeing is evidence that the ablation measures something real rather
+than an artefact of how the blocks were drawn.
+
+\subsection{Sensitivity of the Ranking to the Weights}
+\label{sec:sensitivity}
+
+The weights are a documented judgement and a different analyst would choose differently. The honest
+question is not whether they are correct, since there is no ground truth to be correct against, but
+how much the league table would move if they were different. Two experiments answer it. In the first,
+every weight is multiplied by a random factor in $[1-\lambda, 1+\lambda]$, renormalised to sum to 100,
+and the whole ranking recomputed, 300 draws at each of four levels. In the second, each dimension is
+deleted outright, which is a far more violent change than any plausible disagreement.
+
+\begin{table}[H]\centering\small
+\caption{Ranking stability under random perturbation of all seven weights at once, 300 draws per
+level. ``Top 10 kept'' is the fraction of the published top ten still in the top ten of the
+perturbed ranking.}
+\input{tables/tab_sensitivity}
+\end{table}
+
+\begin{table}[H]\centering\small
+\caption{Ranking after deleting one dimension entirely, with the remaining six renormalised to 100.}
+\input{tables/tab_sensitivity_oat}
+\end{table}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.95\textwidth]{figures/fig_sensitivity.png}
+\caption{Left: rank agreement with the published ranking as the weights are perturbed. Centre:
+membership of the top 10 and top 50 retained. Right: agreement after deleting each dimension
+outright.}
+\end{figure}
+
+\noindent At $\pm 30\%$ on every weight simultaneously, considerably more disagreement than a second
+analyst would plausibly introduce, the ranking still agrees with the published one at Spearman
+$\rho = \sensRho{}$ and keeps \sensTop{} of the top ten. Deleting a dimension outright is the only
+change that moves the table appreciably, and even then it is the high-weight content dimensions that
+matter; the low-weight ones can be removed with very little effect, which is the correct behaviour for
+a dimension carrying three points. This is also the one result in the report that does not depend on
+the label being learnable, since it is a property of the ranking itself.
+
+%========================================================= 9
+\section{Case Study: Bangladesh}
+\label{sec:bangladesh}
+
+\subsection{Protocol and Results}
+
+The \nBD{} Bangladeshi universities were removed from the training set by construction
+(Section~\ref{sec:split}). The model evaluated here was fitted on \nTrain{} universities, none of them
+Bangladeshi, and tuned by cross-validation inside that training set. It is now asked to score all
+\nBD{}. This is the strictest generalisation test in the report: a random 20\% test set still lets a
+model lean on near-neighbours, another campus running the same template, crawled by the same
+collector, in the same country, and here there are none.
+
+\begin{table}[H]\centering\small
+\caption{All \nBD{} Bangladeshi universities, none seen during training. ``World'' is the global rank
+out of \nUni{}; ``Pred.\ \#'' is the national position the model would have assigned. KUET is
+highlighted.}
+\label{tab:bd}
+\input{tables/tab_bangladesh}
+\end{table}
+
+\begin{table}[H]\centering
+\caption{Accuracy on the country holdout, against the rest of the test set.}
+\begin{tabular}{lrr}
 \toprule
-\textbf{Dimension} & \textbf{Declared} & \textbf{Realised} & \textbf{Interpretation} \\
+& \textbf{Bangladesh (\nBD{})} & \textbf{Rest of test set} \\
 \midrule
-$D_1$ Academic information & 28 & 49.8 & the largest single block of variation between sites \\
-$D_4$ Navigation           & 15 & 29.3 & inflated because the navigation gate lives here \\
-$D_2$ Admission support    & 22 & 10.2 & \\
-$D_3$ Currency, activity   & 15 & 8.5  & \\
-$D_5$ Usability, access    & 10 & 0.6  & near-constant across sites, so it separates almost nobody \\
-$D_6$ Technical quality    & 7  & 0.1  & 98.9\% of sites use HTTPS; there is little left to explain \\
-$D_7$ Transparency         & 3  & 0.1  & \\
+MAE (score points) & \textbf{\bdMAE{}} & \bdRestMAE{} \\
+$R^2$              & \bdR{} & --- \\
+Spearman $\rho$    & \bdSpear{} & --- \\
+Largest single error & \bdMaxErr{} points & --- \\
+National positions predicted exactly & \bdExact{} of \nBD{} & --- \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\noindent Two conclusions follow. First, \textbf{a declared weight is not the same as
-realised influence}: a dimension can only differentiate universities to the extent that they
-actually differ on it, and $D_5$--$D_7$ are close to universal. This mirrors a known result in
-the website-evaluation literature, where a scheme allocating 40\% of its score to performance
-was later found to drive under 3\% of its ranking variance.
+\begin{figure}[H]\centering
+\includegraphics[width=\textwidth]{figures/fig_bangladesh.png}
+\caption{Left: predicted against actual for the \nBD{} unseen universities. Centre: signed error per
+university, with no systematic bias in either direction. Right: the mean sub-score profile of
+Bangladeshi websites against the world and against the global top 100.}
+\label{fig:bd}
+\end{figure}
 
-Second, the model \textbf{independently recovered the gating rule}. The single attribute
-\texttt{a02\_primary\_nav} accounts for \textbf{26.3\% of all gain} --- far beyond its
-arithmetic contribution of 3.75 points inside $D_4$ --- because the model learned that this
-one binary determines whether a 45-point ceiling applies. This is a satisfying confirmation
-that the mechanism identified in Section~\ref{sec:why} is what the model actually uses.
+\noindent The MAE on Bangladesh, \bdMAE{}, is about half the MAE on the rest of the test set,
+\bdRestMAE{}, which is the opposite of what a country holdout usually produces. It is not leakage,
+since the build script asserts there is none, and it is not a paradox. It follows from where these
+\nBD{} universities sit: \bdBandN{} of them fall between \bdBandLo{} and \bdBandHi{} points, a dense
+band the model has seen from a thousand other universities. The model's errors concentrate at the
+extremes of the score range, and only three Bangladeshi sites are down there, the three that hit the
+navigation gate, all of which the model places correctly near 45. We read this as showing that the
+scoring structure learned elsewhere transfers to a country the model never trained on, and that
+Bangladeshi university websites are structurally ordinary rather than a distinct population needing
+their own model. It does not show that the model would transfer as well to a country structurally
+unlike anything in the training set.
 
-%========================================================= 9
+For a league table the ordering matters more than the score, and the model reproduces the national
+ordering at Spearman $\rho = \bdSpear{}$. The remaining disagreements are local rather than
+structural, occurring inside tightly packed groups where several universities sit within about a point
+of each other, which is the same order as the model's own error, and no university crosses more than
+one grade boundary. The top of the national table, the middle group and the gated tail are all placed
+correctly; the exact ordering within a cluster of near-identical sites is not something a model with
+roughly one point of error can be expected to resolve.
+
+\subsection{National Dimension Profile}
+
+Multiplying each dimension gap in Figure~\ref{fig:bd} by that dimension's weight converts it into
+points and locates the difference between an average Bangladeshi site and a global top-100 site.
+
+\begin{table}[H]\centering\small
+\caption{Mean sub-score of the \nBD{} Bangladeshi universities against the full dataset and against
+the global top 100. The last two columns convert the gap into points of final score.}
+\input{tables/tab_bd_profile}
+\end{table}
+
+\noindent Bangladeshi university websites average \bdMean{} points against a world mean of
+\worldMean{}, comfortably above average, and \nTopTwoHundred{} of the \nBD{} reach the global top 200.
+Their strength is content: on $D_1$ they score \bdDone{} against a world mean of \worldDone{}, close
+to the global top 100, and they publish their programmes, departments and faculty well.
+
+The weakness is not the content but access to it. $D_4$, navigation and findability, is the only
+dimension where Bangladeshi sites fall below the world average, \bdDfour{} against \worldDfour{}, and
+it is worth \bdGapDfour{} points against the top 100. $D_2$, admission support, is the largest single
+gap at \bdGapDtwo{} points. Together those two account for \bdGapNavAdm{} of the \bdGapTop{}-point gap
+to the global top 100. The practical conclusion is encouraging: these universities have already done
+the expensive work of putting their academic content online, and what separates them from the global
+leaders is a menu, a search box, a breadcrumb trail and a clearly linked admissions policy. Three
+institutions, Bangladesh Agricultural University, East West University and the Islamic University of
+Technology, have no extractable primary navigation at all and are capped at 45, forfeiting
+\bdGateLoss{} points respectively.
+
+\subsection{Prestige and Website Quality}
+\label{sec:prestige}
+
+Table~\ref{tab:bd} contains a result worth stating plainly, because it is the clearest justification
+for excluding the external ranking values in Section~\ref{sec:data} and the ranking badges in
+Section~\ref{sec:exclusions}. The Bangladesh University of Engineering and Technology, by any
+conventional measure the country's most prestigious institution, ranks
+\buetRank{}\textsuperscript{th} of \nBD{} on website quality with a score of \buetScore{} and a grade
+of \buetGrade{}, while a private university founded in 1992 leads the national table. Institutional
+prestige and landing-page quality are close to unrelated in this dataset, which is why a
+website-quality ranking is worth computing separately rather than assuming existing rankings already
+answer the question.
+
+%========================================================= 10
 \section{Rankings}
 \label{sec:rankings}
 
 \begin{table}[H]\centering\small
-\begin{minipage}[t]{0.53\textwidth}\centering
+\caption{Global and national leaders.}
+\begin{minipage}[t]{0.55\textwidth}\centering
 \textbf{Global top 10}\\[3pt]
-\begin{tabular}{rlr}
-\toprule
-\# & University & Score \\
-\midrule
-1  & University of New England (AU)       & 95.4 \\
-2  & University of Porto (PT)             & 95.0 \\
-3  & Eotvos Lorand University (HU)        & 95.0 \\
-4  & University of Strasbourg (FR)        & 94.3 \\
-5  & Southern Cross University (AU)       & 93.3 \\
-6  & City, University of London (UK)      & 92.9 \\
-7  & Gauhati University (IN)              & 92.7 \\
-8  & Nanyang Technological Univ.\ (SG)    & 92.7 \\
-9  & RWTH Aachen University (DE)          & 92.6 \\
-10 & Sophia University (JP)               & 92.4 \\
-\bottomrule
-\end{tabular}
+\input{tables/tab_top10}
 \end{minipage}%
-\begin{minipage}[t]{0.47\textwidth}\centering
-\textbf{Bangladesh top 8} (of 22)\\[3pt]
-\begin{tabular}{rlrr}
-\toprule
-\# & University & Global & Score \\
-\midrule
-1 & North South University & 45  & 87.4 \\
-2 & RUET                   & 79  & 85.5 \\
-3 & CUET                   & 114 & 83.8 \\
-4 & \textbf{KUET}          & \textbf{115} & \textbf{83.8} \\
-5 & AIUB                   & 136 & 83.1 \\
-6 & BRAC University        & 145 & 82.7 \\
-7 & Univ.\ of Professionals& 153 & 82.5 \\
-8 & Patuakhali S\&T Univ.  & 235 & 80.2 \\
-\bottomrule
-\end{tabular}
+\begin{minipage}[t]{0.45\textwidth}\centering
+\textbf{Bangladesh top 8} (of \nBD{})\\[3pt]
+\input{tables/tab_bdtop}
 \end{minipage}
 \end{table}
 
-\noindent Country rankings are produced for the \textbf{18 countries} with at least 20
-universities in the dataset, covering 779 universities. For the 169 rows whose
-\texttt{country} field holds a regional label rather than a country, no country ranking is
-produced, because it would not be one.
-
-%========================================================= 10
-\section{Limitations}
-
-These bound how the ranking should be read and are stated plainly.
-
-\begin{enumerate}
-\item \textbf{The dataset cannot see visual design.} Every attribute is a presence flag, a
-      count or a measurement. Whether a page is cluttered, dated-looking or simply unpleasant
-      to use is not among the 71 columns and therefore cannot be in the score. A site that
-      satisfies every content requirement will score well even if a human would find it ugly.
-      Closing this gap would require screenshots and human raters, not further modelling.
-\item \textbf{Approximately 2\% of rows are extraction failures.} A small number of
-      universities returned almost nothing to the crawler --- no navigation, no programmes, no
-      contact --- which is characteristic of JavaScript-rendered pages the extractor could not
-      read rather than of genuinely empty websites. These fall to the bottom of the ranking.
-      The top of the ranking is unaffected, but the bottom should not be quoted without this
-      caveat.
-\item \textbf{The score reflects the landing page}, not the entire site and not the
-      institution. An excellent admissions portal that is not linked from the front page is
-      invisible to this method.
-\item \textbf{The scoring weights are a documented judgement, not a measured truth.} They were
-      fixed before scoring and are stated in full, but a different reasonable analyst would
-      choose somewhat different weights and obtain a somewhat different ranking. The
-      sensitivity of the ranking to the weights was not measured.
-\item \textbf{Region and data collector are perfectly confounded.} Each of six collectors
-      covered exactly one region, so regional differences in a measurement such as load time
-      cannot be separated from differences in how it was measured. Load time is
-      region-standardised for this reason, but the confound cannot be removed.
-\item \textbf{The crawl is a single snapshot.} Websites change continuously; the freshness
-      attributes in particular would differ on another day.
-\end{enumerate}
+\noindent Country rankings are produced for the \nCountries{} countries with at least 20 universities
+in the dataset, covering \nCountryRanked{} universities. For the 169 rows whose \texttt{country} field
+holds a regional label rather than a country we produce no country ranking, because it would not be
+one. The full Bangladesh table, every position of which is an out-of-sample prediction, is
+Table~\ref{tab:bd}.
 
 %========================================================= 11
-\section{Conclusion}
-
-This project set out to automate the assessment of university website quality. We defined a
-seven-dimension scoring model grounded in what a prospective student needs, applied it to
-1,225 universities, and trained twelve regression algorithms to predict the resulting score
-from raw landing-page attributes. The tuned LightGBM model reaches $R^2 = 0.993$ with a mean
-absolute error of 1.11 points on a test set held out from every fitting and tuning decision,
-and orders the universities at Spearman $\rho = 0.993$.
-
-The comparative study is the more instructive half. Performance across the twelve algorithms
-was not a smooth gradient of capability but a split along one specific structural line: models
-that can represent a threshold and models that cannot. Isolating the 36 gated universities in
-the test set made the mechanism visible --- linear models are $3\times$ worse on exactly those
-cases and normal elsewhere --- and gain-based importance analysis confirmed that the winning
-model had independently identified the gating attribute, assigning it 26\% of all loss
-reduction.
-
-Two methodological points generalise beyond this dataset. Missing values must be filled
-according to what absence \emph{means}, not by a default statistic: median-filling one
-attribute here would have described 468 abandoned notice boards as updated yesterday. And a
-declared weight is not a realised influence: three dimensions carrying 20 points of the
-scoring model account for under 1\% of what the trained model uses, simply because almost every
-university scores alike on them.
-
-\subsection*{Future work}
-
-Adding screenshot-derived visual features and a small panel of human ratings would address the
-principal limitation. Replacing the extractor with a headless browser would eliminate the
-JavaScript-rendering failures. Finally, a sensitivity analysis over the dimension weights would
-quantify how much of the ranking is a property of the websites and how much is a property of
-our scoring choices.
-
-%========================================================= APPENDIX
-\appendix
-\section{Repository contents}
+\section{Risks and Limitations}
+\label{sec:limitations}
 
 \begin{table}[H]\centering\small
-\begin{tabular}{ll}
+\caption{The principal risks to the validity of this study, and how each is handled.}
+\begin{tabular}{p{3.3cm}p{3.9cm}p{7.3cm}}
 \toprule
-\textbf{Path} & \textbf{Contents} \\
+\textbf{Risk} & \textbf{Impact} & \textbf{Disposition} \\
 \midrule
-\texttt{data/university\_website\_scores.csv} & all 1,225 universities, scored and ranked \\
-\texttt{data/train.csv}, \texttt{data/test.csv} & the 979 / 246 split (80 / 20, seed 42) \\
-\texttt{data/data\_dictionary.csv} & every column, its dimension and its range \\
-\texttt{data/weka/} & the same splits in ARFF format \\
-\texttt{notebook/University\_Website\_Quality.ipynb} & the full analysis, executed \\
-\texttt{src/build\_dataset.py} & raw file $\to$ scored dataset $\to$ splits \\
-\texttt{src/make\_figures.py} & regenerates every figure in this report \\
-\texttt{model/final\_model.joblib} & the tuned model \\
-\texttt{results/} & model comparison, importance, metrics as CSV \\
+Label leakage: the label is an arithmetic function of the features &
+Reported accuracy is circular if read as quality prediction &
+\textbf{Not eliminated.} The research question is narrowed accordingly and the limitation stated in
+full in Section~\ref{sec:threats}. Sub-scores, curve outputs and the gate flag are withheld from the
+model, the \nUnscored{} unscored features are supplied as distractors, and the ranking is validated
+independently of the model in Section~\ref{sec:sensitivity} \\[3pt]
+Prestige leakage via displayed QS / Webometrics values &
+The model ranks universities rather than websites &
+Ranking value columns dropped in cleaning, being 95--99\% null and leaky; the badge presence flags are
+retained as page features but excluded from the label, and ablation shows the whole block is worth
+almost nothing \\[3pt]
+Inconsistent extraction across six collectors &
+Systematic between-region offsets mistaken for quality differences &
+Collector and region are perfectly confounded and this cannot be undone; load time is used only in
+region-standardised form, and the confound is reported rather than adjusted for \\[3pt]
+JavaScript-heavy sites under-extracted &
+Content attributes systematically undercounted &
+About 2\% of rows affected; they fall to the bottom of the ranking and are indistinguishable from
+genuinely unnavigable sites \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\noindent \textbf{Environment.} Python 3.13, pandas 2.3.3, numpy 2.4.4, scikit-learn 1.8.0,
-LightGBM 4.6.0. All random seeds fixed; the pipeline is reproducible end to end by running
-\texttt{src/build\_dataset.py} followed by the notebook.
+\begin{enumerate}
+\item \textbf{The label is a function of the features}, as set out in Section~\ref{sec:threats}. It
+bounds every accuracy figure in Sections~\ref{sec:results} and~\ref{sec:final} to a claim about
+recoverability rather than about quality prediction.
+\item \textbf{The dataset cannot see visual design.} Every attribute is a presence flag, a count or a
+measurement, so whether a page is cluttered, dated-looking or unpleasant to use is not among the
+\nFeat{} columns and cannot be in the label. This is also why seven media and visual attributes are
+excluded from it. Closing this gap needs screenshots and human raters rather than more modelling.
+\item \textbf{About 2\% of rows are extraction failures.} A small number of universities returned
+almost nothing to the crawler, which is characteristic of JavaScript-rendered pages the extractor
+could not read rather than of genuinely empty websites. Since the navigation gate is triggered by
+exactly this failure mode, an extraction failure and a genuinely unnavigable site look the same to the
+label, so the bottom of the ranking should not be quoted without this caveat.
+\item \textbf{The score reflects the landing page}, not the whole site and not the institution. An
+excellent admissions portal that the front page does not link to is invisible to this method.
+\item \textbf{The weights are a documented judgement, not a measured truth.} A stated rule fixed them
+before scoring and they are published in full, and Section~\ref{sec:sensitivity} quantifies the
+consequence: at $\pm 30\%$ on every weight the ranking holds at $\rho = \sensRho{}$.
+\item \textbf{Excluding \nUnscored{} attributes is itself a judgement.} Each exclusion has a stated
+reason (Table~\ref{tab:excl}), but reasons can be disagreed with. The most arguable is
+\texttt{a28\_contests}, excluded as an engagement signal rather than an information need despite
+correlating with the score at 0.29.
+\item \textbf{The Bangladesh result is one country}, not a general claim about transfer. The \nBD{}
+Bangladeshi sites resemble their South Asian neighbours, of which the training set contains many.
+\item \textbf{Region and data collector are perfectly confounded}, so regional differences in a
+measurement such as load time cannot be separated from differences in how it was measured.
+\item \textbf{The crawl is a single snapshot.} Websites change continuously, the freshness attributes
+in particular would differ on another day, and $D_3$ is the least stable dimension in the label over
+time.
+\end{enumerate}
+
+%========================================================= 12
+\section{Conclusion}
+
+We collected and audited a global corpus of \nUni{} landing pages described by \nFeat{} attributes,
+classified every attribute by page region, measurement type and scoring role, and built a
+seven-dimension label grounded in what a prospective student needs, derived by task decomposition and
+stated as equations with every inner weight, response curve and gating rule published, along with a
+reason for each of the \nUnscored{} attributes the label does not use. Twelve regression algorithms
+were then trained to predict that label from the raw attributes. The tuned LightGBM model reaches
+$R^2 = \tR{}$ with a mean absolute error of \tMAE{} points on a test set held out from every fitting
+and tuning decision, ordering the universities at Spearman $\rho = \tSpear{}$.
+
+The comparative study is the more instructive half. Performance across the twelve algorithms was not a
+smooth gradient of capability but a split along one structural line: models that can represent a
+threshold and models that cannot. Isolating the \nGatedTest{} gated universities made the mechanism
+visible, with linear regression wrong by \linGated{} points on exactly those cases against 1.85
+elsewhere while LightGBM sits at \lgbGated{}, and gain-based importance confirmed that the winning
+model had independently identified the gating attribute and given it \impNav{} of all loss reduction.
+The ablation study reached the same conclusion from the opposite direction: deleting the six
+navigation features costs more test accuracy than deleting the six academic ones, despite academic
+information carrying nearly twice the declared weight.
+
+The country holdout is the strongest evidence that the framework generalises. All \nBD{} Bangladeshi
+universities were excluded from training by construction, and on them the model achieves MAE
+$= \bdMAE{}$ and reproduces the national ordering at $\rho = \bdSpear{}$ with a worst-case error of
+\bdMaxErr{} points. The case study also yields an actionable diagnosis: Bangladeshi university
+websites sit above the world average and are strong on academic content, and what separates them from
+the global top 100 is navigation and admission support, worth \bdGapNavAdm{} of the
+\bdGapTop{}-point gap.
+
+Three methodological points generalise beyond this dataset. Missing values should be filled according
+to what absence means rather than by a default statistic, since median-filling one attribute here
+would have described 468 abandoned notice boards as updated yesterday. A declared weight is not a
+realised influence: the three lowest-weighted dimensions account for a negligible share of what the
+trained model uses, simply because almost every university scores alike on them. And a subjective
+design choice is not a reason to leave it unmeasured, since the weights are a judgement but the
+sensitivity of the ranking to that judgement is an experiment we could run, and did.
+
+The limitation of Section~\ref{sec:threats} should be carried out of this report along with its
+results. The label is an arithmetic function of the features, so the accuracy figures measure
+recoverability rather than quality prediction. What the study establishes is narrower than the
+headline number suggests and, because the mechanism behind the spread between algorithm families is
+identified rather than merely reported, more durable.
+
+\subsection{Future Work}
+\label{sec:future}
+
+\begin{enumerate}
+\item \textbf{Replace the constructed label with an independent one.} Human ratings on a stratified
+subset, or blind pairwise judgements fitted with a Bradley--Terry model, would give a target that is
+not a function of the features and would turn the accuracy figures from recoverability into genuine
+prediction. This is the highest-value extension and addresses Section~\ref{sec:threats} directly.
+\item \textbf{Add visual features.} Screenshot-derived attributes and a small panel of human raters
+would address limitation 2 and would let the seven media and visual attributes currently excluded from
+the label be scored on quality rather than presence.
+\item \textbf{Replace the extractor with a headless browser} to eliminate the JavaScript rendering
+failures and with them the confusion between an unnavigable site and an unreadable one.
+\item \textbf{Generalise the country holdout.} Extending the protocol of Section~\ref{sec:bangladesh}
+to every country with at least 20 universities would turn a single case study into a
+leave-one-country-out generalisation study.
+\end{enumerate}
+
+%========================================================= REFERENCES
+\newpage
+\begin{thebibliography}{9}
+
+\bibitem{rashida2021}
+M.~Rashida, K.~Islam, A.~S.~M. Kayes, M.~Hammoudeh, M.~S. Arefin, and M.~A. Habib,
+``Towards developing a framework to analyze the qualities of the university websites,''
+\emph{Computers}, vol.~10, no.~5, art.~57, 2021.
+
+\bibitem{saleh2022}
+A.~H. Saleh, R.~C.~M. Yusoff, N.~A.~A. Bakar, and R.~Ibrahim,
+``Systematic literature review on university website quality,''
+\emph{Indonesian Journal of Electrical Engineering and Computer Science},
+vol.~25, no.~1, pp.~511--520, Jan.~2022.
+
+\bibitem{mukanda2022}
+D.~Mukanda, S.~M. Mbuguah, and F.~M. Wabwoba,
+``Evaluation of the usability of university websites for Webometrics ranking,''
+\emph{International Journal of Computer Trends and Technology}, vol.~70, no.~2, pp.~1--9, 2022.
+
+\bibitem{biyyapu2023}
+V.~P. Biyyapu, S.~K.~R. Jammalamadaka, S.~B. Jammalamadaka, B.~Chokara, B.~K.~K. Duvvuri, and
+R.~R. Budaraju,
+``Building an expert system through machine learning for predicting the quality of a website based on
+its completion,''
+\emph{Computers}, vol.~12, no.~9, art.~181, 2023.
+
+\end{thebibliography}
 
 \end{document}

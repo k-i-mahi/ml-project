@@ -17,8 +17,8 @@ Every number here comes from the notebook or the report — nothing is invented 
 >
 > That turned out to be a real question with a real answer. R² ranged from 0.79 to 0.99 across
 > twelve algorithms on identical data. The gap is not noise — it is concentrated entirely on
-> the 36 test universities where a gating rule caps the score. Linear regression is off by
-> 6.41 points on those and only 1.91 elsewhere; LightGBM is at 1.07 on both. A weighted sum
+> the 35 test universities where a gating rule caps the score. Linear regression is off by
+> 8.88 points on those and only 1.85 elsewhere; LightGBM is at 0.77 on both. A weighted sum
 > mathematically cannot represent a hard cap; a tree split can.
 >
 > So the experiment measures something genuine: which model families can recover a scoring
@@ -157,7 +157,7 @@ than with the method. What we did *not* do is tune the weights to produce a rank
 ## D. About the modelling
 
 **"Why 80/20?"**
-Standard practice and it leaves 246 test universities — enough for stable metrics. Stratified
+Standard practice and it leaves 244 test universities — enough for stable metrics. Stratified
 on score band so both halves span the full range, seed fixed at 42 so it is reproducible.
 
 **"How do you know it isn't overfitting?"**
@@ -167,12 +167,12 @@ on 5-fold cross-validation **inside the training set**. And the CV ordering agre
 test ordering at Spearman ρ = 0.888, so the comparison is not a fluke of one split.
 
 **"Why LightGBM?"**
-It won on every metric — R² 0.992, MAE 1.26, Spearman 0.992 — and it was the most stable in
-cross-validation (0.986 ± 0.001, the smallest spread of any model). After tuning: R² 0.993,
-MAE 1.11.
+It won on every metric — R² 0.990, MAE 1.31, Spearman 0.989 — and it was the most stable in
+cross-validation, with the smallest spread of any model. After tuning: R² 0.993, MAE 1.15.
 
 **"Why is k-NN so much worse?"**
-0.786 against 0.992. In a 71-dimensional, mostly binary space, Euclidean distance is a poor
+0.768 against 0.990. In a 71-dimensional, mostly binary space (57 of the 71 features are
+binary flags), Euclidean distance is a poor
 measure of similarity — everything is roughly equidistant from everything else. It is a
 textbook demonstration of the curse of dimensionality, and a good thing to have in the
 comparison for exactly that reason.
@@ -248,17 +248,138 @@ survey.
 |---|---|
 | Universities | 1,225 |
 | Features | 71 |
-| Train / test | 979 / 246 (80/20, stratified, seed 42) |
+| Train / test | 981 / 244 (80/20, stratified, seed 42, **all 22 Bangladeshi universities forced into test**) |
 | Algorithms compared | 12, across 6 families |
 | Score range | 8.3 – 95.4, mean 64.4, sd 18.4 |
 | Universities gated | 186 (15.2%) |
 | **Best model** | **LightGBM (tuned)** |
-| **Test R²** | **0.9931** |
-| **Test MAE** | **1.11 points** |
-| **Test Spearman ρ** | **0.9931** |
+| **Test R²** | **0.9925** |
+| **Test MAE** | **1.15 points** |
+| **Test Spearman ρ** | **0.9918** |
 | Baseline MAE | 15.73 |
 | Linear Regression MAE | 2.56 |
 | Grid search | 81 combinations, 5-fold CV |
-| Gated MAE: linear vs LightGBM | 6.41 vs 1.07 |
+| Gated MAE: linear vs LightGBM | 8.88 vs 0.77 (4.80x) |
+| Bangladesh holdout (22 unseen) | MAE 0.65, R² 0.996, ρ 0.990, worst error 1.40 pts |
+| Weight sensitivity (±30% on all 7) | ρ 0.997, 90% of the top ten retained |
+| Attributes in the label | 51 of 71; the other 20 excluded, each with a reason |
 | Top feature by gain | `a37_programs_listing` (29%) |
 | Gate attribute by gain | `a02_primary_nav` (26%) |
+
+---
+
+## Q. Why are all the Bangladeshi universities in the test set?
+
+Two reasons, and the second is the one that matters.
+
+**One:** the report presents a table of all 22 with predicted and actual scores. If some had
+been in training, half that table would be a memory and half a prediction — the rows would not
+mean the same thing. Holding the whole country out makes every row an honest prediction.
+
+**Two:** it is a stricter generalisation test than a random split. The 22 sites share a region,
+a hosting environment and a set of CMS templates. Predicting them from a training set that
+contains none of them asks whether the model learned website quality or the local habits of
+countries it had already seen.
+
+The rest of the test set is still band-stratified from the other 1,203 universities, so it is
+still 20% of the data and still spans the full range. The largest band distortion the
+constraint causes is 0.9 percentage points, and `build_dataset.py` asserts that no Bangladeshi
+university reaches the training set.
+
+## Q. The model is *more* accurate on Bangladesh than on the rest of the test set. Is that leakage?
+
+No — the assertion in the build script rules it out. It follows from where those 22 sit.
+Seventeen of them fall in a dense, well-populated band the model has seen from a thousand
+other universities. The model's errors concentrate at the extremes of the range, and
+only three Bangladeshi sites are down there — the three capped by the navigation gate, all of
+which the model places correctly at 45.
+
+The honest reading: this shows the model **transfers to a country it never trained on**, and
+that Bangladeshi university websites are structurally ordinary. It does not show it would
+transfer to a country unlike anything in the training set.
+
+## Q. What does the Bangladesh case study actually say about those websites?
+
+They are good, and the weakness is specific. Mean score 71.8 against a world mean of 63.9;
+six of the 22 reach the global top 200. On **D1 academic information** they score 0.943
+against a world mean of 0.785 — close to the global top 100. They have done the expensive
+work of putting programmes, departments and faculty online.
+
+The gap to the global top 100 is 12.1 points, and 7.76 of it is in just two dimensions:
+**D2 admission support** (−4.97) and **D4 navigation** (−2.79). D4 is the only dimension where
+Bangladeshi sites fall *below* the world average. Those are comparatively cheap fixes: a menu,
+a search box, a breadcrumb trail, a clearly linked admissions policy.
+
+Three universities — BAU, East West and IUT — have no extractable primary navigation and are
+capped at 45, forfeiting 17.6, 25.9 and 29.2 points respectively.
+
+## Q. BUET ranks 18th of 22. Isn't that wrong?
+
+It is the point, not a bug. BUET is the country's most prestigious engineering institution and
+its landing page scores 66.80 (grade B). Institutional prestige and website quality are close
+to unrelated in this dataset. That is exactly why we dropped the QS and Webometrics columns in
+cleaning: including them would have let the model infer "famous university, therefore good
+website", which is the inference the project exists to avoid.
+
+## Q. Your scoring weights are subjective. Doesn't that invalidate the ranking?
+
+It would if we had left it unmeasured, so we measured it. Perturb all seven weights randomly
+by ±30% — far more than a second analyst would plausibly disagree by — renormalise, and
+recompute the entire ranking, 300 times. Spearman ρ with the published ranking: **0.997**, and
+90% of the top ten stays in the top ten. Even at ±50% the worst of 300 draws is ρ = 0.978.
+
+Deleting a whole dimension is the only change that moves the table appreciably, and it is the
+high-weight content dimensions that matter; the low-weight ones can be removed with very
+little effect.
+
+The league table is a property of the websites far more than of our weights.
+
+## Q. How is every feature classified?
+
+On three independent axes, all exported to `data/feature_catalog.csv` and printed in full in
+Table 3 of the report:
+
+| axis | question | values |
+|---|---|---|
+| source group | where on the page was it found? | 12 groups (header & navigation, page content, notices, events, footer, rankings, visual design, service, technical, SEO, accessibility, measurement quality) |
+| scoring role | which dimension consumes it, with what weight, through what transform? | D1…D7, or not scored |
+| measurement type | what kind of number is it? | binary flag (57), count (6), indicator (3), plus one each of ratio, percentage, index, z-score, log-count |
+
+**51 of the 71 features enter the score. The other 20 are observed but unscored** — each for a
+recorded reason (prestige leakage, quality not judgeable from presence, no applicant
+information need, depth counts, too rare, redundant, measurement metadata) — and all 71 are
+still given to every model. That is what makes "did the model recover the scoring rule?" a
+fair question. The ablation confirms it did: deleting the whole *rankings & recognition* block
+changes test MAE by a fraction of a point.
+
+## Q. Which block of features does the model actually need most?
+
+D4 — navigation. Deleting its six features costs +4.89 points of test MAE, more than deleting
+D1's six (+1.83), even though D1 carries almost twice the declared weight. The reason is the
+gate: without `a02_primary_nav` the model cannot tell which universities are capped at 45.
+
+Declared weight and modelling value are different things — the same conclusion feature
+importance reaches by a completely different route.
+
+---
+
+## Q. Why do 20 attributes not enter the score?
+
+Because an attribute worth collecting should either be used or excluded for a stated reason, and
+each of the 20 has one:
+
+| reason | n | examples |
+|---|---|---|
+| prestige leakage | 2 | `a07_qs_badge`, `a09_national_rank` — the same argument that dropped the QS/Webometrics value columns |
+| quality not judgeable from presence | 7 | `a30_image_gallery`, `a54_banner_carousel` — the crawler sees *that* a carousel exists, never whether it is any good |
+| no applicant information need | 3 | `a14_stats_block`, `a61_testimonials` |
+| depth count of a scored presence | 2 | `a12_accred_count` — the presence is already scored; counting badges rewards volume |
+| too rare to carry weight | 2 | `a59_feedback_form` (1.9% of sites), `a75_bookmark` (1.0%) |
+| redundant with a scored attribute | 1 | `broken_links_log` — `a66_broken_links` is scored |
+| measurement metadata | 3 | the `*_was_missing` indicators — the label must not reward or punish a site for *our* extractor failing |
+
+Audit: the 20 excluded attributes average |r| = 0.14 with the score, against 0.31 for the 51
+scored ones. The most arguable single call is `a28_contests` (r = 0.29): excluded as an
+engagement signal rather than an information need.
+
+**All 71 are still model inputs.** Only the target omits these 20.

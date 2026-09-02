@@ -1,0 +1,95 @@
+\begin{longtable}{@{}r@{\hspace{4pt}}p{4.15cm}p{1.15cm}p{1.5cm}p{4.85cm}c r@{}}
+\caption{Landing-page attributes used for university website evaluation. Attribute numbers, names, data types, value domains and justifications are as specified for the collection instrument; the dataset column name is printed beneath each attribute name. \emph{Dim} is the scoring dimension of Section~\ref{sec:label} that consumes the attribute and \emph{Pts} the points it contributes at its maximum; a dash marks an attribute that is observed and supplied to every model but does not enter the label.}\label{tab:catalog}\\
+\toprule
+\textbf{\#} & \textbf{Attribute} & \textbf{Type} & \textbf{Domain} & \textbf{Justification} & \textbf{Dim} & \textbf{Pts} \\
+\midrule\endfirsthead
+\multicolumn{7}{@{}l}{\small\itshape Table \ref{tab:catalog}, continued from previous page}\\
+\toprule
+\textbf{\#} & \textbf{Attribute} & \textbf{Type} & \textbf{Domain} & \textbf{Justification} & \textbf{Dim} & \textbf{Pts} \\
+\midrule\endhead
+\midrule\multicolumn{7}{@{}r}{\small\itshape continued on next page}\\\endfoot
+\bottomrule\endlastfoot
+\multicolumn{7}{@{}l}{\cellcolor{softgrey}\textbf{B1. Header \& navigation} \small --- Wayfinding and structural usability \ (6 attributes, 6 scored)}\\\addlinespace[1pt]
+1 & Logo / institutional branding \texttt{\scriptsize a01\_logo} & Boolean & \{0,1\} & \small Institutional identity & D7 & 0.18 \\
+2 & Primary navigation menu presence \texttt{\scriptsize a02\_primary\_nav} & Boolean & \{0,1\} & \small Core wayfinding; a page without one cannot be navigated at all & D4 & 3.75 \\
+3 & Number of top-level navigation items \texttt{\scriptsize a03\_nav\_item\_count} & Integer & [0-20] & \small Navigation complexity: too few leads nowhere, too many is a wall of links & D4 & 3.75 \\
+4 & Search bar \texttt{\scriptsize a04\_search\_bar} & Boolean & \{0,1\} & \small Fast task completion & D4 & 3.00 \\
+5 & Language toggle (native / English) \texttt{\scriptsize a05\_language\_toggle} & Boolean & \{0,1\} & \small Multilingual accessibility & D5 & 0.90 \\
+6 & Breadcrumb / current-location cue \texttt{\scriptsize a06\_breadcrumb} & Boolean & \{0,1\} & \small Recognition over recall & D4 & 1.50 \\
+\multicolumn{7}{@{}l}{\cellcolor{softgrey}\textbf{B2. Rankings \& recognition} \small --- Externally conferred prestige signals \ (7 attributes, 2 scored)}\\\addlinespace[1pt]
+7 & QS World Ranking badge / mention \texttt{\scriptsize a07\_qs\_badge} & Boolean & \{0,1\} & \small Global prestige signal displayed on the page \emph{\footnotesize (excluded: prestige display; excluded to prevent prestige leakage)} & -- & -- \\
+9 & National / local ranking mention \texttt{\scriptsize a09\_national\_rank} & Boolean & \{0,1\} & \small Local prestige signal \emph{\footnotesize (excluded: prestige display; excluded to prevent prestige leakage)} & -- & -- \\
+11 & Accreditation badges \texttt{\scriptsize a11\_accreditation} & Boolean & \{0,1\} & \small Credibility signal & D7 & 0.33 \\
+12 & Accreditation badge count \texttt{\scriptsize a12\_accred\_count} & Integer & [0-10] & \small Credibility depth \emph{\footnotesize (excluded: count depth of a badge already scored by presence)} & -- & -- \\
+13 & Recent achievements / awards section \texttt{\scriptsize a13\_achievements} & Boolean & \{0,1\} & \small Institutional reputation & D7 & 0.24 \\
+14 & Impact / highlight statistics block \texttt{\scriptsize a14\_stats\_block} & Boolean & \{0,1\} & \small Quantified credibility \emph{\footnotesize (excluded: marketing block; serves no applicant information need)} & -- & -- \\
+15 & Number of highlight statistics shown \texttt{\scriptsize a15\_stat\_item\_count} & Integer & [0-10] & \small Richness of proof points \emph{\footnotesize (excluded: count depth of a marketing block)} & -- & -- \\
+\multicolumn{7}{@{}l}{\cellcolor{softgrey}\textbf{B3. Notices \& updates} \small --- Content currency and maintenance \ (6 attributes, 6 scored)}\\\addlinespace[1pt]
+16 & Notice board presence \texttt{\scriptsize a16\_notice\_board} & Boolean & \{0,1\} & \small Core recurring information need & D3 & 1.20 \\
+17 & Notice timestamp shown \texttt{\scriptsize a17\_notice\_timestamp} & Boolean & \{0,1\} & \small Signals content freshness & D3 & 0.90 \\
+18 & Days since the most recent dated notice \texttt{\scriptsize notice\_recency\_days} & Derived & [0-3650] & \small Turns attribute 18 (an ISO date) into a staleness measure comparable across a crawl that spans time & D3 & 4.80 \\
+20 & News \& events section \texttt{\scriptsize a20\_news\_events} & Boolean & \{0,1\} & \small Institutional activity visibility & D3 & 2.40 \\
+21 & Events / academic calendar link \texttt{\scriptsize a21\_calendar\_link} & Boolean & \{0,1\} & \small Time-sensitive planning information & D3 & 1.80 \\
+22 & Admission announcements / deadlines \texttt{\scriptsize a22\_admission\_notice} & Boolean & \{0,1\} & \small High-frequency prospective-student query & D2 & 4.40 \\
+\multicolumn{7}{@{}l}{\cellcolor{softgrey}\textbf{B4. Events \& media} \small --- Engagement and multimedia richness \ (9 attributes, 3 scored)}\\\addlinespace[1pt]
+23 & Upcoming events section \texttt{\scriptsize a23\_upcoming\_events} & Boolean & \{0,1\} & \small Engagement and currency & D3 & 0.60 \\
+24 & Number of upcoming events listed \texttt{\scriptsize a24\_event\_count} & Integer & [0-20] & \small Activity richness & D3 & 3.00 \\
+25 & Event images present \texttt{\scriptsize a25\_event\_images} & Boolean & \{0,1\} & \small Visual engagement \emph{\footnotesize (excluded: media richness; presence is measurable, quality is not)} & -- & -- \\
+26 & Event captions / descriptions present \texttt{\scriptsize a26\_event\_captions} & Boolean & \{0,1\} & \small Informativeness \emph{\footnotesize (excluded: media richness; presence is measurable, quality is not)} & -- & -- \\
+27 & Event date \& time displayed \texttt{\scriptsize a27\_event\_datetime} & Boolean & \{0,1\} & \small Actionability: an undated event cannot be attended & D3 & \emph{mod.} \\
+28 & Forthcoming contests or competitions \texttt{\scriptsize a28\_contests} & Boolean & \{0,1\} & \small Student engagement signal \emph{\footnotesize (excluded: engagement signal; serves no applicant information need)} & -- & -- \\
+29 & Video content on landing page \texttt{\scriptsize a29\_video\_content} & Boolean & \{0,1\} & \small Rich media engagement \emph{\footnotesize (excluded: media richness; presence is measurable, quality is not)} & -- & -- \\
+30 & Photo / image gallery \texttt{\scriptsize a30\_image\_gallery} & Boolean & \{0,1\} & \small Visual storytelling \emph{\footnotesize (excluded: media richness; presence is measurable, quality is not)} & -- & -- \\
+31 & Social media feed embed \texttt{\scriptsize a31\_social\_feed\_embed} & Boolean & \{0,1\} & \small Real-time engagement \emph{\footnotesize (excluded: media richness; present on 5.6\% of sites)} & -- & -- \\
+\multicolumn{7}{@{}l}{\cellcolor{softgrey}\textbf{B5. Landing-page content} \small --- Information completeness \ (15 attributes, 15 scored)}\\\addlinespace[1pt]
+32 & Vision \& mission statement \texttt{\scriptsize a32\_vision\_mission} & Boolean & \{0,1\} & \small Institutional identity signal & D7 & 0.60 \\
+33 & About / overview blurb \texttt{\scriptsize a33\_about\_blurb} & Boolean & \{0,1\} & \small First-impression orientation & D7 & 0.42 \\
+34 & Department list / quick links \texttt{\scriptsize a34\_department\_links} & Boolean & \{0,1\} & \small Primary navigation need for an applicant & D1 & 7.00 \\
+35 & Faculty highlight or link \texttt{\scriptsize a35\_faculty\_link} & Boolean & \{0,1\} & \small Academic credibility cue & D1 & 4.20 \\
+36 & Research / publication highlight \texttt{\scriptsize a36\_research\_highlight} & Boolean & \{0,1\} & \small Academic reputation signal & D1 & 2.80 \\
+37 & Academic programmes listing \texttt{\scriptsize a37\_programs\_listing} & Boolean & \{0,1\} & \small The decision-critical information a prospective student came for & D1 & 8.40 \\
+38 & Scholarship information / link \texttt{\scriptsize a38\_scholarship} & Boolean & \{0,1\} & \small Strong student interest area (53\% in the P2 survey) & D2 & 3.96 \\
+39 & Library access / link \texttt{\scriptsize a39\_library\_link} & Boolean & \{0,1\} & \small Common student resource & D1 & 3.36 \\
+40 & Career / job portal link \texttt{\scriptsize a40\_career\_link} & Boolean & \{0,1\} & \small Student utility feature & D1 & 2.24 \\
+41 & Alumni section / link \texttt{\scriptsize a41\_alumni\_link} & Boolean & \{0,1\} & \small Institutional trust signal & D7 & 0.30 \\
+42 & FAQ link \texttt{\scriptsize a42\_faq\_link} & Boolean & \{0,1\} & \small Self-service reduces friction & D2 & 1.32 \\
+43 & Contact information / webmail link \texttt{\scriptsize a43\_contact\_link} & Boolean & \{0,1\} & \small Direct communication channel & D2 & 3.30 \\
+44 & Student portal link \texttt{\scriptsize a44\_student\_portal} & Boolean & \{0,1\} & \small Core functional access & D7 & 0.33 \\
+45 & Prospectus / brochure download \texttt{\scriptsize a45\_prospectus} & Boolean & \{0,1\} & \small Decision-support material & D2 & 2.64 \\
+46 & Admissions policy / procedure link \texttt{\scriptsize a46\_admissions\_policy} & Boolean & \{0,1\} & \small Decision-critical information & D2 & 5.72 \\
+\multicolumn{7}{@{}l}{\cellcolor{softgrey}\textbf{B6. Footer details} \small --- Secondary navigation and credibility \ (5 attributes, 5 scored)}\\\addlinespace[1pt]
+47 & Footer contact details \texttt{\scriptsize a47\_footer\_contact} & Boolean & \{0,1\} & \small Standard usability expectation & D7 & 0.42 \\
+48 & Footer sitemap link \texttt{\scriptsize a48\_footer\_sitemap} & Boolean & \{0,1\} & \small Redundant navigation path & D4 & 1.50 \\
+49 & Copyright / last-updated line \texttt{\scriptsize a49\_copyright\_line} & Boolean & \{0,1\} & \small Currency and credibility cue & D3 & 0.30 \\
+50 & Social media links \texttt{\scriptsize a50\_social\_links} & Boolean & \{0,1\} & \small Engagement / communication channel & D7 & 0.12 \\
+51 & Quick-links block \texttt{\scriptsize a51\_quick\_links} & Boolean & \{0,1\} & \small Reduces clicks to key pages & D4 & 1.50 \\
+\multicolumn{7}{@{}l}{\cellcolor{softgrey}\textbf{B7. Visual design} \small --- Appearance and readability \ (3 attributes, 1 scored)}\\\addlinespace[1pt]
+53 & Colour contrast ratio \texttt{\scriptsize a53\_contrast\_ratio} & Float & [1-21] WCAG scale & \small Readability and accessibility & D5 & 2.30 \\
+54 & Banner / carousel content \texttt{\scriptsize a54\_banner\_carousel} & Boolean & \{0,1\} & \small First-impression engagement \emph{\footnotesize (excluded: visual presentation the dataset cannot assess for quality)} & -- & -- \\
+57 & Prominent logo placement \texttt{\scriptsize a57\_logo\_prominence} & Boolean & \{0,1\} & \small Brand recall \emph{\footnotesize (excluded: visual presentation the dataset cannot assess for quality)} & -- & -- \\
+\multicolumn{7}{@{}l}{\cellcolor{softgrey}\textbf{B8. Service interaction} \small --- Two-way interaction and trust \ (4 attributes, 2 scored)}\\\addlinespace[1pt]
+58 & Live chat / chatbot presence \texttt{\scriptsize a58\_live\_chat} & Boolean & \{0,1\} & \small Real-time support & D2 & 0.66 \\
+59 & Feedback / contact form on landing page \texttt{\scriptsize a59\_feedback\_form} & Boolean & \{0,1\} & \small Two-way interaction \emph{\footnotesize (excluded: present on 1.9\% of sites; too rare to carry weight)} & -- & -- \\
+60 & Trust / security seal displayed \texttt{\scriptsize a60\_trust\_seal} & Boolean & \{0,1\} & \small Perceived trust & D7 & 0.06 \\
+61 & Testimonials / student stories section \texttt{\scriptsize a61\_testimonials} & Boolean & \{0,1\} & \small Sense of community \emph{\footnotesize (excluded: marketing; serves no applicant information need)} & -- & -- \\
+\multicolumn{7}{@{}l}{\cellcolor{softgrey}\textbf{B9. Technical performance} \small --- Speed, security, reliability \ (6 attributes, 5 scored)}\\\addlinespace[1pt]
+62 & Page load speed, standardised within region \texttt{\scriptsize load\_time\_z\_region} & Derived & z-score & \small Raw load time is confounded with the collector, since each of six collectors covered exactly one region; only the within-region form is used & D6 & 1.40 \\
+63 & Mobile responsiveness score \texttt{\scriptsize a63\_mobile\_score} & Float & [0-100] & \small Multi-device access need & D5 & 3.20 \\
+65 & HTTPS / SSL presence \texttt{\scriptsize a65\_https} & Boolean & \{0,1\} & \small Security and user trust; an unencrypted site should not receive an application form & D6 & 1.82 \\
+66 & Broken links, log-compressed \texttt{\scriptsize broken\_links\_log} & Derived & log(1+n) & \small The raw count is heavily right-skewed; the log keeps 0 vs 3 from being swamped by 40 vs 200 \emph{\footnotesize (excluded: redundant transform of a66, which is scored)} & -- & -- \\
+66 & Broken links on landing page \texttt{\scriptsize a66\_broken\_links} & Integer & [0-N] & \small Reliability and credibility & D6 & 1.68 \\
+67 & Page compression enabled (Gzip etc.) \texttt{\scriptsize a67\_gzip} & Boolean & \{0,1\} & \small Faster, lighter load & D6 & 0.49 \\
+\multicolumn{7}{@{}l}{\cellcolor{softgrey}\textbf{B10. SEO \& metadata} \small --- Discoverability \ (3 attributes, 3 scored)}\\\addlinespace[1pt]
+69 & Page title \& meta description present \texttt{\scriptsize a69\_title\_meta} & Boolean & \{0,1\} & \small Search-engine visibility & D6 & 0.84 \\
+70 & Favicon presence \texttt{\scriptsize a70\_favicon} & Boolean & \{0,1\} & \small Brand recognition in-browser & D6 & 0.28 \\
+71 & Sitemap / robots.txt reference \texttt{\scriptsize a71\_sitemap\_robots} & Boolean & \{0,1\} & \small Crawlability and indexing & D6 & 0.49 \\
+\multicolumn{7}{@{}l}{\cellcolor{softgrey}\textbf{B11. Accessibility} \small --- Inclusive access \ (4 attributes, 3 scored)}\\\addlinespace[1pt]
+72 & Alt-text coverage on images \texttt{\scriptsize a72\_alt\_text\_pct} & Float & [0-100] \% & \small Screen-reader accessibility & D5 & 1.80 \\
+73 & Accessible design across devices \texttt{\scriptsize a73\_accessible\_design} & Boolean & \{0,1\} & \small Inclusive access for all & D5 & 1.00 \\
+74 & Text-size / contrast accessibility toggle \texttt{\scriptsize a74\_a11y\_toggle} & Boolean & \{0,1\} & \small Inclusive design option & D5 & 0.80 \\
+75 & Bookmark / save-page facility \texttt{\scriptsize a75\_bookmark} & Boolean & \{0,1\} & \small Convenience functionality \emph{\footnotesize (excluded: present on 1.0\% of sites; a browser feature, not a page property)} & -- & -- \\
+\multicolumn{7}{@{}l}{\cellcolor{softgrey}\textbf{B12. Measurement quality} \small --- Whether the attribute could be measured at all \ (3 attributes, 0 scored)}\\\addlinespace[1pt]
+18 & Notice date was never found \texttt{\scriptsize notice\_recency\_days\_was\_missing} & Derived & \{0,1\} & \small Records that attribute 18 could not be measured, so 'never measured' stays distinguishable from 'measured as stale' \emph{\footnotesize (excluded: measurement metadata, not a property of the website)} & -- & -- \\
+53 & Contrast ratio was never measured \texttt{\scriptsize a53\_contrast\_ratio\_was\_missing} & Derived & \{0,1\} & \small As above, for attribute 53 \emph{\footnotesize (excluded: measurement metadata, not a property of the website)} & -- & -- \\
+72 & Alt-text coverage was never measured \texttt{\scriptsize a72\_alt\_text\_pct\_was\_missing} & Derived & \{0,1\} & \small As above, for attribute 72 \emph{\footnotesize (excluded: measurement metadata, not a property of the website)} & -- & -- \\
+\end{longtable}

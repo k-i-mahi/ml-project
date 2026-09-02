@@ -1,0 +1,20 @@
+block,kind,n_removed,R2,MAE,dR2,dMAE
+D1,scoring dimension,6,0.9365,2.978,-0.056,1.8293
+D2,scoring dimension,7,0.9551,2.9215,-0.0374,1.7729
+D3,scoring dimension,9,0.9806,1.9415,-0.0119,0.7928
+D4,scoring dimension,6,0.6916,6.0339,-0.301,4.8852
+D5,scoring dimension,6,0.9906,1.2915,-0.0019,0.1429
+D6,scoring dimension,7,0.9921,1.1558,-0.0004,0.0071
+D7,scoring dimension,10,0.9923,1.1576,-0.0002,0.0089
+Accessibility,source group,4,0.9917,1.2278,-0.0008,0.0792
+Events & media,source group,9,0.9903,1.3678,-0.0023,0.2191
+Footer,source group,5,0.9905,1.3127,-0.002,0.164
+Header & navigation,source group,6,0.6749,6.0473,-0.3177,4.8987
+Measurement quality,source group,3,0.9925,1.1487,0.0,0.0
+Notices & updates,source group,6,0.977,2.0034,-0.0156,0.8548
+Page content,source group,15,0.8724,4.6911,-0.1201,3.5425
+Rankings & recognition,source group,7,0.9925,1.1552,-0.0,0.0065
+SEO & metadata,source group,3,0.9922,1.1839,-0.0004,0.0352
+Service & interaction,source group,4,0.9925,1.1606,-0.0,0.012
+Technical performance,source group,6,0.9922,1.1423,-0.0004,-0.0064
+Visual design,source group,3,0.9923,1.1729,-0.0002,0.0242

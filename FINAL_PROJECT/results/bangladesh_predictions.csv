@@ -1,0 +1,23 @@
+name,short,url,actual,predicted,error,grade,global_rank,rank_actual,rank_predicted
+North South University,North South Univ.,https://www.northsouth.edu,86.82,87.13254480235841,0.312544802358417,A+,44,1,1
+Rajshahi University of Engineering and Technology,RUET,https://www.ruet.ac.bd,83.75,82.5630836821594,-1.1869163178405984,A,107,2,4
+BRAC University,BRAC Univ.,https://www.bracu.ac.bd,82.35,83.74764128365823,1.3976412836582313,A,139,3,2
+Khulna University of Engineering and Technology,KUET,https://www.kuet.ac.bd,82.18,83.3400986873209,1.1600986873208967,A,141,4,3
+Chittagong University of Engineering and Technology,CUET,https://www.cuet.ac.bd,81.4,80.79763156189117,-0.6023684381088401,A,173,5,6
+Bangladesh University of Professionals,BUP,https://www.bup.edu.bd,81.03,81.84001198668622,0.8100119866862201,A,186,6,5
+American International University-Bangladesh,AIUB,https://www.aiub.edu,80.81,79.92172282311488,-0.8882771768851256,A,201,7,7
+Patuakhali Science and Technology University,PSTU,https://www.pstu.ac.bd,78.57,78.60255809631332,0.032558096313323404,A,273,8,8
+Khulna University,Khulna Univ.,https://www.ku.ac.bd,76.98,76.90846414502685,-0.07153585497314907,A,337,9,11
+Daffodil International University,Daffodil Int. Univ.,https://www.daffodilvarsity.edu.bd,76.84,77.3662808447551,0.5262808447550924,A,344,10,9
+University of Barisal,Univ. of Barisal,https://www.bu.ac.bd,76.64,76.95049698333928,0.3104969833392772,A,351,11,10
+Bangladesh University of Textiles,BUTEX,https://www.butex.edu.bd,74.15,74.90993634610047,0.75993634610046,B,470,12,12
+University of Dhaka,Univ. of Dhaka,https://www.du.ac.bd,73.17,73.17790016000177,0.007900160001767631,B,502,13,13
+University of Chittagong,Univ. of Chittagong,https://www.cu.ac.bd,72.64,71.79644548580686,-0.8435545141931442,B,526,14,14
+Comilla University,Comilla Univ.,https://www.cou.ac.bd,71.28,71.55522720892883,0.27522720892882546,B,573,15,16
+Jagannath University,Jagannath Univ.,https://www.jnu.ac.bd,71.17,71.61038498353007,0.44038498353006617,B,576,16,15
+Jahangirnagar University,Jahangirnagar Univ.,https://www.juniv.edu,70.84,70.0698239246261,-0.7701760753738967,B,588,17,17
+Bangladesh University of Engineering and Technology,BUET,https://www.buet.ac.bd,66.8,67.74774849924579,0.9477484992457903,B,698,18,18
+University of Rajshahi,Univ. of Rajshahi,https://www.ru.ac.bd,56.15,57.0420352197298,0.8920352197297987,C,857,19,19
+Bangladesh Agricultural University,BAU,https://www.bau.edu.bd,45.0,45.97249374628893,0.9724937462889329,D,932,20,20
+Islamic University of Technology,IUT,https://www.iutoic-dhaka.edu,45.0,44.07725297834187,-0.9227470216581324,D,933,21,22
+East West University,East West Univ.,https://www.ewubd.edu,45.0,44.74675066149398,-0.2532493385060235,D,934,22,21

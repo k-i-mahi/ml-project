@@ -1,0 +1,23 @@
+weka_instance,uni_id,name,url,country,region,website_score,grade
+1,5094,North South University,https://www.northsouth.edu,Bangladesh,South & Central Asia + Oceania,86.82,A+
+2,5107,Rajshahi University of Engineering and Technology,https://www.ruet.ac.bd,Bangladesh,South & Central Asia + Oceania,83.75,A
+3,5093,BRAC University,https://www.bracu.ac.bd,Bangladesh,South & Central Asia + Oceania,82.35,A
+4,5106,Khulna University of Engineering and Technology,https://www.kuet.ac.bd,Bangladesh,South & Central Asia + Oceania,82.18,A
+5,5108,Chittagong University of Engineering and Technology,https://www.cuet.ac.bd,Bangladesh,South & Central Asia + Oceania,81.4,A
+6,5109,Bangladesh University of Professionals,https://www.bup.edu.bd,Bangladesh,South & Central Asia + Oceania,81.03,A
+7,5103,American International University-Bangladesh,https://www.aiub.edu,Bangladesh,South & Central Asia + Oceania,80.81,A
+8,5325,Patuakhali Science and Technology University,https://www.pstu.ac.bd,Bangladesh,South & Central Asia + Oceania,78.57,A
+9,5099,Khulna University,https://www.ku.ac.bd,Bangladesh,South & Central Asia + Oceania,76.98,A
+10,5104,Daffodil International University,https://www.daffodilvarsity.edu.bd,Bangladesh,South & Central Asia + Oceania,76.84,A
+11,5323,University of Barisal,https://www.bu.ac.bd,Bangladesh,South & Central Asia + Oceania,76.64,A
+12,5324,Bangladesh University of Textiles,https://www.butex.edu.bd,Bangladesh,South & Central Asia + Oceania,74.15,B
+13,5091,University of Dhaka,https://www.du.ac.bd,Bangladesh,South & Central Asia + Oceania,73.17,B
+14,5096,University of Chittagong,https://www.cu.ac.bd,Bangladesh,South & Central Asia + Oceania,72.64,B
+15,5322,Comilla University,https://www.cou.ac.bd,Bangladesh,South & Central Asia + Oceania,71.28,B
+16,5110,Jagannath University,https://www.jnu.ac.bd,Bangladesh,South & Central Asia + Oceania,71.17,B
+17,5095,Jahangirnagar University,https://www.juniv.edu,Bangladesh,South & Central Asia + Oceania,70.84,B
+18,5092,Bangladesh University of Engineering and Technology,https://www.buet.ac.bd,Bangladesh,South & Central Asia + Oceania,66.8,B
+19,5097,University of Rajshahi,https://www.ru.ac.bd,Bangladesh,South & Central Asia + Oceania,56.15,C
+20,5098,Bangladesh Agricultural University,https://www.bau.edu.bd,Bangladesh,South & Central Asia + Oceania,45.0,D
+21,5101,Islamic University of Technology,https://www.iutoic-dhaka.edu,Bangladesh,South & Central Asia + Oceania,45.0,D
+22,5105,East West University,https://www.ewubd.edu,Bangladesh,South & Central Asia + Oceania,45.0,D

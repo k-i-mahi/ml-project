@@ -33,6 +33,7 @@ RNG_SEED = 42
 # ======================================================================================
 
 df = pd.read_csv(RAW)
+RAW_NULL = {c: float(df[c].isna().mean()) for c in df.columns}
 audit: list[tuple[str, str]] = []
 audit.append(("raw shape", f"{df.shape[0]} rows x {df.shape[1]} columns"))
 
@@ -236,17 +237,31 @@ D1 = (0.30 * g("a37_programs_listing")
       + 0.08 * g("a40_career_link"))
 
 # ---- D2  Admission support (22) -------------------------------------------------------
-D2 = (0.28 * g("a46_admissions_policy")
-      + 0.22 * g("a22_admission_notice")
-      + 0.20 * g("a38_scholarship")
-      + 0.17 * g("a43_contact_link")
-      + 0.13 * g("a45_prospectus"))
+# "How do I apply, what does it cost, and who do I ask?"  The last clause is why the FAQ and
+# the live-chat widget belong here: both are channels for getting an answer. The feedback
+# form (a59) is not included -- it exists on 1.9% of sites, too rare to carry weight.
+D2 = (0.26 * g("a46_admissions_policy")
+      + 0.20 * g("a22_admission_notice")
+      + 0.18 * g("a38_scholarship")
+      + 0.15 * g("a43_contact_link")
+      + 0.12 * g("a45_prospectus")
+      + 0.06 * g("a42_faq_link")
+      + 0.03 * g("a58_live_chat"))
 
 # ---- D3  Currency and activity (15) ---------------------------------------------------
-D3 = (0.40 * recency_curve(df.notice_recency_days)
-      + 0.25 * event_curve(df.a24_event_count.fillna(0), df.a27_event_datetime.fillna(0))
-      + 0.20 * g("a20_news_events")
-      + 0.15 * g("a21_calendar_link"))
+# Recency answers "when was this last touched"; the notice board and its timestamp are the
+# direct structural evidence that the site is maintained at all, and they disagree with the
+# date field often enough (382 rows carry a date with no board flag, 156 the reverse) that
+# scoring recency alone discards half the evidence. The copyright / last-updated line is the
+# weakest currency cue and is weighted accordingly.
+D3 = (0.32 * recency_curve(df.notice_recency_days)
+      + 0.20 * event_curve(df.a24_event_count.fillna(0), df.a27_event_datetime.fillna(0))
+      + 0.16 * g("a20_news_events")
+      + 0.12 * g("a21_calendar_link")
+      + 0.08 * g("a16_notice_board")
+      + 0.06 * g("a17_notice_timestamp")
+      + 0.04 * g("a23_upcoming_events")
+      + 0.02 * g("a49_copyright_line"))
 
 # ---- D4  Navigation and findability (15) ----------------------------------------------
 D4 = (0.25 * g("a02_primary_nav")
@@ -257,23 +272,44 @@ D4 = (0.25 * g("a02_primary_nav")
       + 0.10 * g("a48_footer_sitemap"))
 
 # ---- D5  Usability and accessibility (10) ---------------------------------------------
-D5 = (0.35 * unit(df.a63_mobile_score.fillna(0), 0, 100)
-      + 0.25 * contrast_curve(df.a53_contrast_ratio)
-      + 0.20 * alt_text_curve(df.a72_alt_text_pct)
+# The text-size / contrast toggle (a74) is an explicit accessibility affordance and belongs
+# in the accessibility dimension; leaving it out scored only 2 of the 4 attributes in the
+# accessibility block. The bookmark facility (a75) is excluded: 1.0% of sites, and it is a
+# browser feature rather than a property of the page.
+D5 = (0.32 * unit(df.a63_mobile_score.fillna(0), 0, 100)
+      + 0.23 * contrast_curve(df.a53_contrast_ratio)
+      + 0.18 * alt_text_curve(df.a72_alt_text_pct)
       + 0.10 * g("a73_accessible_design")
-      + 0.10 * g("a05_language_toggle"))
+      + 0.09 * g("a05_language_toggle")
+      + 0.08 * g("a74_a11y_toggle"))
 
-# ---- D6  Technical quality (7) ---------------------------------------------------------
-D6 = (0.35 * g("a65_https")
-      + 0.35 * broken_curve(df.a66_broken_links.fillna(0))
-      + 0.30 * speed_score)
+# ---- D6  Technical quality and discoverability (7) -------------------------------------
+# Widened from "does the site work" to "does the site work and can it be found". A student
+# who cannot reach the site at all is no better served than one who reaches a broken one, and
+# the SEO block was otherwise the only block in the schema contributing nothing to the score.
+D6 = (0.26 * g("a65_https")
+      + 0.24 * broken_curve(df.a66_broken_links.fillna(0))
+      + 0.20 * speed_score
+      + 0.12 * g("a69_title_meta")
+      + 0.07 * g("a67_gzip")
+      + 0.07 * g("a71_sitemap_robots")
+      + 0.04 * g("a70_favicon"))
 
-# ---- D7  Institutional transparency (3) ------------------------------------------------
-D7 = (0.30 * g("a32_vision_mission")
-      + 0.20 * g("a33_about_blurb")
-      + 0.20 * g("a47_footer_contact")
-      + 0.15 * g("a11_accreditation")
-      + 0.15 * g("a44_student_portal"))
+# ---- D7  Institutional identity and transparency (3) -----------------------------------
+# Widened to cover the identity and credibility signals the schema collects: the logo,
+# the alumni section, the achievements block, the footer social channels and the trust seal
+# are all, per their schema justifications, identity or trust signals. Testimonials
+# are excluded as marketing rather than institutional fact.
+D7 = (0.20 * g("a32_vision_mission")
+      + 0.14 * g("a33_about_blurb")
+      + 0.14 * g("a47_footer_contact")
+      + 0.11 * g("a11_accreditation")
+      + 0.11 * g("a44_student_portal")
+      + 0.10 * g("a41_alumni_link")
+      + 0.08 * g("a13_achievements")
+      + 0.06 * g("a01_logo")
+      + 0.04 * g("a50_social_links")
+      + 0.02 * g("a60_trust_seal"))
 
 WEIGHTS = {"D1_academic_information": 28, "D2_admission_support": 22,
            "D3_currency_activity": 15, "D4_navigation_findability": 15,
@@ -349,63 +385,293 @@ out = out.drop(columns="_bucket")
 
 out.to_csv(DATA / "university_website_scores.csv", index=False)
 
-# ---- 80 / 20 stratified split ----------------------------------------------------------
+# ---- 80 / 20 split, stratified on score band, with a forced country holdout -------------
+# Every Bangladeshi university is placed in the TEST set and none is used for training.
+# Two reasons:
+#   1. The report presents a Bangladesh case study. If any of those universities had been
+#      seen during training, the case-study table would be part in-sample and part
+#      out-of-sample, and the numbers in it would not mean the same thing row to row.
+#      Holding the whole country out makes every row in that table an honest prediction.
+#   2. It is a stricter generalisation test than a random split. The 22 Bangladeshi sites
+#      are not a random draw: they share a region, a hosting environment and a set of design
+#      conventions. Predicting them from a training set that contains none of them asks
+#      whether the model learned website quality or the local habits of one country.
+# The remainder of the test set is then drawn band-stratified from the other 1,203
+# universities, so the test set is still 20% of the data and still spans the full range.
+HOLDOUT_COUNTRY = "Bangladesh"
+is_holdout = out.country.str.strip().str.casefold() == HOLDOUT_COUNTRY.casefold()
+
 band = pd.cut(out.website_score, [-1, 35, 50, 65, 75, 85, 101], labels=False)
 rng = np.random.default_rng(RNG_SEED)
-test_idx = []
+
+test_idx = list(out.index[is_holdout])                       # the whole country, first
+n_target = int(round(0.20 * len(out)))                       # 20% of everything
+pool_frac = max(0.0, (n_target - len(test_idx)) / int((~is_holdout).sum()))
 for b in sorted(band.unique()):
-    idx = out.index[band == b].to_numpy()
+    idx = out.index[(band == b) & ~is_holdout].to_numpy()
     rng.shuffle(idx)
-    test_idx.extend(idx[: int(round(0.20 * len(idx)))])
+    test_idx.extend(idx[: int(round(pool_frac * len(idx)))])
 test_mask = out.index.isin(test_idx)
 
 train, test = out[~test_mask].copy(), out[test_mask].copy()
+assert not (train.country.str.strip().str.casefold() == HOLDOUT_COUNTRY.casefold()).any(),     "a Bangladeshi university leaked into the training set"
+
 COLS = META + FEATURES + ["website_score", "grade"]
 train[COLS].to_csv(DATA / "train.csv", index=False)
 test[COLS].to_csv(DATA / "test.csv", index=False)
+test[test.country.str.strip().str.casefold() == HOLDOUT_COUNTRY.casefold()][COLS]     .to_csv(DATA / "test_bangladesh.csv", index=False)
 
-audit.append(("train / test split", f"{len(train)} / {len(test)}  ({len(test)/len(out):.0%} test, stratified on score band, seed {RNG_SEED})"))
+n_bd = int(is_holdout.sum())
+audit.append(("country holdout", f"all {n_bd} {HOLDOUT_COUNTRY} universities forced into the test set"))
+audit.append(("train / test split", f"{len(train)} / {len(test)}  ({len(test)/len(out):.0%} test, "
+                                    f"band-stratified on the remaining {int((~is_holdout).sum())}, seed {RNG_SEED})"))
+
+# stratification check, reported rather than assumed
+strat = pd.DataFrame({
+    "band": ["F <35", "D 35-50", "C 50-65", "B 65-75", "A 75-85", "A+ >=85"],
+    "all": band.value_counts().reindex(range(6), fill_value=0).values,
+    "train": band[~test_mask].value_counts().reindex(range(6), fill_value=0).values,
+    "test": band[test_mask].value_counts().reindex(range(6), fill_value=0).values,
+})
+strat["all_pct"] = (strat["all"] / strat["all"].sum() * 100).round(1)
+strat["train_pct"] = (strat.train / strat.train.sum() * 100).round(1)
+strat["test_pct"] = (strat.test / strat.test.sum() * 100).round(1)
+strat["drift_pp"] = (strat.test_pct - strat.all_pct).round(1)
+strat.to_csv(DATA / "split_stratification.csv", index=False)
+
+# ======================================================================================
+# 5b. DIMENSION SUB-SCORES  (the arithmetic behind every score, exported for the report)
+# ======================================================================================
+# One row per university: the seven sub-scores in [0,1], their weighted contributions in
+# points, the uncapped total, the cap that applied, and the final score. This is the audit
+# trail for Equation (1): every published score can be recomputed by hand from this file.
+
+dim_out = df[META].copy()
+for k in WEIGHTS:
+    dim_out[k] = df[k].round(4)
+for k in WEIGHTS:
+    dim_out[f"pts_{k[:2]}"] = (WEIGHTS[k] * df[k]).round(2)
+dim_out["raw_score"] = raw_score.round(2)
+dim_out["cap"] = cap
+dim_out["gate_nav"] = (g("a02_primary_nav") == 0).astype(int)
+dim_out["gate_https"] = (g("a65_https") == 0).astype(int)
+dim_out["gate_applied"] = df.gate_applied
+dim_out["points_lost_to_gate"] = (raw_score - df.website_score).clip(lower=0).round(2)
+dim_out["website_score"] = df.website_score
+dim_out["grade"] = df.grade
+dim_out.to_csv(DATA / "dimension_scores.csv", index=False)
+
+audit.append(("dimension sub-scores exported", f"{len(dim_out)} rows x 7 dimensions + gate audit"))
 
 # ======================================================================================
 # 6. DATA DICTIONARY
 # ======================================================================================
 
-DIM_OF = {}
-for dim, cols in {
-    "D1 academic information": ["a37_programs_listing", "a34_department_links", "a35_faculty_link",
-                                 "a39_library_link", "a36_research_highlight", "a40_career_link"],
-    "D2 admission support":    ["a46_admissions_policy", "a22_admission_notice", "a38_scholarship",
-                                 "a43_contact_link", "a45_prospectus"],
-    "D3 currency & activity":  ["notice_recency_days", "notice_evidence", "event_evidence",
-                                 "a20_news_events", "a21_calendar_link", "a27_event_datetime"],
-    "D4 navigation":           ["a02_primary_nav", "a03_nav_item_count", "nav_quality", "a04_search_bar",
-                                 "a06_breadcrumb", "a51_quick_links", "a48_footer_sitemap"],
-    "D5 usability & access":   ["a63_mobile_score", "a53_contrast_ratio", "a72_alt_text_pct",
-                                 "a73_accessible_design", "a05_language_toggle", "a74_a11y_toggle"],
-    "D6 technical quality":    ["a65_https", "a66_broken_links", "broken_links_log",
-                                 "load_time_z_region", "load_time_pct_region", "a67_gzip"],
-    "D7 transparency":         ["a32_vision_mission", "a33_about_blurb", "a47_footer_contact",
-                                 "a11_accreditation", "a44_student_portal"],
+# Every feature is classified on three independent axes, and all three are exported:
+#
+#   SOURCE GROUP  -- where on the page the extractor found it (11 groups, structural)
+#   SCORING ROLE  -- which dimension of the scoring model consumes it, with what weight
+#                    and through what transform (the semantic axis)
+#   MEASUREMENT   -- binary flag / count / percentage / ratio / derived (the statistical axis)
+#
+# A feature can belong to a source group and still be scored by no dimension: many of the 71
+# are observed but not part of the target. They remain in the model's input, which is what
+# makes the "did the model recover the scoring rule" question in the report a fair one.
+
+SOURCE_GROUP = {}
+for grp, cols in {
+    "Header & navigation":  ["a01_logo", "a02_primary_nav", "a03_nav_item_count", "a04_search_bar",
+                             "a05_language_toggle", "a06_breadcrumb"],
+    "Rankings & recognition": ["a07_qs_badge", "a09_national_rank", "a11_accreditation",
+                             "a12_accred_count", "a13_achievements", "a14_stats_block",
+                             "a15_stat_item_count"],
+    "Notices & updates":    ["a16_notice_board", "a17_notice_timestamp", "a20_news_events",
+                             "a21_calendar_link", "a22_admission_notice", "notice_recency_days"],
+    "Events & media":       ["a23_upcoming_events", "a24_event_count", "a25_event_images",
+                             "a26_event_captions", "a27_event_datetime", "a28_contests",
+                             "a29_video_content", "a30_image_gallery", "a31_social_feed_embed"],
+    "Page content":         ["a32_vision_mission", "a33_about_blurb", "a34_department_links",
+                             "a35_faculty_link", "a36_research_highlight", "a37_programs_listing",
+                             "a38_scholarship", "a39_library_link", "a40_career_link",
+                             "a41_alumni_link", "a42_faq_link", "a43_contact_link",
+                             "a44_student_portal", "a45_prospectus", "a46_admissions_policy"],
+    "Footer":               ["a47_footer_contact", "a48_footer_sitemap", "a49_copyright_line",
+                             "a50_social_links", "a51_quick_links"],
+    "Visual design":        ["a53_contrast_ratio", "a54_banner_carousel", "a57_logo_prominence"],
+    "Service & interaction":["a58_live_chat", "a59_feedback_form", "a60_trust_seal",
+                             "a61_testimonials"],
+    "Technical performance":["a63_mobile_score", "a65_https", "a66_broken_links", "a67_gzip",
+                             "load_time_z_region", "broken_links_log"],
+    "SEO & metadata":       ["a69_title_meta", "a70_favicon", "a71_sitemap_robots"],
+    "Accessibility":        ["a72_alt_text_pct", "a73_accessible_design", "a74_a11y_toggle",
+                             "a75_bookmark"],
+    "Measurement quality":  ["notice_recency_days_was_missing", "a72_alt_text_pct_was_missing",
+                             "a53_contrast_ratio_was_missing"],
 }.items():
     for c in cols:
-        DIM_OF[c] = dim
+        SOURCE_GROUP[c] = grp
+
+# feature -> (dimension, weight inside that dimension, transform applied before weighting)
+SCORING_TERM = {
+    "a37_programs_listing": ("D1", 0.30, "identity (0/1)"),
+    "a34_department_links": ("D1", 0.25, "identity (0/1)"),
+    "a35_faculty_link":     ("D1", 0.15, "identity (0/1)"),
+    "a39_library_link":     ("D1", 0.12, "identity (0/1)"),
+    "a36_research_highlight": ("D1", 0.10, "identity (0/1)"),
+    "a40_career_link":      ("D1", 0.08, "identity (0/1)"),
+
+    "a46_admissions_policy": ("D2", 0.26, "identity (0/1)"),
+    "a22_admission_notice":  ("D2", 0.20, "identity (0/1)"),
+    "a38_scholarship":       ("D2", 0.18, "identity (0/1)"),
+    "a43_contact_link":      ("D2", 0.15, "identity (0/1)"),
+    "a45_prospectus":        ("D2", 0.12, "identity (0/1)"),
+    "a42_faq_link":          ("D2", 0.06, "identity (0/1)"),
+    "a58_live_chat":         ("D2", 0.03, "identity (0/1)"),
+
+    "notice_recency_days":  ("D3", 0.32, "recency_curve, 6-step decay"),
+    "a24_event_count":      ("D3", 0.20, "event_curve, 4-step x datetime factor"),
+    # a27 is not an additive term: it is the 1.0 / 0.6 multiplier applied to the a24 event
+    # term inside event_curve. Weight 0 marks it as a modifier so the inner weights of D3
+    # still sum to 1; the tables render it as "mod." rather than as 0 points.
+    "a27_event_datetime":   ("D3", 0.00, "modifier: x1.0 if events are dated, x0.6 if not"),
+    "a20_news_events":      ("D3", 0.16, "identity (0/1)"),
+    "a21_calendar_link":    ("D3", 0.12, "identity (0/1)"),
+    "a16_notice_board":     ("D3", 0.08, "identity (0/1)"),
+    "a17_notice_timestamp": ("D3", 0.06, "identity (0/1)"),
+    "a23_upcoming_events":  ("D3", 0.04, "identity (0/1)"),
+    "a49_copyright_line":   ("D3", 0.02, "identity (0/1)"),
+
+    "a02_primary_nav":      ("D4", 0.25, "identity (0/1); also triggers the 45-point gate"),
+    "a03_nav_item_count":   ("D4", 0.25, "nav_breadth_curve, inverted U"),
+    "a04_search_bar":       ("D4", 0.20, "identity (0/1)"),
+    "a06_breadcrumb":       ("D4", 0.10, "identity (0/1)"),
+    "a51_quick_links":      ("D4", 0.10, "identity (0/1)"),
+    "a48_footer_sitemap":   ("D4", 0.10, "identity (0/1)"),
+
+    "a63_mobile_score":     ("D5", 0.32, "linear rescale 0-100 -> 0-1"),
+    "a53_contrast_ratio":   ("D5", 0.23, "contrast_curve, plateau at 7:1"),
+    "a72_alt_text_pct":     ("D5", 0.18, "sqrt of 0-100 rescale (concave)"),
+    "a73_accessible_design":("D5", 0.10, "identity (0/1)"),
+    "a05_language_toggle":  ("D5", 0.09, "identity (0/1)"),
+    "a74_a11y_toggle":      ("D5", 0.08, "identity (0/1)"),
+
+    "a65_https":            ("D6", 0.26, "identity (0/1); also triggers the 60-point gate"),
+    "a66_broken_links":     ("D6", 0.24, "broken_curve, 5-step penalty"),
+    "load_time_z_region":   ("D6", 0.20, "within-region percentile, inverted"),
+    "a69_title_meta":       ("D6", 0.12, "identity (0/1)"),
+    "a67_gzip":             ("D6", 0.07, "identity (0/1)"),
+    "a71_sitemap_robots":   ("D6", 0.07, "identity (0/1)"),
+    "a70_favicon":          ("D6", 0.04, "identity (0/1)"),
+
+    "a32_vision_mission":   ("D7", 0.20, "identity (0/1)"),
+    "a33_about_blurb":      ("D7", 0.14, "identity (0/1)"),
+    "a47_footer_contact":   ("D7", 0.14, "identity (0/1)"),
+    "a11_accreditation":    ("D7", 0.11, "identity (0/1)"),
+    "a44_student_portal":   ("D7", 0.11, "identity (0/1)"),
+    "a41_alumni_link":      ("D7", 0.10, "identity (0/1)"),
+    "a13_achievements":     ("D7", 0.08, "identity (0/1)"),
+    "a01_logo":             ("D7", 0.06, "identity (0/1)"),
+    "a50_social_links":     ("D7", 0.04, "identity (0/1)"),
+    "a60_trust_seal":       ("D7", 0.02, "identity (0/1)"),
+}
+DIM_NAME = {"D1": "D1 academic information", "D2": "D2 admission support",
+            "D3": "D3 currency & activity", "D4": "D4 navigation & findability",
+            "D5": "D5 usability & accessibility", "D6": "D6 technical quality & discoverability",
+            "D7": "D7 identity & transparency"}
+DIM_OF = {c: DIM_NAME[v[0]] for c, v in SCORING_TERM.items()}
+
+# Why each remaining attribute is NOT in the label. An attribute is excluded only for a
+# stated reason; "we did not get round to it" is not one of them.
+EXCLUSION_REASON = {
+    "a07_qs_badge":       "prestige display; excluded to prevent prestige leakage",
+    "a09_national_rank":  "prestige display; excluded to prevent prestige leakage",
+    "a12_accred_count":   "count depth of a badge already scored by presence",
+    "a14_stats_block":    "marketing block; serves no applicant information need",
+    "a15_stat_item_count":"count depth of a marketing block",
+    "a25_event_images":   "media richness; presence is measurable, quality is not",
+    "a26_event_captions": "media richness; presence is measurable, quality is not",
+    "a28_contests":       "engagement signal; serves no applicant information need",
+    "a29_video_content":  "media richness; presence is measurable, quality is not",
+    "a30_image_gallery":  "media richness; presence is measurable, quality is not",
+    "a31_social_feed_embed": "media richness; present on 5.6% of sites",
+    "a54_banner_carousel":"visual presentation the dataset cannot assess for quality",
+    "a57_logo_prominence":"visual presentation the dataset cannot assess for quality",
+    "a59_feedback_form":  "present on 1.9% of sites; too rare to carry weight",
+    "a61_testimonials":   "marketing; serves no applicant information need",
+    "a75_bookmark":       "present on 1.0% of sites; a browser feature, not a page property",
+    "broken_links_log":   "redundant transform of a66, which is scored",
+    "notice_recency_days_was_missing": "measurement metadata, not a property of the website",
+    "a72_alt_text_pct_was_missing":    "measurement metadata, not a property of the website",
+    "a53_contrast_ratio_was_missing":  "measurement metadata, not a property of the website",
+}
+DIM_KEY = {d[:2]: d for d in WEIGHTS}
+
+
+def measurement_type(col, s_):
+    if col.endswith("_was_missing"):
+        return "indicator (0/1)"
+    u = set(pd.unique(s_.dropna()))
+    if u <= {0, 1}:
+        return "binary flag"
+    if col.endswith("_pct"):
+        return "percentage 0-100"
+    if col.endswith("_ratio"):
+        return "ratio"
+    if col == "load_time_z_region":
+        return "z-score (within region)"
+    if col == "broken_links_log":
+        return "log1p count"
+    if col == "a63_mobile_score":
+        return "index 0-100"
+    if float(np.abs(np.mod(s_.dropna().to_numpy(float), 1)).max()) == 0.0:
+        return "count"
+    return "continuous"
+
+
+catalog = []
+for c in FEATURES:
+    s_ = out[c]
+    dim, w, tf = SCORING_TERM.get(c, ("--", np.nan, EXCLUSION_REASON.get(c, "not scored")))
+    catalog.append(dict(
+        feature=c,
+        source_group=SOURCE_GROUP.get(c, "other"),
+        measurement_type=measurement_type(c, s_),
+        scored_by=dim,
+        weight_in_dimension=w,
+        points_at_maximum=round(WEIGHTS[DIM_KEY[dim]] * w, 2) if dim != "--" else 0.0,
+        transform=tf,
+        engineered=int(c in ENGINEERED),
+        missing_pct_raw=round(100 * RAW_NULL[c], 2) if c in RAW_NULL else "",
+        min=round(float(s_.min()), 3), max=round(float(s_.max()), 3),
+        mean=round(float(s_.mean()), 3), sd=round(float(s_.std()), 3),
+        prevalence_pct=round(100 * float(s_.mean()), 1)
+                       if set(pd.unique(s_.dropna())) <= {0, 1} else "",
+        corr_with_score=round(float(np.corrcoef(s_, out.website_score)[0, 1]), 3),
+    ))
+cat = pd.DataFrame(catalog).sort_values(["scored_by", "source_group", "feature"])
+cat.to_csv(DATA / "feature_catalog.csv", index=False)
+audit.append(("feature catalog written",
+              f"{len(cat)} features; {int((cat.scored_by != '--').sum())} enter the score, "
+              f"{int((cat.scored_by == '--').sum())} observed but unscored"))
 
 rows = []
 for c in FEATURES:
-    s = out[c]
+    s_ = out[c]
     rows.append(dict(
         column=c,
         role="feature",
         dimension=DIM_OF.get(c, "not used by the scoring model"),
-        dtype=str(s.dtype),
-        min=round(float(s.min()), 3), max=round(float(s.max()), 3),
-        mean=round(float(s.mean()), 3),
+        source_group=SOURCE_GROUP.get(c, "other"),
+        measurement=measurement_type(c, s_),
+        dtype=str(s_.dtype),
+        min=round(float(s_.min()), 3), max=round(float(s_.max()), 3),
+        mean=round(float(s_.mean()), 3),
         engineered=int(c in ENGINEERED),
     ))
 for c, role in [("website_score", "TARGET (0-100)"), ("grade", "target, banded"),
                 ("rank", "output"), ("regional_rank", "output"), ("country_rank", "output")]:
-    rows.append(dict(column=c, role=role, dimension="", dtype=str(out[c].dtype),
-                     min="", max="", mean="", engineered=0))
+    rows.append(dict(column=c, role=role, dimension="", source_group="", measurement="",
+                     dtype=str(out[c].dtype), min="", max="", mean="", engineered=0))
 pd.DataFrame(rows).to_csv(DATA / "data_dictionary.csv", index=False)
 
 # ======================================================================================
@@ -452,6 +718,11 @@ summary = dict(
     dimension_weights=WEIGHTS,
     n_gated=int(df.gate_applied.sum()),
     n_countries_ranked=int(out.country_rank.notna().sum()),
+    holdout_country=HOLDOUT_COUNTRY,
+    n_holdout=int(is_holdout.sum()),
+    max_band_drift_pp=float(strat.drift_pp.abs().max()),
+    n_features_scored=int((cat.scored_by != "--").sum()),
+    n_features_unscored=int((cat.scored_by == "--").sum()),
     seed=RNG_SEED,
 )
 (DATA / "dataset_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")

@@ -1,0 +1,8 @@
+dimension,bangladesh,world,top100,weight,gap_vs_world_pts,gap_vs_top100_pts
+D1_academic_information,0.943,0.785,0.993,28,4.42,-1.4
+D2_admission_support,0.585,0.483,0.811,22,2.24,-4.97
+D3_currency_activity,0.765,0.568,0.865,15,2.96,-1.5
+D4_navigation_findability,0.594,0.643,0.78,15,-0.74,-2.79
+D5_usability_accessibility,0.688,0.773,0.833,10,-0.85,-1.45
+D6_technical_quality,0.866,0.799,0.862,7,0.47,0.03
+D7_institutional_transparency,0.813,0.652,0.811,3,0.48,0.01
